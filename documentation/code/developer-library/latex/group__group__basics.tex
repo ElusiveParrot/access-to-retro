@@ -1,0 +1,209 @@
+\hypertarget{group__group__basics}{}\doxysection{Basics}
+\label{group__group__basics}\index{Basics@{Basics}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structar__version}{ar\+\_\+version}}
+\begin{DoxyCompactList}\small\item\em Struct representing versioning system used by Access Retro. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__group__basics_ga333c0eb2dc10838b242ce5d838eba3c3}\label{group__group__basics_ga333c0eb2dc10838b242ce5d838eba3c3}} 
+typedef uint32\+\_\+t {\bfseries ar\+\_\+err\+\_\+code}
+\begin{DoxyCompactList}\small\item\em Type representing error code in Access Retro library. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+AR\+\_\+\+API void \mbox{\hyperlink{group__group__basics_ga44ba3e3829789910eab8b6bffeeb0208}{ar\+\_\+define}} (const char $\ast$name, const char $\ast$system, const char $\ast$author, const char $\ast$rom\+\_\+ext, struct \mbox{\hyperlink{structar__version}{ar\+\_\+version}} version, unsigned frame\+\_\+rate, unsigned default\+\_\+window\+\_\+width, unsigned default\+\_\+window\+\_\+height)
+\begin{DoxyCompactList}\small\item\em Define the virtual console for Access to Retro library. \end{DoxyCompactList}\item 
+AR\+\_\+\+API void \mbox{\hyperlink{group__group__basics_ga7f7ce12c87d0f083b3ba693122770911}{ar\+\_\+init}} (void)
+\begin{DoxyCompactList}\small\item\em Initialise Access Retro dev library. \end{DoxyCompactList}\item 
+AR\+\_\+\+API void \mbox{\hyperlink{group__group__basics_ga35705e8e5a2b49efdd16a33ade7a05c2}{ar\+\_\+quit}} (void)
+\begin{DoxyCompactList}\small\item\em Clean up everything related to Access Retro library. \end{DoxyCompactList}\item 
+AR\+\_\+\+API struct \mbox{\hyperlink{structar__version}{ar\+\_\+version}} \mbox{\hyperlink{group__group__basics_ga6faafdc0e5158554279e99b88d3bda8c}{ar\+\_\+get\+\_\+version}} (void)
+\begin{DoxyCompactList}\small\item\em Get the version of the Access to Retro library itself. \end{DoxyCompactList}\item 
+AR\+\_\+\+API const char $\ast$ \mbox{\hyperlink{group__group__basics_ga785e53cb6c1008de56cfd0b58ffa1995}{ar\+\_\+get\+\_\+vc\+\_\+rom\+\_\+ext}} (void)
+\begin{DoxyCompactList}\small\item\em Get the virtual console\textquotesingle{}s ROM\textquotesingle{}s extension. \end{DoxyCompactList}\item 
+AR\+\_\+\+API const char $\ast$ \mbox{\hyperlink{group__group__basics_gabf0c1ab2203e27629361222d2c5e08e9}{ar\+\_\+get\+\_\+vc\+\_\+name}} (void)
+\begin{DoxyCompactList}\small\item\em Get the virtual console\textquotesingle{}s name. \end{DoxyCompactList}\item 
+AR\+\_\+\+API const char $\ast$ \mbox{\hyperlink{group__group__basics_gae50a3729e62970deb886f2ecde31bbc4}{ar\+\_\+get\+\_\+vc\+\_\+system}} (void)
+\begin{DoxyCompactList}\small\item\em Get the virtual console\textquotesingle{}s system name. \end{DoxyCompactList}\item 
+AR\+\_\+\+API const char $\ast$ \mbox{\hyperlink{group__group__basics_ga81322b27fe481914345061cafa548552}{ar\+\_\+get\+\_\+vc\+\_\+author}} (void)
+\begin{DoxyCompactList}\small\item\em Get the virtual console\textquotesingle{}s author name. \end{DoxyCompactList}\item 
+AR\+\_\+\+API unsigned \mbox{\hyperlink{group__group__basics_ga032fce4e7c61ce9dd87530614cb7c742}{ar\+\_\+get\+\_\+vc\+\_\+frame\+\_\+rate}} (void)
+\begin{DoxyCompactList}\small\item\em Get the virtual console\textquotesingle{}s frame rate. \end{DoxyCompactList}\item 
+AR\+\_\+\+API unsigned \mbox{\hyperlink{group__group__basics_ga858f65cd859260c7809fe4a37afd6665}{ar\+\_\+get\+\_\+vc\+\_\+default\+\_\+window\+\_\+res\+\_\+x}} (void)
+\begin{DoxyCompactList}\small\item\em Get the virtual console\textquotesingle{}s default window width. \end{DoxyCompactList}\item 
+AR\+\_\+\+API unsigned \mbox{\hyperlink{group__group__basics_gae86c4a8890a897ffa41f80e1b0956a57}{ar\+\_\+get\+\_\+vc\+\_\+default\+\_\+window\+\_\+res\+\_\+y}} (void)
+\begin{DoxyCompactList}\small\item\em Get the virtual console\textquotesingle{}s default window height. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Basic functions to define/start/quit the virtual console 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group__group__basics_ga44ba3e3829789910eab8b6bffeeb0208}\label{group__group__basics_ga44ba3e3829789910eab8b6bffeeb0208}} 
+\index{Basics@{Basics}!ar\_define@{ar\_define}}
+\index{ar\_define@{ar\_define}!Basics@{Basics}}
+\doxysubsubsection{\texorpdfstring{ar\_define()}{ar\_define()}}
+{\footnotesize\ttfamily AR\+\_\+\+API void ar\+\_\+define (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{const char $\ast$}]{system,  }\item[{const char $\ast$}]{author,  }\item[{const char $\ast$}]{rom\+\_\+ext,  }\item[{struct \mbox{\hyperlink{structar__version}{ar\+\_\+version}}}]{version,  }\item[{unsigned}]{frame\+\_\+rate,  }\item[{unsigned}]{default\+\_\+window\+\_\+width,  }\item[{unsigned}]{default\+\_\+window\+\_\+height }\end{DoxyParamCaption})}
+
+
+
+Define the virtual console for Access to Retro library. 
+
+Should always be called in \textquotesingle{}\+\_\+ar\+\_\+vc\+\_\+define\textquotesingle{} function that needs to be defined by the virtual console \begin{DoxyWarning}{Warning}
+If NULL is provided as any of the string arguments then a default value of UNKNOWN will be used unless it\textquotesingle{}s the \textquotesingle{}rom\+\_\+ext\textquotesingle{} in which case \textquotesingle{}$\ast$.rom\textquotesingle{} will be used. It is not advisable to use NULL for any of the values. 
+\end{DoxyWarning}
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of the virtual console \\
+\hline
+{\em system} & System that is emulated \\
+\hline
+{\em author} & Author of the virtual console \\
+\hline
+{\em rom\+\_\+ext} & Extension of the ROM files, for example\+: \textquotesingle{}$\ast$.nes\textquotesingle{} \\
+\hline
+{\em version} & Current version of the virtual console \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error codes\+:
+\begin{DoxyItemize}
+\item 0\+: No error 
+\end{DoxyItemize}
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__group__basics_ga81322b27fe481914345061cafa548552}\label{group__group__basics_ga81322b27fe481914345061cafa548552}} 
+\index{Basics@{Basics}!ar\_get\_vc\_author@{ar\_get\_vc\_author}}
+\index{ar\_get\_vc\_author@{ar\_get\_vc\_author}!Basics@{Basics}}
+\doxysubsubsection{\texorpdfstring{ar\_get\_vc\_author()}{ar\_get\_vc\_author()}}
+{\footnotesize\ttfamily AR\+\_\+\+API const char $\ast$ ar\+\_\+get\+\_\+vc\+\_\+author (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Get the virtual console\textquotesingle{}s author name. 
+
+\begin{DoxyReturn}{Returns}
+Virtual console\textquotesingle{}s author name 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__group__basics_ga858f65cd859260c7809fe4a37afd6665}\label{group__group__basics_ga858f65cd859260c7809fe4a37afd6665}} 
+\index{Basics@{Basics}!ar\_get\_vc\_default\_window\_res\_x@{ar\_get\_vc\_default\_window\_res\_x}}
+\index{ar\_get\_vc\_default\_window\_res\_x@{ar\_get\_vc\_default\_window\_res\_x}!Basics@{Basics}}
+\doxysubsubsection{\texorpdfstring{ar\_get\_vc\_default\_window\_res\_x()}{ar\_get\_vc\_default\_window\_res\_x()}}
+{\footnotesize\ttfamily AR\+\_\+\+API unsigned ar\+\_\+get\+\_\+vc\+\_\+default\+\_\+window\+\_\+res\+\_\+x (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Get the virtual console\textquotesingle{}s default window width. 
+
+\begin{DoxyReturn}{Returns}
+Virtual console\textquotesingle{}s default resolution X component 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__group__basics_gae86c4a8890a897ffa41f80e1b0956a57}\label{group__group__basics_gae86c4a8890a897ffa41f80e1b0956a57}} 
+\index{Basics@{Basics}!ar\_get\_vc\_default\_window\_res\_y@{ar\_get\_vc\_default\_window\_res\_y}}
+\index{ar\_get\_vc\_default\_window\_res\_y@{ar\_get\_vc\_default\_window\_res\_y}!Basics@{Basics}}
+\doxysubsubsection{\texorpdfstring{ar\_get\_vc\_default\_window\_res\_y()}{ar\_get\_vc\_default\_window\_res\_y()}}
+{\footnotesize\ttfamily AR\+\_\+\+API unsigned ar\+\_\+get\+\_\+vc\+\_\+default\+\_\+window\+\_\+res\+\_\+y (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Get the virtual console\textquotesingle{}s default window height. 
+
+\begin{DoxyReturn}{Returns}
+Virtual console\textquotesingle{}s default resolution Y component 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__group__basics_ga032fce4e7c61ce9dd87530614cb7c742}\label{group__group__basics_ga032fce4e7c61ce9dd87530614cb7c742}} 
+\index{Basics@{Basics}!ar\_get\_vc\_frame\_rate@{ar\_get\_vc\_frame\_rate}}
+\index{ar\_get\_vc\_frame\_rate@{ar\_get\_vc\_frame\_rate}!Basics@{Basics}}
+\doxysubsubsection{\texorpdfstring{ar\_get\_vc\_frame\_rate()}{ar\_get\_vc\_frame\_rate()}}
+{\footnotesize\ttfamily AR\+\_\+\+API unsigned ar\+\_\+get\+\_\+vc\+\_\+frame\+\_\+rate (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Get the virtual console\textquotesingle{}s frame rate. 
+
+\begin{DoxyReturn}{Returns}
+Virtual console\textquotesingle{}s frame rate 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__group__basics_gabf0c1ab2203e27629361222d2c5e08e9}\label{group__group__basics_gabf0c1ab2203e27629361222d2c5e08e9}} 
+\index{Basics@{Basics}!ar\_get\_vc\_name@{ar\_get\_vc\_name}}
+\index{ar\_get\_vc\_name@{ar\_get\_vc\_name}!Basics@{Basics}}
+\doxysubsubsection{\texorpdfstring{ar\_get\_vc\_name()}{ar\_get\_vc\_name()}}
+{\footnotesize\ttfamily AR\+\_\+\+API const char $\ast$ ar\+\_\+get\+\_\+vc\+\_\+name (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Get the virtual console\textquotesingle{}s name. 
+
+\begin{DoxyReturn}{Returns}
+Virtual console\textquotesingle{}s name 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__group__basics_ga785e53cb6c1008de56cfd0b58ffa1995}\label{group__group__basics_ga785e53cb6c1008de56cfd0b58ffa1995}} 
+\index{Basics@{Basics}!ar\_get\_vc\_rom\_ext@{ar\_get\_vc\_rom\_ext}}
+\index{ar\_get\_vc\_rom\_ext@{ar\_get\_vc\_rom\_ext}!Basics@{Basics}}
+\doxysubsubsection{\texorpdfstring{ar\_get\_vc\_rom\_ext()}{ar\_get\_vc\_rom\_ext()}}
+{\footnotesize\ttfamily AR\+\_\+\+API const char $\ast$ ar\+\_\+get\+\_\+vc\+\_\+rom\+\_\+ext (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Get the virtual console\textquotesingle{}s ROM\textquotesingle{}s extension. 
+
+\begin{DoxyReturn}{Returns}
+Virtual console\textquotesingle{}s ROM\textquotesingle{}s extension in format \textquotesingle{}$\ast$.extension\textquotesingle{} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__group__basics_gae50a3729e62970deb886f2ecde31bbc4}\label{group__group__basics_gae50a3729e62970deb886f2ecde31bbc4}} 
+\index{Basics@{Basics}!ar\_get\_vc\_system@{ar\_get\_vc\_system}}
+\index{ar\_get\_vc\_system@{ar\_get\_vc\_system}!Basics@{Basics}}
+\doxysubsubsection{\texorpdfstring{ar\_get\_vc\_system()}{ar\_get\_vc\_system()}}
+{\footnotesize\ttfamily AR\+\_\+\+API const char $\ast$ ar\+\_\+get\+\_\+vc\+\_\+system (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Get the virtual console\textquotesingle{}s system name. 
+
+\begin{DoxyReturn}{Returns}
+Virtual console\textquotesingle{}s system name, if configured correctly it should follow Access to Retro standard 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__group__basics_ga6faafdc0e5158554279e99b88d3bda8c}\label{group__group__basics_ga6faafdc0e5158554279e99b88d3bda8c}} 
+\index{Basics@{Basics}!ar\_get\_version@{ar\_get\_version}}
+\index{ar\_get\_version@{ar\_get\_version}!Basics@{Basics}}
+\doxysubsubsection{\texorpdfstring{ar\_get\_version()}{ar\_get\_version()}}
+{\footnotesize\ttfamily AR\+\_\+\+API struct \mbox{\hyperlink{structar__version}{ar\+\_\+version}} ar\+\_\+get\+\_\+version (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Get the version of the Access to Retro library itself. 
+
+\begin{DoxyReturn}{Returns}
+Structure containing the version numbers 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__group__basics_ga7f7ce12c87d0f083b3ba693122770911}\label{group__group__basics_ga7f7ce12c87d0f083b3ba693122770911}} 
+\index{Basics@{Basics}!ar\_init@{ar\_init}}
+\index{ar\_init@{ar\_init}!Basics@{Basics}}
+\doxysubsubsection{\texorpdfstring{ar\_init()}{ar\_init()}}
+{\footnotesize\ttfamily AR\+\_\+\+API void ar\+\_\+init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initialise Access Retro dev library. 
+
+Should ALWAYS be called in \textquotesingle{}\+\_\+ar\+\_\+vc\+\_\+startup\textquotesingle{} function that needs to be defined by the virtual console \begin{DoxyReturn}{Returns}
+Error codes\+:
+\begin{DoxyItemize}
+\item 0\+: No error 
+\end{DoxyItemize}
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__group__basics_ga35705e8e5a2b49efdd16a33ade7a05c2}\label{group__group__basics_ga35705e8e5a2b49efdd16a33ade7a05c2}} 
+\index{Basics@{Basics}!ar\_quit@{ar\_quit}}
+\index{ar\_quit@{ar\_quit}!Basics@{Basics}}
+\doxysubsubsection{\texorpdfstring{ar\_quit()}{ar\_quit()}}
+{\footnotesize\ttfamily AR\+\_\+\+API void ar\+\_\+quit (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Clean up everything related to Access Retro library. 
+
+Should always be called in \textquotesingle{}\+\_\+ar\+\_\+vc\+\_\+quit\textquotesingle{} function that needs to be defined by the virtual console \begin{DoxyWarning}{Warning}
+Possibility of memory leak if this function is not be called in \textquotesingle{}\+\_\+ar\+\_\+vc\+\_\+quit\textquotesingle{} 
+\end{DoxyWarning}

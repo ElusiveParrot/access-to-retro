@@ -1,0 +1,65 @@
+\hypertarget{threads_8cpp}{}\doxysection{/\+Users/daniel/\+Developer/access-\/to-\/retro/access-\/to-\/retro/chip8-\/virtual-\/console/src/threads.cpp File Reference}
+\label{threads_8cpp}\index{/Users/daniel/Developer/access-\/to-\/retro/access-\/to-\/retro/chip8-\/virtual-\/console/src/threads.cpp@{/Users/daniel/Developer/access-\/to-\/retro/access-\/to-\/retro/chip8-\/virtual-\/console/src/threads.cpp}}
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include $<$access-\/to-\/retro-\/dev/access-\/to-\/retro-\/dev.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}emulator/emulator.\+hpp\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{threads_8cpp_ad90fc1a6d053b126ba8b5ac417ad2a22}{AR\+\_\+\+DEFINE\+\_\+\+REQUIRED\+\_\+\+FN}} (AR\+\_\+\+THREAD\+\_\+\+MAIN\+\_\+\+FN)
+\begin{DoxyCompactList}\small\item\em Main thread function. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{threads_8cpp_ac004dc6bf61e8bd56801dc5b9d1e0ba0}{AR\+\_\+\+DEFINE\+\_\+\+REQUIRED\+\_\+\+FN}} (AR\+\_\+\+THREAD\+\_\+\+RENDER\+\_\+\+FN)
+\begin{DoxyCompactList}\small\item\em Render thread function. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{threads_8cpp_a805ab9338b22b099308142fe37e4d36d}{AR\+\_\+\+DEFINE\+\_\+\+REQUIRED\+\_\+\+FN}} (AR\+\_\+\+THREAD\+\_\+\+INPUT\+\_\+\+FN)
+\begin{DoxyCompactList}\small\item\em Input thread function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{threads_8cpp_a805ab9338b22b099308142fe37e4d36d}\label{threads_8cpp_a805ab9338b22b099308142fe37e4d36d}} 
+\index{threads.cpp@{threads.cpp}!AR\_DEFINE\_REQUIRED\_FN@{AR\_DEFINE\_REQUIRED\_FN}}
+\index{AR\_DEFINE\_REQUIRED\_FN@{AR\_DEFINE\_REQUIRED\_FN}!threads.cpp@{threads.cpp}}
+\doxysubsubsection{\texorpdfstring{AR\_DEFINE\_REQUIRED\_FN()}{AR\_DEFINE\_REQUIRED\_FN()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily AR\+\_\+\+DEFINE\+\_\+\+REQUIRED\+\_\+\+FN (\begin{DoxyParamCaption}\item[{AR\+\_\+\+THREAD\+\_\+\+INPUT\+\_\+\+FN}]{ }\end{DoxyParamCaption})}
+
+
+
+Input thread function. 
+
+Runs when the virtual console is started, should contain an infinite loop (it will stop automatically when the user closes the window), while the developer is free to use this thread as he likes (even to create more threads) it is recommended to use this thread for input handling \begin{DoxyWarning}{Warning}
+SDL should NOT be used to handle input by the developer, only access to retro library helpers should be used this is due to the fact that SDL does not allow to poll events outside of the thread where it was initialised and doing so will crash the application. 
+\end{DoxyWarning}
+\begin{DoxyRemark}{Remarks}
+This function will loop in a loop in a thread every frame time (1000 / frame rate) (for example\+: every 16.\+6ms if the frame rate is 60) 
+
+This function NEEDS to be defined for the Access to Retro library. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{threads_8cpp_ad90fc1a6d053b126ba8b5ac417ad2a22}\label{threads_8cpp_ad90fc1a6d053b126ba8b5ac417ad2a22}} 
+\index{threads.cpp@{threads.cpp}!AR\_DEFINE\_REQUIRED\_FN@{AR\_DEFINE\_REQUIRED\_FN}}
+\index{AR\_DEFINE\_REQUIRED\_FN@{AR\_DEFINE\_REQUIRED\_FN}!threads.cpp@{threads.cpp}}
+\doxysubsubsection{\texorpdfstring{AR\_DEFINE\_REQUIRED\_FN()}{AR\_DEFINE\_REQUIRED\_FN()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily AR\+\_\+\+DEFINE\+\_\+\+REQUIRED\+\_\+\+FN (\begin{DoxyParamCaption}\item[{AR\+\_\+\+THREAD\+\_\+\+MAIN\+\_\+\+FN}]{ }\end{DoxyParamCaption})}
+
+
+
+Main thread function. 
+
+Runs when the virtual console is started, should contain an infinite loop (it will stop automatically when the user closes the window), while the developer is free to use this thread as he likes (even to create more threads) it is recommended to use this thread for main fetch execute decode cycle and inter-\/component communication (for ex\+: CPU \texorpdfstring{$<$}{<}-\/\texorpdfstring{$>$}{>} GPU). \begin{DoxyRemark}{Remarks}
+This function will loop in a loop in a thread every frame time (1000 / frame rate) (for example\+: every 16.\+6ms if the frame rate is 60) 
+
+This function NEEDS to be defined for the Access to Retro library. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{threads_8cpp_ac004dc6bf61e8bd56801dc5b9d1e0ba0}\label{threads_8cpp_ac004dc6bf61e8bd56801dc5b9d1e0ba0}} 
+\index{threads.cpp@{threads.cpp}!AR\_DEFINE\_REQUIRED\_FN@{AR\_DEFINE\_REQUIRED\_FN}}
+\index{AR\_DEFINE\_REQUIRED\_FN@{AR\_DEFINE\_REQUIRED\_FN}!threads.cpp@{threads.cpp}}
+\doxysubsubsection{\texorpdfstring{AR\_DEFINE\_REQUIRED\_FN()}{AR\_DEFINE\_REQUIRED\_FN()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily AR\+\_\+\+DEFINE\+\_\+\+REQUIRED\+\_\+\+FN (\begin{DoxyParamCaption}\item[{AR\+\_\+\+THREAD\+\_\+\+RENDER\+\_\+\+FN}]{ }\end{DoxyParamCaption})}
+
+
+
+Render thread function. 
+
+Runs when the virtual console is started, should contain an infinite loop (it will stop automatically when the user closes the window), while the developer is free to use this thread as he likes (even to create more threads) it is recommended to use this thread for rendering, whether that\textquotesingle{}s Open\+GL, SDL2 or direct frame buffer access. \begin{DoxyRemark}{Remarks}
+This function will loop in a loop in a thread every frame time (1000 / frame rate) (for example\+: every 16.\+6ms if the frame rate is 60) 
+
+This function NEEDS to be defined for the Access to Retro library. 
+\end{DoxyRemark}

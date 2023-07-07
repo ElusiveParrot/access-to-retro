@@ -1,0 +1,67 @@
+\hypertarget{basics_8h_source}{}\doxysection{basics.\+h}
+\label{basics_8h_source}\index{/Users/daniel/Developer/access-\/to-\/retro/access-\/to-\/retro/developer-\/library/include/access-\/to-\/retro-\/dev/basics.h@{/Users/daniel/Developer/access-\/to-\/retro/access-\/to-\/retro/developer-\/library/include/access-\/to-\/retro-\/dev/basics.h}}
+\mbox{\hyperlink{basics_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#ifndef\ ACCESS\_TO\_RETRO\_BASICS\_H}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#define\ ACCESS\_TO\_RETRO\_BASICS\_H}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#ifdef\ \_WIN32\ }\textcolor{comment}{//\ Windows\ version}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#define\ AR\_API\ extern\ "{}C"{}}\ \_\_declspec(dllexport)}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#else\ }\textcolor{comment}{//\ POSIX\ version}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#define\ AR\_API\ extern\ "{}C"{}}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#ifdef\ \_WIN32\ }\textcolor{comment}{//\ Windows\ version}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#define\ AR\_API\ \_\_declspec(dllexport)}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#else\ }\textcolor{comment}{//\ POSIX\ version}}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#define\ AR\_API}}
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00038\ \textcolor{keyword}{typedef}\ uint32\_t\ \mbox{\hyperlink{group__group__basics_ga333c0eb2dc10838b242ce5d838eba3c3}{ar\_err\_code}};}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00041\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structar__version}{ar\_version}}}
+\DoxyCodeLine{00042\ \{}
+\DoxyCodeLine{00047\ \ \ \ \ uint16\_t\ \mbox{\hyperlink{structar__version_a8cee405c3ce82184fb9f6322feb084c7}{major}};}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00053\ \ \ \ \ uint16\_t\ \mbox{\hyperlink{structar__version_a462476a6b2185bff7ee74560cbbfe42c}{minor}};}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00059\ \ \ \ \ uint16\_t\ \mbox{\hyperlink{structar__version_a7f42d5b43322261c184433be085fa6c2}{patch}};}
+\DoxyCodeLine{00060\ \};}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00076\ AR\_API\ \textcolor{keywordtype}{void}}
+\DoxyCodeLine{00077\ \mbox{\hyperlink{group__group__basics_ga44ba3e3829789910eab8b6bffeeb0208}{ar\_define}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ name,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ system,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ author,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ rom\_ext,\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{structar__version}{ar\_version}}\ version,}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ frame\_rate,\ \textcolor{keywordtype}{unsigned}\ default\_window\_width,\ \textcolor{keywordtype}{unsigned}\ default\_window\_height);}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00086\ AR\_API\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__group__basics_ga7f7ce12c87d0f083b3ba693122770911}{ar\_init}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00093\ AR\_API\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__group__basics_ga35705e8e5a2b49efdd16a33ade7a05c2}{ar\_quit}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00099\ AR\_API\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structar__version}{ar\_version}}\ \mbox{\hyperlink{group__group__basics_ga6faafdc0e5158554279e99b88d3bda8c}{ar\_get\_version}}(void);}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00105\ AR\_API\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{group__group__basics_ga785e53cb6c1008de56cfd0b58ffa1995}{ar\_get\_vc\_rom\_ext}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00111\ AR\_API\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{group__group__basics_gabf0c1ab2203e27629361222d2c5e08e9}{ar\_get\_vc\_name}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00117\ AR\_API\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{group__group__basics_gae50a3729e62970deb886f2ecde31bbc4}{ar\_get\_vc\_system}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00123\ AR\_API\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{group__group__basics_ga81322b27fe481914345061cafa548552}{ar\_get\_vc\_author}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00129\ AR\_API\ \textcolor{keywordtype}{unsigned}\ \mbox{\hyperlink{group__group__basics_ga032fce4e7c61ce9dd87530614cb7c742}{ar\_get\_vc\_frame\_rate}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00135\ AR\_API\ \textcolor{keywordtype}{unsigned}\ \mbox{\hyperlink{group__group__basics_ga858f65cd859260c7809fe4a37afd6665}{ar\_get\_vc\_default\_window\_res\_x}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00136\ }
+\DoxyCodeLine{00141\ AR\_API\ \textcolor{keywordtype}{unsigned}\ \mbox{\hyperlink{group__group__basics_gae86c4a8890a897ffa41f80e1b0956a57}{ar\_get\_vc\_default\_window\_res\_y}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00142\ }
+\DoxyCodeLine{00143\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00144\ \ \textcolor{comment}{//\ end\ of\ group}}
+
+\end{DoxyCode}

@@ -1,0 +1,22 @@
+\hypertarget{definitions_8h}{}\doxysection{/\+Users/daniel/\+Developer/access-\/to-\/retro/access-\/to-\/retro/unit-\/testing-\/library/include/definitions.h File Reference}
+\label{definitions_8h}\index{/Users/daniel/Developer/access-\/to-\/retro/access-\/to-\/retro/unit-\/testing-\/library/include/definitions.h@{/Users/daniel/Developer/access-\/to-\/retro/access-\/to-\/retro/unit-\/testing-\/library/include/definitions.h}}
+{\ttfamily \#include $<$string.\+h$>$}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group__group__definitions_ga0f10a9dc6caa4e38f6cb8620b9455bde}{DEFINE\+\_\+\+TEST}}(FN\+\_\+\+NAME)~int FN\+\_\+\+NAME(void)
+\begin{DoxyCompactList}\small\item\em Define a test. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__group__definitions_gaf2039ccadb0a9443f8e6134f7326aa61}{COMPLETE\+\_\+\+TEST}}(CODE)~return CODE;
+\begin{DoxyCompactList}\small\item\em To be used when the test is finished (either success or failure) \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__group__definitions_ga5dd66fe6bc5d9d8521929591f7d6290f}{ERROR}}(CODE)~(CODE == 0 ? -\/2 \+: CODE)
+\begin{DoxyCompactList}\small\item\em Indicates an error, to be used in COMPLETE\+\_\+\+TEST macro. \end{DoxyCompactList}\item 
+\#define {\bfseries SUCCESS}~0
+\begin{DoxyCompactList}\small\item\em Indicated no error happened, to be used in COMPLETE\+\_\+\+TEST macro. \end{DoxyCompactList}\item 
+\#define {\bfseries DEFINE\+\_\+\+TESTING\+\_\+\+ENTRY\+\_\+\+POINT}~int main(int argc, char$\ast$$\ast$ argv)
+\begin{DoxyCompactList}\small\item\em Used to define entry point of test driver, to be used instead of main function. \end{DoxyCompactList}\item 
+\#define {\bfseries START\+\_\+\+TESTING}~(void)argc;
+\begin{DoxyCompactList}\small\item\em To be used at the beginning of \textquotesingle{}DEFINE\+\_\+\+STARTING\+\_\+\+ENTRY\+\_\+\+POINT\textquotesingle{}. \end{DoxyCompactList}\item 
+\#define {\bfseries END\+\_\+\+TESTING}~return -\/1;
+\begin{DoxyCompactList}\small\item\em To be used at the end of \textquotesingle{}DEFINE\+\_\+\+STARTING\+\_\+\+ENTRY\+\_\+\+POINT\textquotesingle{}. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__group__definitions_ga39815d2a693f81a462f0b9d9eabcbcc5}{DEFINE\+\_\+\+TEST\+\_\+\+FN}}(TEST\+\_\+\+FN\+\_\+\+NAME)
+\begin{DoxyCompactList}\small\item\em Connect testing function with a name used in CMake\+Lists.\+txt. \end{DoxyCompactList}\end{DoxyCompactItemize}

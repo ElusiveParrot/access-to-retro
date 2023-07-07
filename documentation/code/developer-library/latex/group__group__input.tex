@@ -1,0 +1,132 @@
+\hypertarget{group__group__input}{}\doxysection{Input}
+\label{group__group__input}\index{Input@{Input}}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__group__input_ga0fa102210f5b907202dbcde072fc0c65}\label{group__group__input_ga0fa102210f5b907202dbcde072fc0c65}} 
+\#define {\bfseries AR\+\_\+\+UNIFIED\+\_\+\+CONTROLLER\+\_\+\+KEY\+\_\+\+COUNT}~24
+\begin{DoxyCompactList}\small\item\em Represents number of keys of Unified Access to Retro Controller. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__group__input_ga50abbf588ac6e22172cfffa41dfb030e}\label{group__group__input_ga50abbf588ac6e22172cfffa41dfb030e}} 
+enum \mbox{\hyperlink{group__group__input_ga50abbf588ac6e22172cfffa41dfb030e}{ar\+\_\+unified\+\_\+controller\+\_\+key}} \{ \newline
+{\bfseries ar\+\_\+unified\+\_\+controller\+\_\+left\+\_\+analog\+\_\+click}
+, {\bfseries ar\+\_\+unified\+\_\+controller\+\_\+left\+\_\+analog\+\_\+up}
+, {\bfseries ar\+\_\+unified\+\_\+controller\+\_\+left\+\_\+analog\+\_\+left}
+, {\bfseries ar\+\_\+unified\+\_\+controller\+\_\+left\+\_\+analog\+\_\+right}
+, \newline
+{\bfseries ar\+\_\+unified\+\_\+controller\+\_\+left\+\_\+analog\+\_\+down}
+, {\bfseries ar\+\_\+unified\+\_\+controller\+\_\+right\+\_\+analog\+\_\+click}
+, {\bfseries ar\+\_\+unified\+\_\+controller\+\_\+right\+\_\+analog\+\_\+up}
+, {\bfseries ar\+\_\+unified\+\_\+controller\+\_\+right\+\_\+analog\+\_\+left}
+, \newline
+{\bfseries ar\+\_\+unified\+\_\+controller\+\_\+right\+\_\+analog\+\_\+right}
+, {\bfseries ar\+\_\+unified\+\_\+controller\+\_\+right\+\_\+analog\+\_\+down}
+, {\bfseries ar\+\_\+unified\+\_\+controller\+\_\+dpad\+\_\+up}
+, {\bfseries ar\+\_\+unified\+\_\+controller\+\_\+dpad\+\_\+left}
+, \newline
+{\bfseries ar\+\_\+unified\+\_\+controller\+\_\+dpad\+\_\+right}
+, {\bfseries ar\+\_\+unified\+\_\+controller\+\_\+dpad\+\_\+down}
+, {\bfseries ar\+\_\+unified\+\_\+controller\+\_\+x}
+, {\bfseries ar\+\_\+unified\+\_\+controller\+\_\+y}
+, \newline
+{\bfseries ar\+\_\+unified\+\_\+controller\+\_\+b}
+, {\bfseries ar\+\_\+unified\+\_\+controller\+\_\+a}
+, {\bfseries ar\+\_\+unified\+\_\+controller\+\_\+start}
+, {\bfseries ar\+\_\+unified\+\_\+controller\+\_\+back}
+, \newline
+{\bfseries ar\+\_\+unified\+\_\+controller\+\_\+left\+\_\+bumper}
+, {\bfseries ar\+\_\+unified\+\_\+controller\+\_\+left\+\_\+trigger}
+, {\bfseries ar\+\_\+unified\+\_\+controller\+\_\+right\+\_\+bumper}
+, {\bfseries ar\+\_\+unified\+\_\+controller\+\_\+right\+\_\+trigger}
+ \}
+\begin{DoxyCompactList}\small\item\em Enum defining every single key on Unified Access to Retro Controller. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__group__input_ga2cc36bd6e11a059c628d75bbc99cd17c}{ar\+\_\+unified\+\_\+controller\+\_\+key\+\_\+status}} \{ \mbox{\hyperlink{group__group__input_gga2cc36bd6e11a059c628d75bbc99cd17cabb0b8969640ca91839be1fa5d624f911}{ar\+\_\+key\+\_\+status\+\_\+released}}
+, \mbox{\hyperlink{group__group__input_gga2cc36bd6e11a059c628d75bbc99cd17caadab1e3e437c0ce8177689d5dcb76fb6}{ar\+\_\+key\+\_\+status\+\_\+pressed}}
+ \}
+\begin{DoxyCompactList}\small\item\em Enum defining a state that a key on Unified Access to Retro Controller can have. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+AR\+\_\+\+API void \mbox{\hyperlink{group__group__input_gaeac0de8dd15745f4c6ad2d6cc46b6238}{ar\+\_\+initialise\+\_\+input\+\_\+api}} (void)
+\begin{DoxyCompactList}\small\item\em Initialises Access to Retro input API. \end{DoxyCompactList}\item 
+AR\+\_\+\+API enum \mbox{\hyperlink{group__group__input_ga2cc36bd6e11a059c628d75bbc99cd17c}{ar\+\_\+unified\+\_\+controller\+\_\+key\+\_\+status}} \mbox{\hyperlink{group__group__input_ga5817bc258e4472e7fe92f4644816a0ed}{ar\+\_\+get\+\_\+unified\+\_\+controller\+\_\+key\+\_\+status}} (enum \mbox{\hyperlink{group__group__input_ga50abbf588ac6e22172cfffa41dfb030e}{ar\+\_\+unified\+\_\+controller\+\_\+key}} key)
+\begin{DoxyCompactList}\small\item\em Get status of a key on Unified Access to Retro Controller. \end{DoxyCompactList}\item 
+AR\+\_\+\+API void \mbox{\hyperlink{group__group__input_ga47a41d28a053fe213c2bf2fa2d9f094f}{ar\+\_\+set\+\_\+unified\+\_\+controller\+\_\+key\+\_\+status}} (enum \mbox{\hyperlink{group__group__input_ga50abbf588ac6e22172cfffa41dfb030e}{ar\+\_\+unified\+\_\+controller\+\_\+key}} key, enum \mbox{\hyperlink{group__group__input_ga2cc36bd6e11a059c628d75bbc99cd17c}{ar\+\_\+unified\+\_\+controller\+\_\+key\+\_\+status}} status)
+\begin{DoxyCompactList}\small\item\em Set status of key on Unified Access to Retro Controller. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Helper functions dealing with input handling 
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{group__group__input_ga2cc36bd6e11a059c628d75bbc99cd17c}\label{group__group__input_ga2cc36bd6e11a059c628d75bbc99cd17c}} 
+\index{Input@{Input}!ar\_unified\_controller\_key\_status@{ar\_unified\_controller\_key\_status}}
+\index{ar\_unified\_controller\_key\_status@{ar\_unified\_controller\_key\_status}!Input@{Input}}
+\doxysubsubsection{\texorpdfstring{ar\_unified\_controller\_key\_status}{ar\_unified\_controller\_key\_status}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__group__input_ga2cc36bd6e11a059c628d75bbc99cd17c}{ar\+\_\+unified\+\_\+controller\+\_\+key\+\_\+status}}}
+
+
+
+Enum defining a state that a key on Unified Access to Retro Controller can have. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ar\_key\_status\_released@{ar\_key\_status\_released}!Input@{Input}}\index{Input@{Input}!ar\_key\_status\_released@{ar\_key\_status\_released}}}\mbox{\Hypertarget{group__group__input_gga2cc36bd6e11a059c628d75bbc99cd17cabb0b8969640ca91839be1fa5d624f911}\label{group__group__input_gga2cc36bd6e11a059c628d75bbc99cd17cabb0b8969640ca91839be1fa5d624f911}} 
+ar\+\_\+key\+\_\+status\+\_\+released&Key is NOT pressed. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ar\_key\_status\_pressed@{ar\_key\_status\_pressed}!Input@{Input}}\index{Input@{Input}!ar\_key\_status\_pressed@{ar\_key\_status\_pressed}}}\mbox{\Hypertarget{group__group__input_gga2cc36bd6e11a059c628d75bbc99cd17caadab1e3e437c0ce8177689d5dcb76fb6}\label{group__group__input_gga2cc36bd6e11a059c628d75bbc99cd17caadab1e3e437c0ce8177689d5dcb76fb6}} 
+ar\+\_\+key\+\_\+status\+\_\+pressed&Key is pressed. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group__group__input_ga5817bc258e4472e7fe92f4644816a0ed}\label{group__group__input_ga5817bc258e4472e7fe92f4644816a0ed}} 
+\index{Input@{Input}!ar\_get\_unified\_controller\_key\_status@{ar\_get\_unified\_controller\_key\_status}}
+\index{ar\_get\_unified\_controller\_key\_status@{ar\_get\_unified\_controller\_key\_status}!Input@{Input}}
+\doxysubsubsection{\texorpdfstring{ar\_get\_unified\_controller\_key\_status()}{ar\_get\_unified\_controller\_key\_status()}}
+{\footnotesize\ttfamily AR\+\_\+\+API enum \mbox{\hyperlink{group__group__input_ga2cc36bd6e11a059c628d75bbc99cd17c}{ar\+\_\+unified\+\_\+controller\+\_\+key\+\_\+status}} ar\+\_\+get\+\_\+unified\+\_\+controller\+\_\+key\+\_\+status (\begin{DoxyParamCaption}\item[{enum \mbox{\hyperlink{group__group__input_ga50abbf588ac6e22172cfffa41dfb030e}{ar\+\_\+unified\+\_\+controller\+\_\+key}}}]{key }\end{DoxyParamCaption})}
+
+
+
+Get status of a key on Unified Access to Retro Controller. 
+
+\begin{DoxyReturn}{Returns}
+Status of the provided key 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__group__input_gaeac0de8dd15745f4c6ad2d6cc46b6238}\label{group__group__input_gaeac0de8dd15745f4c6ad2d6cc46b6238}} 
+\index{Input@{Input}!ar\_initialise\_input\_api@{ar\_initialise\_input\_api}}
+\index{ar\_initialise\_input\_api@{ar\_initialise\_input\_api}!Input@{Input}}
+\doxysubsubsection{\texorpdfstring{ar\_initialise\_input\_api()}{ar\_initialise\_input\_api()}}
+{\footnotesize\ttfamily AR\+\_\+\+API void ar\+\_\+initialise\+\_\+input\+\_\+api (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initialises Access to Retro input API. 
+
+\begin{DoxyRemark}{Remarks}
+Called in \textquotesingle{}ar\+\_\+init\textquotesingle{}, no need for developers to call it themselves 
+\end{DoxyRemark}
+\mbox{\Hypertarget{group__group__input_ga47a41d28a053fe213c2bf2fa2d9f094f}\label{group__group__input_ga47a41d28a053fe213c2bf2fa2d9f094f}} 
+\index{Input@{Input}!ar\_set\_unified\_controller\_key\_status@{ar\_set\_unified\_controller\_key\_status}}
+\index{ar\_set\_unified\_controller\_key\_status@{ar\_set\_unified\_controller\_key\_status}!Input@{Input}}
+\doxysubsubsection{\texorpdfstring{ar\_set\_unified\_controller\_key\_status()}{ar\_set\_unified\_controller\_key\_status()}}
+{\footnotesize\ttfamily AR\+\_\+\+API void ar\+\_\+set\+\_\+unified\+\_\+controller\+\_\+key\+\_\+status (\begin{DoxyParamCaption}\item[{enum \mbox{\hyperlink{group__group__input_ga50abbf588ac6e22172cfffa41dfb030e}{ar\+\_\+unified\+\_\+controller\+\_\+key}}}]{key,  }\item[{enum \mbox{\hyperlink{group__group__input_ga2cc36bd6e11a059c628d75bbc99cd17c}{ar\+\_\+unified\+\_\+controller\+\_\+key\+\_\+status}}}]{status }\end{DoxyParamCaption})}
+
+
+
+Set status of key on Unified Access to Retro Controller. 
+
+\begin{DoxyRemark}{Remarks}
+Used by the frontend application, shouldn\textquotesingle{}t be used by virtual console developers 
+\end{DoxyRemark}
+
+\begin{DoxyParams}{Parameters}
+{\em key} & Key that will change its status \\
+\hline
+{\em status} & Status to change to \\
+\hline
+\end{DoxyParams}

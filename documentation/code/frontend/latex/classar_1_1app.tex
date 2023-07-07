@@ -1,0 +1,84 @@
+\hypertarget{classar_1_1app}{}\doxysection{ar\+::app Class Reference}
+\label{classar_1_1app}\index{ar::app@{ar::app}}
+
+
+Application class containing entry point of the program, should be only created in main.  
+
+
+
+
+{\ttfamily \#include $<$app.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classar_1_1app_a936c8596458b6ba66a816f39b8f85e42}{app}} (int argc, char $\ast$$\ast$argv)
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classar_1_1app_a8aefd22d20efc57a515f7fd2cccfcab1}{run}} ()
+\begin{DoxyCompactList}\small\item\em Runs the application. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classar_1_1app_ab931fa6a2b99a30e68bf0bb45729e23e}\label{classar_1_1app_ab931fa6a2b99a30e68bf0bb45729e23e}} 
+QApplication {\bfseries \+\_\+qt\+\_\+application}
+\begin{DoxyCompactList}\small\item\em Qt\textquotesingle{}s main application singleton, MUST be constructed first before any other Qt\textquotesingle{}s object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classar_1_1app_ae685689d5e4051d607be92ee36fb3d71}\label{classar_1_1app_ae685689d5e4051d607be92ee36fb3d71}} 
+QPixmap {\bfseries \+\_\+splash\+\_\+pixmap}
+\begin{DoxyCompactList}\small\item\em Image (map of pixels) used for the splash screen. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classar_1_1app_ae966ef7e1c46b4e2e7a6b389fdc255d5}\label{classar_1_1app_ae966ef7e1c46b4e2e7a6b389fdc255d5}} 
+QSplash\+Screen {\bfseries \+\_\+splash}
+\begin{DoxyCompactList}\small\item\em Qt\textquotesingle{}s splash screen, shown before the main window. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classar_1_1app_a1355cc72d2346bdc18510c9671af0e9e}\label{classar_1_1app_a1355cc72d2346bdc18510c9671af0e9e}} 
+\mbox{\hyperlink{classar_1_1gui_1_1main__window}{ar\+::gui\+::main\+\_\+window}} {\bfseries \+\_\+main\+\_\+window}
+\begin{DoxyCompactList}\small\item\em Main GUI screen shown after splash. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classar_1_1app_aa9260583dc5c56aa98c59af40893a767}\label{classar_1_1app_aa9260583dc5c56aa98c59af40893a767}} 
+std\+::vector$<$ std\+::string $>$ {\bfseries \+\_\+args}
+\begin{DoxyCompactList}\small\item\em Command line arguments in vector format. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classar_1_1app_a155bddf654cb1186dab3b016cb964741}\label{classar_1_1app_a155bddf654cb1186dab3b016cb964741}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classar_1_1util_1_1settings__manager}{ar\+::util\+::settings\+\_\+manager}} $>$ {\bfseries \+\_\+settings\+\_\+manager} = nullptr
+\begin{DoxyCompactList}\small\item\em Pointer to global settings manager. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Application class containing entry point of the program, should be only created in main. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classar_1_1app_a936c8596458b6ba66a816f39b8f85e42}\label{classar_1_1app_a936c8596458b6ba66a816f39b8f85e42}} 
+\index{ar::app@{ar::app}!app@{app}}
+\index{app@{app}!ar::app@{ar::app}}
+\doxysubsubsection{\texorpdfstring{app()}{app()}}
+{\footnotesize\ttfamily ar\+::app\+::app (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+
+
+Default constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em argc} & \textquotesingle{}argc\textquotesingle{} from main function \\
+\hline
+{\em argv} & \textquotesingle{}argv\textquotesingle{} from main function \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classar_1_1app_a8aefd22d20efc57a515f7fd2cccfcab1}\label{classar_1_1app_a8aefd22d20efc57a515f7fd2cccfcab1}} 
+\index{ar::app@{ar::app}!run@{run}}
+\index{run@{run}!ar::app@{ar::app}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily int ar\+::app\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Runs the application. 
+
+\begin{DoxyReturn}{Returns}
+Status code returned by Qt. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/daniel/\+Developer/access-\/to-\/retro/access-\/to-\/retro/frontend/src/app/\mbox{\hyperlink{app_8hpp}{app.\+hpp}}\item 
+/\+Users/daniel/\+Developer/access-\/to-\/retro/access-\/to-\/retro/frontend/src/app/app.\+cpp\end{DoxyCompactItemize}

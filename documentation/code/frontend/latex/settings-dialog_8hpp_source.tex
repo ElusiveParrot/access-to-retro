@@ -1,0 +1,74 @@
+\hypertarget{settings-dialog_8hpp_source}{}\doxysection{settings-\/dialog.hpp}
+\label{settings-dialog_8hpp_source}\index{/Users/daniel/Developer/access-\/to-\/retro/access-\/to-\/retro/frontend/src/gui/windows/settings-\/dialog.hpp@{/Users/daniel/Developer/access-\/to-\/retro/access-\/to-\/retro/frontend/src/gui/windows/settings-\/dialog.hpp}}
+\mbox{\hyperlink{settings-dialog_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ AR\_GUI\_SETTINGS\_WINDOW\_H}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ AR\_GUI\_SETTINGS\_WINDOW\_H}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <QAbstractButton>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <functional>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <QDialog>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}util/settings-\/manager.hpp"{}}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ TODO\ Fix\ layouts\ margins}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacear_1_1gui}{ar::gui}}}
+\DoxyCodeLine{00016\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{namespace\ }Ui}
+\DoxyCodeLine{00018\ \ \ \ \ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{keyword}{class\ }settings\_dialog;}
+\DoxyCodeLine{00020\ \ \ \ \ \}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classar_1_1gui_1_1settings__dialog}{settings\_dialog}}\ :\ \textcolor{keyword}{public}\ QDialog}
+\DoxyCodeLine{00024\ \ \ \ \ \{}
+\DoxyCodeLine{00025\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classar_1_1gui_1_1settings__dialog}{settings\_dialog}}(QWidget*\ parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classar_1_1gui_1_1settings__dialog}{\string~settings\_dialog}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ******************\ Qt's\ Slot\ Methods\ ******************}}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keyword}{private}\ slots:}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ******************\ Developer\ Tab\ ******************}}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classar_1_1gui_1_1settings__dialog_ab5c541ba36ddd3cc290862a28e5f55e6}{on\_priority\_combo\_box\_currentTextChanged}}(\textcolor{keyword}{const}\ QString\&);}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classar_1_1gui_1_1settings__dialog_acacfb02a4ada45f1697a4feb1ff83fda}{on\_verbosity\_combo\_box\_currentTextChanged}}(\textcolor{keyword}{const}\ QString\&);}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classar_1_1gui_1_1settings__dialog_af29a158c1c1486abfee4a3b06d659b18}{on\_vc\_path\_browse\_button\_clicked}}();}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ******************\ Graphics\ Tab\ ******************}}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classar_1_1gui_1_1settings__dialog_a7e004a002599e22e3ec249e2c71d0af6}{on\_rendering\_combo\_box\_currentIndexChanged}}(\textcolor{keywordtype}{int}\ index);}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ******************\ General\ Tab\ ******************}}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classar_1_1gui_1_1settings__dialog_a2c2b7a0410a326419882537b783d9f0f}{on\_rom\_path\_browse\_button\_clicked}}();}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classar_1_1gui_1_1settings__dialog_a835c73c4d671fc1cddf596dbd575dc14}{on\_bottom\_button\_box\_clicked}}(QAbstractButton*\ clicked\_button);}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classar_1_1gui_1_1settings__dialog_a08eb477bc27b4bdeb851079f89c22d62}{on\_default\_source\_tab\_combo\_box\_currentIndexChanged}}(\textcolor{keywordtype}{int}\ index);}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classar_1_1gui_1_1settings__dialog_a50336ed8b504b4680a37b98f318f2eaf}{on\_show\_all\_systems\_checkbox\_stateChanged}}(\textcolor{keywordtype}{int}\ arg);}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ std::shared\_ptr<ar::util::settings\_manager>\ \mbox{\hyperlink{classar_1_1gui_1_1settings__dialog_ae4194cb944f1aee92e0aeb5494b2f326}{\_settings\_manager}};}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classar_1_1gui_1_1settings__dialog_a73357217e96b41bbefa9eb1b7b6b87e9}{\_ui\_created}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ Ui::settings\_dialog*\ \mbox{\hyperlink{classar_1_1gui_1_1settings__dialog_a1cc1f651c30a98d4eab0c3f0fcf9d4ad}{ui}};}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ******************\ Ui\ Populating\ Methods\ ******************}}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classar_1_1gui_1_1settings__dialog_af47ecfe701f30d52112f2bb9fc935f5c}{populate\_combo\_boxes}}();}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classar_1_1gui_1_1settings__dialog_a26b0543e7e3f1351b81be34851136b18}{populate\_paths}}();}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classar_1_1gui_1_1settings__dialog_aea3125632278a4fbf6c8fc76984d6cd2}{populate\_checkboxes}}();}
+\DoxyCodeLine{00087\ \ \ \ \ \};}
+\DoxyCodeLine{00088\ \}}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ AR\_GUI\_SETTINGS\_WINDOW\_H}}
+
+\end{DoxyCode}

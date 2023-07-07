@@ -1,0 +1,38 @@
+\hypertarget{basics_8h}{}\doxysection{/\+Users/daniel/\+Developer/access-\/to-\/retro/access-\/to-\/retro/developer-\/library/include/access-\/to-\/retro-\/dev/basics.h File Reference}
+\label{basics_8h}\index{/Users/daniel/Developer/access-\/to-\/retro/access-\/to-\/retro/developer-\/library/include/access-\/to-\/retro-\/dev/basics.h@{/Users/daniel/Developer/access-\/to-\/retro/access-\/to-\/retro/developer-\/library/include/access-\/to-\/retro-\/dev/basics.h}}
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structar__version}{ar\+\_\+version}}
+\begin{DoxyCompactList}\small\item\em Struct representing versioning system used by Access Retro. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef uint32\+\_\+t {\bfseries ar\+\_\+err\+\_\+code}
+\begin{DoxyCompactList}\small\item\em Type representing error code in Access Retro library. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+AR\+\_\+\+API void \mbox{\hyperlink{group__group__basics_ga44ba3e3829789910eab8b6bffeeb0208}{ar\+\_\+define}} (const char $\ast$name, const char $\ast$system, const char $\ast$author, const char $\ast$rom\+\_\+ext, struct \mbox{\hyperlink{structar__version}{ar\+\_\+version}} version, unsigned frame\+\_\+rate, unsigned default\+\_\+window\+\_\+width, unsigned default\+\_\+window\+\_\+height)
+\begin{DoxyCompactList}\small\item\em Define the virtual console for Access to Retro library. \end{DoxyCompactList}\item 
+AR\+\_\+\+API void \mbox{\hyperlink{group__group__basics_ga7f7ce12c87d0f083b3ba693122770911}{ar\+\_\+init}} (void)
+\begin{DoxyCompactList}\small\item\em Initialise Access Retro dev library. \end{DoxyCompactList}\item 
+AR\+\_\+\+API void \mbox{\hyperlink{group__group__basics_ga35705e8e5a2b49efdd16a33ade7a05c2}{ar\+\_\+quit}} (void)
+\begin{DoxyCompactList}\small\item\em Clean up everything related to Access Retro library. \end{DoxyCompactList}\item 
+AR\+\_\+\+API struct \mbox{\hyperlink{structar__version}{ar\+\_\+version}} \mbox{\hyperlink{group__group__basics_ga6faafdc0e5158554279e99b88d3bda8c}{ar\+\_\+get\+\_\+version}} (void)
+\begin{DoxyCompactList}\small\item\em Get the version of the Access to Retro library itself. \end{DoxyCompactList}\item 
+AR\+\_\+\+API const char $\ast$ \mbox{\hyperlink{group__group__basics_ga785e53cb6c1008de56cfd0b58ffa1995}{ar\+\_\+get\+\_\+vc\+\_\+rom\+\_\+ext}} (void)
+\begin{DoxyCompactList}\small\item\em Get the virtual console\textquotesingle{}s ROM\textquotesingle{}s extension. \end{DoxyCompactList}\item 
+AR\+\_\+\+API const char $\ast$ \mbox{\hyperlink{group__group__basics_gabf0c1ab2203e27629361222d2c5e08e9}{ar\+\_\+get\+\_\+vc\+\_\+name}} (void)
+\begin{DoxyCompactList}\small\item\em Get the virtual console\textquotesingle{}s name. \end{DoxyCompactList}\item 
+AR\+\_\+\+API const char $\ast$ \mbox{\hyperlink{group__group__basics_gae50a3729e62970deb886f2ecde31bbc4}{ar\+\_\+get\+\_\+vc\+\_\+system}} (void)
+\begin{DoxyCompactList}\small\item\em Get the virtual console\textquotesingle{}s system name. \end{DoxyCompactList}\item 
+AR\+\_\+\+API const char $\ast$ \mbox{\hyperlink{group__group__basics_ga81322b27fe481914345061cafa548552}{ar\+\_\+get\+\_\+vc\+\_\+author}} (void)
+\begin{DoxyCompactList}\small\item\em Get the virtual console\textquotesingle{}s author name. \end{DoxyCompactList}\item 
+AR\+\_\+\+API unsigned \mbox{\hyperlink{group__group__basics_ga032fce4e7c61ce9dd87530614cb7c742}{ar\+\_\+get\+\_\+vc\+\_\+frame\+\_\+rate}} (void)
+\begin{DoxyCompactList}\small\item\em Get the virtual console\textquotesingle{}s frame rate. \end{DoxyCompactList}\item 
+AR\+\_\+\+API unsigned \mbox{\hyperlink{group__group__basics_ga858f65cd859260c7809fe4a37afd6665}{ar\+\_\+get\+\_\+vc\+\_\+default\+\_\+window\+\_\+res\+\_\+x}} (void)
+\begin{DoxyCompactList}\small\item\em Get the virtual console\textquotesingle{}s default window width. \end{DoxyCompactList}\item 
+AR\+\_\+\+API unsigned \mbox{\hyperlink{group__group__basics_gae86c4a8890a897ffa41f80e1b0956a57}{ar\+\_\+get\+\_\+vc\+\_\+default\+\_\+window\+\_\+res\+\_\+y}} (void)
+\begin{DoxyCompactList}\small\item\em Get the virtual console\textquotesingle{}s default window height. \end{DoxyCompactList}\end{DoxyCompactItemize}

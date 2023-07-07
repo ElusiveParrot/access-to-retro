@@ -1,0 +1,80 @@
+\hypertarget{classar_1_1core_1_1virtual__console__error}{}\doxysection{ar\+::core\+::virtual\+\_\+console\+\_\+error Class Reference}
+\label{classar_1_1core_1_1virtual__console__error}\index{ar::core::virtual\_console\_error@{ar::core::virtual\_console\_error}}
+
+
+Exception used by \mbox{\hyperlink{classar_1_1core_1_1virtual__console}{virtual\+\_\+console}} class.  
+
+
+
+
+{\ttfamily \#include $<$virtual-\/console.\+hpp$>$}
+
+Inheritance diagram for ar\+::core\+::virtual\+\_\+console\+\_\+error\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classar_1_1core_1_1virtual__console__error}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classar_1_1core_1_1virtual__console__error_acd1a3acdd863014fcd938f3af872e8eb}\label{classar_1_1core_1_1virtual__console__error_acd1a3acdd863014fcd938f3af872e8eb}} 
+{\bfseries virtual\+\_\+console\+\_\+error} (std\+::string virtual\+\_\+console\+\_\+name, std\+::string error)
+\item 
+\mbox{\Hypertarget{classar_1_1core_1_1virtual__console__error_a5c4253f9e95b7c93487298d564431fd4}\label{classar_1_1core_1_1virtual__console__error_a5c4253f9e95b7c93487298d564431fd4}} 
+std\+::string {\bfseries get\+\_\+vc\+\_\+name} () const
+\item 
+\mbox{\Hypertarget{classar_1_1core_1_1virtual__console__error_acfe0b59ffda714200754742cf54b16ec}\label{classar_1_1core_1_1virtual__console__error_acfe0b59ffda714200754742cf54b16ec}} 
+std\+::string {\bfseries get\+\_\+error} () const
+\item 
+std\+::string \mbox{\hyperlink{classar_1_1core_1_1virtual__console__error_ad15b8a4185a4a2a4aa6d8de28c31cb29}{get\+\_\+logger\+\_\+formatted\+\_\+error}} () const override
+\begin{DoxyCompactList}\small\item\em Creates a logger-\/friendly error message. Logger should use it by itself, there should be no need to call it directly. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions inherited from \mbox{\hyperlink{classar_1_1base__exception}{ar\+::base\+\_\+exception}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classar_1_1base__exception_a45877a799953cc97dc97ee016a2dabef}\label{classar_1_1base__exception_a45877a799953cc97dc97ee016a2dabef}} 
+{\bfseries base\+\_\+exception} (std\+::string module)
+\item 
+\mbox{\Hypertarget{classar_1_1base__exception_abce3be222ae6e112f07f19796d8671bb}\label{classar_1_1base__exception_abce3be222ae6e112f07f19796d8671bb}} 
+std\+::string {\bfseries get\+\_\+module} () const
+\item 
+virtual std\+::string \mbox{\hyperlink{classar_1_1base__exception_ae87a0e5eb71fb18d4a49796187f1c80e}{get\+\_\+logger\+\_\+formatted\+\_\+error}} () const =0
+\begin{DoxyCompactList}\small\item\em Creates a logger-\/friendly error message. Logger should use it by itself, there should be no need to call it directly. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classar_1_1core_1_1virtual__console__error_a6d040a1eee2a7cb33ed77f656a77a67c}\label{classar_1_1core_1_1virtual__console__error_a6d040a1eee2a7cb33ed77f656a77a67c}} 
+const std\+::string {\bfseries \+\_\+virtual\+\_\+console\+\_\+name}
+\item 
+\mbox{\Hypertarget{classar_1_1core_1_1virtual__console__error_a99cab57af63c845d1c3c042fa863c62e}\label{classar_1_1core_1_1virtual__console__error_a99cab57af63c845d1c3c042fa863c62e}} 
+const std\+::string {\bfseries \+\_\+error}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Exception used by \mbox{\hyperlink{classar_1_1core_1_1virtual__console}{virtual\+\_\+console}} class. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classar_1_1core_1_1virtual__console__error_ad15b8a4185a4a2a4aa6d8de28c31cb29}\label{classar_1_1core_1_1virtual__console__error_ad15b8a4185a4a2a4aa6d8de28c31cb29}} 
+\index{ar::core::virtual\_console\_error@{ar::core::virtual\_console\_error}!get\_logger\_formatted\_error@{get\_logger\_formatted\_error}}
+\index{get\_logger\_formatted\_error@{get\_logger\_formatted\_error}!ar::core::virtual\_console\_error@{ar::core::virtual\_console\_error}}
+\doxysubsubsection{\texorpdfstring{get\_logger\_formatted\_error()}{get\_logger\_formatted\_error()}}
+{\footnotesize\ttfamily std\+::string ar\+::core\+::virtual\+\_\+console\+\_\+error\+::get\+\_\+logger\+\_\+formatted\+\_\+error (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Creates a logger-\/friendly error message. Logger should use it by itself, there should be no need to call it directly. 
+
+\begin{DoxyReturn}{Returns}
+formatted error message 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classar_1_1base__exception_ae87a0e5eb71fb18d4a49796187f1c80e}{ar\+::base\+\_\+exception}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/daniel/\+Developer/access-\/to-\/retro/access-\/to-\/retro/frontend/src/core/\mbox{\hyperlink{virtual-console_8hpp}{virtual-\/console.\+hpp}}\item 
+/\+Users/daniel/\+Developer/access-\/to-\/retro/access-\/to-\/retro/frontend/src/core/virtual-\/console.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,131 @@
+\hypertarget{classar_1_1chip8_1_1gpu}{}\doxysection{ar\+::chip8\+::gpu Class Reference}
+\label{classar_1_1chip8_1_1gpu}\index{ar::chip8::gpu@{ar::chip8::gpu}}
+
+
+Class representing CHIP8\textquotesingle{}s GPU emulator.  
+
+
+
+
+{\ttfamily \#include $<$gpu.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classar_1_1chip8_1_1gpu_a22059f6acb7e0517f98746544c833834}{gpu}} (\mbox{\hyperlink{classar_1_1chip8_1_1ram__memory}{ar\+::chip8\+::ram\+\_\+memory}} \&ram\+\_\+link)
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classar_1_1chip8_1_1gpu_a402d42f9312672d7e26e1c253a6083c4}\label{classar_1_1chip8_1_1gpu_a402d42f9312672d7e26e1c253a6083c4}} 
+void {\bfseries render} ()
+\begin{DoxyCompactList}\small\item\em Render internal GPU state to the screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classar_1_1chip8_1_1gpu_a8877cb0affff58b91d9f17394c25d646}{set\+\_\+draw\+\_\+flag}} (bool new\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Setter for draw flag. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classar_1_1chip8_1_1gpu_a08af2727afb2da3140a845c527d1e41e}{get\+\_\+draw\+\_\+flag}} () const
+\begin{DoxyCompactList}\small\item\em Getter for draw flag. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classar_1_1chip8_1_1gpu_ab26b7a4b659abc8adbce1914d4826226}\label{classar_1_1chip8_1_1gpu_ab26b7a4b659abc8adbce1914d4826226}} 
+void {\bfseries clear\+\_\+screen} ()
+\begin{DoxyCompactList}\small\item\em Clear the screen and set draw flag so that the screen updates to empty. \end{DoxyCompactList}\item 
+ar\+\_\+byte \mbox{\hyperlink{classar_1_1chip8_1_1gpu_a22185cac66ac77c6eb6f1ec202cf835c}{draw}} (ar\+\_\+byte x, ar\+\_\+byte y, ar\+\_\+byte height, uint16\+\_\+t register\+\_\+i\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Draw a sprite on the screen. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classar_1_1chip8_1_1gpu_add8bb4d2e47fdecc47a18a7a37f242ad}\label{classar_1_1chip8_1_1gpu_add8bb4d2e47fdecc47a18a7a37f242ad}} 
+void {\bfseries update\+\_\+texture\+\_\+with\+\_\+frame\+\_\+buffer} ()
+\begin{DoxyCompactList}\small\item\em Updates frame buffer texture with frame buffer pixels. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classar_1_1chip8_1_1gpu_a8711f1ba351c8e5e93175cc11d376604}\label{classar_1_1chip8_1_1gpu_a8711f1ba351c8e5e93175cc11d376604}} 
+\mbox{\hyperlink{classar_1_1chip8_1_1ram__memory}{ar\+::chip8\+::ram\+\_\+memory}} \& {\bfseries \+\_\+ram\+\_\+link}
+\begin{DoxyCompactList}\small\item\em Reference to RAM so that CPU can access it. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classar_1_1chip8_1_1gpu_a5345c0e744a92146200b8c3cdc8fdf45}\label{classar_1_1chip8_1_1gpu_a5345c0e744a92146200b8c3cdc8fdf45}} 
+\mbox{\hyperlink{classar_1_1chip8_1_1frame__buffer}{ar\+::chip8\+::frame\+\_\+buffer}} {\bfseries \+\_\+frame\+\_\+buffer} \{\}
+\begin{DoxyCompactList}\small\item\em CHIP8\textquotesingle{}s screen frame buffer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classar_1_1chip8_1_1gpu_aa65743fdbe6da2d8da8f8953889fc37b}\label{classar_1_1chip8_1_1gpu_aa65743fdbe6da2d8da8f8953889fc37b}} 
+bool {\bfseries \+\_\+draw\+\_\+flag} = false
+\begin{DoxyCompactList}\small\item\em Indicates whether next GPU tick should render to the screen. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classar_1_1chip8_1_1gpu_ab6844c444c8911587fc79318cb37cfa1}\label{classar_1_1chip8_1_1gpu_ab6844c444c8911587fc79318cb37cfa1}} 
+SDL\+\_\+\+Texture $\ast$ {\bfseries \+\_\+frame\+\_\+buffer\+\_\+texture} = nullptr
+\begin{DoxyCompactList}\small\item\em SDL\textquotesingle{}s texture object to render framebuffer to. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class representing CHIP8\textquotesingle{}s GPU emulator. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classar_1_1chip8_1_1gpu_a22059f6acb7e0517f98746544c833834}\label{classar_1_1chip8_1_1gpu_a22059f6acb7e0517f98746544c833834}} 
+\index{ar::chip8::gpu@{ar::chip8::gpu}!gpu@{gpu}}
+\index{gpu@{gpu}!ar::chip8::gpu@{ar::chip8::gpu}}
+\doxysubsubsection{\texorpdfstring{gpu()}{gpu()}}
+{\footnotesize\ttfamily ar\+::chip8\+::gpu\+::gpu (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classar_1_1chip8_1_1ram__memory}{ar\+::chip8\+::ram\+\_\+memory}} \&}]{ram\+\_\+link }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Default constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ram\+\_\+link} & Link to the RAM memory \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classar_1_1chip8_1_1gpu_a22185cac66ac77c6eb6f1ec202cf835c}\label{classar_1_1chip8_1_1gpu_a22185cac66ac77c6eb6f1ec202cf835c}} 
+\index{ar::chip8::gpu@{ar::chip8::gpu}!draw@{draw}}
+\index{draw@{draw}!ar::chip8::gpu@{ar::chip8::gpu}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily ar\+\_\+byte ar\+::chip8\+::gpu\+::draw (\begin{DoxyParamCaption}\item[{ar\+\_\+byte}]{x,  }\item[{ar\+\_\+byte}]{y,  }\item[{ar\+\_\+byte}]{height,  }\item[{uint16\+\_\+t}]{register\+\_\+i\+\_\+value }\end{DoxyParamCaption})}
+
+
+
+Draw a sprite on the screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & X coordinate where the sprite should be drawn \\
+\hline
+{\em y} & Y coordinate where the sprite should be drawn \\
+\hline
+{\em height} & Height of the sprite \\
+\hline
+{\em register\+\_\+i\+\_\+value} & Value of special register I \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value to which general register 0xF (VF) should be set 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classar_1_1chip8_1_1gpu_a08af2727afb2da3140a845c527d1e41e}\label{classar_1_1chip8_1_1gpu_a08af2727afb2da3140a845c527d1e41e}} 
+\index{ar::chip8::gpu@{ar::chip8::gpu}!get\_draw\_flag@{get\_draw\_flag}}
+\index{get\_draw\_flag@{get\_draw\_flag}!ar::chip8::gpu@{ar::chip8::gpu}}
+\doxysubsubsection{\texorpdfstring{get\_draw\_flag()}{get\_draw\_flag()}}
+{\footnotesize\ttfamily bool ar\+::chip8\+::gpu\+::get\+\_\+draw\+\_\+flag (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Getter for draw flag. 
+
+\begin{DoxyReturn}{Returns}
+Whether this GPU tick should render to the screen 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classar_1_1chip8_1_1gpu_a8877cb0affff58b91d9f17394c25d646}\label{classar_1_1chip8_1_1gpu_a8877cb0affff58b91d9f17394c25d646}} 
+\index{ar::chip8::gpu@{ar::chip8::gpu}!set\_draw\_flag@{set\_draw\_flag}}
+\index{set\_draw\_flag@{set\_draw\_flag}!ar::chip8::gpu@{ar::chip8::gpu}}
+\doxysubsubsection{\texorpdfstring{set\_draw\_flag()}{set\_draw\_flag()}}
+{\footnotesize\ttfamily void ar\+::chip8\+::gpu\+::set\+\_\+draw\+\_\+flag (\begin{DoxyParamCaption}\item[{bool}]{new\+\_\+value }\end{DoxyParamCaption})}
+
+
+
+Setter for draw flag. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+\_\+value} & Whether next GPU tick should render to the screen \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/daniel/\+Developer/access-\/to-\/retro/access-\/to-\/retro/chip8-\/virtual-\/console/src/emulator/\mbox{\hyperlink{gpu_8hpp}{gpu.\+hpp}}\item 
+/\+Users/daniel/\+Developer/access-\/to-\/retro/access-\/to-\/retro/chip8-\/virtual-\/console/src/emulator/gpu.\+cpp\end{DoxyCompactItemize}

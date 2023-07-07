@@ -1,0 +1,43 @@
+\hypertarget{frame-buffer_8hpp_source}{}\doxysection{frame-\/buffer.hpp}
+\label{frame-buffer_8hpp_source}\index{/Users/daniel/Developer/access-\/to-\/retro/access-\/to-\/retro/chip8-\/virtual-\/console/src/emulator/frame-\/buffer.hpp@{/Users/daniel/Developer/access-\/to-\/retro/access-\/to-\/retro/chip8-\/virtual-\/console/src/emulator/frame-\/buffer.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ ACCESS\_TO\_RETRO\_FRAME\_BUFFER\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ ACCESS\_TO\_RETRO\_FRAME\_BUFFER\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <access-\/to-\/retro-\/dev/access-\/to-\/retro-\/dev.h>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <cstdint>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <array>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacear_1_1chip8}{ar::chip8}}}
+\DoxyCodeLine{00009\ \{}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{constexpr}\ uint32\_t\ \mbox{\hyperlink{namespacear_1_1chip8_a5a171030855012327408b0f2ee4fe215}{SCREEN\_RESOLUTION\_X}}\ =\ 64;}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{constexpr}\ uint32\_t\ \mbox{\hyperlink{namespacear_1_1chip8_a71327359eb492598dbe9baf75c856b08}{SCREEN\_RESOLUTION\_Y}}\ =\ 32;}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{constexpr}\ ar\_byte\ \mbox{\hyperlink{namespacear_1_1chip8_a8a495f3e8d1b8a60643de4e833d5ba88}{PIXEL\_TURNED\_OFF\_CHANNEL\_VALUE}}\ =\ 0x00;}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{constexpr}\ ar\_byte\ \mbox{\hyperlink{namespacear_1_1chip8_ab4f7ef7f94a47166d3eae55d17337b04}{PIXEL\_TURNED\_ON\_CHANNEL\_VALUE}}\ =\ 0xFF;}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classar_1_1chip8_1_1frame__buffer}{frame\_buffer}}}
+\DoxyCodeLine{00024\ \ \ \ \ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classar_1_1chip8_1_1frame__buffer}{frame\_buffer}}();}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classar_1_1chip8_1_1frame__buffer_a23c96dc333d177d10896815452b7d150}{flip\_pixel\_channels}}(\textcolor{keywordtype}{unsigned}\ x,\ \textcolor{keywordtype}{unsigned}\ y);}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classar_1_1chip8_1_1frame__buffer_a79257d8fabcfd94409e45d57b700e417}{clear}}();}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ [[nodiscard]]\ std::array<ar\_pixel,\ ar::chip8::SCREEN\_RESOLUTION\_X\ *\ ar::chip8::SCREEN\_RESOLUTION\_Y>\&}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classar_1_1chip8_1_1frame__buffer_a8e1c0c75e1ad5c503af5bbc112faec05}{get\_pixels}}();}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ ar\_pixel\&\ \mbox{\hyperlink{classar_1_1chip8_1_1frame__buffer_ae8263d64e18202db027affadb8107495}{get\_pixel\_at}}(\textcolor{keywordtype}{unsigned}\ x,\ \textcolor{keywordtype}{unsigned}\ y);}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ std::array<ar\_pixel,\ ar::chip8::SCREEN\_RESOLUTION\_X\ *\ ar::chip8::SCREEN\_RESOLUTION\_Y>\ \mbox{\hyperlink{classar_1_1chip8_1_1frame__buffer_a1124e7f6b86625411531ce9b088ae151}{\_raw\_pixels}}\ \{\};}
+\DoxyCodeLine{00056\ \ \ \ \ \};}
+\DoxyCodeLine{00057\ \}}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//ACCESS\_TO\_RETRO\_FRAME\_BUFFER\_HPP}}
+
+\end{DoxyCode}

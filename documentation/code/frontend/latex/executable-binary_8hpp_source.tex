@@ -1,0 +1,51 @@
+\hypertarget{executable-binary_8hpp_source}{}\doxysection{executable-\/binary.hpp}
+\label{executable-binary_8hpp_source}\index{/Users/daniel/Developer/access-\/to-\/retro/access-\/to-\/retro/frontend/src/core/executable-\/binary.hpp@{/Users/daniel/Developer/access-\/to-\/retro/access-\/to-\/retro/frontend/src/core/executable-\/binary.hpp}}
+\mbox{\hyperlink{executable-binary_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ ACCESS\_TO\_RETRO\_EXECUTABLE\_BINARY\_HPP}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ ACCESS\_TO\_RETRO\_EXECUTABLE\_BINARY\_HPP}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{types_8hpp}{helpers/types.hpp}}"{}}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacear_1_1core}{ar::core}}}
+\DoxyCodeLine{00013\ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classar_1_1core_1_1executable__binary}{executable\_binary}}}
+\DoxyCodeLine{00016\ \ \ \ \ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classar_1_1core_1_1executable__binary}{executable\_binary}}(std::string\ path);}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classar_1_1core_1_1executable__binary_ad921a0403b639c2f17e588932df29a2e}{load\_to\_memory}}();}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classar_1_1core_1_1executable__binary_a365c5af6f545c9ac324448fd6ef0fae5}{unload\_file}}();}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ [[nodiscard]]\ std::vector<ar::types::byte>\ \mbox{\hyperlink{classar_1_1core_1_1executable__binary_a3d79da6304676106607a6945b870c0cd}{read\_bytes}}(uint64\_t\ addr,\ std::size\_t\ size)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \mbox{\hyperlink{namespacear_1_1types_a3f1d8400536ec75a7ae56d41d2c81c07}{ar::types::byte}}\ \mbox{\hyperlink{classar_1_1core_1_1executable__binary_a873bffa1cc5d9cba4ad06222c5838b0d}{read\_byte}}(uint64\_t\ addr)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ [[nodiscard]]\ std::string\ \mbox{\hyperlink{classar_1_1core_1_1executable__binary_ad08df9b1fd492dffacb3d1e93c4d8022}{get\_path}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ [[nodiscard]]\ uint64\_t\ \mbox{\hyperlink{classar_1_1core_1_1executable__binary_ab6171678ae49ec6ba4391ed775167305}{get\_file\_size}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keyword}{const}\ \mbox{\hyperlink{namespacear_1_1types_a3f1d8400536ec75a7ae56d41d2c81c07}{ar::types::byte}}*\ \mbox{\hyperlink{classar_1_1core_1_1executable__binary_a6aacf868334ef2057dcee3c4569fe8ab}{get\_file\_raw\_bytes}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ [[nodiscard]]\ std::string\ \mbox{\hyperlink{classar_1_1core_1_1executable__binary_a5f11d759cb367b6d003522d53f87333b}{get\_file\_name}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ [[nodiscard]]\ std::string\ \mbox{\hyperlink{classar_1_1core_1_1executable__binary_a6f8fa8123d55ed4fc4da0916be24004f}{get\_file\_extension}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{classar_1_1core_1_1executable__binary_a6b386299bf262751f1ed35b18728149b}{\_path}};}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ uint64\_t\ \mbox{\hyperlink{classar_1_1core_1_1executable__binary_ab838999a4350342c4e25f2d20ace1f6f}{\_file\_size}};}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classar_1_1core_1_1executable__binary_a1038632b6f454ff3ca3fb51238628826}{\_loaded\_to\_memory}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ std::vector<ar::types::byte>\ \mbox{\hyperlink{classar_1_1core_1_1executable__binary_a910b5f75fe2fafe0561a6e08333bcd3b}{\_file\_content}};}
+\DoxyCodeLine{00101\ \ \ \ \ \};}
+\DoxyCodeLine{00102\ \}}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00104\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//ACCESS\_TO\_RETRO\_EXECUTABLE\_BINARY\_HPP}}
+
+\end{DoxyCode}

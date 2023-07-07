@@ -1,0 +1,40 @@
+\hypertarget{input-settings-dialog_8hpp_source}{}\doxysection{input-\/settings-\/dialog.hpp}
+\label{input-settings-dialog_8hpp_source}\index{/Users/daniel/Developer/access-\/to-\/retro/access-\/to-\/retro/frontend/src/gui/windows/input-\/settings-\/dialog.hpp@{/Users/daniel/Developer/access-\/to-\/retro/access-\/to-\/retro/frontend/src/gui/windows/input-\/settings-\/dialog.hpp}}
+\mbox{\hyperlink{input-settings-dialog_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ AR\_GUI\_INPUTSETTINGSDIALOG\_HPP}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ AR\_GUI\_INPUTSETTINGSDIALOG\_HPP}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <QDialog>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}util/settings-\/manager.hpp"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacear_1_1gui}{ar::gui}}}
+\DoxyCodeLine{00012\ \{}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{namespace\ }Ui}
+\DoxyCodeLine{00014\ \ \ \ \ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \textcolor{keyword}{class\ }input\_settings\_dialog;}
+\DoxyCodeLine{00016\ \ \ \ \ \}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classar_1_1gui_1_1input__settings__dialog}{input\_settings\_dialog}}\ :\ \textcolor{keyword}{public}\ QDialog}
+\DoxyCodeLine{00020\ \ \ \ \ \{}
+\DoxyCodeLine{00021\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classar_1_1gui_1_1input__settings__dialog}{input\_settings\_dialog}}(QWidget*\ parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classar_1_1gui_1_1input__settings__dialog}{\string~input\_settings\_dialog}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ std::shared\_ptr<ar::util::settings\_manager>\ \mbox{\hyperlink{classar_1_1gui_1_1input__settings__dialog_a1a53649d7893fe07d2b5367cf745f50e}{\_settings\_manager}};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ Ui::input\_settings\_dialog*\ \mbox{\hyperlink{classar_1_1gui_1_1input__settings__dialog_a00ae532d3d09feb4d03f560a4e0d8c7d}{ui}};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classar_1_1gui_1_1input__settings__dialog_afdd3332f965dd9d70956167c9bf5170a}{connect\_buttons}}();}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classar_1_1gui_1_1input__settings__dialog_ac49e2bdb5cc9a868c09db5e77feba50d}{refresh\_button\_names}}();}
+\DoxyCodeLine{00039\ \ \ \ \ \};}
+\DoxyCodeLine{00040\ \}}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ AR\_GUI\_INPUTSETTINGSDIALOG\_HPP}}
+
+\end{DoxyCode}

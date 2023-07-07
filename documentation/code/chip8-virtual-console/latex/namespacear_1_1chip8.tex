@@ -1,0 +1,134 @@
+\hypertarget{namespacear_1_1chip8}{}\doxysection{ar\+::chip8 Namespace Reference}
+\label{namespacear_1_1chip8}\index{ar::chip8@{ar::chip8}}
+
+
+Root namespace of the project.  
+
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classar_1_1chip8_1_1controller}{controller}}
+\begin{DoxyCompactList}\small\item\em Class representing CHIP8\textquotesingle{}s controller. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classar_1_1chip8_1_1cpu}{cpu}}
+\begin{DoxyCompactList}\small\item\em Class representing CHIP8\textquotesingle{}s CPU emulator. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classar_1_1chip8_1_1emulator}{emulator}}
+\begin{DoxyCompactList}\small\item\em Main emulator object. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classar_1_1chip8_1_1frame__buffer}{frame\+\_\+buffer}}
+\begin{DoxyCompactList}\small\item\em Represents a CHIP8\textquotesingle{}s internal frame buffer object. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classar_1_1chip8_1_1gpu}{gpu}}
+\begin{DoxyCompactList}\small\item\em Class representing CHIP8\textquotesingle{}s GPU emulator. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classar_1_1chip8_1_1ram__memory}{ram\+\_\+memory}}
+\begin{DoxyCompactList}\small\item\em Represents random access memory of CHIP8. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{namespacear_1_1chip8_affdd0b947dd20ed6665494dc1e4860c9}{key}} \{ \newline
+{\bfseries key\+\_\+0}
+, {\bfseries key\+\_\+1}
+, {\bfseries key\+\_\+2}
+, {\bfseries key\+\_\+3}
+, \newline
+{\bfseries key\+\_\+4}
+, {\bfseries key\+\_\+5}
+, {\bfseries key\+\_\+6}
+, {\bfseries key\+\_\+7}
+, \newline
+{\bfseries key\+\_\+8}
+, {\bfseries key\+\_\+9}
+, {\bfseries key\+\_\+a}
+, {\bfseries key\+\_\+b}
+, \newline
+{\bfseries key\+\_\+c}
+, {\bfseries key\+\_\+d}
+, {\bfseries key\+\_\+e}
+, {\bfseries key\+\_\+f}
+ \}
+\begin{DoxyCompactList}\small\item\em Represents CHIP8\textquotesingle{}s controller keys. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespacear_1_1chip8_aff75d2c793cd8067b115c3aa06dc479c}\label{namespacear_1_1chip8_aff75d2c793cd8067b115c3aa06dc479c}} 
+constexpr unsigned {\bfseries KEY\+\_\+\+COUNT} = 16
+\begin{DoxyCompactList}\small\item\em Represents the number of keys that CHIP8 controller has. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{namespacear_1_1chip8_a73205d901d0b090d6bb7d92c32b98592}\label{namespacear_1_1chip8_a73205d901d0b090d6bb7d92c32b98592}} 
+constexpr std\+::size\+\_\+t {\bfseries GENERAL\+\_\+\+REGISTER\+\_\+\+COUNT} = 16
+\begin{DoxyCompactList}\small\item\em Represents a number of general registers that CHIP8 cpu has. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{namespacear_1_1chip8_a3e16549697841eae220540b3159c06d6}\label{namespacear_1_1chip8_a3e16549697841eae220540b3159c06d6}} 
+constexpr uint32\+\_\+t {\bfseries FRAME\+\_\+\+RATE} = 60
+\begin{DoxyCompactList}\small\item\em CHIP8\textquotesingle{}s Frame rate (frames per second shown) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{namespacear_1_1chip8_a84b2ce68cf2012bcde85ea6bdca6cebc}\label{namespacear_1_1chip8_a84b2ce68cf2012bcde85ea6bdca6cebc}} 
+constexpr double {\bfseries FRAME\+\_\+\+TIME} = (1 / static\+\_\+cast$<$double$>$(\mbox{\hyperlink{namespacear_1_1chip8_a3e16549697841eae220540b3159c06d6}{FRAME\+\_\+\+RATE}})) $\ast$ 1000
+\begin{DoxyCompactList}\small\item\em CHIP8\textquotesingle{}s Frame time (time per each frame shown in milliseconds) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{namespacear_1_1chip8_add218926d95ff9a1f11490632f94e2f0}\label{namespacear_1_1chip8_add218926d95ff9a1f11490632f94e2f0}} 
+constexpr uint32\+\_\+t {\bfseries CLOCK\+\_\+\+SPEED} = 600
+\begin{DoxyCompactList}\small\item\em CHIP8\textquotesingle{}s clock speed (600 hz) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{namespacear_1_1chip8_a5a171030855012327408b0f2ee4fe215}\label{namespacear_1_1chip8_a5a171030855012327408b0f2ee4fe215}} 
+constexpr uint32\+\_\+t {\bfseries SCREEN\+\_\+\+RESOLUTION\+\_\+X} = 64
+\begin{DoxyCompactList}\small\item\em CHIP8\textquotesingle{}s screen resolution width. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{namespacear_1_1chip8_a71327359eb492598dbe9baf75c856b08}\label{namespacear_1_1chip8_a71327359eb492598dbe9baf75c856b08}} 
+constexpr uint32\+\_\+t {\bfseries SCREEN\+\_\+\+RESOLUTION\+\_\+Y} = 32
+\begin{DoxyCompactList}\small\item\em CHIP8\textquotesingle{}s screen resolution height. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{namespacear_1_1chip8_a8a495f3e8d1b8a60643de4e833d5ba88}\label{namespacear_1_1chip8_a8a495f3e8d1b8a60643de4e833d5ba88}} 
+constexpr ar\+\_\+byte {\bfseries PIXEL\+\_\+\+TURNED\+\_\+\+OFF\+\_\+\+CHANNEL\+\_\+\+VALUE} = 0x00
+\begin{DoxyCompactList}\small\item\em Value of colour channels when pixel is turned off. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{namespacear_1_1chip8_ab4f7ef7f94a47166d3eae55d17337b04}\label{namespacear_1_1chip8_ab4f7ef7f94a47166d3eae55d17337b04}} 
+constexpr ar\+\_\+byte {\bfseries PIXEL\+\_\+\+TURNED\+\_\+\+ON\+\_\+\+CHANNEL\+\_\+\+VALUE} = 0x\+FF
+\begin{DoxyCompactList}\small\item\em Value of colour channels when pixel is turned on. \end{DoxyCompactList}\item 
+constexpr std\+::array$<$ ar\+\_\+byte, 80 $>$ \mbox{\hyperlink{namespacear_1_1chip8_a795dbab39a4522c494f63a8083c2b3d7}{FONTSET}}
+\begin{DoxyCompactList}\small\item\em CHIP8\textquotesingle{}s font data, this array needs to be loaded to memory at 0x050. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{namespacear_1_1chip8_aca9fda2134e8cb5bb629b65843e0667e}\label{namespacear_1_1chip8_aca9fda2134e8cb5bb629b65843e0667e}} 
+constexpr std\+::size\+\_\+t {\bfseries RAM\+\_\+\+SIZE} = 4096
+\begin{DoxyCompactList}\small\item\em Represents the size of CHIP8 RAM -\/ 4kb. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Root namespace of the project. 
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{namespacear_1_1chip8_affdd0b947dd20ed6665494dc1e4860c9}\label{namespacear_1_1chip8_affdd0b947dd20ed6665494dc1e4860c9}} 
+\index{ar::chip8@{ar::chip8}!key@{key}}
+\index{key@{key}!ar::chip8@{ar::chip8}}
+\doxysubsubsection{\texorpdfstring{key}{key}}
+{\footnotesize\ttfamily enum class \mbox{\hyperlink{namespacear_1_1chip8_affdd0b947dd20ed6665494dc1e4860c9}{ar\+::chip8\+::key}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Represents CHIP8\textquotesingle{}s controller keys. 
+
+It looks exactly like a numpad on keyboards with an extra column (with keys numbered 0-\/F \mbox{[}hex\mbox{]}) 
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespacear_1_1chip8_a795dbab39a4522c494f63a8083c2b3d7}\label{namespacear_1_1chip8_a795dbab39a4522c494f63a8083c2b3d7}} 
+\index{ar::chip8@{ar::chip8}!FONTSET@{FONTSET}}
+\index{FONTSET@{FONTSET}!ar::chip8@{ar::chip8}}
+\doxysubsubsection{\texorpdfstring{FONTSET}{FONTSET}}
+{\footnotesize\ttfamily constexpr std\+::array$<$ar\+\_\+byte, 80$>$ ar\+::chip8\+::\+FONTSET\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0xF0,\ 0x90,\ 0x90,\ 0x90,\ 0xF0,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x20,\ 0x60,\ 0x20,\ 0x20,\ 0x70,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0xF0,\ 0x10,\ 0xF0,\ 0x80,\ 0xF0,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0xF0,\ 0x10,\ 0xF0,\ 0x10,\ 0xF0,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x90,\ 0x90,\ 0xF0,\ 0x10,\ 0x10,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0xF0,\ 0x80,\ 0xF0,\ 0x10,\ 0xF0,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0xF0,\ 0x80,\ 0xF0,\ 0x90,\ 0xF0,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0xF0,\ 0x10,\ 0x20,\ 0x40,\ 0x40,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0xF0,\ 0x90,\ 0xF0,\ 0x90,\ 0xF0,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0xF0,\ 0x90,\ 0xF0,\ 0x10,\ 0xF0,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0xF0,\ 0x90,\ 0xF0,\ 0x90,\ 0x90,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0xE0,\ 0x90,\ 0xE0,\ 0x90,\ 0xE0,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0xF0,\ 0x80,\ 0x80,\ 0x80,\ 0xF0,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0xE0,\ 0x90,\ 0x90,\ 0x90,\ 0xE0,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0xF0,\ 0x80,\ 0xF0,\ 0x80,\ 0xF0,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0xF0,\ 0x80,\ 0xF0,\ 0x80,\ 0x80,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+CHIP8\textquotesingle{}s font data, this array needs to be loaded to memory at 0x050. 
+

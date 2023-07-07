@@ -1,0 +1,82 @@
+\hypertarget{logger_8hpp_source}{}\doxysection{logger.\+hpp}
+\label{logger_8hpp_source}\index{/Users/daniel/Developer/access-\/to-\/retro/access-\/to-\/retro/frontend/src/util/logger.hpp@{/Users/daniel/Developer/access-\/to-\/retro/access-\/to-\/retro/frontend/src/util/logger.hpp}}
+\mbox{\hyperlink{logger_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ ACCESS\_TO\_RETRO\_FRONTEND\_LOGGER\_HPP}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ ACCESS\_TO\_RETRO\_FRONTEND\_LOGGER\_HPP}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <QVariant>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{base-exception_8hpp}{error/base-\/exception.hpp}}"{}}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#define\ LOG(priority,\ ar\_module,\ prefix,\ to\_log)\ ar::util::logger::log(\_\_FILE\_\_,\ \_\_func\_\_,\ \_\_LINE\_\_,\ priority,\ \(\backslash\)}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{ar\_module,\ prefix,\ to\_log)}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#define\ LOG\_EXCEPTION(ar\_module,\ ex)\ ar::util::logger::log(\_\_FILE\_\_,\ \_\_func\_\_,\ \_\_LINE\_\_,\ ar::util::logger::priority::ERROR,\ \(\backslash\)}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{ar\_module,\ ex)}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#define\ LOG\_DEBUG(ar\_module,\ message)\ \ LOG(ar::util::logger::priority::EVERYTHING\_DEV,\ ar\_module,\ "{}DEBUG"{}},\ \ \ \ \ message)}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#define\ LOG\_INFO(message)\ \ \ \ \ \ \ \ \ \ \ \ \ \ LOG(ar::util::logger::priority::EVERYTHING,\ \ \ \ \ "{}"{}},\ \ \ \ \ "{}INFO"{},\ \ \ \ \ \ message)}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#define\ LOG\_WARNING(message)\ \ \ \ \ \ \ \ \ \ \ LOG(ar::util::logger::priority::WARNING,\ \ \ \ \ \ \ \ "{}"{}},\ \ \ \ \ "{}WARNING\ "{},\ \ message)}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#define\ LOG\_ERROR(message)\ \ \ \ \ \ \ \ \ \ \ \ \ LOG(ar::util::logger::priority::APP\_ERROR,\ \ \ \ \ \ \ \ \ \ "{}"{}},\ \ \ \ \ "{}ERROR"{},\ \ \ \ \ message)}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#define\ LOG\_CRITICAL(message)\ \ \ \ \ \ \ \ \ \ LOG(ar::util::logger::priority::CRITICAL,\ \ \ \ \ \ \ "{}"{}},\ \ \ \ \ "{}CRITICAL"{},\ \ message)}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacear_1_1util}{ar::util}}}
+\DoxyCodeLine{00028\ \{}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classar_1_1util_1_1logger}{logger}}}
+\DoxyCodeLine{00031\ \ \ \ \ \{}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keyword}{enum\ class}\ \mbox{\hyperlink{classar_1_1util_1_1logger_a772f03304377db10d29fe373b93377ae}{verbosity}}}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classar_1_1util_1_1logger_a772f03304377db10d29fe373b93377aeae5564829e2f85f6a6873a9d5c4f26d09}{SIMPLE}},}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classar_1_1util_1_1logger_a772f03304377db10d29fe373b93377aeabccda64e9ab94613672c2e2b06e02dbd}{RICH}},}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classar_1_1util_1_1logger_a772f03304377db10d29fe373b93377aeadc30ec20708ef7b0f641ef78b7880a15}{DEBUG}},}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{keyword}{enum\ class}\ \mbox{\hyperlink{classar_1_1util_1_1logger_a451b072128e903c33242c17f37cbe405}{priority}}}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classar_1_1util_1_1logger_a451b072128e903c33242c17f37cbe405a2bfd1b386270ff8266fa048c6116af9b}{EVERYTHING\_DEV}},}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classar_1_1util_1_1logger_a451b072128e903c33242c17f37cbe405a56e591f0c8e18fcd60303753c16b7a43}{EVERYTHING}},}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classar_1_1util_1_1logger_a451b072128e903c33242c17f37cbe405a059e9861e0400dfbe05c98a841f3f96b}{WARNING}},}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classar_1_1util_1_1logger_a451b072128e903c33242c17f37cbe405a8aa0464f63ef85dab8ac5d4336e1c472}{APP\_ERROR}},}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classar_1_1util_1_1logger_a451b072128e903c33242c17f37cbe405a99cd1c61610c76a57cb8d10d6df6b870}{CRITICAL}},}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classar_1_1util_1_1logger_a451b072128e903c33242c17f37cbe405a8697250efc73639dd2a6e7da243ac68b}{NOTHING}},}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classar_1_1util_1_1logger_a28efcd69cda90324a2dc1f563aaa4415}{configure\_based\_on\_args}}(\textcolor{keyword}{const}\ std::vector<std::string>\&\ args);}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classar_1_1util_1_1logger_adc0f6117300ea22a543950a3635284d4}{configure\_based\_on\_settings}}();}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classar_1_1util_1_1logger_a7ce7bbd10dfafccebef522e08a898ca6}{log}}(\textcolor{keyword}{const}\ std::string\&\ file,\ \textcolor{keyword}{const}\ std::string\&\ function,\ \textcolor{keywordtype}{int}\ line,}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classar_1_1util_1_1logger_a451b072128e903c33242c17f37cbe405}{util::logger::priority}}\ \mbox{\hyperlink{classar_1_1util_1_1logger_a451b072128e903c33242c17f37cbe405}{priority}},\ \textcolor{keyword}{const}\ std::string\&\ module,\ \textcolor{keyword}{const}\ std::string\&\ prefix,}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ message);}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classar_1_1util_1_1logger_a7ce7bbd10dfafccebef522e08a898ca6}{log}}(\textcolor{keyword}{const}\ std::string\&\ file,\ \textcolor{keyword}{const}\ std::string\&\ function,\ \textcolor{keywordtype}{int}\ line,}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classar_1_1util_1_1logger_a451b072128e903c33242c17f37cbe405}{util::logger::priority}}\ \mbox{\hyperlink{classar_1_1util_1_1logger_a451b072128e903c33242c17f37cbe405}{priority}},\ \textcolor{keyword}{const}\ std::string\&\ module,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classar_1_1base__exception}{ar::base\_exception}}\&\ ex);}
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ set\_verbosity(\mbox{\hyperlink{classar_1_1util_1_1logger_a772f03304377db10d29fe373b93377ae}{util::logger::verbosity}}\ new\_verbosity);}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ set\_minimum\_priority(\mbox{\hyperlink{classar_1_1util_1_1logger_a451b072128e903c33242c17f37cbe405}{util::logger::priority}}\ new\_minimum\_priority);}
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classar_1_1util_1_1logger_a772f03304377db10d29fe373b93377ae}{util::logger::verbosity}}\ \mbox{\hyperlink{classar_1_1util_1_1logger_a73f817d9b71ff81887f40b5c9dd42355}{\_current\_verbosity}}\ =\ \mbox{\hyperlink{classar_1_1util_1_1logger_a772f03304377db10d29fe373b93377aeae5564829e2f85f6a6873a9d5c4f26d09}{util::logger::verbosity::SIMPLE}};}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classar_1_1util_1_1logger_a451b072128e903c33242c17f37cbe405}{util::logger::priority}}\ \mbox{\hyperlink{classar_1_1util_1_1logger_ad6eb9d681825d5bafd539369c72fd8ae}{\_minimum\_priority}}\ =\ \mbox{\hyperlink{classar_1_1util_1_1logger_a451b072128e903c33242c17f37cbe405a99cd1c61610c76a57cb8d10d6df6b870}{util::logger::priority::CRITICAL}};}
+\DoxyCodeLine{00127\ \ \ \ \ \};}
+\DoxyCodeLine{00128\ \}\ \textcolor{comment}{//\ util}}
+\DoxyCodeLine{00129\ }
+\DoxyCodeLine{00130\ \textcolor{comment}{//\ Declare\ some\ classes\ as\ Qt's\ meta\ types}}
+\DoxyCodeLine{00131\ Q\_DECLARE\_METATYPE(\mbox{\hyperlink{classar_1_1util_1_1logger_a451b072128e903c33242c17f37cbe405}{ar::util::logger::priority}});}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00133\ Q\_DECLARE\_METATYPE(\mbox{\hyperlink{classar_1_1util_1_1logger_a772f03304377db10d29fe373b93377ae}{ar::util::logger::verbosity}});}
+\DoxyCodeLine{00134\ }
+\DoxyCodeLine{00135\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//ACCESS\_TO\_RETRO\_FRONTEND\_LOGGER\_HPP}}
+
+\end{DoxyCode}

@@ -1,0 +1,54 @@
+\hypertarget{qt-helper_8hpp_source}{}\doxysection{qt-\/helper.hpp}
+\label{qt-helper_8hpp_source}\index{/Users/daniel/Developer/access-\/to-\/retro/access-\/to-\/retro/frontend/src/helpers/qt-\/helper.hpp@{/Users/daniel/Developer/access-\/to-\/retro/access-\/to-\/retro/frontend/src/helpers/qt-\/helper.hpp}}
+\mbox{\hyperlink{qt-helper_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ ACCESS\_TO\_RETRO\_QT\_HELPER\_HPP}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ ACCESS\_TO\_RETRO\_QT\_HELPER\_HPP}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <QSplashScreen>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <QApplication>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <QTime>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{types_8hpp}{helpers/types.hpp}}"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{time_8hpp}{util/time.hpp}}"{}}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacear_1_1helpers}{ar::helpers}}}
+\DoxyCodeLine{00016\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{comment}{//\ Exists\ for\ the\ doc\ comment\ above,\ made\ it\ this\ way\ to\ avoid\ nesting\ in\ below\ namespace}}
+\DoxyCodeLine{00018\ \}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{namespace\ }ar::helpers::qt}
+\DoxyCodeLine{00021\ \{}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{static}\ QVariant\ \mbox{\hyperlink{qt-helper_8hpp_a41371ac99510aca51b8a64c1faaee7a2}{create\_variant}}(QMetaType\ type,\ T\ value)}
+\DoxyCodeLine{00031\ \ \ \ \ \{}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ QVariant\ variant\ =\ QVariant(type);}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ variant.setValue(value);}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ variant;}
+\DoxyCodeLine{00036\ \ \ \ \ \}}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{void}\ wait\_with\_event\_processing(\mbox{\hyperlink{classar_1_1util_1_1time__duration}{ar::util::time\_duration}}\ duration);}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{void}\ execute\_splash\_screen\_event(\textcolor{keyword}{const}\ QApplication\&\ \mbox{\hyperlink{classar_1_1app}{app}},\ QSplashScreen\&\ splash,}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::function<\textcolor{keywordtype}{void}()>\&\ action,\ \textcolor{keyword}{const}\ QString\&\ waiting\_message);}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{void}\ show\_error\_message\_box(\textcolor{keyword}{const}\ QString\&\ title,\ \textcolor{keyword}{const}\ QString\&\ message,\ \textcolor{keyword}{const}\ QString\&\ detailed\_text\ =\ \textcolor{stringliteral}{"{}"{}},}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ QSize\ size\ =\ QSize(500,\ 200),\ QWidget*\ parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{namespacear_1_1types_a6d2f0724119a4b1ac175553fdf66dba6}{ar::types::c\_str}}\ \mbox{\hyperlink{qt-helper_8hpp_aeca76f68e2019ae74ede403a54d35583}{qt\_resource\_path}};}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keyword}{namespace\ }resources}
+\DoxyCodeLine{00069\ \ \ \ \ \{}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \mbox{\hyperlink{qt-helper_8hpp_aeca76f68e2019ae74ede403a54d35583}{qt\_resource\_path}}\ \mbox{\hyperlink{namespacear_1_1helpers_1_1qt_1_1resources_a7442658e3aaabec9f78755ee330a6925}{SPLASH\_SCREEN}}\ =\ \textcolor{stringliteral}{"{}:/splash.png"{}};}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \mbox{\hyperlink{qt-helper_8hpp_aeca76f68e2019ae74ede403a54d35583}{qt\_resource\_path}}\ \mbox{\hyperlink{namespacear_1_1helpers_1_1qt_1_1resources_a3d9014f4fcc263e05c2704995d0a7ee6}{GAME\_ICON}}\ =\ \textcolor{stringliteral}{"{}:/game\_icon.png"{}};}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{namespacear_1_1helpers_1_1qt_1_1resources_ad6cfcbfe70e0ed06f579b794b2cb2d5f}{check\_if\_resource\_exists}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{qt-helper_8hpp_aeca76f68e2019ae74ede403a54d35583}{qt\_resource\_path}}\&\ relative\_path\_to\_root);}
+\DoxyCodeLine{00082\ \ \ \ \ \}}
+\DoxyCodeLine{00083\ \}}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//ACCESS\_TO\_RETRO\_QT\_HELPER\_HPP}}
+
+\end{DoxyCode}

@@ -1,0 +1,65 @@
+\hypertarget{classar_1_1base__exception}{}\doxysection{ar\+::base\+\_\+exception Class Reference}
+\label{classar_1_1base__exception}\index{ar::base\_exception@{ar::base\_exception}}
+
+
+Represents the base class for all access retro exceptions in the program.  
+
+
+
+
+{\ttfamily \#include $<$base-\/exception.\+hpp$>$}
+
+Inheritance diagram for ar\+::base\+\_\+exception\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.916667cm]{classar_1_1base__exception}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classar_1_1base__exception_a45877a799953cc97dc97ee016a2dabef}\label{classar_1_1base__exception_a45877a799953cc97dc97ee016a2dabef}} 
+{\bfseries base\+\_\+exception} (std\+::string module)
+\item 
+\mbox{\Hypertarget{classar_1_1base__exception_abce3be222ae6e112f07f19796d8671bb}\label{classar_1_1base__exception_abce3be222ae6e112f07f19796d8671bb}} 
+std\+::string {\bfseries get\+\_\+module} () const
+\item 
+virtual std\+::string \mbox{\hyperlink{classar_1_1base__exception_ae87a0e5eb71fb18d4a49796187f1c80e}{get\+\_\+logger\+\_\+formatted\+\_\+error}} () const =0
+\begin{DoxyCompactList}\small\item\em Creates a logger-\/friendly error message. Logger should use it by itself, there should be no need to call it directly. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classar_1_1base__exception_a9a04f3c99d4e8b684235edfda6765675}\label{classar_1_1base__exception_a9a04f3c99d4e8b684235edfda6765675}} 
+const std\+::string {\bfseries \+\_\+module}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents the base class for all access retro exceptions in the program. 
+
+Should be the default exception base class, STD library exceptions should only be used for non access retro specific code (for example utility classes/functions) 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classar_1_1base__exception_ae87a0e5eb71fb18d4a49796187f1c80e}\label{classar_1_1base__exception_ae87a0e5eb71fb18d4a49796187f1c80e}} 
+\index{ar::base\_exception@{ar::base\_exception}!get\_logger\_formatted\_error@{get\_logger\_formatted\_error}}
+\index{get\_logger\_formatted\_error@{get\_logger\_formatted\_error}!ar::base\_exception@{ar::base\_exception}}
+\doxysubsubsection{\texorpdfstring{get\_logger\_formatted\_error()}{get\_logger\_formatted\_error()}}
+{\footnotesize\ttfamily virtual std\+::string ar\+::base\+\_\+exception\+::get\+\_\+logger\+\_\+formatted\+\_\+error (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Creates a logger-\/friendly error message. Logger should use it by itself, there should be no need to call it directly. 
+
+\begin{DoxyReturn}{Returns}
+formatted error message 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classar_1_1core_1_1virtual__console__error_ad15b8a4185a4a2a4aa6d8de28c31cb29}{ar\+::core\+::virtual\+\_\+console\+\_\+error}}, \mbox{\hyperlink{classar_1_1error_1_1io__error_a22e3a6c05177443c83ee0a62a8b2f60c}{ar\+::error\+::io\+\_\+error}}, and \mbox{\hyperlink{classar_1_1error_1_1os__error_aceb0370b0db523dc2bfedd61a6785ebc}{ar\+::error\+::os\+\_\+error}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/daniel/\+Developer/access-\/to-\/retro/access-\/to-\/retro/frontend/src/error/\mbox{\hyperlink{base-exception_8hpp}{base-\/exception.\+hpp}}\item 
+/\+Users/daniel/\+Developer/access-\/to-\/retro/access-\/to-\/retro/frontend/src/error/base-\/exception.\+cpp\end{DoxyCompactItemize}

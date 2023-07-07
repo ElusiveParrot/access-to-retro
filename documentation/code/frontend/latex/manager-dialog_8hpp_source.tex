@@ -1,0 +1,65 @@
+\hypertarget{manager-dialog_8hpp_source}{}\doxysection{manager-\/dialog.hpp}
+\label{manager-dialog_8hpp_source}\index{/Users/daniel/Developer/access-\/to-\/retro/access-\/to-\/retro/frontend/src/gui/windows/manager-\/dialog.hpp@{/Users/daniel/Developer/access-\/to-\/retro/access-\/to-\/retro/frontend/src/gui/windows/manager-\/dialog.hpp}}
+\mbox{\hyperlink{manager-dialog_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{executable-binary_8hpp}{core/executable-\/binary.hpp}}"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{virtual-console_8hpp}{core/virtual-\/console.hpp}}"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}util/settings-\/manager.hpp"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#ifndef\ AR\_GUI\_MANAGER\_DIALOG\_HPP}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ AR\_GUI\_MANAGER\_DIALOG\_HPP}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <QDialog>}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacear_1_1gui}{ar::gui}}}
+\DoxyCodeLine{00017\ \{}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{namespace\ }Ui}
+\DoxyCodeLine{00020\ \ \ \ \ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keyword}{class\ }manager\_dialog;}
+\DoxyCodeLine{00022\ \ \ \ \ \}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classar_1_1gui_1_1manager__dialog}{manager\_dialog}}\ :\ \textcolor{keyword}{public}\ QDialog}
+\DoxyCodeLine{00026\ \ \ \ \ \{}
+\DoxyCodeLine{00027\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classar_1_1gui_1_1manager__dialog}{manager\_dialog}}(}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<std::unique\_ptr<ar::core::virtual\_console>\ >\&\ virtual\_consoles,}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<std::unique\_ptr<ar::core::executable\_binary>\ >\&\ games,}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::function<\textcolor{keywordtype}{void}()>\ on\_change\_fn,\ QWidget*\ parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classar_1_1gui_1_1manager__dialog}{\string~manager\_dialog}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ******************\ Qt's\ Slot\ Methods\ ******************}}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keyword}{private}\ slots:}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classar_1_1gui_1_1manager__dialog_a3f1d3e1e1eb1dd42ae28bbc39960bb8d}{on\_delete\_selected\_game\_button\_clicked}}();}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classar_1_1gui_1_1manager__dialog_abbb6fff27a297c43c82b7bacd067d58a}{on\_delete\_selected\_vc\_button\_clicked}}();}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classar_1_1gui_1_1manager__dialog_a2113663f8a636a2a927ed7bef96033ca}{on\_install\_new\_game\_button\_clicked}}();}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classar_1_1gui_1_1manager__dialog_a95939beb56555bdcef6eaba8bb454dad}{on\_install\_new\_vc\_button\_clicked}}();}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ std::shared\_ptr<ar::util::settings\_manager>\ \mbox{\hyperlink{classar_1_1gui_1_1manager__dialog_ad9d228d0d2f660eccd932df563942d0e}{\_settings\_manager}};}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ std::function<void()>\ \mbox{\hyperlink{classar_1_1gui_1_1manager__dialog_a20bcb4c7b68e2cb5f723b1ea9b4f0804}{\_on\_change\_fn}};}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ std::vector<std::unique\_ptr<ar::core::virtual\_console>\ >\&\ \_virtual\_consoles\_ref;}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ std::vector<std::unique\_ptr<ar::core::executable\_binary>\ >\&\ \_games\_ref;}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ Ui::manager\_dialog*\ \mbox{\hyperlink{classar_1_1gui_1_1manager__dialog_aad02b30afd9dbe7afc078e43b53c07c7}{ui}};}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ******************\ Ui\ Populating\ Methods\ ******************}}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classar_1_1gui_1_1manager__dialog_abe67d4d9cbe28e4cdfbc40b1ef4e6bd0}{populate\_lists}}();}
+\DoxyCodeLine{00076\ \ \ \ \ \};}
+\DoxyCodeLine{00077\ \}}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ AR\_GUI\_MANAGER\_DIALOG\_HPP}}
+
+\end{DoxyCode}

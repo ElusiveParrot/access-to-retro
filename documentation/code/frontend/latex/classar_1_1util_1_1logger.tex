@@ -1,0 +1,218 @@
+\hypertarget{classar_1_1util_1_1logger}{}\doxysection{ar\+::util\+::logger Class Reference}
+\label{classar_1_1util_1_1logger}\index{ar::util::logger@{ar::util::logger}}
+
+
+Used to display debug messages for the developer or/and to the user.  
+
+
+
+
+{\ttfamily \#include $<$logger.\+hpp$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{classar_1_1util_1_1logger_a772f03304377db10d29fe373b93377ae}{verbosity}} \{ \mbox{\hyperlink{classar_1_1util_1_1logger_a772f03304377db10d29fe373b93377aeae5564829e2f85f6a6873a9d5c4f26d09}{SIMPLE}}
+, \mbox{\hyperlink{classar_1_1util_1_1logger_a772f03304377db10d29fe373b93377aeabccda64e9ab94613672c2e2b06e02dbd}{RICH}}
+, \mbox{\hyperlink{classar_1_1util_1_1logger_a772f03304377db10d29fe373b93377aeadc30ec20708ef7b0f641ef78b7880a15}{DEBUG}}
+ \}
+\begin{DoxyCompactList}\small\item\em Represents verbosity of the message and decides on formatting of the message. \end{DoxyCompactList}\item 
+enum class \mbox{\hyperlink{classar_1_1util_1_1logger_a451b072128e903c33242c17f37cbe405}{priority}} \{ \newline
+\mbox{\hyperlink{classar_1_1util_1_1logger_a451b072128e903c33242c17f37cbe405a2bfd1b386270ff8266fa048c6116af9b}{EVERYTHING\+\_\+\+DEV}}
+, \mbox{\hyperlink{classar_1_1util_1_1logger_a451b072128e903c33242c17f37cbe405a56e591f0c8e18fcd60303753c16b7a43}{EVERYTHING}}
+, \mbox{\hyperlink{classar_1_1util_1_1logger_a451b072128e903c33242c17f37cbe405a059e9861e0400dfbe05c98a841f3f96b}{WARNING}}
+, \mbox{\hyperlink{classar_1_1util_1_1logger_a451b072128e903c33242c17f37cbe405a8aa0464f63ef85dab8ac5d4336e1c472}{APP\+\_\+\+ERROR}}
+, \newline
+\mbox{\hyperlink{classar_1_1util_1_1logger_a451b072128e903c33242c17f37cbe405a99cd1c61610c76a57cb8d10d6df6b870}{CRITICAL}}
+, \mbox{\hyperlink{classar_1_1util_1_1logger_a451b072128e903c33242c17f37cbe405a8697250efc73639dd2a6e7da243ac68b}{NOTHING}}
+ \}
+\begin{DoxyCompactList}\small\item\em Represents priority of the message and decides whether it is shown or not based on the current logger settings. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classar_1_1util_1_1logger_a28efcd69cda90324a2dc1f563aaa4415}{configure\+\_\+based\+\_\+on\+\_\+args}} (const std\+::vector$<$ std\+::string $>$ \&args)
+\begin{DoxyCompactList}\small\item\em Configure global logger based on command line arguments. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classar_1_1util_1_1logger_adc0f6117300ea22a543950a3635284d4}{configure\+\_\+based\+\_\+on\+\_\+settings}} ()
+\begin{DoxyCompactList}\small\item\em Configure global logger based on app settings. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classar_1_1util_1_1logger_a7ce7bbd10dfafccebef522e08a898ca6}{log}} (const std\+::string \&file, const std\+::string \&function, int line, \mbox{\hyperlink{classar_1_1util_1_1logger_a451b072128e903c33242c17f37cbe405}{util\+::logger\+::priority}} \mbox{\hyperlink{classar_1_1util_1_1logger_a451b072128e903c33242c17f37cbe405}{priority}}, const std\+::string \&module, const std\+::string \&prefix, const std\+::string \&message)
+\begin{DoxyCompactList}\small\item\em Direct method to log message to stdout. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classar_1_1util_1_1logger_aa269a219023fca1c44a7d2077650298a}{log}} (const std\+::string \&file, const std\+::string \&function, int line, \mbox{\hyperlink{classar_1_1util_1_1logger_a451b072128e903c33242c17f37cbe405}{util\+::logger\+::priority}} \mbox{\hyperlink{classar_1_1util_1_1logger_a451b072128e903c33242c17f37cbe405}{priority}}, const std\+::string \&module, const \mbox{\hyperlink{classar_1_1base__exception}{ar\+::base\+\_\+exception}} \&ex)
+\begin{DoxyCompactList}\small\item\em Direct method to log message to stdout. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classar_1_1util_1_1logger_a38498bb90c7bae11a33824ff390bb084}\label{classar_1_1util_1_1logger_a38498bb90c7bae11a33824ff390bb084}} 
+static void {\bfseries set\+\_\+verbosity} (\mbox{\hyperlink{classar_1_1util_1_1logger_a772f03304377db10d29fe373b93377ae}{util\+::logger\+::verbosity}} new\+\_\+verbosity)
+\item 
+\mbox{\Hypertarget{classar_1_1util_1_1logger_a8b45c413145b746d5c96c20f06138707}\label{classar_1_1util_1_1logger_a8b45c413145b746d5c96c20f06138707}} 
+static void {\bfseries set\+\_\+minimum\+\_\+priority} (\mbox{\hyperlink{classar_1_1util_1_1logger_a451b072128e903c33242c17f37cbe405}{util\+::logger\+::priority}} new\+\_\+minimum\+\_\+priority)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classar_1_1util_1_1logger_a73f817d9b71ff81887f40b5c9dd42355}\label{classar_1_1util_1_1logger_a73f817d9b71ff81887f40b5c9dd42355}} 
+\mbox{\hyperlink{classar_1_1util_1_1logger_a772f03304377db10d29fe373b93377ae}{util\+::logger\+::verbosity}} {\bfseries \+\_\+current\+\_\+verbosity} = \mbox{\hyperlink{classar_1_1util_1_1logger_a772f03304377db10d29fe373b93377aeae5564829e2f85f6a6873a9d5c4f26d09}{util\+::logger\+::verbosity\+::\+SIMPLE}}
+\begin{DoxyCompactList}\small\item\em Amount of details shown with the message. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classar_1_1util_1_1logger_ad6eb9d681825d5bafd539369c72fd8ae}\label{classar_1_1util_1_1logger_ad6eb9d681825d5bafd539369c72fd8ae}} 
+\mbox{\hyperlink{classar_1_1util_1_1logger_a451b072128e903c33242c17f37cbe405}{util\+::logger\+::priority}} {\bfseries \+\_\+minimum\+\_\+priority} = \mbox{\hyperlink{classar_1_1util_1_1logger_a451b072128e903c33242c17f37cbe405a99cd1c61610c76a57cb8d10d6df6b870}{util\+::logger\+::priority\+::\+CRITICAL}}
+\begin{DoxyCompactList}\small\item\em If message verbosity is below it then it will not show. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Used to display debug messages for the developer or/and to the user. 
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classar_1_1util_1_1logger_a451b072128e903c33242c17f37cbe405}\label{classar_1_1util_1_1logger_a451b072128e903c33242c17f37cbe405}} 
+\index{ar::util::logger@{ar::util::logger}!priority@{priority}}
+\index{priority@{priority}!ar::util::logger@{ar::util::logger}}
+\doxysubsubsection{\texorpdfstring{priority}{priority}}
+{\footnotesize\ttfamily enum class \mbox{\hyperlink{classar_1_1util_1_1logger_a451b072128e903c33242c17f37cbe405}{ar\+::util\+::logger\+::priority}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Represents priority of the message and decides whether it is shown or not based on the current logger settings. 
+
+Minimum priority can be changed using set\+\_\+minimum\+\_\+priority(). \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EVERYTHING\_DEV@{EVERYTHING\_DEV}!ar::util::logger@{ar::util::logger}}\index{ar::util::logger@{ar::util::logger}!EVERYTHING\_DEV@{EVERYTHING\_DEV}}}\mbox{\Hypertarget{classar_1_1util_1_1logger_a451b072128e903c33242c17f37cbe405a2bfd1b386270ff8266fa048c6116af9b}\label{classar_1_1util_1_1logger_a451b072128e903c33242c17f37cbe405a2bfd1b386270ff8266fa048c6116af9b}} 
+EVERYTHING\+\_\+\+DEV&No filter, forces DEBUG verbosity. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EVERYTHING@{EVERYTHING}!ar::util::logger@{ar::util::logger}}\index{ar::util::logger@{ar::util::logger}!EVERYTHING@{EVERYTHING}}}\mbox{\Hypertarget{classar_1_1util_1_1logger_a451b072128e903c33242c17f37cbe405a56e591f0c8e18fcd60303753c16b7a43}\label{classar_1_1util_1_1logger_a451b072128e903c33242c17f37cbe405a56e591f0c8e18fcd60303753c16b7a43}} 
+EVERYTHING&Only filters debug messages. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{WARNING@{WARNING}!ar::util::logger@{ar::util::logger}}\index{ar::util::logger@{ar::util::logger}!WARNING@{WARNING}}}\mbox{\Hypertarget{classar_1_1util_1_1logger_a451b072128e903c33242c17f37cbe405a059e9861e0400dfbe05c98a841f3f96b}\label{classar_1_1util_1_1logger_a451b072128e903c33242c17f37cbe405a059e9861e0400dfbe05c98a841f3f96b}} 
+WARNING&Only shows warnings and all error. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{APP\_ERROR@{APP\_ERROR}!ar::util::logger@{ar::util::logger}}\index{ar::util::logger@{ar::util::logger}!APP\_ERROR@{APP\_ERROR}}}\mbox{\Hypertarget{classar_1_1util_1_1logger_a451b072128e903c33242c17f37cbe405a8aa0464f63ef85dab8ac5d4336e1c472}\label{classar_1_1util_1_1logger_a451b072128e903c33242c17f37cbe405a8aa0464f63ef85dab8ac5d4336e1c472}} 
+APP\+\_\+\+ERROR&Only shows errors. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CRITICAL@{CRITICAL}!ar::util::logger@{ar::util::logger}}\index{ar::util::logger@{ar::util::logger}!CRITICAL@{CRITICAL}}}\mbox{\Hypertarget{classar_1_1util_1_1logger_a451b072128e903c33242c17f37cbe405a99cd1c61610c76a57cb8d10d6df6b870}\label{classar_1_1util_1_1logger_a451b072128e903c33242c17f37cbe405a99cd1c61610c76a57cb8d10d6df6b870}} 
+CRITICAL&Only shows critical errors. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NOTHING@{NOTHING}!ar::util::logger@{ar::util::logger}}\index{ar::util::logger@{ar::util::logger}!NOTHING@{NOTHING}}}\mbox{\Hypertarget{classar_1_1util_1_1logger_a451b072128e903c33242c17f37cbe405a8697250efc73639dd2a6e7da243ac68b}\label{classar_1_1util_1_1logger_a451b072128e903c33242c17f37cbe405a8697250efc73639dd2a6e7da243ac68b}} 
+NOTHING&Logger disabled, forces RICH verbosity (to avoid confusion) \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{classar_1_1util_1_1logger_a772f03304377db10d29fe373b93377ae}\label{classar_1_1util_1_1logger_a772f03304377db10d29fe373b93377ae}} 
+\index{ar::util::logger@{ar::util::logger}!verbosity@{verbosity}}
+\index{verbosity@{verbosity}!ar::util::logger@{ar::util::logger}}
+\doxysubsubsection{\texorpdfstring{verbosity}{verbosity}}
+{\footnotesize\ttfamily enum class \mbox{\hyperlink{classar_1_1util_1_1logger_a772f03304377db10d29fe373b93377ae}{ar\+::util\+::logger\+::verbosity}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Represents verbosity of the message and decides on formatting of the message. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SIMPLE@{SIMPLE}!ar::util::logger@{ar::util::logger}}\index{ar::util::logger@{ar::util::logger}!SIMPLE@{SIMPLE}}}\mbox{\Hypertarget{classar_1_1util_1_1logger_a772f03304377db10d29fe373b93377aeae5564829e2f85f6a6873a9d5c4f26d09}\label{classar_1_1util_1_1logger_a772f03304377db10d29fe373b93377aeae5564829e2f85f6a6873a9d5c4f26d09}} 
+SIMPLE&Message ONLY. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RICH@{RICH}!ar::util::logger@{ar::util::logger}}\index{ar::util::logger@{ar::util::logger}!RICH@{RICH}}}\mbox{\Hypertarget{classar_1_1util_1_1logger_a772f03304377db10d29fe373b93377aeabccda64e9ab94613672c2e2b06e02dbd}\label{classar_1_1util_1_1logger_a772f03304377db10d29fe373b93377aeabccda64e9ab94613672c2e2b06e02dbd}} 
+RICH&Message and time. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEBUG@{DEBUG}!ar::util::logger@{ar::util::logger}}\index{ar::util::logger@{ar::util::logger}!DEBUG@{DEBUG}}}\mbox{\Hypertarget{classar_1_1util_1_1logger_a772f03304377db10d29fe373b93377aeadc30ec20708ef7b0f641ef78b7880a15}\label{classar_1_1util_1_1logger_a772f03304377db10d29fe373b93377aeadc30ec20708ef7b0f641ef78b7880a15}} 
+DEBUG&Message, time, module, file, function and line, forces EVERYTHING\+\_\+\+DEV priority. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classar_1_1util_1_1logger_a28efcd69cda90324a2dc1f563aaa4415}\label{classar_1_1util_1_1logger_a28efcd69cda90324a2dc1f563aaa4415}} 
+\index{ar::util::logger@{ar::util::logger}!configure\_based\_on\_args@{configure\_based\_on\_args}}
+\index{configure\_based\_on\_args@{configure\_based\_on\_args}!ar::util::logger@{ar::util::logger}}
+\doxysubsubsection{\texorpdfstring{configure\_based\_on\_args()}{configure\_based\_on\_args()}}
+{\footnotesize\ttfamily void ar\+::util\+::logger\+::configure\+\_\+based\+\_\+on\+\_\+args (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::string $>$ \&}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Configure global logger based on command line arguments. 
+
+First argument decides verbosity (for ex\+: \char`\"{}-\/\+SIMPLE\char`\"{}) while second priority (for ex\+: \char`\"{}\+EVERYTHING\+\_\+\+DEV\char`\"{}), argument name is 1\+:1 mapped to enum entry. 
+\begin{DoxyParams}{Parameters}
+{\em args} & Vector with arguments that should be constructed from argv and argc \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classar_1_1util_1_1logger_adc0f6117300ea22a543950a3635284d4}\label{classar_1_1util_1_1logger_adc0f6117300ea22a543950a3635284d4}} 
+\index{ar::util::logger@{ar::util::logger}!configure\_based\_on\_settings@{configure\_based\_on\_settings}}
+\index{configure\_based\_on\_settings@{configure\_based\_on\_settings}!ar::util::logger@{ar::util::logger}}
+\doxysubsubsection{\texorpdfstring{configure\_based\_on\_settings()}{configure\_based\_on\_settings()}}
+{\footnotesize\ttfamily void ar\+::util\+::logger\+::configure\+\_\+based\+\_\+on\+\_\+settings (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Configure global logger based on app settings. 
+
+\begin{DoxyWarning}{Warning}
+If settings manager wasn\textquotesingle{}t configured using \textquotesingle{}configure\textquotesingle{} method then this method will fail 
+\end{DoxyWarning}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exceptions} & 
+\begin{DoxyItemize}
+\item std\+::runtime\+\_\+error\+: Settings manager wasn\textquotesingle{}t configured 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classar_1_1util_1_1logger_aa269a219023fca1c44a7d2077650298a}\label{classar_1_1util_1_1logger_aa269a219023fca1c44a7d2077650298a}} 
+\index{ar::util::logger@{ar::util::logger}!log@{log}}
+\index{log@{log}!ar::util::logger@{ar::util::logger}}
+\doxysubsubsection{\texorpdfstring{log()}{log()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void ar\+::util\+::logger\+::log (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file,  }\item[{const std\+::string \&}]{function,  }\item[{int}]{line,  }\item[{\mbox{\hyperlink{classar_1_1util_1_1logger_a451b072128e903c33242c17f37cbe405}{util\+::logger\+::priority}}}]{priority,  }\item[{const std\+::string \&}]{module,  }\item[{const \mbox{\hyperlink{classar_1_1base__exception}{ar\+::base\+\_\+exception}} \&}]{ex }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Direct method to log message to stdout. 
+
+Should be avoid and macros LOG\+\_\+\+EXCEPTION should be used instead. Logger should be used as soon as possible when the error happens so that parameters can correspond to the area where error happened. 
+\begin{DoxyParams}{Parameters}
+{\em file} & Source file where the logger is being used. \\
+\hline
+{\em function} & Function in which the logger is being used. \\
+\hline
+{\em line} & Line in the source code in which the logger is being used. \\
+\hline
+{\em priority} & Priority of the error. \\
+\hline
+{\em module} & Module of the program in which the error happened. Only displayed in debug messages, \\
+\hline
+{\em ex} & Exception that should be logger. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classar_1_1util_1_1logger_a7ce7bbd10dfafccebef522e08a898ca6}\label{classar_1_1util_1_1logger_a7ce7bbd10dfafccebef522e08a898ca6}} 
+\index{ar::util::logger@{ar::util::logger}!log@{log}}
+\index{log@{log}!ar::util::logger@{ar::util::logger}}
+\doxysubsubsection{\texorpdfstring{log()}{log()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void ar\+::util\+::logger\+::log (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file,  }\item[{const std\+::string \&}]{function,  }\item[{int}]{line,  }\item[{\mbox{\hyperlink{classar_1_1util_1_1logger_a451b072128e903c33242c17f37cbe405}{util\+::logger\+::priority}}}]{priority,  }\item[{const std\+::string \&}]{module,  }\item[{const std\+::string \&}]{prefix,  }\item[{const std\+::string \&}]{message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Direct method to log message to stdout. 
+
+Should be avoid and macros LOG\+\_\+x should be used instead. Logger should be used as soon as possible when the error happens so that parameters can correspond to the area where error happened. 
+\begin{DoxyParams}{Parameters}
+{\em file} & Source file where the logger is being used. \\
+\hline
+{\em function} & Function in which the logger is being used. \\
+\hline
+{\em line} & Line in the source code in which the logger is being used. \\
+\hline
+{\em priority} & Priority of the error. \\
+\hline
+{\em module} & Module of the program in which the error happened. Only displayed in debug messages, \\
+\hline
+{\em prefix} & Prefix that will be shown before the message \\
+\hline
+{\em message} & The message that should be logged. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/daniel/\+Developer/access-\/to-\/retro/access-\/to-\/retro/frontend/src/util/\mbox{\hyperlink{logger_8hpp}{logger.\+hpp}}\item 
+/\+Users/daniel/\+Developer/access-\/to-\/retro/access-\/to-\/retro/frontend/src/util/logger.\+cpp\end{DoxyCompactItemize}

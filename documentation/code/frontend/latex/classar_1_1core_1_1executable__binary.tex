@@ -1,0 +1,233 @@
+\hypertarget{classar_1_1core_1_1executable__binary}{}\doxysection{ar\+::core\+::executable\+\_\+binary Class Reference}
+\label{classar_1_1core_1_1executable__binary}\index{ar::core::executable\_binary@{ar::core::executable\_binary}}
+
+
+Represents a binary file that is able to be executed by virtual console, usually a game.  
+
+
+
+
+{\ttfamily \#include $<$executable-\/binary.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classar_1_1core_1_1executable__binary_a1c3ae222a0bf1705d71667f6572fdcba}{executable\+\_\+binary}} (std\+::string path)
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classar_1_1core_1_1executable__binary_ad921a0403b639c2f17e588932df29a2e}{load\+\_\+to\+\_\+memory}} ()
+\begin{DoxyCompactList}\small\item\em Loads contents of the file to memory, allows the file to be accessed. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classar_1_1core_1_1executable__binary_a365c5af6f545c9ac324448fd6ef0fae5}\label{classar_1_1core_1_1executable__binary_a365c5af6f545c9ac324448fd6ef0fae5}} 
+void {\bfseries unload\+\_\+file} ()
+\begin{DoxyCompactList}\small\item\em Unloads the file from memory. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{namespacear_1_1types_a3f1d8400536ec75a7ae56d41d2c81c07}{ar\+::types\+::byte}} $>$ \mbox{\hyperlink{classar_1_1core_1_1executable__binary_a3d79da6304676106607a6945b870c0cd}{read\+\_\+bytes}} (uint64\+\_\+t addr, std\+::size\+\_\+t size) const
+\begin{DoxyCompactList}\small\item\em Read multiple bytes from the binary file. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacear_1_1types_a3f1d8400536ec75a7ae56d41d2c81c07}{ar\+::types\+::byte}} \mbox{\hyperlink{classar_1_1core_1_1executable__binary_a873bffa1cc5d9cba4ad06222c5838b0d}{read\+\_\+byte}} (uint64\+\_\+t addr) const
+\begin{DoxyCompactList}\small\item\em Read a single byte from the binary file. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classar_1_1core_1_1executable__binary_ad08df9b1fd492dffacb3d1e93c4d8022}{get\+\_\+path}} () const
+\begin{DoxyCompactList}\small\item\em Get the path which this executable represents. \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{classar_1_1core_1_1executable__binary_ab6171678ae49ec6ba4391ed775167305}{get\+\_\+file\+\_\+size}} () const
+\begin{DoxyCompactList}\small\item\em Get the size of the represented file. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{namespacear_1_1types_a3f1d8400536ec75a7ae56d41d2c81c07}{ar\+::types\+::byte}} $\ast$ \mbox{\hyperlink{classar_1_1core_1_1executable__binary_a6aacf868334ef2057dcee3c4569fe8ab}{get\+\_\+file\+\_\+raw\+\_\+bytes}} () const
+\begin{DoxyCompactList}\small\item\em Get the raw bytes of the represented file. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classar_1_1core_1_1executable__binary_a5f11d759cb367b6d003522d53f87333b}{get\+\_\+file\+\_\+name}} () const
+\begin{DoxyCompactList}\small\item\em Get the name of the file itself from it\textquotesingle{}s path. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classar_1_1core_1_1executable__binary_a6f8fa8123d55ed4fc4da0916be24004f}{get\+\_\+file\+\_\+extension}} () const
+\begin{DoxyCompactList}\small\item\em Get the name of the file extension from it\textquotesingle{}s path. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classar_1_1core_1_1executable__binary_a6b386299bf262751f1ed35b18728149b}\label{classar_1_1core_1_1executable__binary_a6b386299bf262751f1ed35b18728149b}} 
+std\+::string {\bfseries \+\_\+path}
+\begin{DoxyCompactList}\small\item\em Represented file path. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classar_1_1core_1_1executable__binary_ab838999a4350342c4e25f2d20ace1f6f}\label{classar_1_1core_1_1executable__binary_ab838999a4350342c4e25f2d20ace1f6f}} 
+uint64\+\_\+t {\bfseries \+\_\+file\+\_\+size}
+\begin{DoxyCompactList}\small\item\em Size of the represented file. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classar_1_1core_1_1executable__binary_a1038632b6f454ff3ca3fb51238628826}\label{classar_1_1core_1_1executable__binary_a1038632b6f454ff3ca3fb51238628826}} 
+bool {\bfseries \+\_\+loaded\+\_\+to\+\_\+memory} = false
+\begin{DoxyCompactList}\small\item\em Whether the file was loaded into memory using \textquotesingle{}load\+\_\+to\+\_\+memory\textquotesingle{}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classar_1_1core_1_1executable__binary_a910b5f75fe2fafe0561a6e08333bcd3b}\label{classar_1_1core_1_1executable__binary_a910b5f75fe2fafe0561a6e08333bcd3b}} 
+std\+::vector$<$ \mbox{\hyperlink{namespacear_1_1types_a3f1d8400536ec75a7ae56d41d2c81c07}{ar\+::types\+::byte}} $>$ {\bfseries \+\_\+file\+\_\+content}
+\begin{DoxyCompactList}\small\item\em Contains content of the file after using \textquotesingle{}load\+\_\+to\+\_\+memory\textquotesingle{}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a binary file that is able to be executed by virtual console, usually a game. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classar_1_1core_1_1executable__binary_a1c3ae222a0bf1705d71667f6572fdcba}\label{classar_1_1core_1_1executable__binary_a1c3ae222a0bf1705d71667f6572fdcba}} 
+\index{ar::core::executable\_binary@{ar::core::executable\_binary}!executable\_binary@{executable\_binary}}
+\index{executable\_binary@{executable\_binary}!ar::core::executable\_binary@{ar::core::executable\_binary}}
+\doxysubsubsection{\texorpdfstring{executable\_binary()}{executable\_binary()}}
+{\footnotesize\ttfamily ar\+::core\+::executable\+\_\+binary\+::executable\+\_\+binary (\begin{DoxyParamCaption}\item[{std\+::string}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Default constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & Path to the executable \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+File content are not loaded into memory in the constructor, use \textquotesingle{}load\+\_\+to\+\_\+memory\textquotesingle{} for that 
+\end{DoxyNote}
+\begin{DoxyWarning}{Warning}
+If file is accessed before \textquotesingle{}load\+\_\+to\+\_\+memory\textquotesingle{} is called then exception will be thrown 
+\end{DoxyWarning}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exceptions} & 
+\begin{DoxyItemize}
+\item \mbox{\hyperlink{classar_1_1error_1_1io__error}{ar\+::error\+::io\+\_\+error}}\+: File not found 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classar_1_1core_1_1executable__binary_a6f8fa8123d55ed4fc4da0916be24004f}\label{classar_1_1core_1_1executable__binary_a6f8fa8123d55ed4fc4da0916be24004f}} 
+\index{ar::core::executable\_binary@{ar::core::executable\_binary}!get\_file\_extension@{get\_file\_extension}}
+\index{get\_file\_extension@{get\_file\_extension}!ar::core::executable\_binary@{ar::core::executable\_binary}}
+\doxysubsubsection{\texorpdfstring{get\_file\_extension()}{get\_file\_extension()}}
+{\footnotesize\ttfamily std\+::string ar\+::core\+::executable\+\_\+binary\+::get\+\_\+file\+\_\+extension (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the name of the file extension from it\textquotesingle{}s path. 
+
+\begin{DoxyReturn}{Returns}
+Extension of the file 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classar_1_1core_1_1executable__binary_a5f11d759cb367b6d003522d53f87333b}\label{classar_1_1core_1_1executable__binary_a5f11d759cb367b6d003522d53f87333b}} 
+\index{ar::core::executable\_binary@{ar::core::executable\_binary}!get\_file\_name@{get\_file\_name}}
+\index{get\_file\_name@{get\_file\_name}!ar::core::executable\_binary@{ar::core::executable\_binary}}
+\doxysubsubsection{\texorpdfstring{get\_file\_name()}{get\_file\_name()}}
+{\footnotesize\ttfamily std\+::string ar\+::core\+::executable\+\_\+binary\+::get\+\_\+file\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the name of the file itself from it\textquotesingle{}s path. 
+
+\begin{DoxyReturn}{Returns}
+Name of the file 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classar_1_1core_1_1executable__binary_a6aacf868334ef2057dcee3c4569fe8ab}\label{classar_1_1core_1_1executable__binary_a6aacf868334ef2057dcee3c4569fe8ab}} 
+\index{ar::core::executable\_binary@{ar::core::executable\_binary}!get\_file\_raw\_bytes@{get\_file\_raw\_bytes}}
+\index{get\_file\_raw\_bytes@{get\_file\_raw\_bytes}!ar::core::executable\_binary@{ar::core::executable\_binary}}
+\doxysubsubsection{\texorpdfstring{get\_file\_raw\_bytes()}{get\_file\_raw\_bytes()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{namespacear_1_1types_a3f1d8400536ec75a7ae56d41d2c81c07}{ar\+::types\+::byte}} $\ast$ ar\+::core\+::executable\+\_\+binary\+::get\+\_\+file\+\_\+raw\+\_\+bytes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the raw bytes of the represented file. 
+
+\begin{DoxyReturn}{Returns}
+Bytes representing file contents 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classar_1_1core_1_1executable__binary_ab6171678ae49ec6ba4391ed775167305}\label{classar_1_1core_1_1executable__binary_ab6171678ae49ec6ba4391ed775167305}} 
+\index{ar::core::executable\_binary@{ar::core::executable\_binary}!get\_file\_size@{get\_file\_size}}
+\index{get\_file\_size@{get\_file\_size}!ar::core::executable\_binary@{ar::core::executable\_binary}}
+\doxysubsubsection{\texorpdfstring{get\_file\_size()}{get\_file\_size()}}
+{\footnotesize\ttfamily uint64\+\_\+t ar\+::core\+::executable\+\_\+binary\+::get\+\_\+file\+\_\+size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the size of the represented file. 
+
+\begin{DoxyReturn}{Returns}
+Size of the loaded file 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classar_1_1core_1_1executable__binary_ad08df9b1fd492dffacb3d1e93c4d8022}\label{classar_1_1core_1_1executable__binary_ad08df9b1fd492dffacb3d1e93c4d8022}} 
+\index{ar::core::executable\_binary@{ar::core::executable\_binary}!get\_path@{get\_path}}
+\index{get\_path@{get\_path}!ar::core::executable\_binary@{ar::core::executable\_binary}}
+\doxysubsubsection{\texorpdfstring{get\_path()}{get\_path()}}
+{\footnotesize\ttfamily std\+::string ar\+::core\+::executable\+\_\+binary\+::get\+\_\+path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the path which this executable represents. 
+
+\begin{DoxyReturn}{Returns}
+Path of the binary 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classar_1_1core_1_1executable__binary_ad921a0403b639c2f17e588932df29a2e}\label{classar_1_1core_1_1executable__binary_ad921a0403b639c2f17e588932df29a2e}} 
+\index{ar::core::executable\_binary@{ar::core::executable\_binary}!load\_to\_memory@{load\_to\_memory}}
+\index{load\_to\_memory@{load\_to\_memory}!ar::core::executable\_binary@{ar::core::executable\_binary}}
+\doxysubsubsection{\texorpdfstring{load\_to\_memory()}{load\_to\_memory()}}
+{\footnotesize\ttfamily void ar\+::core\+::executable\+\_\+binary\+::load\+\_\+to\+\_\+memory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Loads contents of the file to memory, allows the file to be accessed. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exceptions} & 
+\begin{DoxyItemize}
+\item ar\+::error\+:io\+\_\+error\+: Unable to read file 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classar_1_1core_1_1executable__binary_a873bffa1cc5d9cba4ad06222c5838b0d}\label{classar_1_1core_1_1executable__binary_a873bffa1cc5d9cba4ad06222c5838b0d}} 
+\index{ar::core::executable\_binary@{ar::core::executable\_binary}!read\_byte@{read\_byte}}
+\index{read\_byte@{read\_byte}!ar::core::executable\_binary@{ar::core::executable\_binary}}
+\doxysubsubsection{\texorpdfstring{read\_byte()}{read\_byte()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacear_1_1types_a3f1d8400536ec75a7ae56d41d2c81c07}{ar\+::types\+::byte}} ar\+::core\+::executable\+\_\+binary\+::read\+\_\+byte (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{addr }\end{DoxyParamCaption}) const}
+
+
+
+Read a single byte from the binary file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em addr} & Address of the byte \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exceptions} & 
+\begin{DoxyItemize}
+\item std\+::runtime\+\_\+error\+: Attempted to read from file before using \textquotesingle{}load\+\_\+to\+\_\+memory\textquotesingle{}
+\item \mbox{\hyperlink{classar_1_1error_1_1io__error}{ar\+::error\+::io\+\_\+error}}\+: Invalid read address 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+Byte at provided address 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classar_1_1core_1_1executable__binary_a3d79da6304676106607a6945b870c0cd}\label{classar_1_1core_1_1executable__binary_a3d79da6304676106607a6945b870c0cd}} 
+\index{ar::core::executable\_binary@{ar::core::executable\_binary}!read\_bytes@{read\_bytes}}
+\index{read\_bytes@{read\_bytes}!ar::core::executable\_binary@{ar::core::executable\_binary}}
+\doxysubsubsection{\texorpdfstring{read\_bytes()}{read\_bytes()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{namespacear_1_1types_a3f1d8400536ec75a7ae56d41d2c81c07}{ar\+::types\+::byte}} $>$ ar\+::core\+::executable\+\_\+binary\+::read\+\_\+bytes (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{addr,  }\item[{std\+::size\+\_\+t}]{size }\end{DoxyParamCaption}) const}
+
+
+
+Read multiple bytes from the binary file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em addr} & Starting address of the read \\
+\hline
+{\em size} & Number of bytes to read \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exceptions} & 
+\begin{DoxyItemize}
+\item std\+::runtime\+\_\+error\+: Attempted to read from file before using \textquotesingle{}load\+\_\+to\+\_\+memory\textquotesingle{}
+\item \mbox{\hyperlink{classar_1_1error_1_1io__error}{ar\+::error\+::io\+\_\+error}}\+: Invalid read address 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+Bytes at provided address 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/daniel/\+Developer/access-\/to-\/retro/access-\/to-\/retro/frontend/src/core/\mbox{\hyperlink{executable-binary_8hpp}{executable-\/binary.\+hpp}}\item 
+/\+Users/daniel/\+Developer/access-\/to-\/retro/access-\/to-\/retro/frontend/src/core/executable-\/binary.\+cpp\end{DoxyCompactItemize}

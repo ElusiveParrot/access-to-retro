@@ -1,0 +1,122 @@
+\hypertarget{classar_1_1chip8_1_1emulator}{}\doxysection{ar\+::chip8\+::emulator Class Reference}
+\label{classar_1_1chip8_1_1emulator}\index{ar::chip8::emulator@{ar::chip8::emulator}}
+
+
+Main emulator object.  
+
+
+
+
+{\ttfamily \#include $<$emulator.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classar_1_1chip8_1_1gpu}{ar\+::chip8\+::gpu}} \& \mbox{\hyperlink{classar_1_1chip8_1_1emulator_adec147a213b644690374e3cd38e93afa}{access\+\_\+gpu}} ()
+\begin{DoxyCompactList}\small\item\em Getter for GPU object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classar_1_1chip8_1_1cpu}{ar\+::chip8\+::cpu}} \& \mbox{\hyperlink{classar_1_1chip8_1_1emulator_a5d359b9c76ea9e283e439ef37dd8682e}{access\+\_\+cpu}} ()
+\begin{DoxyCompactList}\small\item\em Getter for CPU object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classar_1_1chip8_1_1controller}{ar\+::chip8\+::controller}} \& \mbox{\hyperlink{classar_1_1chip8_1_1emulator_a2624e77eec5701ffd936114e1cddf1a8}{access\+\_\+controller}} ()
+\begin{DoxyCompactList}\small\item\em Getter for controller object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classar_1_1chip8_1_1ram__memory}{ar\+::chip8\+::ram\+\_\+memory}} \& \mbox{\hyperlink{classar_1_1chip8_1_1emulator_a8b69a3d3b1dde6402740daa77875123f}{access\+\_\+ram}} ()
+\begin{DoxyCompactList}\small\item\em Getter for RAM object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classar_1_1chip8_1_1emulator_addb70aab32b6ed29a110584592655fe7}\label{classar_1_1chip8_1_1emulator_addb70aab32b6ed29a110584592655fe7}} 
+static void {\bfseries create\+\_\+global\+\_\+emulator} ()
+\begin{DoxyCompactList}\small\item\em Create global emulator object. \end{DoxyCompactList}\item 
+static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classar_1_1chip8_1_1emulator}{ar\+::chip8\+::emulator}} $>$ \mbox{\hyperlink{classar_1_1chip8_1_1emulator_a6e51ee04041edace276710eea89cdd97}{get\+\_\+global\+\_\+emulator}} ()
+\begin{DoxyCompactList}\small\item\em The emulator object is global, this is a getter to it (similar to settings\+\_\+managers in frontend) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classar_1_1chip8_1_1emulator_adf089fbf3e9c5b8a45ffcddee92a888d}\label{classar_1_1chip8_1_1emulator_adf089fbf3e9c5b8a45ffcddee92a888d}} 
+\mbox{\hyperlink{classar_1_1chip8_1_1controller}{ar\+::chip8\+::controller}} {\bfseries \+\_\+controller} \{\}
+\begin{DoxyCompactList}\small\item\em Object emulating CHIP8\textquotesingle{}s controller. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classar_1_1chip8_1_1emulator_aa218d22d2beb95277b187154f73e9b74}\label{classar_1_1chip8_1_1emulator_aa218d22d2beb95277b187154f73e9b74}} 
+\mbox{\hyperlink{classar_1_1chip8_1_1ram__memory}{ar\+::chip8\+::ram\+\_\+memory}} {\bfseries \+\_\+ram} \{\}
+\begin{DoxyCompactList}\small\item\em Object emulating CHIP8\textquotesingle{}s RAM memory. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classar_1_1chip8_1_1emulator_ad8003c54cc7b0177e24b92cbaa79a08d}\label{classar_1_1chip8_1_1emulator_ad8003c54cc7b0177e24b92cbaa79a08d}} 
+\mbox{\hyperlink{classar_1_1chip8_1_1gpu}{ar\+::chip8\+::gpu}} {\bfseries \+\_\+gpu}
+\begin{DoxyCompactList}\small\item\em Object emulating CHIP8\textquotesingle{}s GPU. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classar_1_1chip8_1_1emulator_a5367243f872d0fe769cd1b343e706bb4}\label{classar_1_1chip8_1_1emulator_a5367243f872d0fe769cd1b343e706bb4}} 
+\mbox{\hyperlink{classar_1_1chip8_1_1cpu}{ar\+::chip8\+::cpu}} {\bfseries \+\_\+cpu}
+\begin{DoxyCompactList}\small\item\em Object emulating CHIP8\textquotesingle{}s CPU. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Main emulator object. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classar_1_1chip8_1_1emulator_a2624e77eec5701ffd936114e1cddf1a8}\label{classar_1_1chip8_1_1emulator_a2624e77eec5701ffd936114e1cddf1a8}} 
+\index{ar::chip8::emulator@{ar::chip8::emulator}!access\_controller@{access\_controller}}
+\index{access\_controller@{access\_controller}!ar::chip8::emulator@{ar::chip8::emulator}}
+\doxysubsubsection{\texorpdfstring{access\_controller()}{access\_controller()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classar_1_1chip8_1_1controller}{ar\+::chip8\+::controller}} \& ar\+::chip8\+::emulator\+::access\+\_\+controller (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Getter for controller object. 
+
+\begin{DoxyReturn}{Returns}
+Emulator\textquotesingle{}s controller object 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classar_1_1chip8_1_1emulator_a5d359b9c76ea9e283e439ef37dd8682e}\label{classar_1_1chip8_1_1emulator_a5d359b9c76ea9e283e439ef37dd8682e}} 
+\index{ar::chip8::emulator@{ar::chip8::emulator}!access\_cpu@{access\_cpu}}
+\index{access\_cpu@{access\_cpu}!ar::chip8::emulator@{ar::chip8::emulator}}
+\doxysubsubsection{\texorpdfstring{access\_cpu()}{access\_cpu()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classar_1_1chip8_1_1cpu}{ar\+::chip8\+::cpu}} \& ar\+::chip8\+::emulator\+::access\+\_\+cpu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Getter for CPU object. 
+
+\begin{DoxyReturn}{Returns}
+Emulator\textquotesingle{}s CPU object 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classar_1_1chip8_1_1emulator_adec147a213b644690374e3cd38e93afa}\label{classar_1_1chip8_1_1emulator_adec147a213b644690374e3cd38e93afa}} 
+\index{ar::chip8::emulator@{ar::chip8::emulator}!access\_gpu@{access\_gpu}}
+\index{access\_gpu@{access\_gpu}!ar::chip8::emulator@{ar::chip8::emulator}}
+\doxysubsubsection{\texorpdfstring{access\_gpu()}{access\_gpu()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classar_1_1chip8_1_1gpu}{ar\+::chip8\+::gpu}} \& ar\+::chip8\+::emulator\+::access\+\_\+gpu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Getter for GPU object. 
+
+\begin{DoxyReturn}{Returns}
+Emulator\textquotesingle{}s GPU object 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classar_1_1chip8_1_1emulator_a8b69a3d3b1dde6402740daa77875123f}\label{classar_1_1chip8_1_1emulator_a8b69a3d3b1dde6402740daa77875123f}} 
+\index{ar::chip8::emulator@{ar::chip8::emulator}!access\_ram@{access\_ram}}
+\index{access\_ram@{access\_ram}!ar::chip8::emulator@{ar::chip8::emulator}}
+\doxysubsubsection{\texorpdfstring{access\_ram()}{access\_ram()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classar_1_1chip8_1_1ram__memory}{ar\+::chip8\+::ram\+\_\+memory}} \& ar\+::chip8\+::emulator\+::access\+\_\+ram (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Getter for RAM object. 
+
+\begin{DoxyReturn}{Returns}
+Emulator\textquotesingle{}s RAM object 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classar_1_1chip8_1_1emulator_a6e51ee04041edace276710eea89cdd97}\label{classar_1_1chip8_1_1emulator_a6e51ee04041edace276710eea89cdd97}} 
+\index{ar::chip8::emulator@{ar::chip8::emulator}!get\_global\_emulator@{get\_global\_emulator}}
+\index{get\_global\_emulator@{get\_global\_emulator}!ar::chip8::emulator@{ar::chip8::emulator}}
+\doxysubsubsection{\texorpdfstring{get\_global\_emulator()}{get\_global\_emulator()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classar_1_1chip8_1_1emulator}{ar\+::chip8\+::emulator}} $>$ ar\+::chip8\+::emulator\+::get\+\_\+global\+\_\+emulator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The emulator object is global, this is a getter to it (similar to settings\+\_\+managers in frontend) 
+
+\begin{DoxyReturn}{Returns}
+Pointer to global emulator object 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/daniel/\+Developer/access-\/to-\/retro/access-\/to-\/retro/chip8-\/virtual-\/console/src/emulator/\mbox{\hyperlink{emulator_8hpp}{emulator.\+hpp}}\item 
+/\+Users/daniel/\+Developer/access-\/to-\/retro/access-\/to-\/retro/chip8-\/virtual-\/console/src/emulator/emulator.\+cpp\end{DoxyCompactItemize}

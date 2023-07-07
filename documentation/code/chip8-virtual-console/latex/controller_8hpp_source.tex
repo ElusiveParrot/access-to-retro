@@ -1,0 +1,50 @@
+\hypertarget{controller_8hpp_source}{}\doxysection{controller.\+hpp}
+\label{controller_8hpp_source}\index{/Users/daniel/Developer/access-\/to-\/retro/access-\/to-\/retro/chip8-\/virtual-\/console/src/emulator/controller.hpp@{/Users/daniel/Developer/access-\/to-\/retro/access-\/to-\/retro/chip8-\/virtual-\/console/src/emulator/controller.hpp}}
+\mbox{\hyperlink{controller_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ ACCESS\_TO\_RETRO\_CONTROLLER\_HPP}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ ACCESS\_TO\_RETRO\_CONTROLLER\_HPP}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <access-\/to-\/retro-\/dev/access-\/to-\/retro-\/dev.h>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <array>}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacear_1_1chip8}{ar::chip8}}}
+\DoxyCodeLine{00012\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{enum\ class}\ \mbox{\hyperlink{namespacear_1_1chip8_affdd0b947dd20ed6665494dc1e4860c9}{key}}}
+\DoxyCodeLine{00018\ \ \ \ \ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ key\_0,}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ key\_1,}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ key\_2,}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ key\_3,}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ key\_4,}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ key\_5,}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ key\_6,}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ key\_7,}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ key\_8,}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ key\_9,}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ key\_a,}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ key\_b,}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ key\_c,}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ key\_d,}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ key\_e,}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ key\_f}
+\DoxyCodeLine{00035\ \ \ \ \ \};}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{unsigned}\ \mbox{\hyperlink{namespacear_1_1chip8_aff75d2c793cd8067b115c3aa06dc479c}{KEY\_COUNT}}\ =\ 16;}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classar_1_1chip8_1_1controller}{controller}}}
+\DoxyCodeLine{00042\ \ \ \ \ \{}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classar_1_1chip8_1_1controller_ab5204db5b7f6b75b5fb198500249fa9c}{set\_key\_status}}(\mbox{\hyperlink{namespacear_1_1chip8_affdd0b947dd20ed6665494dc1e4860c9}{ar::chip8::key}}\ \mbox{\hyperlink{namespacear_1_1chip8_affdd0b947dd20ed6665494dc1e4860c9}{key}},\ ar\_unified\_controller\_key\_status\ status);}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classar_1_1chip8_1_1controller_a7f86b14913837799045ccd8571779683}{is\_key\_pressed}}(\mbox{\hyperlink{namespacear_1_1chip8_affdd0b947dd20ed6665494dc1e4860c9}{ar::chip8::key}}\ \mbox{\hyperlink{namespacear_1_1chip8_affdd0b947dd20ed6665494dc1e4860c9}{key}});}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ std::array<bool,\ ar::chip8::KEY\_COUNT>\ \mbox{\hyperlink{classar_1_1chip8_1_1controller_a6b296c5040d3cb9e2d3acb27456e7fbf}{\_key\_pad}}\ \{\};}
+\DoxyCodeLine{00061\ \ \ \ \ \};}
+\DoxyCodeLine{00062\ \}}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//ACCESS\_TO\_RETRO\_CONTROLLER\_HPP}}
+
+\end{DoxyCode}

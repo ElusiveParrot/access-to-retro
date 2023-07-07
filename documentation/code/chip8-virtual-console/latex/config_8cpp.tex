@@ -1,0 +1,98 @@
+\hypertarget{config_8cpp}{}\doxysection{/\+Users/daniel/\+Developer/access-\/to-\/retro/access-\/to-\/retro/chip8-\/virtual-\/console/src/config.cpp File Reference}
+\label{config_8cpp}\index{/Users/daniel/Developer/access-\/to-\/retro/access-\/to-\/retro/chip8-\/virtual-\/console/src/config.cpp@{/Users/daniel/Developer/access-\/to-\/retro/access-\/to-\/retro/chip8-\/virtual-\/console/src/config.cpp}}
+{\ttfamily \#include $<$access-\/to-\/retro-\/dev/access-\/to-\/retro-\/dev.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}emulator/emulator.\+hpp\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{config_8cpp_a1b85dc0d017a251f12c32f6709897176}{AR\+\_\+\+DEFINE\+\_\+\+REQUIRED\+\_\+\+FN}} (AR\+\_\+\+DEFINE\+\_\+\+FN)
+\begin{DoxyCompactList}\small\item\em Defines virtual console\textquotesingle{}s metadata for the frontend to use. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{config_8cpp_a10ad695ff46566a35d3c858134df18f0}{AR\+\_\+\+DEFINE\+\_\+\+REQUIRED\+\_\+\+FN}} (AR\+\_\+\+STARTUP\+\_\+\+FN)
+\begin{DoxyCompactList}\small\item\em Configures the virtual console and the developer library. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{config_8cpp_a7d06f63a1ff930522b7eba3ee273a001}{AR\+\_\+\+DEFINE\+\_\+\+REQUIRED\+\_\+\+FN}} (AR\+\_\+\+QUIT\+\_\+\+FN)
+\begin{DoxyCompactList}\small\item\em Clean up resources of the virtual console and library. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{config_8cpp_aeb592b4b3704499892a7df5b74ea0fc1}\label{config_8cpp_aeb592b4b3704499892a7df5b74ea0fc1}} 
+constexpr const char $\ast$ {\bfseries NAME} = \char`\"{}access-\/to-\/retro-\/chip8\char`\"{}
+\item 
+\mbox{\Hypertarget{config_8cpp_aee3d4df3f6b22644baa4d86a825ce3e7}\label{config_8cpp_aee3d4df3f6b22644baa4d86a825ce3e7}} 
+constexpr const char $\ast$ {\bfseries SYSTEM} = \char`\"{}CHIP8\char`\"{}
+\item 
+\mbox{\Hypertarget{config_8cpp_af03c95564d4975e43c01208cc2822ed9}\label{config_8cpp_af03c95564d4975e43c01208cc2822ed9}} 
+constexpr const char $\ast$ {\bfseries AUTHOR} = \char`\"{}Daniel Wenda\char`\"{}
+\item 
+\mbox{\Hypertarget{config_8cpp_af8f799b10fd262cd6fa4a4c01574fac2}\label{config_8cpp_af8f799b10fd262cd6fa4a4c01574fac2}} 
+constexpr const char $\ast$ {\bfseries ROM\+\_\+\+EXT} = \char`\"{}$\ast$.ch8\char`\"{}
+\item 
+\mbox{\Hypertarget{config_8cpp_a51dfdd8afac3553251ed2665a78b2ce7}\label{config_8cpp_a51dfdd8afac3553251ed2665a78b2ce7}} 
+constexpr unsigned {\bfseries FRAME\+\_\+\+RATE} = 60
+\item 
+\mbox{\Hypertarget{config_8cpp_a8cab0d919e9905c1d372b5b7abe632e4}\label{config_8cpp_a8cab0d919e9905c1d372b5b7abe632e4}} 
+constexpr unsigned {\bfseries DEFAULT\+\_\+\+WINDOW\+\_\+\+WIDTH} = \mbox{\hyperlink{namespacear_1_1chip8_a5a171030855012327408b0f2ee4fe215}{ar\+::chip8\+::\+SCREEN\+\_\+\+RESOLUTION\+\_\+X}} $\ast$ 10
+\item 
+\mbox{\Hypertarget{config_8cpp_a64ecb31c81c5b3ec12c65efd95a0e800}\label{config_8cpp_a64ecb31c81c5b3ec12c65efd95a0e800}} 
+constexpr unsigned {\bfseries DEFAULT\+\_\+\+WINDOW\+\_\+\+HEIGHT} = \mbox{\hyperlink{namespacear_1_1chip8_a71327359eb492598dbe9baf75c856b08}{ar\+::chip8\+::\+SCREEN\+\_\+\+RESOLUTION\+\_\+Y}} $\ast$ 10
+\item 
+\mbox{\Hypertarget{config_8cpp_a6bc6ca033edb1eac7bd94bcacafc4415}\label{config_8cpp_a6bc6ca033edb1eac7bd94bcacafc4415}} 
+constexpr ar\+\_\+version {\bfseries VERSION} \{ .major = 1, .minor = 0, .patch = 0 \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{config_8cpp_a1b85dc0d017a251f12c32f6709897176}\label{config_8cpp_a1b85dc0d017a251f12c32f6709897176}} 
+\index{config.cpp@{config.cpp}!AR\_DEFINE\_REQUIRED\_FN@{AR\_DEFINE\_REQUIRED\_FN}}
+\index{AR\_DEFINE\_REQUIRED\_FN@{AR\_DEFINE\_REQUIRED\_FN}!config.cpp@{config.cpp}}
+\doxysubsubsection{\texorpdfstring{AR\_DEFINE\_REQUIRED\_FN()}{AR\_DEFINE\_REQUIRED\_FN()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily AR\+\_\+\+DEFINE\+\_\+\+REQUIRED\+\_\+\+FN (\begin{DoxyParamCaption}\item[{AR\+\_\+\+DEFINE\+\_\+\+FN}]{ }\end{DoxyParamCaption})}
+
+
+
+Defines virtual console\textquotesingle{}s metadata for the frontend to use. 
+
+Runs when the virtual console is loaded by the frontend (not when it\textquotesingle{}s started). \begin{DoxyRemark}{Remarks}
+Graphics mode should also be configured here, using \textquotesingle{}ar\+\_\+graphics\+\_\+set\+\_\+method\textquotesingle{} 
+
+This function NEEDS to be defined for the Access to Retro library. 
+\end{DoxyRemark}
+\begin{DoxyReturn}{Returns}
+Error code\+:
+\begin{DoxyItemize}
+\item 0\+: No error,
+\item Anything else\+: In this virtual console it\textquotesingle{}s result from ar\+\_\+define. 
+\end{DoxyItemize}
+\end{DoxyReturn}
+\mbox{\Hypertarget{config_8cpp_a7d06f63a1ff930522b7eba3ee273a001}\label{config_8cpp_a7d06f63a1ff930522b7eba3ee273a001}} 
+\index{config.cpp@{config.cpp}!AR\_DEFINE\_REQUIRED\_FN@{AR\_DEFINE\_REQUIRED\_FN}}
+\index{AR\_DEFINE\_REQUIRED\_FN@{AR\_DEFINE\_REQUIRED\_FN}!config.cpp@{config.cpp}}
+\doxysubsubsection{\texorpdfstring{AR\_DEFINE\_REQUIRED\_FN()}{AR\_DEFINE\_REQUIRED\_FN()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily AR\+\_\+\+DEFINE\+\_\+\+REQUIRED\+\_\+\+FN (\begin{DoxyParamCaption}\item[{AR\+\_\+\+QUIT\+\_\+\+FN}]{ }\end{DoxyParamCaption})}
+
+
+
+Clean up resources of the virtual console and library. 
+
+Runs when the virtual console is closed, should be used to deallocate memory and resources. \begin{DoxyRemark}{Remarks}
+This function NEEDS to be defined for the Access to Retro library. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{config_8cpp_a10ad695ff46566a35d3c858134df18f0}\label{config_8cpp_a10ad695ff46566a35d3c858134df18f0}} 
+\index{config.cpp@{config.cpp}!AR\_DEFINE\_REQUIRED\_FN@{AR\_DEFINE\_REQUIRED\_FN}}
+\index{AR\_DEFINE\_REQUIRED\_FN@{AR\_DEFINE\_REQUIRED\_FN}!config.cpp@{config.cpp}}
+\doxysubsubsection{\texorpdfstring{AR\_DEFINE\_REQUIRED\_FN()}{AR\_DEFINE\_REQUIRED\_FN()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily AR\+\_\+\+DEFINE\+\_\+\+REQUIRED\+\_\+\+FN (\begin{DoxyParamCaption}\item[{AR\+\_\+\+STARTUP\+\_\+\+FN}]{ }\end{DoxyParamCaption})}
+
+
+
+Configures the virtual console and the developer library. 
+
+Runs when the virtual console is started, should be used to configure virtual console\textquotesingle{}s internal state and the library. \begin{DoxyRemark}{Remarks}
+This function NEEDS to be defined for the Access to Retro library. 
+\end{DoxyRemark}
+\begin{DoxyReturn}{Returns}
+Error code\+:
+\begin{DoxyItemize}
+\item 0\+: No error
+\item Anything else\+: In this virtual console it\textquotesingle{}s the result from ar\+\_\+init. 
+\end{DoxyItemize}
+\end{DoxyReturn}

@@ -1,0 +1,144 @@
+\hypertarget{classar_1_1gui_1_1main__window}{}\doxysection{ar\+::gui\+::main\+\_\+window Class Reference}
+\label{classar_1_1gui_1_1main__window}\index{ar::gui::main\_window@{ar::gui::main\_window}}
+
+
+Main window/landing page of the application, shown after the splash screen.  
+
+
+
+
+{\ttfamily \#include $<$main-\/window.\+hpp$>$}
+
+Inheritance diagram for ar\+::gui\+::main\+\_\+window\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classar_1_1gui_1_1main__window}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classar_1_1gui_1_1main__window_aaceaaa0e71de1534c742c2070b123afb}\label{classar_1_1gui_1_1main__window_aaceaaa0e71de1534c742c2070b123afb}} 
+{\bfseries main\+\_\+window} (QWidget $\ast$parent=nullptr)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Slots}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classar_1_1gui_1_1main__window_a3bb43e12482ad4785ec4e299bb96c9b3}\label{classar_1_1gui_1_1main__window_a3bb43e12482ad4785ec4e299bb96c9b3}} 
+void {\bfseries on\+\_\+settings\+\_\+button\+\_\+clicked} ()
+\begin{DoxyCompactList}\small\item\em Runs when settings button in menubar is clicked. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classar_1_1gui_1_1main__window_ad4a13db1c91358bcf6937d659c5e6f55}\label{classar_1_1gui_1_1main__window_ad4a13db1c91358bcf6937d659c5e6f55}} 
+void {\bfseries on\+\_\+manager\+\_\+button\+\_\+clicked} ()
+\begin{DoxyCompactList}\small\item\em Runs when manager button in menubar is clicked. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classar_1_1gui_1_1main__window_adfd3924f562029bcf73ba436fac4cb93}\label{classar_1_1gui_1_1main__window_adfd3924f562029bcf73ba436fac4cb93}} 
+void {\bfseries on\+\_\+input\+\_\+button\+\_\+clicked} ()
+\begin{DoxyCompactList}\small\item\em Runs when input button in menubar is clicked. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classar_1_1gui_1_1main__window_a697eefe26c916a38acf3d1e4c796a098}\label{classar_1_1gui_1_1main__window_a697eefe26c916a38acf3d1e4c796a098}} 
+void {\bfseries on\+\_\+refresh\+\_\+button\+\_\+clicked} ()
+\begin{DoxyCompactList}\small\item\em Runs when refresh button in menubar is clicked. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classar_1_1gui_1_1main__window_a8dfe8921a18b9ccf4997bf92eebf7601}\label{classar_1_1gui_1_1main__window_a8dfe8921a18b9ccf4997bf92eebf7601}} 
+void {\bfseries on\+\_\+about\+\_\+button\+\_\+clicked} ()
+\begin{DoxyCompactList}\small\item\em Runs when about button in menubar is clicked. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classar_1_1gui_1_1main__window_a44104592b9a0e3a8496fb17562e9c2a3}\label{classar_1_1gui_1_1main__window_a44104592b9a0e3a8496fb17562e9c2a3}} 
+void {\bfseries on\+\_\+games\+\_\+search\+\_\+button\+\_\+clicked} ()
+\begin{DoxyCompactList}\small\item\em Runs when search button is clicked on games tab. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classar_1_1gui_1_1main__window_a1bc892140c7005cb3626f48fc0bc5a18}\label{classar_1_1gui_1_1main__window_a1bc892140c7005cb3626f48fc0bc5a18}} 
+void {\bfseries on\+\_\+games\+\_\+search\+\_\+clear\+\_\+filter\+\_\+button\+\_\+clicked} ()
+\begin{DoxyCompactList}\small\item\em Runs when clear filter button is clicked on games tab. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classar_1_1gui_1_1main__window_a2dfd2d09cf027f8c81c15f1245aa6248}\label{classar_1_1gui_1_1main__window_a2dfd2d09cf027f8c81c15f1245aa6248}} 
+void {\bfseries on\+\_\+games\+\_\+list\+\_\+current\+Item\+Changed} (QList\+Widget\+Item $\ast$item)
+\begin{DoxyCompactList}\small\item\em Runs when user clicks a game on game list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classar_1_1gui_1_1main__window_a0518d9aef1343a2167bf0f90aa929a62}\label{classar_1_1gui_1_1main__window_a0518d9aef1343a2167bf0f90aa929a62}} 
+void {\bfseries load\+\_\+virtual\+\_\+consoles} ()
+\begin{DoxyCompactList}\small\item\em Searches for virtual consoles and loads them into \textquotesingle{}\+\_\+virtual\+\_\+consoles\textquotesingle{} vector. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classar_1_1gui_1_1main__window_a323ec47796390bb1abc8317f358ea16d}\label{classar_1_1gui_1_1main__window_a323ec47796390bb1abc8317f358ea16d}} 
+void {\bfseries load\+\_\+games} ()
+\begin{DoxyCompactList}\small\item\em Searches for games and loads them into \textquotesingle{}\+\_\+games\textquotesingle{} vector. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classar_1_1gui_1_1main__window_a33bd2883aa83a801db2ae08baacac458}{is\+\_\+first\+\_\+time\+\_\+setup\+\_\+needed}} ()
+\begin{DoxyCompactList}\small\item\em Checks whether first time setup and returns if it needed. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::reference\+\_\+wrapper$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classar_1_1core_1_1executable__binary}{ar\+::core\+::executable\+\_\+binary}} $>$ $>$ $>$ \mbox{\hyperlink{classar_1_1gui_1_1main__window_ab87e11ef5e0d4cda14450692ec45ca1c}{collect\+\_\+games\+\_\+with\+\_\+extensions}} (const std\+::vector$<$ std\+::string $>$ \&extensions)
+\begin{DoxyCompactList}\small\item\em Helper method to get a list of games that have one of provided extensions. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classar_1_1gui_1_1main__window_a0d6869cc5baf26a3efaeb56dc06ff423}\label{classar_1_1gui_1_1main__window_a0d6869cc5baf26a3efaeb56dc06ff423}} 
+void {\bfseries system\+\_\+selected} ()
+\begin{DoxyCompactList}\small\item\em @bief Runs when a system button (game console system) is clicked \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classar_1_1gui_1_1main__window_a581377bd2239ffdb7b4d0a57c2a3c9e4}\label{classar_1_1gui_1_1main__window_a581377bd2239ffdb7b4d0a57c2a3c9e4}} 
+void {\bfseries populate\+\_\+systems\+\_\+tab} ()
+\begin{DoxyCompactList}\small\item\em Populate systems tab with UI elements. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classar_1_1gui_1_1main__window_a7789ae25aa1362a6cad715fe82e6c854}{populate\+\_\+games\+\_\+tab}} (const std\+::string \&filter=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em Populate games tab with UI elements. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classar_1_1gui_1_1main__window_a1e6b39bd0f43ef813888da2dd55efb11}\label{classar_1_1gui_1_1main__window_a1e6b39bd0f43ef813888da2dd55efb11}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classar_1_1util_1_1settings__manager}{ar\+::util\+::settings\+\_\+manager}} $>$ {\bfseries \+\_\+settings\+\_\+manager}
+\begin{DoxyCompactList}\small\item\em Global settings manager object fetched as a pointer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classar_1_1gui_1_1main__window_a01c5bf70cac7a5f7812d05e855fcbdfb}\label{classar_1_1gui_1_1main__window_a01c5bf70cac7a5f7812d05e855fcbdfb}} 
+std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classar_1_1core_1_1virtual__console}{ar\+::core\+::virtual\+\_\+console}} $>$ $>$ {\bfseries \+\_\+virtual\+\_\+consoles}
+\begin{DoxyCompactList}\small\item\em Stores loaded virtual consoles. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classar_1_1gui_1_1main__window_aa76f5cd56f6cb0f284750ebe6a147ff2}\label{classar_1_1gui_1_1main__window_aa76f5cd56f6cb0f284750ebe6a147ff2}} 
+std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classar_1_1core_1_1executable__binary}{ar\+::core\+::executable\+\_\+binary}} $>$ $>$ {\bfseries \+\_\+games}
+\begin{DoxyCompactList}\small\item\em Stores loaded games. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classar_1_1gui_1_1main__window_ab60bfe3b039e6f54201877bbb7cc9a75}\label{classar_1_1gui_1_1main__window_ab60bfe3b039e6f54201877bbb7cc9a75}} 
+Ui\+::main\+\_\+window $\ast$ {\bfseries ui}
+\begin{DoxyCompactList}\small\item\em Qt\textquotesingle{}s autogenerated Ui. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Main window/landing page of the application, shown after the splash screen. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classar_1_1gui_1_1main__window_ab87e11ef5e0d4cda14450692ec45ca1c}\label{classar_1_1gui_1_1main__window_ab87e11ef5e0d4cda14450692ec45ca1c}} 
+\index{ar::gui::main\_window@{ar::gui::main\_window}!collect\_games\_with\_extensions@{collect\_games\_with\_extensions}}
+\index{collect\_games\_with\_extensions@{collect\_games\_with\_extensions}!ar::gui::main\_window@{ar::gui::main\_window}}
+\doxysubsubsection{\texorpdfstring{collect\_games\_with\_extensions()}{collect\_games\_with\_extensions()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::reference\+\_\+wrapper$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classar_1_1core_1_1executable__binary}{ar\+::core\+::executable\+\_\+binary}} $>$ $>$ $>$ ar\+::gui\+::main\+\_\+window\+::collect\+\_\+games\+\_\+with\+\_\+extensions (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::string $>$ \&}]{extensions }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Helper method to get a list of games that have one of provided extensions. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em extensions} & List of extensions \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+List of games with provided extensions 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classar_1_1gui_1_1main__window_a33bd2883aa83a801db2ae08baacac458}\label{classar_1_1gui_1_1main__window_a33bd2883aa83a801db2ae08baacac458}} 
+\index{ar::gui::main\_window@{ar::gui::main\_window}!is\_first\_time\_setup\_needed@{is\_first\_time\_setup\_needed}}
+\index{is\_first\_time\_setup\_needed@{is\_first\_time\_setup\_needed}!ar::gui::main\_window@{ar::gui::main\_window}}
+\doxysubsubsection{\texorpdfstring{is\_first\_time\_setup\_needed()}{is\_first\_time\_setup\_needed()}}
+{\footnotesize\ttfamily bool ar\+::gui\+::main\+\_\+window\+::is\+\_\+first\+\_\+time\+\_\+setup\+\_\+needed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Checks whether first time setup and returns if it needed. 
+
+\begin{DoxyReturn}{Returns}
+If first time setup is needed 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classar_1_1gui_1_1main__window_a7789ae25aa1362a6cad715fe82e6c854}\label{classar_1_1gui_1_1main__window_a7789ae25aa1362a6cad715fe82e6c854}} 
+\index{ar::gui::main\_window@{ar::gui::main\_window}!populate\_games\_tab@{populate\_games\_tab}}
+\index{populate\_games\_tab@{populate\_games\_tab}!ar::gui::main\_window@{ar::gui::main\_window}}
+\doxysubsubsection{\texorpdfstring{populate\_games\_tab()}{populate\_games\_tab()}}
+{\footnotesize\ttfamily void ar\+::gui\+::main\+\_\+window\+::populate\+\_\+games\+\_\+tab (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filter = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Populate games tab with UI elements. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filter} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/daniel/\+Developer/access-\/to-\/retro/access-\/to-\/retro/frontend/src/gui/\mbox{\hyperlink{main-window_8hpp}{main-\/window.\+hpp}}\item 
+/\+Users/daniel/\+Developer/access-\/to-\/retro/access-\/to-\/retro/frontend/src/gui/main-\/window.\+cpp\end{DoxyCompactItemize}

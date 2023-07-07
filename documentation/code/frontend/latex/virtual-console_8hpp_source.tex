@@ -1,0 +1,117 @@
+\hypertarget{virtual-console_8hpp_source}{}\doxysection{virtual-\/console.hpp}
+\label{virtual-console_8hpp_source}\index{/Users/daniel/Developer/access-\/to-\/retro/access-\/to-\/retro/frontend/src/core/virtual-\/console.hpp@{/Users/daniel/Developer/access-\/to-\/retro/access-\/to-\/retro/frontend/src/core/virtual-\/console.hpp}}
+\mbox{\hyperlink{virtual-console_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ ACCESS\_TO\_RETRO\_FRONTEND\_VIRTUAL\_CONSOLE\_HPP}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ ACCESS\_TO\_RETRO\_FRONTEND\_VIRTUAL\_CONSOLE\_HPP}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <functional>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <thread>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{types_8hpp}{helpers/types.hpp}}"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{executable-binary_8hpp}{executable-\/binary.hpp}}"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{dynamic-library_8hpp}{dynamic-\/library.hpp}}"{}}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacear_1_1core}{ar::core}}}
+\DoxyCodeLine{00016\ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classar_1_1core_1_1virtual__console}{virtual\_console}}}
+\DoxyCodeLine{00026\ \ \ \ \ \{}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classar_1_1core_1_1virtual__console}{virtual\_console}}(\textcolor{keyword}{const}\ std::string\&\ path);}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classar_1_1core_1_1virtual__console}{virtual\_console}}(\mbox{\hyperlink{classar_1_1core_1_1virtual__console}{virtual\_console}}\&\&\ other)\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classar_1_1core_1_1virtual__console}{\string~virtual\_console}}();}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classar_1_1core_1_1virtual__console_a0b1bff7493b23f70fe87a6253c614a65}{prepare\_for\_startup}}(std::unique\_ptr<ar::core::executable\_binary>\&\ binary);}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classar_1_1core_1_1virtual__console_a8cd59003b78576ad2599c57cadef010b}{create\_and\_run\_threads}}();}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ T\ \mbox{\hyperlink{classar_1_1core_1_1virtual__console_a94ca942b89fbb24ebefe67ba7f02479a}{get\_symbol\_from\_library}}(\textcolor{keyword}{const}\ std::string\&\ symbol\_name)}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Pass\ through\ to\ ar::core::dynamic\_library\ 's\ get\_symbol\ function}}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classar_1_1core_1_1virtual__console_a414a74cc755669c6c7c529ea333b1459}{\_library}}.\mbox{\hyperlink{classar_1_1core_1_1dynamic__library_afdbeb96dfc3a42a3772415f625d370dc}{get\_symbol}}<T>(symbol\_name);}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classar_1_1core_1_1virtual__console_aaf30d68d38e3826842276877a839aeba}{quit\_and\_cleanup}}();}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ [[nodiscard]]\ std::string\ \mbox{\hyperlink{classar_1_1core_1_1virtual__console_affec56df5b4a318ec23c72813f152ed4}{get\_path}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ [[nodiscard]]\ std::string\ \mbox{\hyperlink{classar_1_1core_1_1virtual__console_a14c70d4c4fa8d9abbbc6b88948db1c50}{get\_name}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ [[nodiscard]]\ std::string\ \mbox{\hyperlink{classar_1_1core_1_1virtual__console_a93c8ada30f651f93802924beb95cb383}{get\_system}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ [[nodiscard]]\ std::string\ \mbox{\hyperlink{classar_1_1core_1_1virtual__console_a8d2ad1d0962e1eaba042e82a6222cc0c}{get\_author}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ [[nodiscard]]\ std::string\ \mbox{\hyperlink{classar_1_1core_1_1virtual__console_ab2c4e806809214e49327180864adee46}{get\_rom\_extension}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keywordtype}{unsigned}\ \mbox{\hyperlink{classar_1_1core_1_1virtual__console_a108481ff37b4d6359e9c14e9f935d9cd}{get\_default\_window\_width}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keywordtype}{unsigned}\ \mbox{\hyperlink{classar_1_1core_1_1virtual__console_afc121dae1ddc908f7fe353bbe16d1502}{get\_default\_window\_height}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{classar_1_1core_1_1virtual__console_aa0029bae7e1445be9114905c93fd41a6}{\_path}};}
+\DoxyCodeLine{00129\ }
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classar_1_1core_1_1dynamic__library}{ar::core::dynamic\_library}}\ \mbox{\hyperlink{classar_1_1core_1_1virtual__console_a414a74cc755669c6c7c529ea333b1459}{\_library}};}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{classar_1_1core_1_1virtual__console_a375559f7744c1055c69ff45d871eb4bd}{\_name}};}
+\DoxyCodeLine{00135\ }
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{classar_1_1core_1_1virtual__console_a08ce2e43c321c703cc9d4cfe07f39763}{\_system}};}
+\DoxyCodeLine{00138\ }
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ @brief\ Name/nickname\ of\ this\ virtual\ console's\ author}}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ std::string\ \_author;}
+\DoxyCodeLine{00141\ }
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{classar_1_1core_1_1virtual__console_ae02159420e248bfe6dfe56fc3fc2cd6f}{\_rom\_extension}};}
+\DoxyCodeLine{00144\ }
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classar_1_1core_1_1virtual__console_a594c9674243c539785208519273ce67c}{\_frame\_time}};}
+\DoxyCodeLine{00147\ }
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \mbox{\hyperlink{classar_1_1core_1_1virtual__console_a995e75245e35118092f0aba811054c66}{\_default\_window\_width}};}
+\DoxyCodeLine{00150\ }
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \mbox{\hyperlink{classar_1_1core_1_1virtual__console_ac1852e504531a605b2df9d5b0d8af259}{\_default\_window\_height}};}
+\DoxyCodeLine{00153\ }
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ std::optional<std::reference\_wrapper<std::unique\_ptr<ar::core::executable\_binary>\ >\ >\ \mbox{\hyperlink{classar_1_1core_1_1virtual__console_a3446de0a4557e8f745940dddd4ccaa69}{\_linked\_binary}};}
+\DoxyCodeLine{00156\ }
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TODO\ ar\_version}}
+\DoxyCodeLine{00158\ }
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ std::function<\mbox{\hyperlink{namespacear_1_1types_af22b095bd412dfdff3412bd0efe32912}{ar::types::err\_code}}()>\ \mbox{\hyperlink{classar_1_1core_1_1virtual__console_ae8c981433ce2872197650ce2f9554079}{\_define\_fn}};}
+\DoxyCodeLine{00161\ }
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ std::function<\mbox{\hyperlink{namespacear_1_1types_af22b095bd412dfdff3412bd0efe32912}{ar::types::err\_code}}()>\ \mbox{\hyperlink{classar_1_1core_1_1virtual__console_a4ea35cd8fdf4b5857181336e0b476e03}{\_startup\_fn}};}
+\DoxyCodeLine{00164\ }
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ std::function<void()>\ \mbox{\hyperlink{classar_1_1core_1_1virtual__console_ac93ec509059c58f2e4a2560647bf9a9e}{\_quit\_fn}};}
+\DoxyCodeLine{00167\ }
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ std::atomic\_bool\ \mbox{\hyperlink{classar_1_1core_1_1virtual__console_a68a0f73eee345084e6bf5547ca464f49}{\_run\_threads}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00170\ }
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ std::unique\_ptr<std::thread>\ \mbox{\hyperlink{classar_1_1core_1_1virtual__console_aa2e739fbb0c8c0d4748ff61f56cbc119}{\_main\_thread}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00173\ }
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ std::function<void()>\ \mbox{\hyperlink{classar_1_1core_1_1virtual__console_a2ed06c7ec9c96feff79578356a4393fe}{\_main\_thread\_fn}};}
+\DoxyCodeLine{00176\ }
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ std::unique\_ptr<std::thread>\ \mbox{\hyperlink{classar_1_1core_1_1virtual__console_a2dd2d99a408c2461c9cf153e9e6a67ee}{\_render\_thread}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00179\ }
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ std::function<void()>\ \mbox{\hyperlink{classar_1_1core_1_1virtual__console_a34f66b1aaee38146a0a4523ff8da218b}{\_render\_thread\_fn}};}
+\DoxyCodeLine{00182\ }
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ std::unique\_ptr<std::thread>\ \mbox{\hyperlink{classar_1_1core_1_1virtual__console_aced3d2dfc19329b4da2e7ce55a2eecdc}{\_input\_thread}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00185\ }
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ std::function<void()>\ \mbox{\hyperlink{classar_1_1core_1_1virtual__console_a0d226d12336bef43420e176355c50f5d}{\_input\_thread\_fn}};}
+\DoxyCodeLine{00188\ \ \ \ \ \};}
+\DoxyCodeLine{00189\ }
+\DoxyCodeLine{00191\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classar_1_1core_1_1virtual__console__error}{virtual\_console\_error}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classar_1_1base__exception}{ar::base\_exception}}}
+\DoxyCodeLine{00192\ \ \ \ \ \{}
+\DoxyCodeLine{00193\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classar_1_1core_1_1virtual__console__error}{virtual\_console\_error}}(std::string\ virtual\_console\_name,\ std::string\ error);}
+\DoxyCodeLine{00195\ }
+\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ [[nodiscard]]\ std::string\ get\_vc\_name()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ [[nodiscard]]\ std::string\ get\_error()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00198\ }
+\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ [[nodiscard]]\ std::string\ \mbox{\hyperlink{classar_1_1core_1_1virtual__console__error_ad15b8a4185a4a2a4aa6d8de28c31cb29}{get\_logger\_formatted\_error}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00200\ }
+\DoxyCodeLine{00201\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\ \_virtual\_console\_name;}
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\ \_error;}
+\DoxyCodeLine{00204\ \ \ \ \ \};}
+\DoxyCodeLine{00205\ \}}
+\DoxyCodeLine{00206\ }
+\DoxyCodeLine{00207\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ ACCESS\_TO\_RETRO\_FRONTEND\_VIRTUAL\_CONSOLE\_HPP}}
+
+\end{DoxyCode}

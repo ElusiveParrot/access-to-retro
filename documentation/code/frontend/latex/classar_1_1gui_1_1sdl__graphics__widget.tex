@@ -1,0 +1,204 @@
+\hypertarget{classar_1_1gui_1_1sdl__graphics__widget}{}\doxysection{ar\+::gui\+::sdl\+\_\+graphics\+\_\+widget Class Reference}
+\label{classar_1_1gui_1_1sdl__graphics__widget}\index{ar::gui::sdl\_graphics\_widget@{ar::gui::sdl\_graphics\_widget}}
+
+
+Widget used to allow SDL2 to render onto a Qt.  
+
+
+
+
+{\ttfamily \#include $<$sdl-\/graphics-\/widget.\+hpp$>$}
+
+Inheritance diagram for ar\+::gui\+::sdl\+\_\+graphics\+\_\+widget\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classar_1_1gui_1_1sdl__graphics__widget}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classar_1_1gui_1_1sdl__graphics__widget_afd6b90387aab807912b826eebedf7cba}{sdl\+\_\+graphics\+\_\+widget}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classar_1_1core_1_1virtual__console}{ar\+::core\+::virtual\+\_\+console}} $>$ \&virtual\+\_\+console, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classar_1_1core_1_1executable__binary}{ar\+::core\+::executable\+\_\+binary}} $>$ \&game, QWidget $\ast$parent=nullptr)
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classar_1_1gui_1_1sdl__graphics__widget_a8ca126a49d80222766231222074084b8}\label{classar_1_1gui_1_1sdl__graphics__widget_a8ca126a49d80222766231222074084b8}} 
+void {\bfseries prepare\+\_\+for\+\_\+game\+\_\+launch} ()
+\begin{DoxyCompactList}\small\item\em Prepares virtual console and game for launch. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classar_1_1gui_1_1sdl__graphics__widget_aa9cd1499521e62e30bd3a734c88e819a}{prepare\+\_\+graphics}} ()
+\begin{DoxyCompactList}\small\item\em Prepare graphical part of Access to Retro library inside the virtual console. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classar_1_1gui_1_1sdl__graphics__widget_a8bf955e759454fa3f00f393014a81203}\label{classar_1_1gui_1_1sdl__graphics__widget_a8bf955e759454fa3f00f393014a81203}} 
+QPaint\+Engine $\ast$ {\bfseries paint\+Engine} () const override
+\begin{DoxyCompactList}\small\item\em Dummy function silencing Qt\textquotesingle{}s paint engine bug error. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classar_1_1gui_1_1sdl__graphics__widget_a7ae70861d8511f41696395ed4a0c08df}{initialise\+\_\+sdl\+\_\+objects}} ()
+\begin{DoxyCompactList}\small\item\em Initialise objects from sdl library. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classar_1_1gui_1_1sdl__graphics__widget_a3cf522ad7ef6bcf9d18aa42f7124d87c}\label{classar_1_1gui_1_1sdl__graphics__widget_a3cf522ad7ef6bcf9d18aa42f7124d87c}} 
+void {\bfseries destroy\+\_\+sdl\+\_\+objects} ()
+\begin{DoxyCompactList}\small\item\em Destroy objects from sdl library. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classar_1_1gui_1_1sdl__graphics__widget_a024b3fb178ca145c62d743dbacb60e12}{on\+\_\+resize}} (int w, int h)
+\begin{DoxyCompactList}\small\item\em Handles resize event on SDL side -\/ does nothing for now. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classar_1_1gui_1_1sdl__graphics__widget_a63dcc175f8c42e4dce16cdadf7f22b5d}\label{classar_1_1gui_1_1sdl__graphics__widget_a63dcc175f8c42e4dce16cdadf7f22b5d}} 
+void {\bfseries resize\+Event} (QResize\+Event $\ast$event) override
+\begin{DoxyCompactList}\small\item\em Qt\textquotesingle{}s widget resize event handler. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classar_1_1gui_1_1sdl__graphics__widget_adb47cd691d89ac1746f5b1befaf600e1}\label{classar_1_1gui_1_1sdl__graphics__widget_adb47cd691d89ac1746f5b1befaf600e1}} 
+void {\bfseries key\+Press\+Event} (QKey\+Event $\ast$event) override
+\begin{DoxyCompactList}\small\item\em Overrides Qt\textquotesingle{}s Key press event for input handling. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classar_1_1gui_1_1sdl__graphics__widget_a702dd8213bb7930b76014b92f33fa140}\label{classar_1_1gui_1_1sdl__graphics__widget_a702dd8213bb7930b76014b92f33fa140}} 
+void {\bfseries key\+Release\+Event} (QKey\+Event $\ast$event) override
+\begin{DoxyCompactList}\small\item\em Overrides Qt\textquotesingle{}s Key release event for input handling. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classar_1_1gui_1_1sdl__graphics__widget_ac1df0be03a0caf07a4b16a17f3145f05}\label{classar_1_1gui_1_1sdl__graphics__widget_ac1df0be03a0caf07a4b16a17f3145f05}} 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classar_1_1core_1_1virtual__console}{ar\+::core\+::virtual\+\_\+console}} $>$ \& {\bfseries \+\_\+virtual\+\_\+console}
+\begin{DoxyCompactList}\small\item\em Virtual console that will output to this widget. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classar_1_1gui_1_1sdl__graphics__widget_ae7e82bd80b5c9e36a1424cb841e9513c}\label{classar_1_1gui_1_1sdl__graphics__widget_ae7e82bd80b5c9e36a1424cb841e9513c}} 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classar_1_1core_1_1executable__binary}{ar\+::core\+::executable\+\_\+binary}} $>$ \& {\bfseries \+\_\+game}
+\begin{DoxyCompactList}\small\item\em Game that will be played in this widget. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classar_1_1gui_1_1sdl__graphics__widget_a263b6e3a4062f0954a075b696dcc7acf}\label{classar_1_1gui_1_1sdl__graphics__widget_a263b6e3a4062f0954a075b696dcc7acf}} 
+\mbox{\hyperlink{classar_1_1core_1_1input__handler}{ar\+::core\+::input\+\_\+handler}} {\bfseries \+\_\+input\+\_\+handler}
+\begin{DoxyCompactList}\small\item\em Object handling input and directing it to the virtual console. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classar_1_1gui_1_1sdl__graphics__widget_a49c249340227005d23aa8b3dfcee78f6}\label{classar_1_1gui_1_1sdl__graphics__widget_a49c249340227005d23aa8b3dfcee78f6}} 
+QTimer {\bfseries \+\_\+frame\+\_\+timer}
+\begin{DoxyCompactList}\small\item\em Timer used to time when to handle user input. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classar_1_1gui_1_1sdl__graphics__widget_add208730c744a9868d9c267422e778fd}\label{classar_1_1gui_1_1sdl__graphics__widget_add208730c744a9868d9c267422e778fd}} 
+SDL\+\_\+\+Window $\ast$ {\bfseries \+\_\+sdl\+\_\+window} = nullptr
+\begin{DoxyCompactList}\small\item\em Emulated SDL window created from Qt\textquotesingle{}s open\+GL widget. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classar_1_1gui_1_1sdl__graphics__widget_a591521549e02e36ed2f50df16b782b04}\label{classar_1_1gui_1_1sdl__graphics__widget_a591521549e02e36ed2f50df16b782b04}} 
+SDL\+\_\+\+Renderer $\ast$ {\bfseries \+\_\+sdl\+\_\+renderer} = nullptr
+\begin{DoxyCompactList}\small\item\em Basic SDL renderer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classar_1_1gui_1_1sdl__graphics__widget_a3c9840025e46c44bda0d34386c93c042}\label{classar_1_1gui_1_1sdl__graphics__widget_a3c9840025e46c44bda0d34386c93c042}} 
+ar\+\_\+graphics\+\_\+method {\bfseries \+\_\+graphics\+\_\+method} = ar\+\_\+graphics\+\_\+method\+\_\+none
+\begin{DoxyCompactList}\small\item\em Access to Retro\textquotesingle{}s graphics method, set using \textquotesingle{}ar\+\_\+graphics\+\_\+set\+\_\+method\textquotesingle{} by virtual console. \end{DoxyCompactList}\item 
+ar\+\_\+frame\+\_\+buffer $\ast$ \mbox{\hyperlink{classar_1_1gui_1_1sdl__graphics__widget_a609917478f7671d38e817b483c6a3978}{\+\_\+frame\+\_\+buffer}} = nullptr
+\begin{DoxyCompactList}\small\item\em Frame buffer object from the Access to Retro library created by the developer if graphics mode is SDL. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr int \mbox{\hyperlink{classar_1_1gui_1_1sdl__graphics__widget_ad446eff3382962afe203ad1a7cb3520d}{FRAME\+\_\+\+RATE}} = 60
+\begin{DoxyCompactList}\small\item\em Defines framerate for the widget. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Widget used to allow SDL2 to render onto a Qt. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classar_1_1gui_1_1sdl__graphics__widget_afd6b90387aab807912b826eebedf7cba}\label{classar_1_1gui_1_1sdl__graphics__widget_afd6b90387aab807912b826eebedf7cba}} 
+\index{ar::gui::sdl\_graphics\_widget@{ar::gui::sdl\_graphics\_widget}!sdl\_graphics\_widget@{sdl\_graphics\_widget}}
+\index{sdl\_graphics\_widget@{sdl\_graphics\_widget}!ar::gui::sdl\_graphics\_widget@{ar::gui::sdl\_graphics\_widget}}
+\doxysubsubsection{\texorpdfstring{sdl\_graphics\_widget()}{sdl\_graphics\_widget()}}
+{\footnotesize\ttfamily ar\+::gui\+::sdl\+\_\+graphics\+\_\+widget\+::sdl\+\_\+graphics\+\_\+widget (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classar_1_1core_1_1virtual__console}{ar\+::core\+::virtual\+\_\+console}} $>$ \&}]{virtual\+\_\+console,  }\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classar_1_1core_1_1executable__binary}{ar\+::core\+::executable\+\_\+binary}} $>$ \&}]{game,  }\item[{QWidget $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+
+
+Default constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em virtual\+\_\+console} & Virtual console that will output to this widget \\
+\hline
+{\em game} & Game that will be played in this widget \\
+\hline
+{\em parent} & Parent window \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exceptions} & 
+\begin{DoxyItemize}
+\item std\+::runtime\+\_\+error\+: Unable to initialise SDL objects
+\item \mbox{\hyperlink{classar_1_1core_1_1virtual__console__error}{ar\+::core\+::virtual\+\_\+console\+\_\+error}}\+: Virtual console threw an error 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classar_1_1gui_1_1sdl__graphics__widget_a7ae70861d8511f41696395ed4a0c08df}\label{classar_1_1gui_1_1sdl__graphics__widget_a7ae70861d8511f41696395ed4a0c08df}} 
+\index{ar::gui::sdl\_graphics\_widget@{ar::gui::sdl\_graphics\_widget}!initialise\_sdl\_objects@{initialise\_sdl\_objects}}
+\index{initialise\_sdl\_objects@{initialise\_sdl\_objects}!ar::gui::sdl\_graphics\_widget@{ar::gui::sdl\_graphics\_widget}}
+\doxysubsubsection{\texorpdfstring{initialise\_sdl\_objects()}{initialise\_sdl\_objects()}}
+{\footnotesize\ttfamily void ar\+::gui\+::sdl\+\_\+graphics\+\_\+widget\+::initialise\+\_\+sdl\+\_\+objects (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Initialise objects from sdl library. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exceptions} & 
+\begin{DoxyItemize}
+\item std\+::runtime\+\_\+error\+: Unable to initialise SDL objects 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classar_1_1gui_1_1sdl__graphics__widget_a024b3fb178ca145c62d743dbacb60e12}\label{classar_1_1gui_1_1sdl__graphics__widget_a024b3fb178ca145c62d743dbacb60e12}} 
+\index{ar::gui::sdl\_graphics\_widget@{ar::gui::sdl\_graphics\_widget}!on\_resize@{on\_resize}}
+\index{on\_resize@{on\_resize}!ar::gui::sdl\_graphics\_widget@{ar::gui::sdl\_graphics\_widget}}
+\doxysubsubsection{\texorpdfstring{on\_resize()}{on\_resize()}}
+{\footnotesize\ttfamily void ar\+::gui\+::sdl\+\_\+graphics\+\_\+widget\+::on\+\_\+resize (\begin{DoxyParamCaption}\item[{int}]{w,  }\item[{int}]{h }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Handles resize event on SDL side -\/ does nothing for now. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em w} & New width \\
+\hline
+{\em h} & New height \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classar_1_1gui_1_1sdl__graphics__widget_aa9cd1499521e62e30bd3a734c88e819a}\label{classar_1_1gui_1_1sdl__graphics__widget_aa9cd1499521e62e30bd3a734c88e819a}} 
+\index{ar::gui::sdl\_graphics\_widget@{ar::gui::sdl\_graphics\_widget}!prepare\_graphics@{prepare\_graphics}}
+\index{prepare\_graphics@{prepare\_graphics}!ar::gui::sdl\_graphics\_widget@{ar::gui::sdl\_graphics\_widget}}
+\doxysubsubsection{\texorpdfstring{prepare\_graphics()}{prepare\_graphics()}}
+{\footnotesize\ttfamily void ar\+::gui\+::sdl\+\_\+graphics\+\_\+widget\+::prepare\+\_\+graphics (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Prepare graphical part of Access to Retro library inside the virtual console. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exceptions} & 
+\begin{DoxyItemize}
+\item \mbox{\hyperlink{classar_1_1core_1_1virtual__console__error}{ar\+::core\+::virtual\+\_\+console\+\_\+error}}\+: Invalid graphical mode (or ar\+\_\+graphics\+\_\+mode\+\_\+none) set by the virtual console 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classar_1_1gui_1_1sdl__graphics__widget_a609917478f7671d38e817b483c6a3978}\label{classar_1_1gui_1_1sdl__graphics__widget_a609917478f7671d38e817b483c6a3978}} 
+\index{ar::gui::sdl\_graphics\_widget@{ar::gui::sdl\_graphics\_widget}!\_frame\_buffer@{\_frame\_buffer}}
+\index{\_frame\_buffer@{\_frame\_buffer}!ar::gui::sdl\_graphics\_widget@{ar::gui::sdl\_graphics\_widget}}
+\doxysubsubsection{\texorpdfstring{\_frame\_buffer}{\_frame\_buffer}}
+{\footnotesize\ttfamily ar\+\_\+frame\+\_\+buffer$\ast$ ar\+::gui\+::sdl\+\_\+graphics\+\_\+widget\+::\+\_\+frame\+\_\+buffer = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Frame buffer object from the Access to Retro library created by the developer if graphics mode is SDL. 
+
+\begin{DoxyRemark}{Remarks}
+Freed by the library automatically 
+\end{DoxyRemark}
+\mbox{\Hypertarget{classar_1_1gui_1_1sdl__graphics__widget_ad446eff3382962afe203ad1a7cb3520d}\label{classar_1_1gui_1_1sdl__graphics__widget_ad446eff3382962afe203ad1a7cb3520d}} 
+\index{ar::gui::sdl\_graphics\_widget@{ar::gui::sdl\_graphics\_widget}!FRAME\_RATE@{FRAME\_RATE}}
+\index{FRAME\_RATE@{FRAME\_RATE}!ar::gui::sdl\_graphics\_widget@{ar::gui::sdl\_graphics\_widget}}
+\doxysubsubsection{\texorpdfstring{FRAME\_RATE}{FRAME\_RATE}}
+{\footnotesize\ttfamily constexpr int ar\+::gui\+::sdl\+\_\+graphics\+\_\+widget\+::\+FRAME\+\_\+\+RATE = 60\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}, {\ttfamily [private]}}
+
+
+
+Defines framerate for the widget. 
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000001}{Todo}}]Enable developer to set his own (low priority) \end{DoxyRefDesc}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/daniel/\+Developer/access-\/to-\/retro/access-\/to-\/retro/frontend/src/gui/widgets/\mbox{\hyperlink{sdl-graphics-widget_8hpp}{sdl-\/graphics-\/widget.\+hpp}}\item 
+/\+Users/daniel/\+Developer/access-\/to-\/retro/access-\/to-\/retro/frontend/src/gui/widgets/sdl-\/graphics-\/widget.\+cpp\end{DoxyCompactItemize}

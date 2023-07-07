@@ -1,0 +1,104 @@
+\hypertarget{classar_1_1gui_1_1virtual__console__and__game__picker__dialog}{}\doxysection{ar\+::gui\+::virtual\+\_\+console\+\_\+and\+\_\+game\+\_\+picker\+\_\+dialog Class Reference}
+\label{classar_1_1gui_1_1virtual__console__and__game__picker__dialog}\index{ar::gui::virtual\_console\_and\_game\_picker\_dialog@{ar::gui::virtual\_console\_and\_game\_picker\_dialog}}
+
+
+Shown after clicking a system or a game, allows the user to pick virtual console and/or game.  
+
+
+
+
+{\ttfamily \#include $<$virtual-\/console-\/and-\/game-\/picker-\/dialog.\+hpp$>$}
+
+Inheritance diagram for ar\+::gui\+::virtual\+\_\+console\+\_\+and\+\_\+game\+\_\+picker\+\_\+dialog\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classar_1_1gui_1_1virtual__console__and__game__picker__dialog}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classar_1_1gui_1_1virtual__console__and__game__picker__dialog_a04d9872f618bc0290cddba6135b6809e}{virtual\+\_\+console\+\_\+and\+\_\+game\+\_\+picker\+\_\+dialog}} (std\+::vector$<$ std\+::reference\+\_\+wrapper$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classar_1_1core_1_1virtual__console}{ar\+::core\+::virtual\+\_\+console}} $>$ $>$ $>$ associated\+\_\+virtual\+\_\+consoles, std\+::vector$<$ std\+::reference\+\_\+wrapper$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classar_1_1core_1_1executable__binary}{ar\+::core\+::executable\+\_\+binary}} $>$ $>$ $>$ associated\+\_\+games, bool hide\+\_\+games, QWidget $\ast$parent=nullptr)
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Slots}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classar_1_1gui_1_1virtual__console__and__game__picker__dialog_a2995187ee54907f39b249dabd5449aec}\label{classar_1_1gui_1_1virtual__console__and__game__picker__dialog_a2995187ee54907f39b249dabd5449aec}} 
+void {\bfseries accept} () override
+\begin{DoxyCompactList}\small\item\em Override \textquotesingle{}Ok\textquotesingle{} button behaviour. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classar_1_1gui_1_1virtual__console__and__game__picker__dialog_a1e60289b470b9ccb601a8cdff31094d1}{launch\+\_\+virtual\+\_\+console\+\_\+with\+\_\+game}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classar_1_1core_1_1virtual__console}{ar\+::core\+::virtual\+\_\+console}} $>$ \&virtual\+\_\+console, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classar_1_1core_1_1executable__binary}{ar\+::core\+::executable\+\_\+binary}} $>$ \&game)
+\begin{DoxyCompactList}\small\item\em Launch virtual console window with selected virtual console and game. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classar_1_1gui_1_1virtual__console__and__game__picker__dialog_afa2b51508c0a4e984fa20644814a613c}\label{classar_1_1gui_1_1virtual__console__and__game__picker__dialog_afa2b51508c0a4e984fa20644814a613c}} 
+void {\bfseries populate\+\_\+games\+\_\+selection} ()
+\begin{DoxyCompactList}\small\item\em Populate game selection list. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classar_1_1gui_1_1virtual__console__and__game__picker__dialog_a55c45531f32298795e4880dfc308c8ec}\label{classar_1_1gui_1_1virtual__console__and__game__picker__dialog_a55c45531f32298795e4880dfc308c8ec}} 
+void {\bfseries populate\+\_\+virtual\+\_\+consoles\+\_\+selection} ()
+\begin{DoxyCompactList}\small\item\em Populate virtual consoles selection list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classar_1_1gui_1_1virtual__console__and__game__picker__dialog_abff2e24f311484f39fc77909251004b5}\label{classar_1_1gui_1_1virtual__console__and__game__picker__dialog_abff2e24f311484f39fc77909251004b5}} 
+std\+::vector$<$ std\+::reference\+\_\+wrapper$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classar_1_1core_1_1virtual__console}{ar\+::core\+::virtual\+\_\+console}} $>$ $>$ $>$ {\bfseries \+\_\+associated\+\_\+virtual\+\_\+consoles}
+\begin{DoxyCompactList}\small\item\em Virtual consoles associated with that system/game. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classar_1_1gui_1_1virtual__console__and__game__picker__dialog_a3d60934f12fcf3c4fcf30318e359bdf8}\label{classar_1_1gui_1_1virtual__console__and__game__picker__dialog_a3d60934f12fcf3c4fcf30318e359bdf8}} 
+std\+::vector$<$ std\+::reference\+\_\+wrapper$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classar_1_1core_1_1executable__binary}{ar\+::core\+::executable\+\_\+binary}} $>$ $>$ $>$ {\bfseries \+\_\+associated\+\_\+games}
+\begin{DoxyCompactList}\small\item\em Games associated with that system. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classar_1_1gui_1_1virtual__console__and__game__picker__dialog_a6a3404c0f9ea7425ce543864648d16ab}\label{classar_1_1gui_1_1virtual__console__and__game__picker__dialog_a6a3404c0f9ea7425ce543864648d16ab}} 
+Ui\+::virtual\+\_\+console\+\_\+and\+\_\+game\+\_\+picker\+\_\+dialog $\ast$ {\bfseries ui}
+\begin{DoxyCompactList}\small\item\em Qt\textquotesingle{}s autogenerated Ui. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Shown after clicking a system or a game, allows the user to pick virtual console and/or game. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classar_1_1gui_1_1virtual__console__and__game__picker__dialog_a04d9872f618bc0290cddba6135b6809e}\label{classar_1_1gui_1_1virtual__console__and__game__picker__dialog_a04d9872f618bc0290cddba6135b6809e}} 
+\index{ar::gui::virtual\_console\_and\_game\_picker\_dialog@{ar::gui::virtual\_console\_and\_game\_picker\_dialog}!virtual\_console\_and\_game\_picker\_dialog@{virtual\_console\_and\_game\_picker\_dialog}}
+\index{virtual\_console\_and\_game\_picker\_dialog@{virtual\_console\_and\_game\_picker\_dialog}!ar::gui::virtual\_console\_and\_game\_picker\_dialog@{ar::gui::virtual\_console\_and\_game\_picker\_dialog}}
+\doxysubsubsection{\texorpdfstring{virtual\_console\_and\_game\_picker\_dialog()}{virtual\_console\_and\_game\_picker\_dialog()}}
+{\footnotesize\ttfamily ar\+::gui\+::virtual\+\_\+console\+\_\+and\+\_\+game\+\_\+picker\+\_\+dialog\+::virtual\+\_\+console\+\_\+and\+\_\+game\+\_\+picker\+\_\+dialog (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::reference\+\_\+wrapper$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classar_1_1core_1_1virtual__console}{ar\+::core\+::virtual\+\_\+console}} $>$ $>$ $>$}]{associated\+\_\+virtual\+\_\+consoles,  }\item[{std\+::vector$<$ std\+::reference\+\_\+wrapper$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classar_1_1core_1_1executable__binary}{ar\+::core\+::executable\+\_\+binary}} $>$ $>$ $>$}]{associated\+\_\+games,  }\item[{bool}]{hide\+\_\+games,  }\item[{QWidget $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Default constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em associated\+\_\+virtual\+\_\+consoles} & Virtual consoles associated with that system/game \\
+\hline
+{\em associated\+\_\+games} & Games associated with that system \\
+\hline
+{\em hide\+\_\+games} & Hide game selection, used for when launching through games tab \\
+\hline
+{\em parent} & Qt\textquotesingle{}s parent window \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classar_1_1gui_1_1virtual__console__and__game__picker__dialog_a1e60289b470b9ccb601a8cdff31094d1}\label{classar_1_1gui_1_1virtual__console__and__game__picker__dialog_a1e60289b470b9ccb601a8cdff31094d1}} 
+\index{ar::gui::virtual\_console\_and\_game\_picker\_dialog@{ar::gui::virtual\_console\_and\_game\_picker\_dialog}!launch\_virtual\_console\_with\_game@{launch\_virtual\_console\_with\_game}}
+\index{launch\_virtual\_console\_with\_game@{launch\_virtual\_console\_with\_game}!ar::gui::virtual\_console\_and\_game\_picker\_dialog@{ar::gui::virtual\_console\_and\_game\_picker\_dialog}}
+\doxysubsubsection{\texorpdfstring{launch\_virtual\_console\_with\_game()}{launch\_virtual\_console\_with\_game()}}
+{\footnotesize\ttfamily void ar\+::gui\+::virtual\+\_\+console\+\_\+and\+\_\+game\+\_\+picker\+\_\+dialog\+::launch\+\_\+virtual\+\_\+console\+\_\+with\+\_\+game (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classar_1_1core_1_1virtual__console}{ar\+::core\+::virtual\+\_\+console}} $>$ \&}]{virtual\+\_\+console,  }\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classar_1_1core_1_1executable__binary}{ar\+::core\+::executable\+\_\+binary}} $>$ \&}]{game }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Launch virtual console window with selected virtual console and game. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em virtual\+\_\+console} & Selected virtual console \\
+\hline
+{\em game} & Selected game \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/daniel/\+Developer/access-\/to-\/retro/access-\/to-\/retro/frontend/src/gui/windows/\mbox{\hyperlink{virtual-console-and-game-picker-dialog_8hpp}{virtual-\/console-\/and-\/game-\/picker-\/dialog.\+hpp}}\item 
+/\+Users/daniel/\+Developer/access-\/to-\/retro/access-\/to-\/retro/frontend/src/gui/windows/virtual-\/console-\/and-\/game-\/picker-\/dialog.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,247 @@
+\hypertarget{group__group__graphics}{}\doxysection{Graphics}
+\label{group__group__graphics}\index{Graphics@{Graphics}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structar__pixel}{ar\+\_\+pixel}}
+\begin{DoxyCompactList}\small\item\em Represents a single pixel inside \textquotesingle{}\mbox{\hyperlink{structar__frame__buffer}{ar\+\_\+frame\+\_\+buffer}}\textquotesingle{}, can be used for other purposes by developers. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structar__frame__buffer}{ar\+\_\+frame\+\_\+buffer}}
+\begin{DoxyCompactList}\small\item\em Represents a frame buffer (array of pixels) that is used for \textquotesingle{}ar\+\_\+graphics\+\_\+method\+\_\+framebuffer\textquotesingle{} graphics method. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__group__graphics_ga0be1dabb3bddd2b5afe380cf341c60d5}\label{group__group__graphics_ga0be1dabb3bddd2b5afe380cf341c60d5}} 
+typedef \mbox{\hyperlink{group__group__data_gadc181543960ce661bfd1dab31dcc1881}{ar\+\_\+generic\+\_\+memory\+\_\+ptr}} {\bfseries open\+\_\+gl\+\_\+context}
+\begin{DoxyCompactList}\small\item\em Represents Open\+GL context object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{group__group__graphics_ga98c79d7caca7d3e3a416e1242faab901}{ar\+\_\+graphics\+\_\+method}} \{ \mbox{\hyperlink{group__group__graphics_gga98c79d7caca7d3e3a416e1242faab901a98a4c74fd251fae71e4a01137c168dfb}{ar\+\_\+graphics\+\_\+method\+\_\+none}}
+, \mbox{\hyperlink{group__group__graphics_gga98c79d7caca7d3e3a416e1242faab901a6824a5997e08b0f84b9bd5960316ffa9}{ar\+\_\+graphics\+\_\+method\+\_\+frame\+\_\+buffer}}
+, \mbox{\hyperlink{group__group__graphics_gga98c79d7caca7d3e3a416e1242faab901ab6fff7bf7c6bfdbc5cfa17e7012d0ba9}{ar\+\_\+graphics\+\_\+method\+\_\+sdl}}
+, \mbox{\hyperlink{group__group__graphics_gga98c79d7caca7d3e3a416e1242faab901aa8743c1d574075b299d52e0119e7ad42}{ar\+\_\+graphics\+\_\+method\+\_\+open\+\_\+gl\+\_\+context}}
+ \}
+\begin{DoxyCompactList}\small\item\em Contains all methods of supported graphical output, should be set using \textquotesingle{}ar\+\_\+graphics\+\_\+set\+\_\+method\textquotesingle{}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+AR\+\_\+\+API void \mbox{\hyperlink{group__group__graphics_ga059e1b430cf96c7c2d6145cb8b821682}{ar\+\_\+graphics\+\_\+set\+\_\+method}} (enum \mbox{\hyperlink{group__group__graphics_ga98c79d7caca7d3e3a416e1242faab901}{ar\+\_\+graphics\+\_\+method}} method)
+\begin{DoxyCompactList}\small\item\em Set graphics method to be used by this virtual console. \end{DoxyCompactList}\item 
+AR\+\_\+\+API enum \mbox{\hyperlink{group__group__graphics_ga98c79d7caca7d3e3a416e1242faab901}{ar\+\_\+graphics\+\_\+method}} \mbox{\hyperlink{group__group__graphics_ga02a4539c61cc9560bf97c1c4b11ee92a}{ar\+\_\+graphics\+\_\+get\+\_\+method}} (void)
+\begin{DoxyCompactList}\small\item\em Get currently set graphics method. \end{DoxyCompactList}\item 
+AR\+\_\+\+API void \mbox{\hyperlink{group__group__graphics_ga84be1acd91f933fb7bba8642a7411104}{ar\+\_\+graphics\+\_\+free\+\_\+object}} (void)
+\begin{DoxyCompactList}\small\item\em Free the graphical object based on current graphical method. \end{DoxyCompactList}\item 
+AR\+\_\+\+API void \mbox{\hyperlink{group__group__graphics_ga83057600a63ed0fb101ef4d4ca202b9c}{ar\+\_\+graphics\+\_\+create\+\_\+frame\+\_\+buffer}} (uint32\+\_\+t width, uint32\+\_\+t height)
+\begin{DoxyCompactList}\small\item\em Create a frame buffer graphical object. \end{DoxyCompactList}\item 
+AR\+\_\+\+API struct \mbox{\hyperlink{structar__frame__buffer}{ar\+\_\+frame\+\_\+buffer}} $\ast$ \mbox{\hyperlink{group__group__graphics_gad46ae81770f16dd5b4329a549215a4d3}{ar\+\_\+graphics\+\_\+get\+\_\+frame\+\_\+buffer}} (void)
+\begin{DoxyCompactList}\small\item\em Getter for frame buffer graphical object. \end{DoxyCompactList}\item 
+AR\+\_\+\+API void \mbox{\hyperlink{group__group__graphics_gaf930d3d591d5443ddce3b4e9053256b5}{ar\+\_\+graphics\+\_\+set\+\_\+sdl\+\_\+objects}} (SDL\+\_\+\+Window $\ast$window, SDL\+\_\+\+Renderer $\ast$renderer)
+\begin{DoxyCompactList}\small\item\em Connect access to retro library with access to retro frontend SDL objects. \end{DoxyCompactList}\item 
+AR\+\_\+\+API SDL\+\_\+\+Window $\ast$ \mbox{\hyperlink{group__group__graphics_ga8a396a2241afc31bd72e0c1e88e46b29}{ar\+\_\+graphics\+\_\+get\+\_\+sdl\+\_\+window}} (void)
+\begin{DoxyCompactList}\small\item\em Getter for frontend\textquotesingle{}s SDL window graphical object. \end{DoxyCompactList}\item 
+AR\+\_\+\+API SDL\+\_\+\+Renderer $\ast$ \mbox{\hyperlink{group__group__graphics_gaf4734b5f04993ddb167d28c590d4f425}{ar\+\_\+graphics\+\_\+get\+\_\+sdl\+\_\+renderer}} (void)
+\begin{DoxyCompactList}\small\item\em Getter for frontend\textquotesingle{}s SDL window renderer object. \end{DoxyCompactList}\item 
+AR\+\_\+\+API void \mbox{\hyperlink{group__group__graphics_gadbfe1cfaf7da5771b34b0bca97234f08}{ar\+\_\+graphics\+\_\+set\+\_\+gl\+\_\+context}} (\mbox{\hyperlink{group__group__graphics_ga0be1dabb3bddd2b5afe380cf341c60d5}{open\+\_\+gl\+\_\+context}} context)
+\begin{DoxyCompactList}\small\item\em Connect access to retro library with frontend\textquotesingle{}s Open\+GL context. \end{DoxyCompactList}\item 
+AR\+\_\+\+API \mbox{\hyperlink{group__group__graphics_ga0be1dabb3bddd2b5afe380cf341c60d5}{open\+\_\+gl\+\_\+context}} \mbox{\hyperlink{group__group__graphics_ga1206bd9a1ad4b61d666ecd2edef41019}{ar\+\_\+graphics\+\_\+get\+\_\+gl\+\_\+context}} (void)
+\begin{DoxyCompactList}\small\item\em Getter for frontend\textquotesingle{}s Open\+GL context. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Deals with graphical output/input 
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{group__group__graphics_ga98c79d7caca7d3e3a416e1242faab901}\label{group__group__graphics_ga98c79d7caca7d3e3a416e1242faab901}} 
+\index{Graphics@{Graphics}!ar\_graphics\_method@{ar\_graphics\_method}}
+\index{ar\_graphics\_method@{ar\_graphics\_method}!Graphics@{Graphics}}
+\doxysubsubsection{\texorpdfstring{ar\_graphics\_method}{ar\_graphics\_method}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__group__graphics_ga98c79d7caca7d3e3a416e1242faab901}{ar\+\_\+graphics\+\_\+method}}}
+
+
+
+Contains all methods of supported graphical output, should be set using \textquotesingle{}ar\+\_\+graphics\+\_\+set\+\_\+method\textquotesingle{}. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ar\_graphics\_method\_none@{ar\_graphics\_method\_none}!Graphics@{Graphics}}\index{Graphics@{Graphics}!ar\_graphics\_method\_none@{ar\_graphics\_method\_none}}}\mbox{\Hypertarget{group__group__graphics_gga98c79d7caca7d3e3a416e1242faab901a98a4c74fd251fae71e4a01137c168dfb}\label{group__group__graphics_gga98c79d7caca7d3e3a416e1242faab901a98a4c74fd251fae71e4a01137c168dfb}} 
+ar\+\_\+graphics\+\_\+method\+\_\+none&No graphical output. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ar\_graphics\_method\_frame\_buffer@{ar\_graphics\_method\_frame\_buffer}!Graphics@{Graphics}}\index{Graphics@{Graphics}!ar\_graphics\_method\_frame\_buffer@{ar\_graphics\_method\_frame\_buffer}}}\mbox{\Hypertarget{group__group__graphics_gga98c79d7caca7d3e3a416e1242faab901a6824a5997e08b0f84b9bd5960316ffa9}\label{group__group__graphics_gga98c79d7caca7d3e3a416e1242faab901a6824a5997e08b0f84b9bd5960316ffa9}} 
+ar\+\_\+graphics\+\_\+method\+\_\+frame\+\_\+buffer&Output graphics using a raw frame buffer. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ar\_graphics\_method\_sdl@{ar\_graphics\_method\_sdl}!Graphics@{Graphics}}\index{Graphics@{Graphics}!ar\_graphics\_method\_sdl@{ar\_graphics\_method\_sdl}}}\mbox{\Hypertarget{group__group__graphics_gga98c79d7caca7d3e3a416e1242faab901ab6fff7bf7c6bfdbc5cfa17e7012d0ba9}\label{group__group__graphics_gga98c79d7caca7d3e3a416e1242faab901ab6fff7bf7c6bfdbc5cfa17e7012d0ba9}} 
+ar\+\_\+graphics\+\_\+method\+\_\+sdl&Output graphics using SDL2 renderer. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ar\_graphics\_method\_open\_gl\_context@{ar\_graphics\_method\_open\_gl\_context}!Graphics@{Graphics}}\index{Graphics@{Graphics}!ar\_graphics\_method\_open\_gl\_context@{ar\_graphics\_method\_open\_gl\_context}}}\mbox{\Hypertarget{group__group__graphics_gga98c79d7caca7d3e3a416e1242faab901aa8743c1d574075b299d52e0119e7ad42}\label{group__group__graphics_gga98c79d7caca7d3e3a416e1242faab901aa8743c1d574075b299d52e0119e7ad42}} 
+ar\+\_\+graphics\+\_\+method\+\_\+open\+\_\+gl\+\_\+context&Output graphics using Open\+GL directly. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group__group__graphics_ga83057600a63ed0fb101ef4d4ca202b9c}\label{group__group__graphics_ga83057600a63ed0fb101ef4d4ca202b9c}} 
+\index{Graphics@{Graphics}!ar\_graphics\_create\_frame\_buffer@{ar\_graphics\_create\_frame\_buffer}}
+\index{ar\_graphics\_create\_frame\_buffer@{ar\_graphics\_create\_frame\_buffer}!Graphics@{Graphics}}
+\doxysubsubsection{\texorpdfstring{ar\_graphics\_create\_frame\_buffer()}{ar\_graphics\_create\_frame\_buffer()}}
+{\footnotesize\ttfamily AR\+\_\+\+API void ar\+\_\+graphics\+\_\+create\+\_\+frame\+\_\+buffer (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{width,  }\item[{uint32\+\_\+t}]{height }\end{DoxyParamCaption})}
+
+
+
+Create a frame buffer graphical object. 
+
+This NEEDS to be called if graphics method is set to \textquotesingle{}ar\+\_\+graphics\+\_\+method\+\_\+frame\+\_\+buffer\textquotesingle{} otherwise getter will return nullptr. 
+\begin{DoxyParams}{Parameters}
+{\em width} & Width of the frame \\
+\hline
+{\em height} & Height of the frame \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__group__graphics_ga84be1acd91f933fb7bba8642a7411104}\label{group__group__graphics_ga84be1acd91f933fb7bba8642a7411104}} 
+\index{Graphics@{Graphics}!ar\_graphics\_free\_object@{ar\_graphics\_free\_object}}
+\index{ar\_graphics\_free\_object@{ar\_graphics\_free\_object}!Graphics@{Graphics}}
+\doxysubsubsection{\texorpdfstring{ar\_graphics\_free\_object()}{ar\_graphics\_free\_object()}}
+{\footnotesize\ttfamily AR\+\_\+\+API void ar\+\_\+graphics\+\_\+free\+\_\+object (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Free the graphical object based on current graphical method. 
+
+\begin{DoxyRemark}{Remarks}
+Called automatically in \textquotesingle{}ar\+\_\+quit\textquotesingle{}, no need for developer to call it himself 
+
+This gets called by \textquotesingle{}ar\+\_\+quit\textquotesingle{} so no need to call this directly in virtual console 
+\end{DoxyRemark}
+\mbox{\Hypertarget{group__group__graphics_gad46ae81770f16dd5b4329a549215a4d3}\label{group__group__graphics_gad46ae81770f16dd5b4329a549215a4d3}} 
+\index{Graphics@{Graphics}!ar\_graphics\_get\_frame\_buffer@{ar\_graphics\_get\_frame\_buffer}}
+\index{ar\_graphics\_get\_frame\_buffer@{ar\_graphics\_get\_frame\_buffer}!Graphics@{Graphics}}
+\doxysubsubsection{\texorpdfstring{ar\_graphics\_get\_frame\_buffer()}{ar\_graphics\_get\_frame\_buffer()}}
+{\footnotesize\ttfamily AR\+\_\+\+API struct \mbox{\hyperlink{structar__frame__buffer}{ar\+\_\+frame\+\_\+buffer}} $\ast$ ar\+\_\+graphics\+\_\+get\+\_\+frame\+\_\+buffer (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Getter for frame buffer graphical object. 
+
+\begin{DoxyWarning}{Warning}
+If \textquotesingle{}ar\+\_\+graphics\+\_\+create\+\_\+frame\+\_\+buffer\textquotesingle{} was not called before then this will return nullptr. 
+\end{DoxyWarning}
+\begin{DoxyReturn}{Returns}
+Pointer to the previously created frame buffer graphical object 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__group__graphics_ga1206bd9a1ad4b61d666ecd2edef41019}\label{group__group__graphics_ga1206bd9a1ad4b61d666ecd2edef41019}} 
+\index{Graphics@{Graphics}!ar\_graphics\_get\_gl\_context@{ar\_graphics\_get\_gl\_context}}
+\index{ar\_graphics\_get\_gl\_context@{ar\_graphics\_get\_gl\_context}!Graphics@{Graphics}}
+\doxysubsubsection{\texorpdfstring{ar\_graphics\_get\_gl\_context()}{ar\_graphics\_get\_gl\_context()}}
+{\footnotesize\ttfamily AR\+\_\+\+API \mbox{\hyperlink{group__group__graphics_ga0be1dabb3bddd2b5afe380cf341c60d5}{open\+\_\+gl\+\_\+context}} ar\+\_\+graphics\+\_\+get\+\_\+gl\+\_\+context (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Getter for frontend\textquotesingle{}s Open\+GL context. 
+
+\begin{DoxyWarning}{Warning}
+If \textquotesingle{}ar\+\_\+graphics\+\_\+set\+\_\+sdl\+\_\+objects\textquotesingle{} was not called before then this will return nullptr. 
+\end{DoxyWarning}
+\begin{DoxyReturn}{Returns}
+Pointer to frontend\textquotesingle{}s SDL window object 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__group__graphics_ga02a4539c61cc9560bf97c1c4b11ee92a}\label{group__group__graphics_ga02a4539c61cc9560bf97c1c4b11ee92a}} 
+\index{Graphics@{Graphics}!ar\_graphics\_get\_method@{ar\_graphics\_get\_method}}
+\index{ar\_graphics\_get\_method@{ar\_graphics\_get\_method}!Graphics@{Graphics}}
+\doxysubsubsection{\texorpdfstring{ar\_graphics\_get\_method()}{ar\_graphics\_get\_method()}}
+{\footnotesize\ttfamily AR\+\_\+\+API enum \mbox{\hyperlink{group__group__graphics_ga98c79d7caca7d3e3a416e1242faab901}{ar\+\_\+graphics\+\_\+method}} ar\+\_\+graphics\+\_\+get\+\_\+method (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Get currently set graphics method. 
+
+\begin{DoxyReturn}{Returns}
+Currently set graphics method 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__group__graphics_gaf4734b5f04993ddb167d28c590d4f425}\label{group__group__graphics_gaf4734b5f04993ddb167d28c590d4f425}} 
+\index{Graphics@{Graphics}!ar\_graphics\_get\_sdl\_renderer@{ar\_graphics\_get\_sdl\_renderer}}
+\index{ar\_graphics\_get\_sdl\_renderer@{ar\_graphics\_get\_sdl\_renderer}!Graphics@{Graphics}}
+\doxysubsubsection{\texorpdfstring{ar\_graphics\_get\_sdl\_renderer()}{ar\_graphics\_get\_sdl\_renderer()}}
+{\footnotesize\ttfamily AR\+\_\+\+API SDL\+\_\+\+Renderer $\ast$ ar\+\_\+graphics\+\_\+get\+\_\+sdl\+\_\+renderer (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Getter for frontend\textquotesingle{}s SDL window renderer object. 
+
+\begin{DoxyWarning}{Warning}
+If \textquotesingle{}ar\+\_\+graphics\+\_\+set\+\_\+sdl\+\_\+objects\textquotesingle{} was not called before then this will return nullptr. 
+\end{DoxyWarning}
+\begin{DoxyReturn}{Returns}
+Pointer to frontend\textquotesingle{}s SDL renderer object 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__group__graphics_ga8a396a2241afc31bd72e0c1e88e46b29}\label{group__group__graphics_ga8a396a2241afc31bd72e0c1e88e46b29}} 
+\index{Graphics@{Graphics}!ar\_graphics\_get\_sdl\_window@{ar\_graphics\_get\_sdl\_window}}
+\index{ar\_graphics\_get\_sdl\_window@{ar\_graphics\_get\_sdl\_window}!Graphics@{Graphics}}
+\doxysubsubsection{\texorpdfstring{ar\_graphics\_get\_sdl\_window()}{ar\_graphics\_get\_sdl\_window()}}
+{\footnotesize\ttfamily AR\+\_\+\+API SDL\+\_\+\+Window $\ast$ ar\+\_\+graphics\+\_\+get\+\_\+sdl\+\_\+window (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Getter for frontend\textquotesingle{}s SDL window graphical object. 
+
+\begin{DoxyWarning}{Warning}
+If \textquotesingle{}ar\+\_\+graphics\+\_\+set\+\_\+sdl\+\_\+objects\textquotesingle{} was not called before then this will return nullptr. 
+\end{DoxyWarning}
+\begin{DoxyReturn}{Returns}
+Pointer to frontend\textquotesingle{}s SDL window object 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__group__graphics_gadbfe1cfaf7da5771b34b0bca97234f08}\label{group__group__graphics_gadbfe1cfaf7da5771b34b0bca97234f08}} 
+\index{Graphics@{Graphics}!ar\_graphics\_set\_gl\_context@{ar\_graphics\_set\_gl\_context}}
+\index{ar\_graphics\_set\_gl\_context@{ar\_graphics\_set\_gl\_context}!Graphics@{Graphics}}
+\doxysubsubsection{\texorpdfstring{ar\_graphics\_set\_gl\_context()}{ar\_graphics\_set\_gl\_context()}}
+{\footnotesize\ttfamily AR\+\_\+\+API void ar\+\_\+graphics\+\_\+set\+\_\+gl\+\_\+context (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__group__graphics_ga0be1dabb3bddd2b5afe380cf341c60d5}{open\+\_\+gl\+\_\+context}}}]{context }\end{DoxyParamCaption})}
+
+
+
+Connect access to retro library with frontend\textquotesingle{}s Open\+GL context. 
+
+\begin{DoxyRemark}{Remarks}
+Used by the frontend application, shouldn\textquotesingle{}t be used by virtual console developers 
+\end{DoxyRemark}
+
+\begin{DoxyParams}{Parameters}
+{\em context} & Frontend\textquotesingle{}s Open\+GL context \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__group__graphics_ga059e1b430cf96c7c2d6145cb8b821682}\label{group__group__graphics_ga059e1b430cf96c7c2d6145cb8b821682}} 
+\index{Graphics@{Graphics}!ar\_graphics\_set\_method@{ar\_graphics\_set\_method}}
+\index{ar\_graphics\_set\_method@{ar\_graphics\_set\_method}!Graphics@{Graphics}}
+\doxysubsubsection{\texorpdfstring{ar\_graphics\_set\_method()}{ar\_graphics\_set\_method()}}
+{\footnotesize\ttfamily AR\+\_\+\+API void ar\+\_\+graphics\+\_\+set\+\_\+method (\begin{DoxyParamCaption}\item[{enum \mbox{\hyperlink{group__group__graphics_ga98c79d7caca7d3e3a416e1242faab901}{ar\+\_\+graphics\+\_\+method}}}]{method }\end{DoxyParamCaption})}
+
+
+
+Set graphics method to be used by this virtual console. 
+
+\begin{DoxyRemark}{Remarks}
+It is recommended to call this function in AR\+\_\+\+STARTUP\+\_\+\+FN 
+\end{DoxyRemark}
+\begin{DoxyWarning}{Warning}
+If this is not set then \textquotesingle{}ar\+\_\+graphics\+\_\+method\+\_\+none\textquotesingle{} is assumed 
+\end{DoxyWarning}
+\mbox{\Hypertarget{group__group__graphics_gaf930d3d591d5443ddce3b4e9053256b5}\label{group__group__graphics_gaf930d3d591d5443ddce3b4e9053256b5}} 
+\index{Graphics@{Graphics}!ar\_graphics\_set\_sdl\_objects@{ar\_graphics\_set\_sdl\_objects}}
+\index{ar\_graphics\_set\_sdl\_objects@{ar\_graphics\_set\_sdl\_objects}!Graphics@{Graphics}}
+\doxysubsubsection{\texorpdfstring{ar\_graphics\_set\_sdl\_objects()}{ar\_graphics\_set\_sdl\_objects()}}
+{\footnotesize\ttfamily AR\+\_\+\+API void ar\+\_\+graphics\+\_\+set\+\_\+sdl\+\_\+objects (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Window $\ast$}]{window,  }\item[{SDL\+\_\+\+Renderer $\ast$}]{renderer }\end{DoxyParamCaption})}
+
+
+
+Connect access to retro library with access to retro frontend SDL objects. 
+
+\begin{DoxyRemark}{Remarks}
+Used by the frontend application, shouldn\textquotesingle{}t be used by virtual console developers 
+\end{DoxyRemark}
+
+\begin{DoxyParams}{Parameters}
+{\em window} & Frontend\textquotesingle{}s SDL Window object \\
+\hline
+{\em renderer} & Frontend\textquotesingle{}s SDL Renderer object \\
+\hline
+\end{DoxyParams}

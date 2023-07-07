@@ -1,0 +1,48 @@
+\hypertarget{gpu_8hpp_source}{}\doxysection{gpu.\+hpp}
+\label{gpu_8hpp_source}\index{/Users/daniel/Developer/access-\/to-\/retro/access-\/to-\/retro/chip8-\/virtual-\/console/src/emulator/gpu.hpp@{/Users/daniel/Developer/access-\/to-\/retro/access-\/to-\/retro/chip8-\/virtual-\/console/src/emulator/gpu.hpp}}
+\mbox{\hyperlink{gpu_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ ACCESS\_TO\_RETRO\_GPU\_HPP}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ ACCESS\_TO\_RETRO\_GPU\_HPP}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <SDL.h>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}frame-\/buffer.hpp"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{ram-memory_8hpp}{ram-\/memory.hpp}}"{}}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacear_1_1chip8}{ar::chip8}}}
+\DoxyCodeLine{00013\ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classar_1_1chip8_1_1gpu}{gpu}}}
+\DoxyCodeLine{00016\ \ \ \ \ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classar_1_1chip8_1_1gpu}{gpu}}(\mbox{\hyperlink{classar_1_1chip8_1_1ram__memory}{ar::chip8::ram\_memory}}\&\ ram\_link);}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classar_1_1chip8_1_1gpu}{\string~gpu}}();}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classar_1_1chip8_1_1gpu_a402d42f9312672d7e26e1c253a6083c4}{render}}();}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classar_1_1chip8_1_1gpu_a8877cb0affff58b91d9f17394c25d646}{set\_draw\_flag}}(\textcolor{keywordtype}{bool}\ new\_value);}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classar_1_1chip8_1_1gpu_a08af2727afb2da3140a845c527d1e41e}{get\_draw\_flag}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{comment}{\ \ \ \ \ \ \ \ /*******************\ Instructions\ Functions\ *******************/}}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classar_1_1chip8_1_1gpu_ab26b7a4b659abc8adbce1914d4826226}{clear\_screen}}();}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ [[nodiscard]]\ ar\_byte\ \mbox{\hyperlink{classar_1_1chip8_1_1gpu_a22185cac66ac77c6eb6f1ec202cf835c}{draw}}(ar\_byte\ x,\ ar\_byte\ y,\ ar\_byte\ height,\ uint16\_t\ register\_i\_value);}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classar_1_1chip8_1_1ram__memory}{ar::chip8::ram\_memory}}\&\ \mbox{\hyperlink{classar_1_1chip8_1_1gpu_a8711f1ba351c8e5e93175cc11d376604}{\_ram\_link}};}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classar_1_1chip8_1_1frame__buffer}{ar::chip8::frame\_buffer}}\ \mbox{\hyperlink{classar_1_1chip8_1_1gpu_a5345c0e744a92146200b8c3cdc8fdf45}{\_frame\_buffer}}\ \{\};}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classar_1_1chip8_1_1gpu_aa65743fdbe6da2d8da8f8953889fc37b}{\_draw\_flag}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ SDL\_Texture*\ \mbox{\hyperlink{classar_1_1chip8_1_1gpu_ab6844c444c8911587fc79318cb37cfa1}{\_frame\_buffer\_texture}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classar_1_1chip8_1_1gpu_add8bb4d2e47fdecc47a18a7a37f242ad}{update\_texture\_with\_frame\_buffer}}();}
+\DoxyCodeLine{00072\ \ \ \ \ \};}
+\DoxyCodeLine{00073\ \}}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//ACCESS\_TO\_RETRO\_GPU\_HPP}}
+
+\end{DoxyCode}

@@ -1,0 +1,108 @@
+\hypertarget{classar_1_1chip8_1_1ram__memory}{}\doxysection{ar\+::chip8\+::ram\+\_\+memory Class Reference}
+\label{classar_1_1chip8_1_1ram__memory}\index{ar::chip8::ram\_memory@{ar::chip8::ram\_memory}}
+
+
+Represents random access memory of CHIP8.  
+
+
+
+
+{\ttfamily \#include $<$ram-\/memory.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classar_1_1chip8_1_1ram__memory_a4c983dafa9f0875d5fe8b79815200c46}{load\+\_\+binary}} (ar\+\_\+executable $\ast$executable)
+\begin{DoxyCompactList}\small\item\em Loads a game ROM into the memory. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classar_1_1chip8_1_1ram__memory_a1c89c83335b94b176d85ee93bfb4c040}{write}} (uint16\+\_\+t addr, ar\+\_\+byte value)
+\begin{DoxyCompactList}\small\item\em Writes a byte to memory. \end{DoxyCompactList}\item 
+ar\+\_\+byte \mbox{\hyperlink{classar_1_1chip8_1_1ram__memory_ad7fbe391567e355be0f9c06e73502395}{read}} (uint16\+\_\+t addr) const
+\begin{DoxyCompactList}\small\item\em Reads a byte from memory. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{classar_1_1chip8_1_1ram__memory_a2445d4f37ed527ee7891e34d53fe4556}{read\+\_\+instruction}} (uint16\+\_\+t pc\+\_\+value) const
+\begin{DoxyCompactList}\small\item\em Reads memory address (and the one straight after it) at address to which program counter is set and returns an instruction from that address. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classar_1_1chip8_1_1ram__memory_a202cdb725bf4617e5fe997ab2f46406a}\label{classar_1_1chip8_1_1ram__memory_a202cdb725bf4617e5fe997ab2f46406a}} 
+std\+::array$<$ ar\+\_\+byte, \mbox{\hyperlink{namespacear_1_1chip8_aca9fda2134e8cb5bb629b65843e0667e}{ar\+::chip8\+::\+RAM\+\_\+\+SIZE}} $>$ {\bfseries \+\_\+raw\+\_\+memory} \{ 0 \}
+\begin{DoxyCompactList}\small\item\em Raw representation of the memory using an array. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents random access memory of CHIP8. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classar_1_1chip8_1_1ram__memory_a4c983dafa9f0875d5fe8b79815200c46}\label{classar_1_1chip8_1_1ram__memory_a4c983dafa9f0875d5fe8b79815200c46}} 
+\index{ar::chip8::ram\_memory@{ar::chip8::ram\_memory}!load\_binary@{load\_binary}}
+\index{load\_binary@{load\_binary}!ar::chip8::ram\_memory@{ar::chip8::ram\_memory}}
+\doxysubsubsection{\texorpdfstring{load\_binary()}{load\_binary()}}
+{\footnotesize\ttfamily void ar\+::chip8\+::ram\+\_\+memory\+::load\+\_\+binary (\begin{DoxyParamCaption}\item[{ar\+\_\+executable $\ast$}]{executable }\end{DoxyParamCaption})}
+
+
+
+Loads a game ROM into the memory. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em executable} & Access to retro library executable \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classar_1_1chip8_1_1ram__memory_ad7fbe391567e355be0f9c06e73502395}\label{classar_1_1chip8_1_1ram__memory_ad7fbe391567e355be0f9c06e73502395}} 
+\index{ar::chip8::ram\_memory@{ar::chip8::ram\_memory}!read@{read}}
+\index{read@{read}!ar::chip8::ram\_memory@{ar::chip8::ram\_memory}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily ar\+\_\+byte ar\+::chip8\+::ram\+\_\+memory\+::read (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{addr }\end{DoxyParamCaption}) const}
+
+
+
+Reads a byte from memory. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em addr} & Address of the requested memory location \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classar_1_1chip8_1_1ram__memory_a2445d4f37ed527ee7891e34d53fe4556}\label{classar_1_1chip8_1_1ram__memory_a2445d4f37ed527ee7891e34d53fe4556}} 
+\index{ar::chip8::ram\_memory@{ar::chip8::ram\_memory}!read\_instruction@{read\_instruction}}
+\index{read\_instruction@{read\_instruction}!ar::chip8::ram\_memory@{ar::chip8::ram\_memory}}
+\doxysubsubsection{\texorpdfstring{read\_instruction()}{read\_instruction()}}
+{\footnotesize\ttfamily uint16\+\_\+t ar\+::chip8\+::ram\+\_\+memory\+::read\+\_\+instruction (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{pc\+\_\+value }\end{DoxyParamCaption}) const}
+
+
+
+Reads memory address (and the one straight after it) at address to which program counter is set and returns an instruction from that address. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pc\+\_\+value} & Value of program counter \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Encoded instruction 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classar_1_1chip8_1_1ram__memory_a1c89c83335b94b176d85ee93bfb4c040}\label{classar_1_1chip8_1_1ram__memory_a1c89c83335b94b176d85ee93bfb4c040}} 
+\index{ar::chip8::ram\_memory@{ar::chip8::ram\_memory}!write@{write}}
+\index{write@{write}!ar::chip8::ram\_memory@{ar::chip8::ram\_memory}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily void ar\+::chip8\+::ram\+\_\+memory\+::write (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{addr,  }\item[{ar\+\_\+byte}]{value }\end{DoxyParamCaption})}
+
+
+
+Writes a byte to memory. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em addr} & Address where the value will be written to \\
+\hline
+{\em value} & Value that will be written \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/daniel/\+Developer/access-\/to-\/retro/access-\/to-\/retro/chip8-\/virtual-\/console/src/emulator/\mbox{\hyperlink{ram-memory_8hpp}{ram-\/memory.\+hpp}}\item 
+/\+Users/daniel/\+Developer/access-\/to-\/retro/access-\/to-\/retro/chip8-\/virtual-\/console/src/emulator/ram-\/memory.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,44 @@
+\hypertarget{settings-manager_8hpp_source}{}\doxysection{settings-\/manager.hpp}
+\label{settings-manager_8hpp_source}\index{/Users/daniel/Developer/access-\/to-\/retro/access-\/to-\/retro/frontend/src/util/settings-\/manager.hpp@{/Users/daniel/Developer/access-\/to-\/retro/access-\/to-\/retro/frontend/src/util/settings-\/manager.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ ACCESS\_TO\_RETRO\_SETTINGS\_MANAGER\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ ACCESS\_TO\_RETRO\_SETTINGS\_MANAGER\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <QSettings>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <QDir>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <optional>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacear_1_1util}{ar::util}}}
+\DoxyCodeLine{00009\ \{}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classar_1_1util_1_1settings__manager}{settings\_manager}}}
+\DoxyCodeLine{00012\ \ \ \ \ \{}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classar_1_1util_1_1settings__manager_a86a77a3514290b076f16fc2763352089}{settings\_manager}}();}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classar_1_1util_1_1settings__manager_a2dd656569812f6301fef89abb6516f7d}{configure}}();}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ std::shared\_ptr<ar::util::settings\_manager>\ \mbox{\hyperlink{classar_1_1util_1_1settings__manager_a516ee22949bd17c7f98ef9281a52c637}{get\_global\_manager}}();}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keyword}{static}\ std::string\ \mbox{\hyperlink{classar_1_1util_1_1settings__manager_a5d20d29fab758a58b7c5624c323779db}{get\_settings\_file\_path}}();}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ [[nodiscard]]\ std::optional<std::string>\ \mbox{\hyperlink{classar_1_1util_1_1settings__manager_a0d309acd34ee720c7c7f6f5e13e94d4f}{get\_setting}}(\textcolor{keyword}{const}\ std::string\&\ key);}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ [[nodiscard]]\ std::string\ \mbox{\hyperlink{classar_1_1util_1_1settings__manager_a3de2cefb07ac23b39e6837989eb376fd}{get\_setting\_or\_set\_if\_not\_exists}}(\textcolor{keyword}{const}\ std::string\&\ key,}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ default\_value);}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classar_1_1util_1_1settings__manager_ad0737c577b23f04f41ed4c1dd2636775}{set\_setting}}(\textcolor{keyword}{const}\ std::string\&\ key,\ \textcolor{keyword}{const}\ std::string\&\ value);}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classar_1_1util_1_1settings__manager_a942c85c61dd082b132fe84ae0b2ae7fa}{\_configured}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ QSettings\ \mbox{\hyperlink{classar_1_1util_1_1settings__manager_a2b0db33bf405b6e00b66b8b0fb061860}{\_settings}};}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ QSettings\ \mbox{\hyperlink{classar_1_1util_1_1settings__manager_a0b78af1149997aada86474f6f89532e6}{create\_qsettings\_object\_and\_or\_file}}();}
+\DoxyCodeLine{00083\ \ \ \ \ \};}
+\DoxyCodeLine{00084\ \}}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//ACCESS\_TO\_RETRO\_SETTINGS\_MANAGER\_HPP}}
+
+\end{DoxyCode}

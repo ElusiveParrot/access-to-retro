@@ -1,0 +1,597 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ar::gui::input_settings_dialog</class>
+ <widget class="QDialog" name="ar::gui::input_settings_dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>783</width>
+    <height>690</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Controller Settings</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../../../resources/resources.qrc">
+    <normaloff>:/appicon.ico</normaloff>:/appicon.ico</iconset>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QGroupBox" name="settings_group_box">
+     <property name="title">
+      <string>Set up Access to Retro Unified Controller Model</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <spacer name="horizontalSpacer">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QLabel" name="label">
+          <property name="text">
+           <string/>
+          </property>
+          <property name="pixmap">
+           <pixmap resource="../../../resources/resources.qrc">:/controller-x360.png</pixmap>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <item>
+         <widget class="QTabWidget" name="tabWidget">
+          <property name="currentIndex">
+           <number>0</number>
+          </property>
+          <widget class="QWidget" name="analog_sticks_tab">
+           <attribute name="title">
+            <string>Analog Sticks</string>
+           </attribute>
+           <layout class="QHBoxLayout" name="horizontalLayout_2">
+            <item>
+             <widget class="QGroupBox" name="left_analog_box">
+              <property name="title">
+               <string>Left Analog Stick</string>
+              </property>
+              <layout class="QGridLayout" name="gridLayout">
+               <item row="2" column="1">
+                <widget class="QPushButton" name="left_analog_right_button">
+                 <property name="accessibleName">
+                  <string>left_analog_right</string>
+                 </property>
+                 <property name="text">
+                  <string>LEFT_ANALOG_RIGHT</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="3" column="0">
+                <widget class="QLabel" name="label_4">
+                 <property name="text">
+                  <string>Down</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="0">
+                <widget class="QLabel" name="label_2">
+                 <property name="text">
+                  <string>Up</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="1">
+                <widget class="QPushButton" name="left_analog_click_button">
+                 <property name="accessibleName">
+                  <string>left_analog_click</string>
+                 </property>
+                 <property name="text">
+                  <string>LEFT_ANALOG_CLICK</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="0">
+                <widget class="QLabel" name="label_5">
+                 <property name="text">
+                  <string>Right</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="0">
+                <widget class="QLabel" name="label_6">
+                 <property name="text">
+                  <string>Left</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="0">
+                <widget class="QLabel" name="label_3">
+                 <property name="text">
+                  <string>Click</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="1">
+                <widget class="QPushButton" name="left_analog_up_button">
+                 <property name="accessibleName">
+                  <string>left_analog_up</string>
+                 </property>
+                 <property name="text">
+                  <string>LEFT_ANALOG_UP</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="1">
+                <widget class="QPushButton" name="left_analog_left_button">
+                 <property name="accessibleName">
+                  <string>left_analog_left</string>
+                 </property>
+                 <property name="text">
+                  <string>LEFT_ANALOG_LEFT</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="3" column="1">
+                <widget class="QPushButton" name="left_analog_down_button">
+                 <property name="accessibleName">
+                  <string>left_analog_down</string>
+                 </property>
+                 <property name="text">
+                  <string>LEFT_ANALOG_DOWN</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QGroupBox" name="right_analog_box">
+              <property name="title">
+               <string>Right Analog Stick</string>
+              </property>
+              <layout class="QGridLayout" name="gridLayout_2">
+               <item row="0" column="0">
+                <widget class="QLabel" name="label_7">
+                 <property name="text">
+                  <string>Up</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="1">
+                <widget class="QPushButton" name="right_analog_up_button">
+                 <property name="accessibleName">
+                  <string>right_analog_up</string>
+                 </property>
+                 <property name="text">
+                  <string>RIGHT_ANALOG_UP</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="0">
+                <widget class="QLabel" name="label_8">
+                 <property name="text">
+                  <string>Left</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="1">
+                <widget class="QPushButton" name="right_analog_left_button">
+                 <property name="accessibleName">
+                  <string>right_analog_left</string>
+                 </property>
+                 <property name="text">
+                  <string>RIGHT_ANALOG_LEFT</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="0">
+                <widget class="QLabel" name="label_9">
+                 <property name="text">
+                  <string>Right</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="1">
+                <widget class="QPushButton" name="right_analog_right_button">
+                 <property name="accessibleName">
+                  <string>right_analog_right</string>
+                 </property>
+                 <property name="text">
+                  <string>RIGHT_ANALOG_RIGHT</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="3" column="0">
+                <widget class="QLabel" name="label_10">
+                 <property name="text">
+                  <string>Down</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="3" column="1">
+                <widget class="QPushButton" name="right_analog_down_button">
+                 <property name="accessibleName">
+                  <string>right_analog_down</string>
+                 </property>
+                 <property name="text">
+                  <string>RIGHT_ANALOG_DOWN</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="0">
+                <widget class="QLabel" name="label_11">
+                 <property name="text">
+                  <string>Click</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="1">
+                <widget class="QPushButton" name="right_analog_click_button">
+                 <property name="accessibleName">
+                  <string>right_analog_click</string>
+                 </property>
+                 <property name="text">
+                  <string>RIGHT_ANALOG_CLICK</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="buttons_tab">
+           <attribute name="title">
+            <string>Buttons</string>
+           </attribute>
+           <layout class="QHBoxLayout" name="horizontalLayout_3">
+            <item>
+             <widget class="QGroupBox" name="top_box">
+              <property name="title">
+               <string>Top Buttons</string>
+              </property>
+              <layout class="QGridLayout" name="gridLayout_5">
+               <item row="0" column="1">
+                <widget class="QPushButton" name="left_bumper_button">
+                 <property name="accessibleName">
+                  <string>left_bumper</string>
+                 </property>
+                 <property name="text">
+                  <string>LEFT_BUMPER</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="0">
+                <widget class="QLabel" name="label_24">
+                 <property name="text">
+                  <string>Left Trigger</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="3" column="0">
+                <widget class="QLabel" name="label_25">
+                 <property name="text">
+                  <string>Right Trigger</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="1">
+                <widget class="QPushButton" name="right_bumper_button">
+                 <property name="accessibleName">
+                  <string>right_bumper</string>
+                 </property>
+                 <property name="text">
+                  <string>RIGHT_BUMPER</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="0">
+                <widget class="QLabel" name="label_22">
+                 <property name="text">
+                  <string>Left Bumper</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="1">
+                <widget class="QPushButton" name="left_trigger_button">
+                 <property name="accessibleName">
+                  <string>left_trigger</string>
+                 </property>
+                 <property name="text">
+                  <string>LEFT_TRIGGER</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="3" column="1">
+                <widget class="QPushButton" name="right_trigger_button">
+                 <property name="accessibleName">
+                  <string>right_trigger</string>
+                 </property>
+                 <property name="text">
+                  <string>RIGHT_TRIGGER</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="0">
+                <widget class="QLabel" name="label_23">
+                 <property name="text">
+                  <string>Right Bumper</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QGroupBox" name="face_box">
+              <property name="title">
+               <string>Face Buttons</string>
+              </property>
+              <layout class="QGridLayout" name="gridLayout_4">
+               <item row="0" column="0">
+                <widget class="QLabel" name="label_16">
+                 <property name="text">
+                  <string>Start</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="1">
+                <widget class="QPushButton" name="start_button">
+                 <property name="accessibleName">
+                  <string>start</string>
+                 </property>
+                 <property name="text">
+                  <string>START</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="0">
+                <widget class="QLabel" name="label_17">
+                 <property name="text">
+                  <string>Back</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="1">
+                <widget class="QPushButton" name="back_button">
+                 <property name="accessibleName">
+                  <string>back</string>
+                 </property>
+                 <property name="text">
+                  <string>BACK</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="0">
+                <widget class="QLabel" name="label_18">
+                 <property name="text">
+                  <string>X</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="1">
+                <widget class="QPushButton" name="x_button">
+                 <property name="accessibleName">
+                  <string>x</string>
+                 </property>
+                 <property name="text">
+                  <string>X</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="3" column="0">
+                <widget class="QLabel" name="label_19">
+                 <property name="text">
+                  <string>Y</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="3" column="1">
+                <widget class="QPushButton" name="y_button">
+                 <property name="accessibleName">
+                  <string>y</string>
+                 </property>
+                 <property name="text">
+                  <string>Y</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="0">
+                <widget class="QLabel" name="label_20">
+                 <property name="text">
+                  <string>B</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="1">
+                <widget class="QPushButton" name="b_button">
+                 <property name="accessibleName">
+                  <string>b</string>
+                 </property>
+                 <property name="text">
+                  <string>B</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="5" column="0">
+                <widget class="QLabel" name="label_21">
+                 <property name="text">
+                  <string>A</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="5" column="1">
+                <widget class="QPushButton" name="a_button">
+                 <property name="accessibleName">
+                  <string>a</string>
+                 </property>
+                 <property name="text">
+                  <string>A</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QGroupBox" name="dpad_box">
+              <property name="title">
+               <string>Directional Pad (D-Pad)</string>
+              </property>
+              <layout class="QGridLayout" name="gridLayout_3">
+               <item row="0" column="0">
+                <widget class="QLabel" name="label_12">
+                 <property name="text">
+                  <string>Up</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="1">
+                <widget class="QPushButton" name="dpad_up_button">
+                 <property name="accessibleName">
+                  <string>dpad_up</string>
+                 </property>
+                 <property name="text">
+                  <string>DPAD_UP</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="0">
+                <widget class="QLabel" name="label_13">
+                 <property name="text">
+                  <string>Left</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="1">
+                <widget class="QPushButton" name="dpad_left_button">
+                 <property name="accessibleName">
+                  <string>dpad_left</string>
+                 </property>
+                 <property name="text">
+                  <string>DPAD_LEFT</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="0">
+                <widget class="QLabel" name="label_14">
+                 <property name="text">
+                  <string>Right</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="1">
+                <widget class="QPushButton" name="dpad_right_button">
+                 <property name="accessibleName">
+                  <string>dpad_right</string>
+                 </property>
+                 <property name="text">
+                  <string>DPAD_RIGHT</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="3" column="0">
+                <widget class="QLabel" name="label_15">
+                 <property name="text">
+                  <string>Down</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="3" column="1">
+                <widget class="QPushButton" name="dpad_down_button">
+                 <property name="accessibleName">
+                  <string>dpad_down</string>
+                 </property>
+                 <property name="text">
+                  <string>DPAD_DOWN</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Ok</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="../../../resources/resources.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>ar::gui::input_settings_dialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>248</x>
+     <y>254</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>ar::gui::input_settings_dialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>316</x>
+     <y>260</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

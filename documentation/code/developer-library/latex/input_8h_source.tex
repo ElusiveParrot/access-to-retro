@@ -1,0 +1,64 @@
+\hypertarget{input_8h_source}{}\doxysection{input.\+h}
+\label{input_8h_source}\index{/Users/daniel/Developer/access-\/to-\/retro/access-\/to-\/retro/developer-\/library/include/access-\/to-\/retro-\/dev/input.h@{/Users/daniel/Developer/access-\/to-\/retro/access-\/to-\/retro/developer-\/library/include/access-\/to-\/retro-\/dev/input.h}}
+\mbox{\hyperlink{input_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#ifndef\ ACCESS\_TO\_RETRO\_INPUT\_H}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#define\ ACCESS\_TO\_RETRO\_INPUT\_H}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <stdbool.h>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{basics_8h}{basics.h}}"{}}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#define\ AR\_UNIFIED\_CONTROLLER\_KEY\_COUNT\ 24}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{group__group__input_ga50abbf588ac6e22172cfffa41dfb030e}{ar\_unified\_controller\_key}}}
+\DoxyCodeLine{00021\ \{}
+\DoxyCodeLine{00022\ \ \ \ \ ar\_unified\_controller\_left\_analog\_click,}
+\DoxyCodeLine{00023\ \ \ \ \ ar\_unified\_controller\_left\_analog\_up,}
+\DoxyCodeLine{00024\ \ \ \ \ ar\_unified\_controller\_left\_analog\_left,}
+\DoxyCodeLine{00025\ \ \ \ \ ar\_unified\_controller\_left\_analog\_right,}
+\DoxyCodeLine{00026\ \ \ \ \ ar\_unified\_controller\_left\_analog\_down,}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ ar\_unified\_controller\_right\_analog\_click,}
+\DoxyCodeLine{00029\ \ \ \ \ ar\_unified\_controller\_right\_analog\_up,}
+\DoxyCodeLine{00030\ \ \ \ \ ar\_unified\_controller\_right\_analog\_left,}
+\DoxyCodeLine{00031\ \ \ \ \ ar\_unified\_controller\_right\_analog\_right,}
+\DoxyCodeLine{00032\ \ \ \ \ ar\_unified\_controller\_right\_analog\_down,}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ ar\_unified\_controller\_dpad\_up,}
+\DoxyCodeLine{00035\ \ \ \ \ ar\_unified\_controller\_dpad\_left,}
+\DoxyCodeLine{00036\ \ \ \ \ ar\_unified\_controller\_dpad\_right,}
+\DoxyCodeLine{00037\ \ \ \ \ ar\_unified\_controller\_dpad\_down,}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ ar\_unified\_controller\_x,}
+\DoxyCodeLine{00040\ \ \ \ \ ar\_unified\_controller\_y,}
+\DoxyCodeLine{00041\ \ \ \ \ ar\_unified\_controller\_b,}
+\DoxyCodeLine{00042\ \ \ \ \ ar\_unified\_controller\_a,}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ ar\_unified\_controller\_start,}
+\DoxyCodeLine{00045\ \ \ \ \ ar\_unified\_controller\_back,}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \ \ ar\_unified\_controller\_left\_bumper,}
+\DoxyCodeLine{00048\ \ \ \ \ ar\_unified\_controller\_left\_trigger,}
+\DoxyCodeLine{00049\ \ \ \ \ ar\_unified\_controller\_right\_bumper,}
+\DoxyCodeLine{00050\ \ \ \ \ ar\_unified\_controller\_right\_trigger}
+\DoxyCodeLine{00051\ \};}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00054\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{group__group__input_ga2cc36bd6e11a059c628d75bbc99cd17c}{ar\_unified\_controller\_key\_status}}}
+\DoxyCodeLine{00055\ \{}
+\DoxyCodeLine{00057\ \ \ \ \ \mbox{\hyperlink{group__group__input_gga2cc36bd6e11a059c628d75bbc99cd17cabb0b8969640ca91839be1fa5d624f911}{ar\_key\_status\_released}},}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00060\ \ \ \ \ \mbox{\hyperlink{group__group__input_gga2cc36bd6e11a059c628d75bbc99cd17caadab1e3e437c0ce8177689d5dcb76fb6}{ar\_key\_status\_pressed}}}
+\DoxyCodeLine{00061\ \};}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00067\ AR\_API\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__group__input_gaeac0de8dd15745f4c6ad2d6cc46b6238}{ar\_initialise\_input\_api}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00073\ AR\_API\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{group__group__input_ga2cc36bd6e11a059c628d75bbc99cd17c}{ar\_unified\_controller\_key\_status}}\ \mbox{\hyperlink{group__group__input_ga5817bc258e4472e7fe92f4644816a0ed}{ar\_get\_unified\_controller\_key\_status}}(\textcolor{keyword}{enum}\ \mbox{\hyperlink{group__group__input_ga50abbf588ac6e22172cfffa41dfb030e}{ar\_unified\_controller\_key}}\ key);}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00081\ AR\_API\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__group__input_ga47a41d28a053fe213c2bf2fa2d9f094f}{ar\_set\_unified\_controller\_key\_status}}(\textcolor{keyword}{enum}\ \mbox{\hyperlink{group__group__input_ga50abbf588ac6e22172cfffa41dfb030e}{ar\_unified\_controller\_key}}\ key,}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{group__group__input_ga2cc36bd6e11a059c628d75bbc99cd17c}{ar\_unified\_controller\_key\_status}}\ status);}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//ACCESS\_TO\_RETRO\_INPUT\_H}}
+\DoxyCodeLine{00085\ \ \textcolor{comment}{//\ end\ of\ group}}
+
+\end{DoxyCode}

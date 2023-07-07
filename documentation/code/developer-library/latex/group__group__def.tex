@@ -1,0 +1,141 @@
+\hypertarget{group__group__def}{}\doxysection{Required Definitions Helper}
+\label{group__group__def}\index{Required Definitions Helper@{Required Definitions Helper}}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group__group__def_ga6ea80850c313b263d6b373bfbf10a528}{AR\+\_\+\+DEFINE\+\_\+\+REQUIRED\+\_\+\+FN}}(signature)~AR\+\_\+\+API signature
+\begin{DoxyCompactList}\small\item\em Defines a function required. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__group__def_ga9a88566b89285b2225c5b1b8a959799b}{AR\+\_\+\+DEFINE\+\_\+\+FN}}~\mbox{\hyperlink{group__group__basics_ga333c0eb2dc10838b242ce5d838eba3c3}{ar\+\_\+err\+\_\+code}} \+\_\+ar\+\_\+vc\+\_\+define(void)
+\begin{DoxyCompactList}\small\item\em Defines virtual console\textquotesingle{}s metadata for the frontend to use. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__group__def_gaae7cfe176b3bdb4c445c2d4b25536402}{AR\+\_\+\+STARTUP\+\_\+\+FN}}~\mbox{\hyperlink{group__group__basics_ga333c0eb2dc10838b242ce5d838eba3c3}{ar\+\_\+err\+\_\+code}} \+\_\+ar\+\_\+vc\+\_\+startup(void)
+\begin{DoxyCompactList}\small\item\em Configures the virtual console and the developer library. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__group__def_gabf7a1cc1caa2c38645868789cb045f07}{AR\+\_\+\+QUIT\+\_\+\+FN}}~void \+\_\+ar\+\_\+vc\+\_\+quit(void)
+\begin{DoxyCompactList}\small\item\em Clean up resources of the virtual console and library. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__group__def_ga91eb46036c68ed97e0e0a527265ea3da}{AR\+\_\+\+THREAD\+\_\+\+MAIN\+\_\+\+FN}}~void \+\_\+ar\+\_\+vc\+\_\+main\+\_\+thread(void)
+\begin{DoxyCompactList}\small\item\em Main thread function. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__group__def_ga2c8c99d9dcb02238a16d4ce2b5cf31a4}{AR\+\_\+\+THREAD\+\_\+\+RENDER\+\_\+\+FN}}~void \+\_\+ar\+\_\+vc\+\_\+render\+\_\+thread(void)
+\begin{DoxyCompactList}\small\item\em Render thread function. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__group__def_gaa40f73e1b01fe868771902627eb1643d}{AR\+\_\+\+THREAD\+\_\+\+INPUT\+\_\+\+FN}}~void \+\_\+ar\+\_\+vc\+\_\+input\+\_\+thread(void)
+\begin{DoxyCompactList}\small\item\em Input thread function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Contains helper macros for usage in C/\+C++ virtual console projects 
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group__group__def_ga9a88566b89285b2225c5b1b8a959799b}\label{group__group__def_ga9a88566b89285b2225c5b1b8a959799b}} 
+\index{Required Definitions Helper@{Required Definitions Helper}!AR\_DEFINE\_FN@{AR\_DEFINE\_FN}}
+\index{AR\_DEFINE\_FN@{AR\_DEFINE\_FN}!Required Definitions Helper@{Required Definitions Helper}}
+\doxysubsubsection{\texorpdfstring{AR\_DEFINE\_FN}{AR\_DEFINE\_FN}}
+{\footnotesize\ttfamily \#define AR\+\_\+\+DEFINE\+\_\+\+FN~\mbox{\hyperlink{group__group__basics_ga333c0eb2dc10838b242ce5d838eba3c3}{ar\+\_\+err\+\_\+code}} \+\_\+ar\+\_\+vc\+\_\+define(void)}
+
+
+
+Defines virtual console\textquotesingle{}s metadata for the frontend to use. 
+
+Runs when the virtual console is loaded by the frontend (not when it\textquotesingle{}s started). \begin{DoxyRemark}{Remarks}
+This function NEEDS to be defined for the Access to Retro library. 
+\end{DoxyRemark}
+\begin{DoxyReturn}{Returns}
+Error code\+:
+\begin{DoxyItemize}
+\item 0\+: No error,
+\item Anything else\+: In this virtual console it\textquotesingle{}s result from ar\+\_\+define. 
+\end{DoxyItemize}
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__group__def_ga6ea80850c313b263d6b373bfbf10a528}\label{group__group__def_ga6ea80850c313b263d6b373bfbf10a528}} 
+\index{Required Definitions Helper@{Required Definitions Helper}!AR\_DEFINE\_REQUIRED\_FN@{AR\_DEFINE\_REQUIRED\_FN}}
+\index{AR\_DEFINE\_REQUIRED\_FN@{AR\_DEFINE\_REQUIRED\_FN}!Required Definitions Helper@{Required Definitions Helper}}
+\doxysubsubsection{\texorpdfstring{AR\_DEFINE\_REQUIRED\_FN}{AR\_DEFINE\_REQUIRED\_FN}}
+{\footnotesize\ttfamily \#define AR\+\_\+\+DEFINE\+\_\+\+REQUIRED\+\_\+\+FN(\begin{DoxyParamCaption}\item[{}]{signature }\end{DoxyParamCaption})~AR\+\_\+\+API signature}
+
+
+
+Defines a function required. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em signature} & Signature of the function, most likely another macro -\/ it\textquotesingle{}s discouraged to use manual signatures \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__group__def_gabf7a1cc1caa2c38645868789cb045f07}\label{group__group__def_gabf7a1cc1caa2c38645868789cb045f07}} 
+\index{Required Definitions Helper@{Required Definitions Helper}!AR\_QUIT\_FN@{AR\_QUIT\_FN}}
+\index{AR\_QUIT\_FN@{AR\_QUIT\_FN}!Required Definitions Helper@{Required Definitions Helper}}
+\doxysubsubsection{\texorpdfstring{AR\_QUIT\_FN}{AR\_QUIT\_FN}}
+{\footnotesize\ttfamily \#define AR\+\_\+\+QUIT\+\_\+\+FN~void \+\_\+ar\+\_\+vc\+\_\+quit(void)}
+
+
+
+Clean up resources of the virtual console and library. 
+
+Runs when the virtual console is closed, should be used to deallocate memory and resources. \begin{DoxyRemark}{Remarks}
+This function NEEDS to be defined for the Access to Retro library. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{group__group__def_gaae7cfe176b3bdb4c445c2d4b25536402}\label{group__group__def_gaae7cfe176b3bdb4c445c2d4b25536402}} 
+\index{Required Definitions Helper@{Required Definitions Helper}!AR\_STARTUP\_FN@{AR\_STARTUP\_FN}}
+\index{AR\_STARTUP\_FN@{AR\_STARTUP\_FN}!Required Definitions Helper@{Required Definitions Helper}}
+\doxysubsubsection{\texorpdfstring{AR\_STARTUP\_FN}{AR\_STARTUP\_FN}}
+{\footnotesize\ttfamily \#define AR\+\_\+\+STARTUP\+\_\+\+FN~\mbox{\hyperlink{group__group__basics_ga333c0eb2dc10838b242ce5d838eba3c3}{ar\+\_\+err\+\_\+code}} \+\_\+ar\+\_\+vc\+\_\+startup(void)}
+
+
+
+Configures the virtual console and the developer library. 
+
+Runs when the virtual console is started, should be used to configure virtual console\textquotesingle{}s internal state and the library. \begin{DoxyRemark}{Remarks}
+This function NEEDS to be defined for the Access to Retro library. 
+\end{DoxyRemark}
+\begin{DoxyReturn}{Returns}
+Error code\+:
+\begin{DoxyItemize}
+\item 0\+: No error
+\item Anything else\+: In this virtual console it\textquotesingle{}s the result from ar\+\_\+init. 
+\end{DoxyItemize}
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__group__def_gaa40f73e1b01fe868771902627eb1643d}\label{group__group__def_gaa40f73e1b01fe868771902627eb1643d}} 
+\index{Required Definitions Helper@{Required Definitions Helper}!AR\_THREAD\_INPUT\_FN@{AR\_THREAD\_INPUT\_FN}}
+\index{AR\_THREAD\_INPUT\_FN@{AR\_THREAD\_INPUT\_FN}!Required Definitions Helper@{Required Definitions Helper}}
+\doxysubsubsection{\texorpdfstring{AR\_THREAD\_INPUT\_FN}{AR\_THREAD\_INPUT\_FN}}
+{\footnotesize\ttfamily \#define AR\+\_\+\+THREAD\+\_\+\+INPUT\+\_\+\+FN~void \+\_\+ar\+\_\+vc\+\_\+input\+\_\+thread(void)}
+
+
+
+Input thread function. 
+
+Runs when the virtual console is started, should contain an infinite loop (it will stop automatically when the user closes the window), while the developer is free to use this thread as he likes (even to create more threads) it is recommended to use this thread for input handling \begin{DoxyWarning}{Warning}
+SDL should NOT be used to handle input by the developer, only access to retro library helpers should be used this is due to the fact that SDL does not allow to poll events outside of the thread where it was initialised and doing so will crash the application. 
+\end{DoxyWarning}
+\begin{DoxyRemark}{Remarks}
+This function will loop in a loop in a thread every frame time (1000 / frame rate) (for example\+: every 16.\+6ms if the frame rate is 60) 
+
+This function NEEDS to be defined for the Access to Retro library. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{group__group__def_ga91eb46036c68ed97e0e0a527265ea3da}\label{group__group__def_ga91eb46036c68ed97e0e0a527265ea3da}} 
+\index{Required Definitions Helper@{Required Definitions Helper}!AR\_THREAD\_MAIN\_FN@{AR\_THREAD\_MAIN\_FN}}
+\index{AR\_THREAD\_MAIN\_FN@{AR\_THREAD\_MAIN\_FN}!Required Definitions Helper@{Required Definitions Helper}}
+\doxysubsubsection{\texorpdfstring{AR\_THREAD\_MAIN\_FN}{AR\_THREAD\_MAIN\_FN}}
+{\footnotesize\ttfamily \#define AR\+\_\+\+THREAD\+\_\+\+MAIN\+\_\+\+FN~void \+\_\+ar\+\_\+vc\+\_\+main\+\_\+thread(void)}
+
+
+
+Main thread function. 
+
+Runs when the virtual console is started, should contain an infinite loop (it will stop automatically when the user closes the window), while the developer is free to use this thread as he likes (even to create more threads) it is recommended to use this thread for main fetch execute decode cycle and inter-\/component communication (for ex\+: CPU \texorpdfstring{$<$}{<}-\/\texorpdfstring{$>$}{>} GPU). \begin{DoxyRemark}{Remarks}
+This function will loop in a loop in a thread every frame time (1000 / frame rate) (for example\+: every 16.\+6ms if the frame rate is 60) 
+
+This function NEEDS to be defined for the Access to Retro library. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{group__group__def_ga2c8c99d9dcb02238a16d4ce2b5cf31a4}\label{group__group__def_ga2c8c99d9dcb02238a16d4ce2b5cf31a4}} 
+\index{Required Definitions Helper@{Required Definitions Helper}!AR\_THREAD\_RENDER\_FN@{AR\_THREAD\_RENDER\_FN}}
+\index{AR\_THREAD\_RENDER\_FN@{AR\_THREAD\_RENDER\_FN}!Required Definitions Helper@{Required Definitions Helper}}
+\doxysubsubsection{\texorpdfstring{AR\_THREAD\_RENDER\_FN}{AR\_THREAD\_RENDER\_FN}}
+{\footnotesize\ttfamily \#define AR\+\_\+\+THREAD\+\_\+\+RENDER\+\_\+\+FN~void \+\_\+ar\+\_\+vc\+\_\+render\+\_\+thread(void)}
+
+
+
+Render thread function. 
+
+Runs when the virtual console is started, should contain an infinite loop (it will stop automatically when the user closes the window), while the developer is free to use this thread as he likes (even to create more threads) it is recommended to use this thread for rendering, whether that\textquotesingle{}s Open\+GL, SDL2 or direct frame buffer access. \begin{DoxyRemark}{Remarks}
+This function will loop in a loop in a thread every frame time (1000 / frame rate) (for example\+: every 16.\+6ms if the frame rate is 60) 
+
+This function NEEDS to be defined for the Access to Retro library. 
+\end{DoxyRemark}

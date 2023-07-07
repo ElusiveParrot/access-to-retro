@@ -1,0 +1,128 @@
+\hypertarget{qt-helper_8hpp}{}\doxysection{/\+Users/daniel/\+Developer/access-\/to-\/retro/access-\/to-\/retro/frontend/src/helpers/qt-\/helper.hpp File Reference}
+\label{qt-helper_8hpp}\index{/Users/daniel/Developer/access-\/to-\/retro/access-\/to-\/retro/frontend/src/helpers/qt-\/helper.hpp@{/Users/daniel/Developer/access-\/to-\/retro/access-\/to-\/retro/frontend/src/helpers/qt-\/helper.hpp}}
+{\ttfamily \#include $<$QSplash\+Screen$>$}\newline
+{\ttfamily \#include $<$QApplication$>$}\newline
+{\ttfamily \#include $<$QTime$>$}\newline
+{\ttfamily \#include \char`\"{}helpers/types.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}util/time.\+hpp\char`\"{}}\newline
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespacear}{ar}}
+\begin{DoxyCompactList}\small\item\em Root namespace of the project, contains important top-\/level classes and functions. \end{DoxyCompactList}\item 
+namespace \mbox{\hyperlink{namespacear_1_1helpers}{ar\+::helpers}}
+\begin{DoxyCompactList}\small\item\em Helper classes and function with various functionality. \end{DoxyCompactList}\item 
+namespace \mbox{\hyperlink{namespacear_1_1helpers_1_1qt_1_1resources}{ar\+::helpers\+::qt\+::resources}}
+\begin{DoxyCompactList}\small\item\em Contains paths to the resources inside .qrc file for Qt. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{qt-helper_8hpp_aeca76f68e2019ae74ede403a54d35583}\label{qt-helper_8hpp_aeca76f68e2019ae74ede403a54d35583}} 
+typedef \mbox{\hyperlink{namespacear_1_1types_a6d2f0724119a4b1ac175553fdf66dba6}{ar\+::types\+::c\+\_\+str}} {\bfseries ar\+::helpers\+::qt\+::qt\+\_\+resource\+\_\+path}
+\begin{DoxyCompactList}\small\item\em Abstraction for a path for Qt resource in .qrc file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\static QVariant \mbox{\hyperlink{qt-helper_8hpp_a41371ac99510aca51b8a64c1faaee7a2}{ar\+::helpers\+::qt\+::create\+\_\+variant}} (QMeta\+Type type, T value)
+\begin{DoxyCompactList}\small\item\em Helper function to create QVariant objects with custom class type. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{qt-helper_8hpp_acf5663c033b113e34a0c642a4a73e456}{ar\+::helpers\+::qt\+::wait\+\_\+with\+\_\+event\+\_\+processing}} (\mbox{\hyperlink{classar_1_1util_1_1time__duration}{ar\+::util\+::time\+\_\+duration}} duration)
+\begin{DoxyCompactList}\small\item\em Similar to OS\textquotesingle{}s wait but affects only Qt\textquotesingle{}s thread. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{qt-helper_8hpp_a653135c536d8705265aef8a13665269c}{ar\+::helpers\+::qt\+::execute\+\_\+splash\+\_\+screen\+\_\+event}} (const QApplication \&app, QSplash\+Screen \&splash, const std\+::function$<$ void()$>$ \&action, const QString \&waiting\+\_\+message)
+\begin{DoxyCompactList}\small\item\em Used to execute an action while the splash screen is visible. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{qt-helper_8hpp_abeda4564b7acec9bd011caf5308926aa}{ar\+::helpers\+::qt\+::show\+\_\+error\+\_\+message\+\_\+box}} (const QString \&title, const QString \&message, const QString \&detailed\+\_\+text=\char`\"{}\char`\"{}, QSize size=QSize(500, 200), QWidget $\ast$parent=nullptr)
+\begin{DoxyCompactList}\small\item\em Shows a message box with \textquotesingle{}critical\textquotesingle{} severity. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespacear_1_1helpers_1_1qt_1_1resources_ad6cfcbfe70e0ed06f579b794b2cb2d5f}{ar\+::helpers\+::qt\+::resources\+::check\+\_\+if\+\_\+resource\+\_\+exists}} (const qt\+\_\+resource\+\_\+path \&relative\+\_\+path\+\_\+to\+\_\+root)
+\begin{DoxyCompactList}\small\item\em Checks if resource exists inside the .qrc file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespacear_1_1helpers_1_1qt_1_1resources_a7442658e3aaabec9f78755ee330a6925}\label{namespacear_1_1helpers_1_1qt_1_1resources_a7442658e3aaabec9f78755ee330a6925}} 
+constexpr qt\+\_\+resource\+\_\+path {\bfseries ar\+::helpers\+::qt\+::resources\+::\+SPLASH\+\_\+\+SCREEN} = \char`\"{}\+:/splash.\+png\char`\"{}
+\begin{DoxyCompactList}\small\item\em Image used for the splash screen shown before the main window. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{namespacear_1_1helpers_1_1qt_1_1resources_a3d9014f4fcc263e05c2704995d0a7ee6}\label{namespacear_1_1helpers_1_1qt_1_1resources_a3d9014f4fcc263e05c2704995d0a7ee6}} 
+constexpr qt\+\_\+resource\+\_\+path {\bfseries ar\+::helpers\+::qt\+::resources\+::\+GAME\+\_\+\+ICON} = \char`\"{}\+:/game\+\_\+icon.\+png\char`\"{}
+\begin{DoxyCompactList}\small\item\em Icon for a list of games. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{qt-helper_8hpp_a41371ac99510aca51b8a64c1faaee7a2}\label{qt-helper_8hpp_a41371ac99510aca51b8a64c1faaee7a2}} 
+\index{qt-\/helper.hpp@{qt-\/helper.hpp}!create\_variant@{create\_variant}}
+\index{create\_variant@{create\_variant}!qt-\/helper.hpp@{qt-\/helper.hpp}}
+\doxysubsubsection{\texorpdfstring{create\_variant()}{create\_variant()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+static QVariant ar\+::helpers\+::qt\+::create\+\_\+variant (\begin{DoxyParamCaption}\item[{QMeta\+Type}]{type,  }\item[{T}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Helper function to create QVariant objects with custom class type. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Custom class type \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em type} & Custom class\textquotesingle{}s QMeta\+Type object \\
+\hline
+{\em value} & Value of created variant \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Created QVariant 
+\end{DoxyReturn}
+\mbox{\Hypertarget{qt-helper_8hpp_a653135c536d8705265aef8a13665269c}\label{qt-helper_8hpp_a653135c536d8705265aef8a13665269c}} 
+\index{qt-\/helper.hpp@{qt-\/helper.hpp}!execute\_splash\_screen\_event@{execute\_splash\_screen\_event}}
+\index{execute\_splash\_screen\_event@{execute\_splash\_screen\_event}!qt-\/helper.hpp@{qt-\/helper.hpp}}
+\doxysubsubsection{\texorpdfstring{execute\_splash\_screen\_event()}{execute\_splash\_screen\_event()}}
+{\footnotesize\ttfamily void ar\+::helpers\+::qt\+::execute\+\_\+splash\+\_\+screen\+\_\+event (\begin{DoxyParamCaption}\item[{const QApplication \&}]{app,  }\item[{QSplash\+Screen \&}]{splash,  }\item[{const std\+::function$<$ void()$>$ \&}]{action,  }\item[{const QString \&}]{waiting\+\_\+message }\end{DoxyParamCaption})}
+
+
+
+Used to execute an action while the splash screen is visible. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em app} & Main Qt application object \\
+\hline
+{\em action} & Lambda defining the action that should happen. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{qt-helper_8hpp_abeda4564b7acec9bd011caf5308926aa}\label{qt-helper_8hpp_abeda4564b7acec9bd011caf5308926aa}} 
+\index{qt-\/helper.hpp@{qt-\/helper.hpp}!show\_error\_message\_box@{show\_error\_message\_box}}
+\index{show\_error\_message\_box@{show\_error\_message\_box}!qt-\/helper.hpp@{qt-\/helper.hpp}}
+\doxysubsubsection{\texorpdfstring{show\_error\_message\_box()}{show\_error\_message\_box()}}
+{\footnotesize\ttfamily void ar\+::helpers\+::qt\+::show\+\_\+error\+\_\+message\+\_\+box (\begin{DoxyParamCaption}\item[{const QString \&}]{title,  }\item[{const QString \&}]{message,  }\item[{const QString \&}]{detailed\+\_\+text = {\ttfamily \char`\"{}\char`\"{}},  }\item[{QSize}]{size = {\ttfamily QSize(500,~200)},  }\item[{QWidget $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+
+
+Shows a message box with \textquotesingle{}critical\textquotesingle{} severity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em title} & Title at the top of the message box \\
+\hline
+{\em message} & Message in the middle of the message box \\
+\hline
+{\em detailed\+\_\+text} & Text below \textquotesingle{}message\textquotesingle{} \\
+\hline
+{\em size} & Size of the message box \\
+\hline
+{\em parent} & Parent window of the message box \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{qt-helper_8hpp_acf5663c033b113e34a0c642a4a73e456}\label{qt-helper_8hpp_acf5663c033b113e34a0c642a4a73e456}} 
+\index{qt-\/helper.hpp@{qt-\/helper.hpp}!wait\_with\_event\_processing@{wait\_with\_event\_processing}}
+\index{wait\_with\_event\_processing@{wait\_with\_event\_processing}!qt-\/helper.hpp@{qt-\/helper.hpp}}
+\doxysubsubsection{\texorpdfstring{wait\_with\_event\_processing()}{wait\_with\_event\_processing()}}
+{\footnotesize\ttfamily void ar\+::helpers\+::qt\+::wait\+\_\+with\+\_\+event\+\_\+processing (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classar_1_1util_1_1time__duration}{ar\+::util\+::time\+\_\+duration}}}]{duration }\end{DoxyParamCaption})}
+
+
+
+Similar to OS\textquotesingle{}s wait but affects only Qt\textquotesingle{}s thread. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em duration} & Time to \textquotesingle{}wait\textquotesingle{} \\
+\hline
+\end{DoxyParams}

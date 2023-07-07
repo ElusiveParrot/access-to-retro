@@ -1,0 +1,76 @@
+\hypertarget{sdl-graphics-widget_8hpp_source}{}\doxysection{sdl-\/graphics-\/widget.hpp}
+\label{sdl-graphics-widget_8hpp_source}\index{/Users/daniel/Developer/access-\/to-\/retro/access-\/to-\/retro/frontend/src/gui/widgets/sdl-\/graphics-\/widget.hpp@{/Users/daniel/Developer/access-\/to-\/retro/access-\/to-\/retro/frontend/src/gui/widgets/sdl-\/graphics-\/widget.hpp}}
+\mbox{\hyperlink{sdl-graphics-widget_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ AR\_GUI\_SDLGRAPHICSWIDGET\_HPP}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ AR\_GUI\_SDLGRAPHICSWIDGET\_HPP}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <access-\/to-\/retro-\/dev/access-\/to-\/retro-\/dev.h>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <QKeyEvent>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <QWidget>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <QTimer>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <SDL.h>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{executable-binary_8hpp}{core/executable-\/binary.hpp}}"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{virtual-console_8hpp}{core/virtual-\/console.hpp}}"{}}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{input-handler_8hpp}{core/input-\/handler.hpp}}"{}}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacear_1_1gui}{ar::gui}}}
+\DoxyCodeLine{00018\ \{}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classar_1_1gui_1_1sdl__graphics__widget}{sdl\_graphics\_widget}}\ :\ \textcolor{keyword}{public}\ QWidget}
+\DoxyCodeLine{00021\ \ \ \ \ \{}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classar_1_1gui_1_1sdl__graphics__widget}{sdl\_graphics\_widget}}(std::unique\_ptr<ar::core::virtual\_console>\&\ virtual\_console,}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::unique\_ptr<ar::core::executable\_binary>\&\ game,}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ QWidget*\ parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classar_1_1gui_1_1sdl__graphics__widget}{\string~sdl\_graphics\_widget}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classar_1_1gui_1_1sdl__graphics__widget_ad446eff3382962afe203ad1a7cb3520d}{FRAME\_RATE}}\ =\ 60;}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ std::unique\_ptr<ar::core::virtual\_console>\&\ \mbox{\hyperlink{classar_1_1gui_1_1sdl__graphics__widget_ac1df0be03a0caf07a4b16a17f3145f05}{\_virtual\_console}};}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ std::unique\_ptr<ar::core::executable\_binary>\&\ \mbox{\hyperlink{classar_1_1gui_1_1sdl__graphics__widget_ae7e82bd80b5c9e36a1424cb841e9513c}{\_game}};}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classar_1_1core_1_1input__handler}{ar::core::input\_handler}}\ \mbox{\hyperlink{classar_1_1gui_1_1sdl__graphics__widget_a263b6e3a4062f0954a075b696dcc7acf}{\_input\_handler}};}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classar_1_1gui_1_1sdl__graphics__widget_a8ca126a49d80222766231222074084b8}{prepare\_for\_game\_launch}}();}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classar_1_1gui_1_1sdl__graphics__widget_aa9cd1499521e62e30bd3a734c88e819a}{prepare\_graphics}}();}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ QPaintEngine*\ \mbox{\hyperlink{classar_1_1gui_1_1sdl__graphics__widget_a8bf955e759454fa3f00f393014a81203}{paintEngine}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ QTimer\ \mbox{\hyperlink{classar_1_1gui_1_1sdl__graphics__widget_a49c249340227005d23aa8b3dfcee78f6}{\_frame\_timer}};}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ******************\ SDL's\ objects\ ******************}}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ SDL\_Window*\ \mbox{\hyperlink{classar_1_1gui_1_1sdl__graphics__widget_add208730c744a9868d9c267422e778fd}{\_sdl\_window}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ SDL\_Renderer*\ \mbox{\hyperlink{classar_1_1gui_1_1sdl__graphics__widget_a591521549e02e36ed2f50df16b782b04}{\_sdl\_renderer}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classar_1_1gui_1_1sdl__graphics__widget_a7ae70861d8511f41696395ed4a0c08df}{initialise\_sdl\_objects}}();}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classar_1_1gui_1_1sdl__graphics__widget_a3cf522ad7ef6bcf9d18aa42f7124d87c}{destroy\_sdl\_objects}}();}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classar_1_1gui_1_1sdl__graphics__widget_a024b3fb178ca145c62d743dbacb60e12}{on\_resize}}(\textcolor{keywordtype}{int}\ w,\ \textcolor{keywordtype}{int}\ h);}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ******************\ Qt's\ event\ overwrites\ ******************}}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classar_1_1gui_1_1sdl__graphics__widget_a63dcc175f8c42e4dce16cdadf7f22b5d}{resizeEvent}}(QResizeEvent*\ event)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classar_1_1gui_1_1sdl__graphics__widget_adb47cd691d89ac1746f5b1befaf600e1}{keyPressEvent}}(QKeyEvent*\ event)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classar_1_1gui_1_1sdl__graphics__widget_a702dd8213bb7930b76014b92f33fa140}{keyReleaseEvent}}(QKeyEvent*\ event)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ******************\ Access\ to\ Retro\ Developer\ Library\ objects\ ******************}}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ ar\_graphics\_method\ \mbox{\hyperlink{classar_1_1gui_1_1sdl__graphics__widget_a3c9840025e46c44bda0d34386c93c042}{\_graphics\_method}}\ =\ ar\_graphics\_method\_none;}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ ar\_frame\_buffer*\ \mbox{\hyperlink{classar_1_1gui_1_1sdl__graphics__widget_a609917478f7671d38e817b483c6a3978}{\_frame\_buffer}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00117\ \ \ \ \ \};}
+\DoxyCodeLine{00118\ \}}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00120\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ AR\_GUI\_SDLGRAPHICSWIDGET\_HPP}}
+
+\end{DoxyCode}

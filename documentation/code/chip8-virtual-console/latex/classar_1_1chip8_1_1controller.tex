@@ -1,0 +1,71 @@
+\hypertarget{classar_1_1chip8_1_1controller}{}\doxysection{ar\+::chip8\+::controller Class Reference}
+\label{classar_1_1chip8_1_1controller}\index{ar::chip8::controller@{ar::chip8::controller}}
+
+
+Class representing CHIP8\textquotesingle{}s controller.  
+
+
+
+
+{\ttfamily \#include $<$controller.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classar_1_1chip8_1_1controller_ab5204db5b7f6b75b5fb198500249fa9c}{set\+\_\+key\+\_\+status}} (\mbox{\hyperlink{namespacear_1_1chip8_affdd0b947dd20ed6665494dc1e4860c9}{ar\+::chip8\+::key}} \mbox{\hyperlink{namespacear_1_1chip8_affdd0b947dd20ed6665494dc1e4860c9}{key}}, ar\+\_\+unified\+\_\+controller\+\_\+key\+\_\+status status)
+\begin{DoxyCompactList}\small\item\em Setter for key status. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classar_1_1chip8_1_1controller_a7f86b14913837799045ccd8571779683}{is\+\_\+key\+\_\+pressed}} (\mbox{\hyperlink{namespacear_1_1chip8_affdd0b947dd20ed6665494dc1e4860c9}{ar\+::chip8\+::key}} \mbox{\hyperlink{namespacear_1_1chip8_affdd0b947dd20ed6665494dc1e4860c9}{key}})
+\begin{DoxyCompactList}\small\item\em Check whether the key was pressed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classar_1_1chip8_1_1controller_a6b296c5040d3cb9e2d3acb27456e7fbf}\label{classar_1_1chip8_1_1controller_a6b296c5040d3cb9e2d3acb27456e7fbf}} 
+std\+::array$<$ bool, \mbox{\hyperlink{namespacear_1_1chip8_aff75d2c793cd8067b115c3aa06dc479c}{ar\+::chip8\+::\+KEY\+\_\+\+COUNT}} $>$ {\bfseries \+\_\+key\+\_\+pad} \{\}
+\begin{DoxyCompactList}\small\item\em Maps 1\+:1 with \textquotesingle{}\mbox{\hyperlink{namespacear_1_1chip8_affdd0b947dd20ed6665494dc1e4860c9}{ar\+::chip8\+::key}}\textquotesingle{} when key is casted to int, value represents whether it\textquotesingle{}s pressed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class representing CHIP8\textquotesingle{}s controller. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classar_1_1chip8_1_1controller_a7f86b14913837799045ccd8571779683}\label{classar_1_1chip8_1_1controller_a7f86b14913837799045ccd8571779683}} 
+\index{ar::chip8::controller@{ar::chip8::controller}!is\_key\_pressed@{is\_key\_pressed}}
+\index{is\_key\_pressed@{is\_key\_pressed}!ar::chip8::controller@{ar::chip8::controller}}
+\doxysubsubsection{\texorpdfstring{is\_key\_pressed()}{is\_key\_pressed()}}
+{\footnotesize\ttfamily bool ar\+::chip8\+::controller\+::is\+\_\+key\+\_\+pressed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacear_1_1chip8_affdd0b947dd20ed6665494dc1e4860c9}{ar\+::chip8\+::key}}}]{key }\end{DoxyParamCaption})}
+
+
+
+Check whether the key was pressed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & Key to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Whether the key was pressed 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classar_1_1chip8_1_1controller_ab5204db5b7f6b75b5fb198500249fa9c}\label{classar_1_1chip8_1_1controller_ab5204db5b7f6b75b5fb198500249fa9c}} 
+\index{ar::chip8::controller@{ar::chip8::controller}!set\_key\_status@{set\_key\_status}}
+\index{set\_key\_status@{set\_key\_status}!ar::chip8::controller@{ar::chip8::controller}}
+\doxysubsubsection{\texorpdfstring{set\_key\_status()}{set\_key\_status()}}
+{\footnotesize\ttfamily void ar\+::chip8\+::controller\+::set\+\_\+key\+\_\+status (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacear_1_1chip8_affdd0b947dd20ed6665494dc1e4860c9}{ar\+::chip8\+::key}}}]{key,  }\item[{ar\+\_\+unified\+\_\+controller\+\_\+key\+\_\+status}]{status }\end{DoxyParamCaption})}
+
+
+
+Setter for key status. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & Button that was pressed \\
+\hline
+{\em status} & Status of the key \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/daniel/\+Developer/access-\/to-\/retro/access-\/to-\/retro/chip8-\/virtual-\/console/src/emulator/\mbox{\hyperlink{controller_8hpp}{controller.\+hpp}}\item 
+/\+Users/daniel/\+Developer/access-\/to-\/retro/access-\/to-\/retro/chip8-\/virtual-\/console/src/emulator/controller.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,70 @@
+\hypertarget{group__group__game}{}\doxysection{Game}
+\label{group__group__game}\index{Game@{Game}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structar__executable}{ar\+\_\+executable}}
+\begin{DoxyCompactList}\small\item\em Represents an executable binary file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+AR\+\_\+\+API void \mbox{\hyperlink{group__group__game_ga27c83bc6f6821fb790af726b1cc80ce5}{ar\+\_\+create\+\_\+executable}} (const \mbox{\hyperlink{group__group__data_ga98a547dd832af88e55f5046e7bf2aa57}{ar\+\_\+byte}} $\ast$bytes, size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Connect access to retro library with executable loaded in virtual console. \end{DoxyCompactList}\item 
+AR\+\_\+\+API struct \mbox{\hyperlink{structar__executable}{ar\+\_\+executable}} $\ast$ \mbox{\hyperlink{group__group__game_gaa065a4a366a262aa8d61bdbe7000d0fb}{ar\+\_\+get\+\_\+executable}} (void)
+\begin{DoxyCompactList}\small\item\em Getter for set executable, contains the binary of the game. \end{DoxyCompactList}\item 
+AR\+\_\+\+API void \mbox{\hyperlink{group__group__game_ga6971c8de3c49f3c051da2f495513d658}{ar\+\_\+free\+\_\+executable}} (void)
+\begin{DoxyCompactList}\small\item\em Free the global library\textquotesingle{}s executable object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Helper functions dealing with game files, game loading/unloading 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group__group__game_ga27c83bc6f6821fb790af726b1cc80ce5}\label{group__group__game_ga27c83bc6f6821fb790af726b1cc80ce5}} 
+\index{Game@{Game}!ar\_create\_executable@{ar\_create\_executable}}
+\index{ar\_create\_executable@{ar\_create\_executable}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{ar\_create\_executable()}{ar\_create\_executable()}}
+{\footnotesize\ttfamily AR\+\_\+\+API void ar\+\_\+create\+\_\+executable (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{group__group__data_ga98a547dd832af88e55f5046e7bf2aa57}{ar\+\_\+byte}} $\ast$}]{bytes,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+
+
+Connect access to retro library with executable loaded in virtual console. 
+
+\begin{DoxyRemark}{Remarks}
+Used by the frontend application, shouldn\textquotesingle{}t be used by virtual console developers 
+\end{DoxyRemark}
+
+\begin{DoxyParams}{Parameters}
+{\em bytes} & Pointer to raw bytes of the executable \\
+\hline
+{\em size} & Size of the executable \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__group__game_ga6971c8de3c49f3c051da2f495513d658}\label{group__group__game_ga6971c8de3c49f3c051da2f495513d658}} 
+\index{Game@{Game}!ar\_free\_executable@{ar\_free\_executable}}
+\index{ar\_free\_executable@{ar\_free\_executable}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{ar\_free\_executable()}{ar\_free\_executable()}}
+{\footnotesize\ttfamily AR\+\_\+\+API void ar\+\_\+free\+\_\+executable (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Free the global library\textquotesingle{}s executable object. 
+
+\begin{DoxyRemark}{Remarks}
+Used by the frontend application, shouldn\textquotesingle{}t be used by virtual console developers 
+
+This gets called by \textquotesingle{}ar\+\_\+quit\textquotesingle{} so no need to call this directly in virtual console 
+\end{DoxyRemark}
+\mbox{\Hypertarget{group__group__game_gaa065a4a366a262aa8d61bdbe7000d0fb}\label{group__group__game_gaa065a4a366a262aa8d61bdbe7000d0fb}} 
+\index{Game@{Game}!ar\_get\_executable@{ar\_get\_executable}}
+\index{ar\_get\_executable@{ar\_get\_executable}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{ar\_get\_executable()}{ar\_get\_executable()}}
+{\footnotesize\ttfamily AR\+\_\+\+API struct \mbox{\hyperlink{structar__executable}{ar\+\_\+executable}} $\ast$ ar\+\_\+get\+\_\+executable (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Getter for set executable, contains the binary of the game. 
+
+\begin{DoxyReturn}{Returns}
+Set executable object 
+\end{DoxyReturn}

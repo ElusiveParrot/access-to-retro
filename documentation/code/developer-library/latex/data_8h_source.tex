@@ -1,0 +1,53 @@
+\hypertarget{data_8h_source}{}\doxysection{data.\+h}
+\label{data_8h_source}\index{/Users/daniel/Developer/access-\/to-\/retro/access-\/to-\/retro/developer-\/library/include/access-\/to-\/retro-\/dev/data.h@{/Users/daniel/Developer/access-\/to-\/retro/access-\/to-\/retro/developer-\/library/include/access-\/to-\/retro-\/dev/data.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#ifndef\ ACCESS\_TO\_RETRO\_DATA\_H}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#define\ ACCESS\_TO\_RETRO\_DATA\_H}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <stdbool.h>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{basics_8h}{basics.h}}"{}}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{comment}{/*************************************\ Data\ Types\ *************************************/}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{typedef}\ uint8\_t\ \mbox{\hyperlink{group__group__data_ga98a547dd832af88e55f5046e7bf2aa57}{ar\_byte}};}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00029\ \textcolor{keyword}{typedef}\ uint8\_t\ \mbox{\hyperlink{group__group__data_gab21b83d8b5627a31f0ce97b7c4582b5c}{ar\_sbyte}};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00032\ \textcolor{keyword}{typedef}\ \textcolor{keywordtype}{void}*\ \mbox{\hyperlink{group__group__data_gadc181543960ce661bfd1dab31dcc1881}{ar\_generic\_memory\_ptr}};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00040\ \textcolor{keyword}{typedef}\ uintmax\_t\ \mbox{\hyperlink{group__group__data_ga7ab6719e5d65156b5672eb2de3f6cfad}{ar\_max\_int}};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00050\ \textcolor{keyword}{typedef}\ intmax\_t\ \mbox{\hyperlink{group__group__data_ga0b20a9fac92eb141cbd3835332191d33}{ar\_max\_sint}};}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00057\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structar__bit}{ar\_bit}}}
+\DoxyCodeLine{00058\ \{}
+\DoxyCodeLine{00060\ \ \ \ \ uint8\_t\ \mbox{\hyperlink{structar__bit_a201cf4af5d4b46a0fa9adc8e1455366c}{value}}:\ 1;}
+\DoxyCodeLine{00061\ \};}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00064\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structar__bit}{ar\_bit}}\ \mbox{\hyperlink{structar__bit}{ar\_bit}};}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00067\ \textcolor{keyword}{typedef}\ uint8\_t\ \mbox{\hyperlink{group__group__data_ga02cbd533e2ad45810954d3578099c0ce}{ar\_bit\_index}};}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \textcolor{comment}{/*************************************\ Bit\ Manipulation\ *************************************/}}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00076\ AR\_API\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__group__data_gac8660764bc1ffabf946a65bd18c0cc5a}{ar\_set\_bit}}(\mbox{\hyperlink{group__group__data_ga7ab6719e5d65156b5672eb2de3f6cfad}{ar\_max\_int}}*\ data,\ \mbox{\hyperlink{group__group__data_ga02cbd533e2ad45810954d3578099c0ce}{ar\_bit\_index}}\ bit\_index);}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00084\ AR\_API\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__group__data_gaa15743b1f3424f8a1773def0e94ed7e6}{ar\_set\_bit\_to}}(\mbox{\hyperlink{group__group__data_ga7ab6719e5d65156b5672eb2de3f6cfad}{ar\_max\_int}}*\ data,\ \mbox{\hyperlink{group__group__data_ga02cbd533e2ad45810954d3578099c0ce}{ar\_bit\_index}}\ bit\_index,\ \mbox{\hyperlink{structar__bit}{ar\_bit}}\ new\_value);}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00091\ AR\_API\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__group__data_gafb559abcf4d9f4927ad4154c7613390b}{ar\_clear\_bit}}(\mbox{\hyperlink{group__group__data_ga7ab6719e5d65156b5672eb2de3f6cfad}{ar\_max\_int}}*\ data,\ \mbox{\hyperlink{group__group__data_ga02cbd533e2ad45810954d3578099c0ce}{ar\_bit\_index}}\ bit\_index);}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00099\ AR\_API\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__group__data_gaad5cb69d923f81bd75ddc12bd7571c62}{ar\_toggle\_bit}}(\mbox{\hyperlink{group__group__data_ga7ab6719e5d65156b5672eb2de3f6cfad}{ar\_max\_int}}*\ data,\ \mbox{\hyperlink{group__group__data_ga02cbd533e2ad45810954d3578099c0ce}{ar\_bit\_index}}\ bit\_index);}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00107\ AR\_API\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{group__group__data_gab038aa1926c64dcf4ccc8f7dfe1788b1}{ar\_is\_bit\_set}}(\mbox{\hyperlink{group__group__data_ga7ab6719e5d65156b5672eb2de3f6cfad}{ar\_max\_int}}\ data,\ \mbox{\hyperlink{group__group__data_ga02cbd533e2ad45810954d3578099c0ce}{ar\_bit\_index}}\ bit\_index);}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00109\ \textcolor{comment}{/*************************************\ Byte\ Manipulation\ *************************************/}}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00118\ AR\_API\ \mbox{\hyperlink{group__group__data_ga7ab6719e5d65156b5672eb2de3f6cfad}{ar\_max\_int}}\ \mbox{\hyperlink{group__group__data_ga94b39b0a4c4e192550f43f06cdbb357e}{ar\_combine\_n\_bytes}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{group__group__data_ga98a547dd832af88e55f5046e7bf2aa57}{ar\_byte}}*\ bytes,\ \mbox{\hyperlink{group__group__data_ga7ab6719e5d65156b5672eb2de3f6cfad}{ar\_max\_int}}\ byte\_count);}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00120\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//ACCESS\_TO\_RETRO\_DATA\_H}}
+\DoxyCodeLine{00121\ \ \textcolor{comment}{//\ end\ of\ group}}
+
+\end{DoxyCode}

@@ -1,0 +1,81 @@
+\hypertarget{classar_1_1util_1_1time__duration}{}\doxysection{ar\+::util\+::time\+\_\+duration Class Reference}
+\label{classar_1_1util_1_1time__duration}\index{ar::util::time\_duration@{ar::util::time\_duration}}
+
+
+Represents a duration of time, not to be confused with date/time.  
+
+
+
+
+{\ttfamily \#include $<$time.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classar_1_1util_1_1time__duration_a75267fecb7e93995e2f7109f68d87e16}\label{classar_1_1util_1_1time__duration_a75267fecb7e93995e2f7109f68d87e16}} 
+{\bfseries time\+\_\+duration} (unsigned seconds)
+\item 
+\mbox{\Hypertarget{classar_1_1util_1_1time__duration_ac9b0e21b81a368cdcb49017319c0ac16}\label{classar_1_1util_1_1time__duration_ac9b0e21b81a368cdcb49017319c0ac16}} 
+{\bfseries time\+\_\+duration} (unsigned hours, unsigned minutes, unsigned seconds)
+\item 
+unsigned \mbox{\hyperlink{classar_1_1util_1_1time__duration_aa6765d16c302af774c56036c37970762}{get\+\_\+total\+\_\+hours}} (bool ceil\+\_\+instead\+\_\+of\+\_\+floor) const
+\begin{DoxyCompactList}\small\item\em Returns the time duration in hours. \end{DoxyCompactList}\item 
+unsigned \mbox{\hyperlink{classar_1_1util_1_1time__duration_a5ad95e0cf678e176692d6d27ddf47796}{get\+\_\+total\+\_\+minutes}} (bool ceil\+\_\+instead\+\_\+of\+\_\+floor) const
+\begin{DoxyCompactList}\small\item\em Returns the time duration in minutes. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classar_1_1util_1_1time__duration_a907f451254f1384f7caeb2fffa73e50d}\label{classar_1_1util_1_1time__duration_a907f451254f1384f7caeb2fffa73e50d}} 
+unsigned {\bfseries get\+\_\+total\+\_\+seconds} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classar_1_1util_1_1time__duration_ab727de5cf5393028befae8210c3f17a2}\label{classar_1_1util_1_1time__duration_ab727de5cf5393028befae8210c3f17a2}} 
+unsigned {\bfseries \+\_\+seconds} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a duration of time, not to be confused with date/time. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classar_1_1util_1_1time__duration_aa6765d16c302af774c56036c37970762}\label{classar_1_1util_1_1time__duration_aa6765d16c302af774c56036c37970762}} 
+\index{ar::util::time\_duration@{ar::util::time\_duration}!get\_total\_hours@{get\_total\_hours}}
+\index{get\_total\_hours@{get\_total\_hours}!ar::util::time\_duration@{ar::util::time\_duration}}
+\doxysubsubsection{\texorpdfstring{get\_total\_hours()}{get\_total\_hours()}}
+{\footnotesize\ttfamily unsigned ar\+::util\+::time\+\_\+duration\+::get\+\_\+total\+\_\+hours (\begin{DoxyParamCaption}\item[{bool}]{ceil\+\_\+instead\+\_\+of\+\_\+floor }\end{DoxyParamCaption}) const}
+
+
+
+Returns the time duration in hours. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ceil\+\_\+instead\+\_\+of\+\_\+floor} & Uses ceil() function instead of floor() on the value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Duration in hours 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classar_1_1util_1_1time__duration_a5ad95e0cf678e176692d6d27ddf47796}\label{classar_1_1util_1_1time__duration_a5ad95e0cf678e176692d6d27ddf47796}} 
+\index{ar::util::time\_duration@{ar::util::time\_duration}!get\_total\_minutes@{get\_total\_minutes}}
+\index{get\_total\_minutes@{get\_total\_minutes}!ar::util::time\_duration@{ar::util::time\_duration}}
+\doxysubsubsection{\texorpdfstring{get\_total\_minutes()}{get\_total\_minutes()}}
+{\footnotesize\ttfamily unsigned ar\+::util\+::time\+\_\+duration\+::get\+\_\+total\+\_\+minutes (\begin{DoxyParamCaption}\item[{bool}]{ceil\+\_\+instead\+\_\+of\+\_\+floor }\end{DoxyParamCaption}) const}
+
+
+
+Returns the time duration in minutes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ceil\+\_\+instead\+\_\+of\+\_\+floor} & Uses ceil() function instead of floor() on the value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Duration in minutes 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/daniel/\+Developer/access-\/to-\/retro/access-\/to-\/retro/frontend/src/util/\mbox{\hyperlink{time_8hpp}{time.\+hpp}}\item 
+/\+Users/daniel/\+Developer/access-\/to-\/retro/access-\/to-\/retro/frontend/src/util/time.\+cpp\end{DoxyCompactItemize}

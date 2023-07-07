@@ -1,0 +1,76 @@
+\hypertarget{classar_1_1error_1_1os__error}{}\doxysection{ar\+::error\+::os\+\_\+error Class Reference}
+\label{classar_1_1error_1_1os__error}\index{ar::error::os\_error@{ar::error::os\_error}}
+
+
+Exception related to actions on OS level.  
+
+
+
+
+{\ttfamily \#include $<$os-\/error.\+hpp$>$}
+
+Inheritance diagram for ar\+::error\+::os\+\_\+error\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classar_1_1error_1_1os__error}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classar_1_1error_1_1os__error_aa28b0c447fadfcddb73e679b4da7ccf6}\label{classar_1_1error_1_1os__error_aa28b0c447fadfcddb73e679b4da7ccf6}} 
+{\bfseries os\+\_\+error} (std\+::string error)
+\item 
+\mbox{\Hypertarget{classar_1_1error_1_1os__error_a64a2dc2c38f97d092fd85f4849f35637}\label{classar_1_1error_1_1os__error_a64a2dc2c38f97d092fd85f4849f35637}} 
+std\+::string {\bfseries get\+\_\+error} () const
+\item 
+std\+::string \mbox{\hyperlink{classar_1_1error_1_1os__error_aceb0370b0db523dc2bfedd61a6785ebc}{get\+\_\+logger\+\_\+formatted\+\_\+error}} () const override
+\begin{DoxyCompactList}\small\item\em Creates a logger-\/friendly error message. Logger should use it by itself, there should be no need to call it directly. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions inherited from \mbox{\hyperlink{classar_1_1base__exception}{ar\+::base\+\_\+exception}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classar_1_1base__exception_a45877a799953cc97dc97ee016a2dabef}\label{classar_1_1base__exception_a45877a799953cc97dc97ee016a2dabef}} 
+{\bfseries base\+\_\+exception} (std\+::string module)
+\item 
+\mbox{\Hypertarget{classar_1_1base__exception_abce3be222ae6e112f07f19796d8671bb}\label{classar_1_1base__exception_abce3be222ae6e112f07f19796d8671bb}} 
+std\+::string {\bfseries get\+\_\+module} () const
+\item 
+virtual std\+::string \mbox{\hyperlink{classar_1_1base__exception_ae87a0e5eb71fb18d4a49796187f1c80e}{get\+\_\+logger\+\_\+formatted\+\_\+error}} () const =0
+\begin{DoxyCompactList}\small\item\em Creates a logger-\/friendly error message. Logger should use it by itself, there should be no need to call it directly. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classar_1_1error_1_1os__error_a2b42b98dcf12afb62e6787b8ec9b6cab}\label{classar_1_1error_1_1os__error_a2b42b98dcf12afb62e6787b8ec9b6cab}} 
+const std\+::string {\bfseries \+\_\+error}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Exception related to actions on OS level. 
+
+Should be used for OS specific actions for ex\+: dynamic library loading. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classar_1_1error_1_1os__error_aceb0370b0db523dc2bfedd61a6785ebc}\label{classar_1_1error_1_1os__error_aceb0370b0db523dc2bfedd61a6785ebc}} 
+\index{ar::error::os\_error@{ar::error::os\_error}!get\_logger\_formatted\_error@{get\_logger\_formatted\_error}}
+\index{get\_logger\_formatted\_error@{get\_logger\_formatted\_error}!ar::error::os\_error@{ar::error::os\_error}}
+\doxysubsubsection{\texorpdfstring{get\_logger\_formatted\_error()}{get\_logger\_formatted\_error()}}
+{\footnotesize\ttfamily std\+::string ar\+::error\+::os\+\_\+error\+::get\+\_\+logger\+\_\+formatted\+\_\+error (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Creates a logger-\/friendly error message. Logger should use it by itself, there should be no need to call it directly. 
+
+\begin{DoxyReturn}{Returns}
+formatted error message 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classar_1_1base__exception_ae87a0e5eb71fb18d4a49796187f1c80e}{ar\+::base\+\_\+exception}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/daniel/\+Developer/access-\/to-\/retro/access-\/to-\/retro/frontend/src/error/\mbox{\hyperlink{os-error_8hpp}{os-\/error.\+hpp}}\item 
+/\+Users/daniel/\+Developer/access-\/to-\/retro/access-\/to-\/retro/frontend/src/error/os-\/error.\+cpp\end{DoxyCompactItemize}

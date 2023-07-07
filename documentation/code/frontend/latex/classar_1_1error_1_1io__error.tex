@@ -1,0 +1,82 @@
+\hypertarget{classar_1_1error_1_1io__error}{}\doxysection{ar\+::error\+::io\+\_\+error Class Reference}
+\label{classar_1_1error_1_1io__error}\index{ar::error::io\_error@{ar::error::io\_error}}
+
+
+Input/output operation exception.  
+
+
+
+
+{\ttfamily \#include $<$io-\/error.\+hpp$>$}
+
+Inheritance diagram for ar\+::error\+::io\+\_\+error\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classar_1_1error_1_1io__error}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classar_1_1error_1_1io__error_a47cef8860f6f3b02dcbfa37fb821140b}\label{classar_1_1error_1_1io__error_a47cef8860f6f3b02dcbfa37fb821140b}} 
+{\bfseries io\+\_\+error} (std\+::string source, std\+::string error)
+\item 
+\mbox{\Hypertarget{classar_1_1error_1_1io__error_a370e19dbbe4cf639172e72030529b191}\label{classar_1_1error_1_1io__error_a370e19dbbe4cf639172e72030529b191}} 
+std\+::string {\bfseries get\+\_\+source} () const
+\item 
+\mbox{\Hypertarget{classar_1_1error_1_1io__error_a60d13fa99525746c9e8ad5582a62706f}\label{classar_1_1error_1_1io__error_a60d13fa99525746c9e8ad5582a62706f}} 
+std\+::string {\bfseries get\+\_\+error} () const
+\item 
+std\+::string \mbox{\hyperlink{classar_1_1error_1_1io__error_a22e3a6c05177443c83ee0a62a8b2f60c}{get\+\_\+logger\+\_\+formatted\+\_\+error}} () const override
+\begin{DoxyCompactList}\small\item\em Creates a logger-\/friendly error message. Logger should use it by itself, there should be no need to call it directly. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions inherited from \mbox{\hyperlink{classar_1_1base__exception}{ar\+::base\+\_\+exception}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classar_1_1base__exception_a45877a799953cc97dc97ee016a2dabef}\label{classar_1_1base__exception_a45877a799953cc97dc97ee016a2dabef}} 
+{\bfseries base\+\_\+exception} (std\+::string module)
+\item 
+\mbox{\Hypertarget{classar_1_1base__exception_abce3be222ae6e112f07f19796d8671bb}\label{classar_1_1base__exception_abce3be222ae6e112f07f19796d8671bb}} 
+std\+::string {\bfseries get\+\_\+module} () const
+\item 
+virtual std\+::string \mbox{\hyperlink{classar_1_1base__exception_ae87a0e5eb71fb18d4a49796187f1c80e}{get\+\_\+logger\+\_\+formatted\+\_\+error}} () const =0
+\begin{DoxyCompactList}\small\item\em Creates a logger-\/friendly error message. Logger should use it by itself, there should be no need to call it directly. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classar_1_1error_1_1io__error_a60288e59ce36f9159996de415bac855a}\label{classar_1_1error_1_1io__error_a60288e59ce36f9159996de415bac855a}} 
+const std\+::string {\bfseries \+\_\+source}
+\item 
+\mbox{\Hypertarget{classar_1_1error_1_1io__error_a6ce78579709a2078daf5fffc64aaff9f}\label{classar_1_1error_1_1io__error_a6ce78579709a2078daf5fffc64aaff9f}} 
+const std\+::string {\bfseries \+\_\+error}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Input/output operation exception. 
+
+Should be the default exception for any I/O operation such as reading files, writing to files etc. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classar_1_1error_1_1io__error_a22e3a6c05177443c83ee0a62a8b2f60c}\label{classar_1_1error_1_1io__error_a22e3a6c05177443c83ee0a62a8b2f60c}} 
+\index{ar::error::io\_error@{ar::error::io\_error}!get\_logger\_formatted\_error@{get\_logger\_formatted\_error}}
+\index{get\_logger\_formatted\_error@{get\_logger\_formatted\_error}!ar::error::io\_error@{ar::error::io\_error}}
+\doxysubsubsection{\texorpdfstring{get\_logger\_formatted\_error()}{get\_logger\_formatted\_error()}}
+{\footnotesize\ttfamily std\+::string ar\+::error\+::io\+\_\+error\+::get\+\_\+logger\+\_\+formatted\+\_\+error (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Creates a logger-\/friendly error message. Logger should use it by itself, there should be no need to call it directly. 
+
+\begin{DoxyReturn}{Returns}
+formatted error message 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classar_1_1base__exception_ae87a0e5eb71fb18d4a49796187f1c80e}{ar\+::base\+\_\+exception}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/daniel/\+Developer/access-\/to-\/retro/access-\/to-\/retro/frontend/src/error/\mbox{\hyperlink{io-error_8hpp}{io-\/error.\+hpp}}\item 
+/\+Users/daniel/\+Developer/access-\/to-\/retro/access-\/to-\/retro/frontend/src/error/io-\/error.\+cpp\end{DoxyCompactItemize}

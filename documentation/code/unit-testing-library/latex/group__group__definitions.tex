@@ -1,0 +1,101 @@
+\hypertarget{group__group__definitions}{}\doxysection{Definitions}
+\label{group__group__definitions}\index{Definitions@{Definitions}}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group__group__definitions_ga0f10a9dc6caa4e38f6cb8620b9455bde}{DEFINE\+\_\+\+TEST}}(FN\+\_\+\+NAME)~int FN\+\_\+\+NAME(void)
+\begin{DoxyCompactList}\small\item\em Define a test. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__group__definitions_gaf2039ccadb0a9443f8e6134f7326aa61}{COMPLETE\+\_\+\+TEST}}(CODE)~return CODE;
+\begin{DoxyCompactList}\small\item\em To be used when the test is finished (either success or failure) \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__group__definitions_ga5dd66fe6bc5d9d8521929591f7d6290f}{ERROR}}(CODE)~(CODE == 0 ? -\/2 \+: CODE)
+\begin{DoxyCompactList}\small\item\em Indicates an error, to be used in COMPLETE\+\_\+\+TEST macro. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__group__definitions_gaa90cac659d18e8ef6294c7ae337f6b58}\label{group__group__definitions_gaa90cac659d18e8ef6294c7ae337f6b58}} 
+\#define {\bfseries SUCCESS}~0
+\begin{DoxyCompactList}\small\item\em Indicated no error happened, to be used in COMPLETE\+\_\+\+TEST macro. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__group__definitions_gafd441366641a4e1d513a924b97d11d42}\label{group__group__definitions_gafd441366641a4e1d513a924b97d11d42}} 
+\#define {\bfseries DEFINE\+\_\+\+TESTING\+\_\+\+ENTRY\+\_\+\+POINT}~int main(int argc, char$\ast$$\ast$ argv)
+\begin{DoxyCompactList}\small\item\em Used to define entry point of test driver, to be used instead of main function. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__group__definitions_ga40125fbe62a8a170cb5d3a163d1b9b61}\label{group__group__definitions_ga40125fbe62a8a170cb5d3a163d1b9b61}} 
+\#define {\bfseries START\+\_\+\+TESTING}~(void)argc;
+\begin{DoxyCompactList}\small\item\em To be used at the beginning of \textquotesingle{}DEFINE\+\_\+\+STARTING\+\_\+\+ENTRY\+\_\+\+POINT\textquotesingle{}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__group__definitions_ga8866e2a2f8ef9ab0a813344cb0f50935}\label{group__group__definitions_ga8866e2a2f8ef9ab0a813344cb0f50935}} 
+\#define {\bfseries END\+\_\+\+TESTING}~return -\/1;
+\begin{DoxyCompactList}\small\item\em To be used at the end of \textquotesingle{}DEFINE\+\_\+\+STARTING\+\_\+\+ENTRY\+\_\+\+POINT\textquotesingle{}. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__group__definitions_ga39815d2a693f81a462f0b9d9eabcbcc5}{DEFINE\+\_\+\+TEST\+\_\+\+FN}}(TEST\+\_\+\+FN\+\_\+\+NAME)
+\begin{DoxyCompactList}\small\item\em Connect testing function with a name used in CMake\+Lists.\+txt. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Contains basic definitions for unit testing 
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group__group__definitions_gaf2039ccadb0a9443f8e6134f7326aa61}\label{group__group__definitions_gaf2039ccadb0a9443f8e6134f7326aa61}} 
+\index{Definitions@{Definitions}!COMPLETE\_TEST@{COMPLETE\_TEST}}
+\index{COMPLETE\_TEST@{COMPLETE\_TEST}!Definitions@{Definitions}}
+\doxysubsubsection{\texorpdfstring{COMPLETE\_TEST}{COMPLETE\_TEST}}
+{\footnotesize\ttfamily \#define COMPLETE\+\_\+\+TEST(\begin{DoxyParamCaption}\item[{}]{CODE }\end{DoxyParamCaption})~return CODE;}
+
+
+
+To be used when the test is finished (either success or failure) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em CODE} & error/success code, use ERROR or SUCCESS macro \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__group__definitions_ga0f10a9dc6caa4e38f6cb8620b9455bde}\label{group__group__definitions_ga0f10a9dc6caa4e38f6cb8620b9455bde}} 
+\index{Definitions@{Definitions}!DEFINE\_TEST@{DEFINE\_TEST}}
+\index{DEFINE\_TEST@{DEFINE\_TEST}!Definitions@{Definitions}}
+\doxysubsubsection{\texorpdfstring{DEFINE\_TEST}{DEFINE\_TEST}}
+{\footnotesize\ttfamily \#define DEFINE\+\_\+\+TEST(\begin{DoxyParamCaption}\item[{}]{FN\+\_\+\+NAME }\end{DoxyParamCaption})~int FN\+\_\+\+NAME(void)}
+
+
+
+Define a test. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em FN\+\_\+\+NAME} & name of the testing function (not to be confused with function being tested) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__group__definitions_ga39815d2a693f81a462f0b9d9eabcbcc5}\label{group__group__definitions_ga39815d2a693f81a462f0b9d9eabcbcc5}} 
+\index{Definitions@{Definitions}!DEFINE\_TEST\_FN@{DEFINE\_TEST\_FN}}
+\index{DEFINE\_TEST\_FN@{DEFINE\_TEST\_FN}!Definitions@{Definitions}}
+\doxysubsubsection{\texorpdfstring{DEFINE\_TEST\_FN}{DEFINE\_TEST\_FN}}
+{\footnotesize\ttfamily \#define DEFINE\+\_\+\+TEST\+\_\+\+FN(\begin{DoxyParamCaption}\item[{}]{TEST\+\_\+\+FN\+\_\+\+NAME }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{if}\ (strcmp(argv[1],\ \#TEST\_FN\_NAME)\ ==\ 0)\ \(\backslash\)}
+\DoxyCodeLine{\{\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{return}\ TEST\_FN\_NAME();\ \(\backslash\)}
+\DoxyCodeLine{\}\ \(\backslash\)}
+
+\end{DoxyCode}
+
+
+Connect testing function with a name used in CMake\+Lists.\+txt. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em TEST\+\_\+\+NAME} & Name used in CMake\+Lists.\+txt \\
+\hline
+{\em TEST\+\_\+\+FN} & Testing function \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__group__definitions_ga5dd66fe6bc5d9d8521929591f7d6290f}\label{group__group__definitions_ga5dd66fe6bc5d9d8521929591f7d6290f}} 
+\index{Definitions@{Definitions}!ERROR@{ERROR}}
+\index{ERROR@{ERROR}!Definitions@{Definitions}}
+\doxysubsubsection{\texorpdfstring{ERROR}{ERROR}}
+{\footnotesize\ttfamily \#define ERROR(\begin{DoxyParamCaption}\item[{}]{CODE }\end{DoxyParamCaption})~(CODE == 0 ? -\/2 \+: CODE)}
+
+
+
+Indicates an error, to be used in COMPLETE\+\_\+\+TEST macro. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em CODE} & error code, if zero is provided then -\/2 is used instead \\
+\hline
+\end{DoxyParams}

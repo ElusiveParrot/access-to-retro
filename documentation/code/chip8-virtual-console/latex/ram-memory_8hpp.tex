@@ -1,0 +1,23 @@
+\hypertarget{ram-memory_8hpp}{}\doxysection{/\+Users/daniel/\+Developer/access-\/to-\/retro/access-\/to-\/retro/chip8-\/virtual-\/console/src/emulator/ram-\/memory.hpp File Reference}
+\label{ram-memory_8hpp}\index{/Users/daniel/Developer/access-\/to-\/retro/access-\/to-\/retro/chip8-\/virtual-\/console/src/emulator/ram-\/memory.hpp@{/Users/daniel/Developer/access-\/to-\/retro/access-\/to-\/retro/chip8-\/virtual-\/console/src/emulator/ram-\/memory.hpp}}
+{\ttfamily \#include $<$access-\/to-\/retro-\/dev/access-\/to-\/retro-\/dev.\+h$>$}\newline
+{\ttfamily \#include $<$cstdlib$>$}\newline
+{\ttfamily \#include $<$array$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classar_1_1chip8_1_1ram__memory}{ar\+::chip8\+::ram\+\_\+memory}}
+\begin{DoxyCompactList}\small\item\em Represents random access memory of CHIP8. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespacear_1_1chip8}{ar\+::chip8}}
+\begin{DoxyCompactList}\small\item\em Root namespace of the project. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+constexpr std\+::array$<$ ar\+\_\+byte, 80 $>$ \mbox{\hyperlink{namespacear_1_1chip8_a795dbab39a4522c494f63a8083c2b3d7}{ar\+::chip8\+::\+FONTSET}}
+\begin{DoxyCompactList}\small\item\em CHIP8\textquotesingle{}s font data, this array needs to be loaded to memory at 0x050. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{namespacear_1_1chip8_aca9fda2134e8cb5bb629b65843e0667e}\label{namespacear_1_1chip8_aca9fda2134e8cb5bb629b65843e0667e}} 
+constexpr std\+::size\+\_\+t {\bfseries ar\+::chip8\+::\+RAM\+\_\+\+SIZE} = 4096
+\begin{DoxyCompactList}\small\item\em Represents the size of CHIP8 RAM -\/ 4kb. \end{DoxyCompactList}\end{DoxyCompactItemize}

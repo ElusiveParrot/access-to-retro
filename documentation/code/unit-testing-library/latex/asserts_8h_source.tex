@@ -1,0 +1,75 @@
+\hypertarget{asserts_8h_source}{}\doxysection{asserts.\+h}
+\label{asserts_8h_source}\index{/Users/daniel/Developer/access-\/to-\/retro/access-\/to-\/retro/unit-\/testing-\/library/include/asserts.h@{/Users/daniel/Developer/access-\/to-\/retro/access-\/to-\/retro/unit-\/testing-\/library/include/asserts.h}}
+\mbox{\hyperlink{asserts_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#ifndef\ ACCESS\_TO\_RETRO\_ASSERTS\_H}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#define\ ACCESS\_TO\_RETRO\_ASSERTS\_H}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <stdbool.h>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{definitions_8h}{definitions.h}}"{}}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#define\ ASSERT\_NULL(OBJ,\ FAIL\_CODE)\ \(\backslash\)}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{if\ (OBJ\ !=\ NULL)\ \(\backslash\)}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\{\ \(\backslash\)}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\ \ \ \ COMPLETE\_TEST(ERROR(FAIL\_CODE));\ \(\backslash\)}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\}\ \(\backslash\)}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{}}
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#define\ ASSERT\_NOT\_NULL(OBJ,\ FAIL\_CODE)\ \(\backslash\)}}
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{if\ (OBJ\ ==\ NULL)\ \(\backslash\)}}
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\{\ \(\backslash\)}}
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\ \ \ \ COMPLETE\_TEST(ERROR(FAIL\_CODE));\ \(\backslash\)}}
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\}\ \(\backslash\)}}
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{}}
+\DoxyCodeLine{00047\ \textcolor{preprocessor}{\#define\ ASSERT\_EQ(OBJ1,\ OBJ2,\ FAIL\_CODE)\ \(\backslash\)}}
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{if\ (OBJ1\ !=\ OBJ2)\ \(\backslash\)}}
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\{\ \(\backslash\)}}
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\ \ \ \ COMPLETE\_TEST(ERROR(FAIL\_CODE));\ \(\backslash\)}}
+\DoxyCodeLine{00051\ \textcolor{preprocessor}{\}\ \(\backslash\)}}
+\DoxyCodeLine{00052\ \textcolor{preprocessor}{}}
+\DoxyCodeLine{00058\ \textcolor{preprocessor}{\#define\ ASSERT\_TRUE(OBJ,\ FAIL\_CODE)\ \(\backslash\)}}
+\DoxyCodeLine{00059\ \textcolor{preprocessor}{if\ (!OBJ)\ \(\backslash\)}}
+\DoxyCodeLine{00060\ \textcolor{preprocessor}{\{\ \(\backslash\)}}
+\DoxyCodeLine{00061\ \textcolor{preprocessor}{\ \ \ \ COMPLETE\_TEST(ERROR(FAIL\_CODE));\ \(\backslash\)}}
+\DoxyCodeLine{00062\ \textcolor{preprocessor}{\}\ \(\backslash\)}}
+\DoxyCodeLine{00063\ \textcolor{preprocessor}{}}
+\DoxyCodeLine{00069\ \textcolor{preprocessor}{\#define\ ASSERT\_FALSE(OBJ,\ FAIL\_CODE)\ \(\backslash\)}}
+\DoxyCodeLine{00070\ \textcolor{preprocessor}{if\ (OBJ)\ \(\backslash\)}}
+\DoxyCodeLine{00071\ \textcolor{preprocessor}{\{\ \(\backslash\)}}
+\DoxyCodeLine{00072\ \textcolor{preprocessor}{\ \ \ \ COMPLETE\_TEST(ERROR(FAIL\_CODE));\ \(\backslash\)}}
+\DoxyCodeLine{00073\ \textcolor{preprocessor}{\}\ \(\backslash\)}}
+\DoxyCodeLine{00074\ \textcolor{preprocessor}{}}
+\DoxyCodeLine{00082\ \textcolor{preprocessor}{\#define\ ASSERT\_NEQ(OBJ1,\ OBJ2,\ FAIL\_CODE)\ \(\backslash\)}}
+\DoxyCodeLine{00083\ \textcolor{preprocessor}{if\ (OBJ1\ ==\ OBJ2)\ \(\backslash\)}}
+\DoxyCodeLine{00084\ \textcolor{preprocessor}{\{\ \(\backslash\)}}
+\DoxyCodeLine{00085\ \textcolor{preprocessor}{\ \ \ \ COMPLETE\_TEST(ERROR(FAIL\_CODE));\ \(\backslash\)}}
+\DoxyCodeLine{00086\ \textcolor{preprocessor}{\}\ \(\backslash\)}}
+\DoxyCodeLine{00087\ \textcolor{preprocessor}{}}
+\DoxyCodeLine{00095\ \textcolor{preprocessor}{\#define\ ASSERT\_STR\_EQ(STR1,\ STR2,\ FAIL\_CODE)\ \(\backslash\)}}
+\DoxyCodeLine{00096\ \textcolor{preprocessor}{if\ (strcmp(STR1,\ STR2)\ !=\ 0)\ \(\backslash\)}}
+\DoxyCodeLine{00097\ \textcolor{preprocessor}{\{\ \(\backslash\)}}
+\DoxyCodeLine{00098\ \textcolor{preprocessor}{\ \ \ \ COMPLETE\_TEST(ERROR(FAIL\_CODE));\ \(\backslash\)}}
+\DoxyCodeLine{00099\ \textcolor{preprocessor}{\}\ \(\backslash\)}}
+\DoxyCodeLine{00100\ \textcolor{preprocessor}{}}
+\DoxyCodeLine{00108\ \textcolor{preprocessor}{\#define\ ASSERT\_STR\_NEQ(OBJ1,\ OBJ2,\ FAIL\_CODE)\ \(\backslash\)}}
+\DoxyCodeLine{00109\ \textcolor{preprocessor}{if\ (strcmp(STR1,\ STR2)\ ==\ 0)\ \(\backslash\)}}
+\DoxyCodeLine{00110\ \textcolor{preprocessor}{\{\ \(\backslash\)}}
+\DoxyCodeLine{00111\ \textcolor{preprocessor}{\ \ \ \ COMPLETE\_TEST(ERROR(FAIL\_CODE));\ \(\backslash\)}}
+\DoxyCodeLine{00112\ \textcolor{preprocessor}{\}\ \(\backslash\)}}
+\DoxyCodeLine{00113\ \textcolor{preprocessor}{}}
+\DoxyCodeLine{00119\ \textcolor{preprocessor}{\#define\ ASSERT\_TEST\_SUCCEEDS(TEST\_FN,\ FAIL\_CODE)\ \(\backslash\)}}
+\DoxyCodeLine{00120\ \textcolor{preprocessor}{if\ (TEST\_FN()\ !=\ 0)\(\backslash\)}}
+\DoxyCodeLine{00121\ \textcolor{preprocessor}{\{\ \(\backslash\)}}
+\DoxyCodeLine{00122\ \textcolor{preprocessor}{\ \ \ \ COMPLETE\_TEST(ERROR(FAIL\_CODE));\ \(\backslash\)}}
+\DoxyCodeLine{00123\ \textcolor{preprocessor}{\}\ \(\backslash\)}}
+\DoxyCodeLine{00124\ \textcolor{preprocessor}{}}
+\DoxyCodeLine{00130\ \textcolor{preprocessor}{\#define\ ASSERT\_TEST\_FAILS(TEST\_FN,\ FAIL\_CODE)\ \(\backslash\)}}
+\DoxyCodeLine{00131\ \textcolor{preprocessor}{if\ (TEST\_FN()\ ==\ 0)\(\backslash\)}}
+\DoxyCodeLine{00132\ \textcolor{preprocessor}{\{\ \(\backslash\)}}
+\DoxyCodeLine{00133\ \textcolor{preprocessor}{\ \ \ \ COMPLETE\_TEST(ERROR(FAIL\_CODE));\ \(\backslash\)}}
+\DoxyCodeLine{00134\ \textcolor{preprocessor}{\}\ \(\backslash\)}}
+\DoxyCodeLine{00135\ \textcolor{preprocessor}{}}
+\DoxyCodeLine{00136\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//ACCESS\_TO\_RETRO\_ASSERTS\_H}}
+\DoxyCodeLine{00137\ \ \textcolor{comment}{//\ end\ of\ group}}
+
+\end{DoxyCode}

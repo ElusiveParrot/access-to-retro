@@ -1,0 +1,58 @@
+\hypertarget{virtual-console-and-game-picker-dialog_8hpp_source}{}\doxysection{virtual-\/console-\/and-\/game-\/picker-\/dialog.hpp}
+\label{virtual-console-and-game-picker-dialog_8hpp_source}\index{/Users/daniel/Developer/access-\/to-\/retro/access-\/to-\/retro/frontend/src/gui/windows/virtual-\/console-\/and-\/game-\/picker-\/dialog.hpp@{/Users/daniel/Developer/access-\/to-\/retro/access-\/to-\/retro/frontend/src/gui/windows/virtual-\/console-\/and-\/game-\/picker-\/dialog.hpp}}
+\mbox{\hyperlink{virtual-console-and-game-picker-dialog_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ AR\_GUI\_VIRTUALCONSOLEAND\_GAMEPICKER\_DIALOG\_H}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ AR\_GUI\_VIRTUALCONSOLEAND\_GAMEPICKER\_DIALOG\_H}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <QDialog>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{executable-binary_8hpp}{core/executable-\/binary.hpp}}"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{virtual-console_8hpp}{core/virtual-\/console.hpp}}"{}}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacear_1_1gui}{ar::gui}}}
+\DoxyCodeLine{00014\ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{namespace\ }Ui}
+\DoxyCodeLine{00016\ \ \ \ \ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{class\ }virtual\_console\_and\_game\_picker\_dialog;}
+\DoxyCodeLine{00018\ \ \ \ \ \}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classar_1_1gui_1_1virtual__console__and__game__picker__dialog}{virtual\_console\_and\_game\_picker\_dialog}}\ :\ \textcolor{keyword}{public}\ QDialog}
+\DoxyCodeLine{00022\ \ \ \ \ \{}
+\DoxyCodeLine{00023\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classar_1_1gui_1_1virtual__console__and__game__picker__dialog}{virtual\_console\_and\_game\_picker\_dialog}}(}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<std::reference\_wrapper<std::unique\_ptr<ar::core::virtual\_console>\ >\ >}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ associated\_virtual\_consoles,}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<std::reference\_wrapper<std::unique\_ptr<ar::core::executable\_binary>\ >\ >}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ associated\_games,}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ hide\_games,\ QWidget*\ parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classar_1_1gui_1_1virtual__console__and__game__picker__dialog}{\string~virtual\_console\_and\_game\_picker\_dialog}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ******************\ Qt's\ Slot\ Methods\ ******************}}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keyword}{private}\ slots:}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classar_1_1gui_1_1virtual__console__and__game__picker__dialog_a2995187ee54907f39b249dabd5449aec}{accept}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ std::vector<std::reference\_wrapper<std::unique\_ptr<ar::core::virtual\_console>\ >\ >\ \mbox{\hyperlink{classar_1_1gui_1_1virtual__console__and__game__picker__dialog_abff2e24f311484f39fc77909251004b5}{\_associated\_virtual\_consoles}};}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ std::vector<std::reference\_wrapper<std::unique\_ptr<ar::core::executable\_binary>\ >\ >\ \mbox{\hyperlink{classar_1_1gui_1_1virtual__console__and__game__picker__dialog_a3d60934f12fcf3c4fcf30318e359bdf8}{\_associated\_games}};}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ Ui::virtual\_console\_and\_game\_picker\_dialog*\ \mbox{\hyperlink{classar_1_1gui_1_1virtual__console__and__game__picker__dialog_a6a3404c0f9ea7425ce543864648d16ab}{ui}};}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classar_1_1gui_1_1virtual__console__and__game__picker__dialog_a1e60289b470b9ccb601a8cdff31094d1}{launch\_virtual\_console\_with\_game}}(std::unique\_ptr<ar::core::virtual\_console>\&\ virtual\_console,}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::unique\_ptr<ar::core::executable\_binary>\&\ game);}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ******************\ Ui\ Populating\ Methods\ ******************}}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classar_1_1gui_1_1virtual__console__and__game__picker__dialog_afa2b51508c0a4e984fa20644814a613c}{populate\_games\_selection}}();}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classar_1_1gui_1_1virtual__console__and__game__picker__dialog_a55c45531f32298795e4880dfc308c8ec}{populate\_virtual\_consoles\_selection}}();}
+\DoxyCodeLine{00071\ \ \ \ \ \};}
+\DoxyCodeLine{00072\ \}}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ AR\_GUI\_VIRTUALCONSOLEAND\_GAMEPICKER\_DIALOG\_H}}
+
+\end{DoxyCode}

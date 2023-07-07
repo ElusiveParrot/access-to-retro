@@ -1,0 +1,43 @@
+\hypertarget{input-handler_8hpp_source}{}\doxysection{input-\/handler.hpp}
+\label{input-handler_8hpp_source}\index{/Users/daniel/Developer/access-\/to-\/retro/access-\/to-\/retro/frontend/src/core/input-\/handler.hpp@{/Users/daniel/Developer/access-\/to-\/retro/access-\/to-\/retro/frontend/src/core/input-\/handler.hpp}}
+\mbox{\hyperlink{input-handler_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ ACCESS\_TO\_RETRO\_INPUT\_HANDLER\_HPP}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ ACCESS\_TO\_RETRO\_INPUT\_HANDLER\_HPP}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <access-\/to-\/retro-\/dev/access-\/to-\/retro-\/dev.h>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <unordered\_map>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{virtual-console_8hpp}{core/virtual-\/console.hpp}}"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}util/settings-\/manager.hpp"{}}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacear_1_1core}{ar::core}}}
+\DoxyCodeLine{00015\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{namespacear_1_1core_a7a6d0bfc8f5bfac50dfe7453d639f11c}{key\_id}};}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classar_1_1core_1_1input__handler}{input\_handler}}}
+\DoxyCodeLine{00021\ \ \ \ \ \{}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classar_1_1core_1_1input__handler}{input\_handler}}(std::unique\_ptr<core::virtual\_console>\&\ \mbox{\hyperlink{classar_1_1core_1_1virtual__console}{virtual\_console}});}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classar_1_1core_1_1input__handler_ae5d14cd68f842619c4f83913e9161568}{key\_press}}(\textcolor{keyword}{const}\ std::string\&\ key);}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classar_1_1core_1_1input__handler_a09a0d8ec516cf33f32b96a1b55685bae}{key\_release}}(\textcolor{keyword}{const}\ std::string\&\ key);}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ std::shared\_ptr<ar::util::settings\_manager>\ \mbox{\hyperlink{classar_1_1core_1_1input__handler_a7ef92fcddc59299c03c2af3a369adbe9}{\_settings\_manager}};}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ std::unique\_ptr<ar::core::virtual\_console>\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \&\ \mbox{\hyperlink{classar_1_1core_1_1input__handler_ab6654d7b84a718f9118448dd54887d23}{\_virtual\_console}};}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ std::function<void(ar\_unified\_controller\_key,\ ar\_unified\_controller\_key\_status)>\ \mbox{\hyperlink{classar_1_1core_1_1input__handler_a40e3f4b9276ff7e99841dc600c1cc3d4}{\_set\_key\_status\_fn}};}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ std::unordered\_map<std::string,\ ar\_unified\_controller\_key>\ \mbox{\hyperlink{classar_1_1core_1_1input__handler_aff1e018b4ad5fbf54c2e3d61d1f5f5bf}{\_input\_translation\_map}};}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classar_1_1core_1_1input__handler_a6341faff99c74bfe03f17f3164e6e854}{fill\_input\_translation\_map\_from\_settings}}();}
+\DoxyCodeLine{00064\ \ \ \ \ \};}
+\DoxyCodeLine{00065\ \}}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//ACCESS\_TO\_RETRO\_INPUT\_HANDLER\_HPP}}
+
+\end{DoxyCode}

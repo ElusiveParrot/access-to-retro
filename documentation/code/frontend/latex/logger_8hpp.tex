@@ -1,0 +1,80 @@
+\hypertarget{logger_8hpp}{}\doxysection{/\+Users/daniel/\+Developer/access-\/to-\/retro/access-\/to-\/retro/frontend/src/util/logger.hpp File Reference}
+\label{logger_8hpp}\index{/Users/daniel/Developer/access-\/to-\/retro/access-\/to-\/retro/frontend/src/util/logger.hpp@{/Users/daniel/Developer/access-\/to-\/retro/access-\/to-\/retro/frontend/src/util/logger.hpp}}
+{\ttfamily \#include $<$QVariant$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include \char`\"{}error/base-\/exception.\+hpp\char`\"{}}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classar_1_1util_1_1logger}{ar\+::util\+::logger}}
+\begin{DoxyCompactList}\small\item\em Used to display debug messages for the developer or/and to the user. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespacear}{ar}}
+\begin{DoxyCompactList}\small\item\em Root namespace of the project, contains important top-\/level classes and functions. \end{DoxyCompactList}\item 
+namespace \mbox{\hyperlink{namespacear_1_1util}{ar\+::util}}
+\begin{DoxyCompactList}\small\item\em Contains classes with various functionality that are not part of \textquotesingle{}core\textquotesingle{}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{logger_8hpp_a0a5fa1cee33c776d0816f1ab5cbd0725}{LOG}}(priority,  ar\+\_\+module,  prefix,  to\+\_\+log)
+\begin{DoxyCompactList}\small\item\em Shortcut macros for logging. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{logger_8hpp_a7c001c88f1db2542a16087520236ab5a}{LOG\+\_\+\+EXCEPTION}}(ar\+\_\+module,  ex)
+\item 
+\mbox{\Hypertarget{logger_8hpp_a316fe67ff8ef6df1318cfa2d3a739551}\label{logger_8hpp_a316fe67ff8ef6df1318cfa2d3a739551}} 
+\#define {\bfseries LOG\+\_\+\+DEBUG}(ar\+\_\+module,  message)~\mbox{\hyperlink{logger_8hpp_a0a5fa1cee33c776d0816f1ab5cbd0725}{LOG}}(\mbox{\hyperlink{classar_1_1util_1_1logger_a451b072128e903c33242c17f37cbe405a2bfd1b386270ff8266fa048c6116af9b}{ar\+::util\+::logger\+::priority\+::\+EVERYTHING\+\_\+\+DEV}}, ar\+\_\+module, \char`\"{}DEBUG\char`\"{},     message)
+\begin{DoxyCompactList}\small\item\em Shortcut macros for non-\/exception logging with pre-\/defined priority, prefix and/or module. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{logger_8hpp_a1df2a84bb8d3b43c8c49f1aff655190a}\label{logger_8hpp_a1df2a84bb8d3b43c8c49f1aff655190a}} 
+\#define {\bfseries LOG\+\_\+\+INFO}(message)~\mbox{\hyperlink{logger_8hpp_a0a5fa1cee33c776d0816f1ab5cbd0725}{LOG}}(\mbox{\hyperlink{classar_1_1util_1_1logger_a451b072128e903c33242c17f37cbe405a56e591f0c8e18fcd60303753c16b7a43}{ar\+::util\+::logger\+::priority\+::\+EVERYTHING}},     \char`\"{}\char`\"{},     \char`\"{}INFO\char`\"{},      message)
+\item 
+\mbox{\Hypertarget{logger_8hpp_a742fe07b291cf09fdb408ebb6dd398fe}\label{logger_8hpp_a742fe07b291cf09fdb408ebb6dd398fe}} 
+\#define {\bfseries LOG\+\_\+\+WARNING}(message)~\mbox{\hyperlink{logger_8hpp_a0a5fa1cee33c776d0816f1ab5cbd0725}{LOG}}(\mbox{\hyperlink{classar_1_1util_1_1logger_a451b072128e903c33242c17f37cbe405a059e9861e0400dfbe05c98a841f3f96b}{ar\+::util\+::logger\+::priority\+::\+WARNING}},        \char`\"{}\char`\"{},     \char`\"{}WARNING \char`\"{},  message)
+\item 
+\mbox{\Hypertarget{logger_8hpp_a27d98b18ba06759c6ef5c71b1e1a9904}\label{logger_8hpp_a27d98b18ba06759c6ef5c71b1e1a9904}} 
+\#define {\bfseries LOG\+\_\+\+ERROR}(message)~\mbox{\hyperlink{logger_8hpp_a0a5fa1cee33c776d0816f1ab5cbd0725}{LOG}}(\mbox{\hyperlink{classar_1_1util_1_1logger_a451b072128e903c33242c17f37cbe405a8aa0464f63ef85dab8ac5d4336e1c472}{ar\+::util\+::logger\+::priority\+::\+APP\+\_\+\+ERROR}},          \char`\"{}\char`\"{},     \char`\"{}ERROR\char`\"{},     message)
+\item 
+\mbox{\Hypertarget{logger_8hpp_a03ca9a5372d8ae44523626d137312555}\label{logger_8hpp_a03ca9a5372d8ae44523626d137312555}} 
+\#define {\bfseries LOG\+\_\+\+CRITICAL}(message)~\mbox{\hyperlink{logger_8hpp_a0a5fa1cee33c776d0816f1ab5cbd0725}{LOG}}(\mbox{\hyperlink{classar_1_1util_1_1logger_a451b072128e903c33242c17f37cbe405a99cd1c61610c76a57cb8d10d6df6b870}{ar\+::util\+::logger\+::priority\+::\+CRITICAL}},       \char`\"{}\char`\"{},     \char`\"{}CRITICAL\char`\"{},  message)
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{logger_8hpp_a4cf1a652cf0fdaf2f0467ea5db9adfba}\label{logger_8hpp_a4cf1a652cf0fdaf2f0467ea5db9adfba}} 
+{\bfseries Q\+\_\+\+DECLARE\+\_\+\+METATYPE} (\mbox{\hyperlink{classar_1_1util_1_1logger_a451b072128e903c33242c17f37cbe405}{ar\+::util\+::logger\+::priority}})
+\item 
+\mbox{\Hypertarget{logger_8hpp_a62b416a9725fc841d7a5d1db821b8a51}\label{logger_8hpp_a62b416a9725fc841d7a5d1db821b8a51}} 
+{\bfseries Q\+\_\+\+DECLARE\+\_\+\+METATYPE} (\mbox{\hyperlink{classar_1_1util_1_1logger_a772f03304377db10d29fe373b93377ae}{ar\+::util\+::logger\+::verbosity}})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{logger_8hpp_a0a5fa1cee33c776d0816f1ab5cbd0725}\label{logger_8hpp_a0a5fa1cee33c776d0816f1ab5cbd0725}} 
+\index{logger.hpp@{logger.hpp}!LOG@{LOG}}
+\index{LOG@{LOG}!logger.hpp@{logger.hpp}}
+\doxysubsubsection{\texorpdfstring{LOG}{LOG}}
+{\footnotesize\ttfamily \#define LOG(\begin{DoxyParamCaption}\item[{}]{priority,  }\item[{}]{ar\+\_\+module,  }\item[{}]{prefix,  }\item[{}]{to\+\_\+log }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classar_1_1util_1_1logger_a7ce7bbd10dfafccebef522e08a898ca6}{ar::util::logger::log}}(\_\_FILE\_\_,\ \_\_func\_\_,\ \_\_LINE\_\_,\ priority,\ \(\backslash\)}
+\DoxyCodeLine{ar\_module,\ prefix,\ to\_log)}
+
+\end{DoxyCode}
+
+
+Shortcut macros for logging. 
+
+\mbox{\Hypertarget{logger_8hpp_a7c001c88f1db2542a16087520236ab5a}\label{logger_8hpp_a7c001c88f1db2542a16087520236ab5a}} 
+\index{logger.hpp@{logger.hpp}!LOG\_EXCEPTION@{LOG\_EXCEPTION}}
+\index{LOG\_EXCEPTION@{LOG\_EXCEPTION}!logger.hpp@{logger.hpp}}
+\doxysubsubsection{\texorpdfstring{LOG\_EXCEPTION}{LOG\_EXCEPTION}}
+{\footnotesize\ttfamily \#define LOG\+\_\+\+EXCEPTION(\begin{DoxyParamCaption}\item[{}]{ar\+\_\+module,  }\item[{}]{ex }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classar_1_1util_1_1logger_a7ce7bbd10dfafccebef522e08a898ca6}{ar::util::logger::log}}(\_\_FILE\_\_,\ \_\_func\_\_,\ \_\_LINE\_\_,\ ar::util::logger::priority::ERROR,\ \(\backslash\)}
+\DoxyCodeLine{ar\_module,\ ex)}
+
+\end{DoxyCode}

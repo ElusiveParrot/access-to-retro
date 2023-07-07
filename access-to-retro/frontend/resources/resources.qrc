@@ -1,0 +1,32 @@
+<RCC>
+    <qresource prefix="/">
+        <file>splash.png</file>
+        <file>appicon.ico</file>
+        <file>settings-gear.png</file>
+        <file>about.png</file>
+        <file>help.png</file>
+        <file>input.png</file>
+        <file>refresh.png</file>
+        <file>search.png</file>
+        <file>settings.png</file>
+        <file>tools.png</file>
+        <file>updates.png</file>
+        <file>consoles/atari_2600.png</file>
+        <file>consoles/game_boy.png</file>
+        <file>consoles/game_boy_color.png</file>
+        <file>consoles/game_gear.png</file>
+        <file>consoles/genesis.png</file>
+        <file>consoles/master_system.png</file>
+        <file>consoles/mega_drive.png</file>
+        <file>consoles/n64.png</file>
+        <file>consoles/nes.png</file>
+        <file>consoles/pc_engine.png</file>
+        <file>consoles/snes.png</file>
+        <file>consoles/other.png</file>
+        <file>game_icon.png</file>
+        <file>windows_app.rc</file>
+        <file>install.png</file>
+        <file>delete.png</file>
+        <file>controller-x360.png</file>
+    </qresource>
+</RCC>

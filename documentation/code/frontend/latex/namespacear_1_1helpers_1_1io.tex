@@ -1,0 +1,65 @@
+\hypertarget{namespacear_1_1helpers_1_1io}{}\doxysection{ar\+::helpers\+::io Namespace Reference}
+\label{namespacear_1_1helpers_1_1io}\index{ar::helpers::io@{ar::helpers::io}}
+
+
+Helper classes and function that help with IO operations.  
+
+
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{namespacear_1_1helpers_1_1io_a9b0a49f84c9c02c9b960bf94f84f5b83}{is\+\_\+extension\+\_\+part\+\_\+of\+\_\+extensions\+\_\+string}} (const std\+::string \&extension, const std\+::string \&extensions\+\_\+string)
+\begin{DoxyCompactList}\small\item\em Checks whether a file extension is contained within a string containing extensions. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacear_1_1helpers_1_1io_ab72b44baf7a136d5efe3f23f2ad06aec}{copy\+\_\+file}} (const std\+::string \&file\+\_\+path, const std\+::string \&output\+\_\+directory)
+\begin{DoxyCompactList}\small\item\em Copy file from provided file path to provided directory. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Helper classes and function that help with IO operations. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacear_1_1helpers_1_1io_ab72b44baf7a136d5efe3f23f2ad06aec}\label{namespacear_1_1helpers_1_1io_ab72b44baf7a136d5efe3f23f2ad06aec}} 
+\index{ar::helpers::io@{ar::helpers::io}!copy\_file@{copy\_file}}
+\index{copy\_file@{copy\_file}!ar::helpers::io@{ar::helpers::io}}
+\doxysubsubsection{\texorpdfstring{copy\_file()}{copy\_file()}}
+{\footnotesize\ttfamily void ar\+::helpers\+::io\+::copy\+\_\+file (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file\+\_\+path,  }\item[{const std\+::string \&}]{output\+\_\+directory }\end{DoxyParamCaption})}
+
+
+
+Copy file from provided file path to provided directory. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+\_\+path} & File to be copied \\
+\hline
+{\em output\+\_\+directory} & Directory to which the file will be copied \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exceptions} & 
+\begin{DoxyItemize}
+\item ar\+::error\+:io\+\_\+error\+: Unable to copy the file 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{namespacear_1_1helpers_1_1io_a9b0a49f84c9c02c9b960bf94f84f5b83}\label{namespacear_1_1helpers_1_1io_a9b0a49f84c9c02c9b960bf94f84f5b83}} 
+\index{ar::helpers::io@{ar::helpers::io}!is\_extension\_part\_of\_extensions\_string@{is\_extension\_part\_of\_extensions\_string}}
+\index{is\_extension\_part\_of\_extensions\_string@{is\_extension\_part\_of\_extensions\_string}!ar::helpers::io@{ar::helpers::io}}
+\doxysubsubsection{\texorpdfstring{is\_extension\_part\_of\_extensions\_string()}{is\_extension\_part\_of\_extensions\_string()}}
+{\footnotesize\ttfamily bool ar\+::helpers\+::io\+::is\+\_\+extension\+\_\+part\+\_\+of\+\_\+extensions\+\_\+string (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{extension,  }\item[{const std\+::string \&}]{extensions\+\_\+string }\end{DoxyParamCaption})}
+
+
+
+Checks whether a file extension is contained within a string containing extensions. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em extension} & File extension \\
+\hline
+{\em extensions\+\_\+string} & String containing extensions for file picker (ex\+: $\ast$.jpg) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Whether file matches the extension query 
+\end{DoxyReturn}

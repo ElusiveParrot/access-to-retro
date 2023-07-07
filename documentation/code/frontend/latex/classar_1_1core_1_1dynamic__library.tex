@@ -1,0 +1,113 @@
+\hypertarget{classar_1_1core_1_1dynamic__library}{}\doxysection{ar\+::core\+::dynamic\+\_\+library Class Reference}
+\label{classar_1_1core_1_1dynamic__library}\index{ar::core::dynamic\_library@{ar::core::dynamic\_library}}
+
+
+Represents a dynamically linked library file (for example\+: \textquotesingle{}.dll\textquotesingle{} on windows).  
+
+
+
+
+{\ttfamily \#include $<$dynamic-\/library.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classar_1_1core_1_1dynamic__library_af27484d4c7ab617630ade24567f43eab}{dynamic\+\_\+library}} (const std\+::string \&path)
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\T \mbox{\hyperlink{classar_1_1core_1_1dynamic__library_afdbeb96dfc3a42a3772415f625d370dc}{get\+\_\+symbol}} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Fetches the requested symbol\textquotesingle{}s address by name and casts it to T. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::string \mbox{\hyperlink{classar_1_1core_1_1dynamic__library_acca3b714fefb1c9f8f12e3a34feb5048}{get\+\_\+error\+\_\+message}} ()
+\begin{DoxyCompactList}\small\item\em Query OS\textquotesingle{}s API to get error message for last dynamic library loading error. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classar_1_1core_1_1dynamic__library_accfa2ce3fef6671bfb83066f4c5551f2}\label{classar_1_1core_1_1dynamic__library_accfa2ce3fef6671bfb83066f4c5551f2}} 
+std\+::string {\bfseries \+\_\+lib\+\_\+path}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a dynamically linked library file (for example\+: \textquotesingle{}.dll\textquotesingle{} on windows). 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classar_1_1core_1_1dynamic__library_af27484d4c7ab617630ade24567f43eab}\label{classar_1_1core_1_1dynamic__library_af27484d4c7ab617630ade24567f43eab}} 
+\index{ar::core::dynamic\_library@{ar::core::dynamic\_library}!dynamic\_library@{dynamic\_library}}
+\index{dynamic\_library@{dynamic\_library}!ar::core::dynamic\_library@{ar::core::dynamic\_library}}
+\doxysubsubsection{\texorpdfstring{dynamic\_library()}{dynamic\_library()}}
+{\footnotesize\ttfamily ar\+::core\+::dynamic\+\_\+library\+::dynamic\+\_\+library (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Default constructor. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exceptions} & 
+\begin{DoxyItemize}
+\item \mbox{\hyperlink{classar_1_1error_1_1io__error}{ar\+::error\+::io\+\_\+error}}\+: When the library file could not be opened 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyExceptions}
+
+\begin{DoxyParams}{Parameters}
+{\em path} & Path of the library \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classar_1_1core_1_1dynamic__library_acca3b714fefb1c9f8f12e3a34feb5048}\label{classar_1_1core_1_1dynamic__library_acca3b714fefb1c9f8f12e3a34feb5048}} 
+\index{ar::core::dynamic\_library@{ar::core::dynamic\_library}!get\_error\_message@{get\_error\_message}}
+\index{get\_error\_message@{get\_error\_message}!ar::core::dynamic\_library@{ar::core::dynamic\_library}}
+\doxysubsubsection{\texorpdfstring{get\_error\_message()}{get\_error\_message()}}
+{\footnotesize\ttfamily std\+::string ar\+::core\+::dynamic\+\_\+library\+::get\+\_\+error\+\_\+message (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Query OS\textquotesingle{}s API to get error message for last dynamic library loading error. 
+
+\begin{DoxyReturn}{Returns}
+Error string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classar_1_1core_1_1dynamic__library_afdbeb96dfc3a42a3772415f625d370dc}\label{classar_1_1core_1_1dynamic__library_afdbeb96dfc3a42a3772415f625d370dc}} 
+\index{ar::core::dynamic\_library@{ar::core::dynamic\_library}!get\_symbol@{get\_symbol}}
+\index{get\_symbol@{get\_symbol}!ar::core::dynamic\_library@{ar::core::dynamic\_library}}
+\doxysubsubsection{\texorpdfstring{get\_symbol()}{get\_symbol()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T ar\+::core\+::dynamic\+\_\+library\+::get\+\_\+symbol (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Fetches the requested symbol\textquotesingle{}s address by name and casts it to T. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exceptions} & 
+\begin{DoxyItemize}
+\item std\+::runtime\+\_\+error\+: When the library has not been loaded
+\item ar\+::core\+::os\+\_\+error\+: When the symbol was not found inside the library 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyExceptions}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Type that the result will be casted to. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of the symbol as defined in the library. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Symbol\textquotesingle{}s address casted to T 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/daniel/\+Developer/access-\/to-\/retro/access-\/to-\/retro/frontend/src/core/\mbox{\hyperlink{dynamic-library_8hpp}{dynamic-\/library.\+hpp}}\item 
+/\+Users/daniel/\+Developer/access-\/to-\/retro/access-\/to-\/retro/frontend/src/core/dynamic-\/library.\+cpp\end{DoxyCompactItemize}

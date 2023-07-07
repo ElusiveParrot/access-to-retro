@@ -1,0 +1,91 @@
+\hypertarget{classar_1_1chip8_1_1frame__buffer}{}\doxysection{ar\+::chip8\+::frame\+\_\+buffer Class Reference}
+\label{classar_1_1chip8_1_1frame__buffer}\index{ar::chip8::frame\_buffer@{ar::chip8::frame\_buffer}}
+
+
+Represents a CHIP8\textquotesingle{}s internal frame buffer object.  
+
+
+
+
+{\ttfamily \#include $<$frame-\/buffer.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classar_1_1chip8_1_1frame__buffer_a23c96dc333d177d10896815452b7d150}{flip\+\_\+pixel\+\_\+channels}} (unsigned x, unsigned y)
+\begin{DoxyCompactList}\small\item\em Flip colour channels in individual pixel, CHIP8 is black and white so no need to set individual values. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classar_1_1chip8_1_1frame__buffer_a79257d8fabcfd94409e45d57b700e417}\label{classar_1_1chip8_1_1frame__buffer_a79257d8fabcfd94409e45d57b700e417}} 
+void {\bfseries clear} ()
+\begin{DoxyCompactList}\small\item\em Clears the frame buffer by setting each pixel to rgba(0,0,0,255) \end{DoxyCompactList}\item 
+std\+::array$<$ ar\+\_\+pixel, \mbox{\hyperlink{namespacear_1_1chip8_a5a171030855012327408b0f2ee4fe215}{ar\+::chip8\+::\+SCREEN\+\_\+\+RESOLUTION\+\_\+X}} $\ast$\mbox{\hyperlink{namespacear_1_1chip8_a71327359eb492598dbe9baf75c856b08}{ar\+::chip8\+::\+SCREEN\+\_\+\+RESOLUTION\+\_\+Y}} $>$ \& \mbox{\hyperlink{classar_1_1chip8_1_1frame__buffer_a8e1c0c75e1ad5c503af5bbc112faec05}{get\+\_\+pixels}} ()
+\begin{DoxyCompactList}\small\item\em Getter for pixel arrays. \end{DoxyCompactList}\item 
+ar\+\_\+pixel \& \mbox{\hyperlink{classar_1_1chip8_1_1frame__buffer_ae8263d64e18202db027affadb8107495}{get\+\_\+pixel\+\_\+at}} (unsigned x, unsigned y)
+\begin{DoxyCompactList}\small\item\em Getter for a specific pixel. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classar_1_1chip8_1_1frame__buffer_a1124e7f6b86625411531ce9b088ae151}\label{classar_1_1chip8_1_1frame__buffer_a1124e7f6b86625411531ce9b088ae151}} 
+std\+::array$<$ ar\+\_\+pixel, \mbox{\hyperlink{namespacear_1_1chip8_a5a171030855012327408b0f2ee4fe215}{ar\+::chip8\+::\+SCREEN\+\_\+\+RESOLUTION\+\_\+X}} $\ast$\mbox{\hyperlink{namespacear_1_1chip8_a71327359eb492598dbe9baf75c856b08}{ar\+::chip8\+::\+SCREEN\+\_\+\+RESOLUTION\+\_\+Y}} $>$ {\bfseries \+\_\+raw\+\_\+pixels} \{\}
+\begin{DoxyCompactList}\small\item\em Array of raw pixel colours. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a CHIP8\textquotesingle{}s internal frame buffer object. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classar_1_1chip8_1_1frame__buffer_a23c96dc333d177d10896815452b7d150}\label{classar_1_1chip8_1_1frame__buffer_a23c96dc333d177d10896815452b7d150}} 
+\index{ar::chip8::frame\_buffer@{ar::chip8::frame\_buffer}!flip\_pixel\_channels@{flip\_pixel\_channels}}
+\index{flip\_pixel\_channels@{flip\_pixel\_channels}!ar::chip8::frame\_buffer@{ar::chip8::frame\_buffer}}
+\doxysubsubsection{\texorpdfstring{flip\_pixel\_channels()}{flip\_pixel\_channels()}}
+{\footnotesize\ttfamily void ar\+::chip8\+::frame\+\_\+buffer\+::flip\+\_\+pixel\+\_\+channels (\begin{DoxyParamCaption}\item[{unsigned}]{x,  }\item[{unsigned}]{y }\end{DoxyParamCaption})}
+
+
+
+Flip colour channels in individual pixel, CHIP8 is black and white so no need to set individual values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & X position of the pixel \\
+\hline
+{\em y} & Y position of the pixel \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classar_1_1chip8_1_1frame__buffer_ae8263d64e18202db027affadb8107495}\label{classar_1_1chip8_1_1frame__buffer_ae8263d64e18202db027affadb8107495}} 
+\index{ar::chip8::frame\_buffer@{ar::chip8::frame\_buffer}!get\_pixel\_at@{get\_pixel\_at}}
+\index{get\_pixel\_at@{get\_pixel\_at}!ar::chip8::frame\_buffer@{ar::chip8::frame\_buffer}}
+\doxysubsubsection{\texorpdfstring{get\_pixel\_at()}{get\_pixel\_at()}}
+{\footnotesize\ttfamily ar\+\_\+pixel \& ar\+::chip8\+::frame\+\_\+buffer\+::get\+\_\+pixel\+\_\+at (\begin{DoxyParamCaption}\item[{unsigned}]{x,  }\item[{unsigned}]{y }\end{DoxyParamCaption})}
+
+
+
+Getter for a specific pixel. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & X position of the pixel \\
+\hline
+{\em y} & Y position of the pixel \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Targeted pixel 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classar_1_1chip8_1_1frame__buffer_a8e1c0c75e1ad5c503af5bbc112faec05}\label{classar_1_1chip8_1_1frame__buffer_a8e1c0c75e1ad5c503af5bbc112faec05}} 
+\index{ar::chip8::frame\_buffer@{ar::chip8::frame\_buffer}!get\_pixels@{get\_pixels}}
+\index{get\_pixels@{get\_pixels}!ar::chip8::frame\_buffer@{ar::chip8::frame\_buffer}}
+\doxysubsubsection{\texorpdfstring{get\_pixels()}{get\_pixels()}}
+{\footnotesize\ttfamily std\+::array$<$ ar\+\_\+pixel, \mbox{\hyperlink{namespacear_1_1chip8_a5a171030855012327408b0f2ee4fe215}{ar\+::chip8\+::\+SCREEN\+\_\+\+RESOLUTION\+\_\+X}} $\ast$\mbox{\hyperlink{namespacear_1_1chip8_a71327359eb492598dbe9baf75c856b08}{ar\+::chip8\+::\+SCREEN\+\_\+\+RESOLUTION\+\_\+Y}} $>$ \& ar\+::chip8\+::frame\+\_\+buffer\+::get\+\_\+pixels (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Getter for pixel arrays. 
+
+\begin{DoxyReturn}{Returns}
+Raw pixel array 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/daniel/\+Developer/access-\/to-\/retro/access-\/to-\/retro/chip8-\/virtual-\/console/src/emulator/frame-\/buffer.\+hpp\item 
+/\+Users/daniel/\+Developer/access-\/to-\/retro/access-\/to-\/retro/chip8-\/virtual-\/console/src/emulator/frame-\/buffer.\+cpp\end{DoxyCompactItemize}

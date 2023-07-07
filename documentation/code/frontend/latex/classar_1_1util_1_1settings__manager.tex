@@ -1,0 +1,208 @@
+\hypertarget{classar_1_1util_1_1settings__manager}{}\doxysection{ar\+::util\+::settings\+\_\+manager Class Reference}
+\label{classar_1_1util_1_1settings__manager}\index{ar::util::settings\_manager@{ar::util::settings\_manager}}
+
+
+Class used to manage application settings, wrapped for QSettings.  
+
+
+
+
+{\ttfamily \#include $<$settings-\/manager.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classar_1_1util_1_1settings__manager_a86a77a3514290b076f16fc2763352089}{settings\+\_\+manager}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor, should NOT be used. \end{DoxyCompactList}\item 
+std\+::optional$<$ std\+::string $>$ \mbox{\hyperlink{classar_1_1util_1_1settings__manager_a0d309acd34ee720c7c7f6f5e13e94d4f}{get\+\_\+setting}} (const std\+::string \&key)
+\begin{DoxyCompactList}\small\item\em Getter for settings inside the settings file. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classar_1_1util_1_1settings__manager_a3de2cefb07ac23b39e6837989eb376fd}{get\+\_\+setting\+\_\+or\+\_\+set\+\_\+if\+\_\+not\+\_\+exists}} (const std\+::string \&key, const std\+::string \&default\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Getter for settings inside the settings file, if the value doesn\textquotesingle{}t exist the it gets set. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classar_1_1util_1_1settings__manager_ad0737c577b23f04f41ed4c1dd2636775}{set\+\_\+setting}} (const std\+::string \&key, const std\+::string \&value)
+\begin{DoxyCompactList}\small\item\em Setter for settings inside the settings file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classar_1_1util_1_1settings__manager_a2dd656569812f6301fef89abb6516f7d}{configure}} ()
+\begin{DoxyCompactList}\small\item\em Configures the setting manager singleton. \end{DoxyCompactList}\item 
+static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classar_1_1util_1_1settings__manager}{ar\+::util\+::settings\+\_\+manager}} $>$ \mbox{\hyperlink{classar_1_1util_1_1settings__manager_a516ee22949bd17c7f98ef9281a52c637}{get\+\_\+global\+\_\+manager}} ()
+\begin{DoxyCompactList}\small\item\em Getter for a singleton settings manager object. \end{DoxyCompactList}\item 
+static std\+::string \mbox{\hyperlink{classar_1_1util_1_1settings__manager_a5d20d29fab758a58b7c5624c323779db}{get\+\_\+settings\+\_\+file\+\_\+path}} ()
+\begin{DoxyCompactList}\small\item\em Getter for a path of Access to Retro settings file, the file might not be there if the program didn\textquotesingle{}t run before and \textquotesingle{}configure\textquotesingle{} was not yet used. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static QSettings \mbox{\hyperlink{classar_1_1util_1_1settings__manager_a0b78af1149997aada86474f6f89532e6}{create\+\_\+qsettings\+\_\+object\+\_\+and\+\_\+or\+\_\+file}} ()
+\begin{DoxyCompactList}\small\item\em Helper function to create QSettings object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classar_1_1util_1_1settings__manager_a942c85c61dd082b132fe84ae0b2ae7fa}\label{classar_1_1util_1_1settings__manager_a942c85c61dd082b132fe84ae0b2ae7fa}} 
+bool {\bfseries \+\_\+configured} = false
+\begin{DoxyCompactList}\small\item\em Whether the setting manager has been configured. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classar_1_1util_1_1settings__manager_a2b0db33bf405b6e00b66b8b0fb061860}\label{classar_1_1util_1_1settings__manager_a2b0db33bf405b6e00b66b8b0fb061860}} 
+QSettings {\bfseries \+\_\+settings}
+\begin{DoxyCompactList}\small\item\em Internal QSettings object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class used to manage application settings, wrapped for QSettings. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classar_1_1util_1_1settings__manager_a86a77a3514290b076f16fc2763352089}\label{classar_1_1util_1_1settings__manager_a86a77a3514290b076f16fc2763352089}} 
+\index{ar::util::settings\_manager@{ar::util::settings\_manager}!settings\_manager@{settings\_manager}}
+\index{settings\_manager@{settings\_manager}!ar::util::settings\_manager@{ar::util::settings\_manager}}
+\doxysubsubsection{\texorpdfstring{settings\_manager()}{settings\_manager()}}
+{\footnotesize\ttfamily ar\+::util\+::settings\+\_\+manager\+::settings\+\_\+manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default constructor, should NOT be used. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exceptions} & 
+\begin{DoxyItemize}
+\item \mbox{\hyperlink{classar_1_1error_1_1io__error}{ar\+::error\+::io\+\_\+error}}\+: Unable to create new settings file if it wasn\textquotesingle{}t found
+
+Should not be used anywhere outside of implementation file to create a singleton,, use \textquotesingle{}get\+\_\+global\+\_\+manager\textquotesingle{} instead to access the singleton 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classar_1_1util_1_1settings__manager_a2dd656569812f6301fef89abb6516f7d}\label{classar_1_1util_1_1settings__manager_a2dd656569812f6301fef89abb6516f7d}} 
+\index{ar::util::settings\_manager@{ar::util::settings\_manager}!configure@{configure}}
+\index{configure@{configure}!ar::util::settings\_manager@{ar::util::settings\_manager}}
+\doxysubsubsection{\texorpdfstring{configure()}{configure()}}
+{\footnotesize\ttfamily void ar\+::util\+::settings\+\_\+manager\+::configure (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Configures the setting manager singleton. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exceptions} & 
+\begin{DoxyItemize}
+\item \mbox{\hyperlink{classar_1_1error_1_1io__error}{ar\+::error\+::io\+\_\+error}}\+: Unable to create new settings file if it wasn\textquotesingle{}t found
+
+Should be called somewhere at the beginning of the program, before \textquotesingle{}get\+\_\+global\+\_\+manager\textquotesingle{} is used. 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classar_1_1util_1_1settings__manager_a0b78af1149997aada86474f6f89532e6}\label{classar_1_1util_1_1settings__manager_a0b78af1149997aada86474f6f89532e6}} 
+\index{ar::util::settings\_manager@{ar::util::settings\_manager}!create\_qsettings\_object\_and\_or\_file@{create\_qsettings\_object\_and\_or\_file}}
+\index{create\_qsettings\_object\_and\_or\_file@{create\_qsettings\_object\_and\_or\_file}!ar::util::settings\_manager@{ar::util::settings\_manager}}
+\doxysubsubsection{\texorpdfstring{create\_qsettings\_object\_and\_or\_file()}{create\_qsettings\_object\_and\_or\_file()}}
+{\footnotesize\ttfamily QSettings ar\+::util\+::settings\+\_\+manager\+::create\+\_\+qsettings\+\_\+object\+\_\+and\+\_\+or\+\_\+file (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Helper function to create QSettings object. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exceptions} & 
+\begin{DoxyItemize}
+\item \mbox{\hyperlink{classar_1_1error_1_1io__error}{ar\+::error\+::io\+\_\+error}}\+: Unable to create new settings file if it wasn\textquotesingle{}t found 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+Configured QSettings object 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classar_1_1util_1_1settings__manager_a516ee22949bd17c7f98ef9281a52c637}\label{classar_1_1util_1_1settings__manager_a516ee22949bd17c7f98ef9281a52c637}} 
+\index{ar::util::settings\_manager@{ar::util::settings\_manager}!get\_global\_manager@{get\_global\_manager}}
+\index{get\_global\_manager@{get\_global\_manager}!ar::util::settings\_manager@{ar::util::settings\_manager}}
+\doxysubsubsection{\texorpdfstring{get\_global\_manager()}{get\_global\_manager()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classar_1_1util_1_1settings__manager}{ar\+::util\+::settings\+\_\+manager}} $>$ ar\+::util\+::settings\+\_\+manager\+::get\+\_\+global\+\_\+manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Getter for a singleton settings manager object. 
+
+\begin{DoxyRemark}{Remarks}
+Useful when you want to store pointer to settings manager as a class member 
+\end{DoxyRemark}
+\begin{DoxyWarning}{Warning}
+If \textquotesingle{}configure\textquotesingle{} wasn\textquotesingle{}t called it wil return a null pointer 
+\end{DoxyWarning}
+\begin{DoxyReturn}{Returns}
+Global singleton of settings manager or a null pointer if \textquotesingle{}configure\textquotesingle{} wasn\textquotesingle{}t used before this call 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classar_1_1util_1_1settings__manager_a0d309acd34ee720c7c7f6f5e13e94d4f}\label{classar_1_1util_1_1settings__manager_a0d309acd34ee720c7c7f6f5e13e94d4f}} 
+\index{ar::util::settings\_manager@{ar::util::settings\_manager}!get\_setting@{get\_setting}}
+\index{get\_setting@{get\_setting}!ar::util::settings\_manager@{ar::util::settings\_manager}}
+\doxysubsubsection{\texorpdfstring{get\_setting()}{get\_setting()}}
+{\footnotesize\ttfamily std\+::optional$<$ std\+::string $>$ ar\+::util\+::settings\+\_\+manager\+::get\+\_\+setting (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key }\end{DoxyParamCaption})}
+
+
+
+Getter for settings inside the settings file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & Name of the setting \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+String value for that setting or nothing if it does not exist 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classar_1_1util_1_1settings__manager_a3de2cefb07ac23b39e6837989eb376fd}\label{classar_1_1util_1_1settings__manager_a3de2cefb07ac23b39e6837989eb376fd}} 
+\index{ar::util::settings\_manager@{ar::util::settings\_manager}!get\_setting\_or\_set\_if\_not\_exists@{get\_setting\_or\_set\_if\_not\_exists}}
+\index{get\_setting\_or\_set\_if\_not\_exists@{get\_setting\_or\_set\_if\_not\_exists}!ar::util::settings\_manager@{ar::util::settings\_manager}}
+\doxysubsubsection{\texorpdfstring{get\_setting\_or\_set\_if\_not\_exists()}{get\_setting\_or\_set\_if\_not\_exists()}}
+{\footnotesize\ttfamily std\+::string ar\+::util\+::settings\+\_\+manager\+::get\+\_\+setting\+\_\+or\+\_\+set\+\_\+if\+\_\+not\+\_\+exists (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key,  }\item[{const std\+::string \&}]{default\+\_\+value }\end{DoxyParamCaption})}
+
+
+
+Getter for settings inside the settings file, if the value doesn\textquotesingle{}t exist the it gets set. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & Name of the setting \\
+\hline
+{\em default\+\_\+value} & Value that the setting will be set to if it does not exist \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+String value for that setting 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classar_1_1util_1_1settings__manager_a5d20d29fab758a58b7c5624c323779db}\label{classar_1_1util_1_1settings__manager_a5d20d29fab758a58b7c5624c323779db}} 
+\index{ar::util::settings\_manager@{ar::util::settings\_manager}!get\_settings\_file\_path@{get\_settings\_file\_path}}
+\index{get\_settings\_file\_path@{get\_settings\_file\_path}!ar::util::settings\_manager@{ar::util::settings\_manager}}
+\doxysubsubsection{\texorpdfstring{get\_settings\_file\_path()}{get\_settings\_file\_path()}}
+{\footnotesize\ttfamily std\+::string ar\+::util\+::settings\+\_\+manager\+::get\+\_\+settings\+\_\+file\+\_\+path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Getter for a path of Access to Retro settings file, the file might not be there if the program didn\textquotesingle{}t run before and \textquotesingle{}configure\textquotesingle{} was not yet used. 
+
+\begin{DoxyReturn}{Returns}
+Path to the configuration file 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classar_1_1util_1_1settings__manager_ad0737c577b23f04f41ed4c1dd2636775}\label{classar_1_1util_1_1settings__manager_ad0737c577b23f04f41ed4c1dd2636775}} 
+\index{ar::util::settings\_manager@{ar::util::settings\_manager}!set\_setting@{set\_setting}}
+\index{set\_setting@{set\_setting}!ar::util::settings\_manager@{ar::util::settings\_manager}}
+\doxysubsubsection{\texorpdfstring{set\_setting()}{set\_setting()}}
+{\footnotesize\ttfamily void ar\+::util\+::settings\+\_\+manager\+::set\+\_\+setting (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key,  }\item[{const std\+::string \&}]{value }\end{DoxyParamCaption})}
+
+
+
+Setter for settings inside the settings file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & Name of the setting \\
+\hline
+{\em value} & New/initial value \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/daniel/\+Developer/access-\/to-\/retro/access-\/to-\/retro/frontend/src/util/settings-\/manager.\+hpp\item 
+/\+Users/daniel/\+Developer/access-\/to-\/retro/access-\/to-\/retro/frontend/src/util/settings-\/manager.\+cpp\end{DoxyCompactItemize}

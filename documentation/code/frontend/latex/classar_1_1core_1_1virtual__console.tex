@@ -1,0 +1,328 @@
+\hypertarget{classar_1_1core_1_1virtual__console}{}\doxysection{ar\+::core\+::virtual\+\_\+console Class Reference}
+\label{classar_1_1core_1_1virtual__console}\index{ar::core::virtual\_console@{ar::core::virtual\_console}}
+
+
+Each emulator is called a \textquotesingle{}virtual console\textquotesingle{} in this frontend, this class represents a single emulator.  
+
+
+
+
+{\ttfamily \#include $<$virtual-\/console.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classar_1_1core_1_1virtual__console_a15a0ae8588fa7979e573d77bc226b075}{virtual\+\_\+console}} (const std\+::string \&path)
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classar_1_1core_1_1virtual__console_a124af2d63b3d5a996f173cbfa87acaa5}{virtual\+\_\+console}} (\mbox{\hyperlink{classar_1_1core_1_1virtual__console}{virtual\+\_\+console}} \&\&other) noexcept
+\begin{DoxyCompactList}\small\item\em Move constructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classar_1_1core_1_1virtual__console_a0b1bff7493b23f70fe87a6253c614a65}{prepare\+\_\+for\+\_\+startup}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classar_1_1core_1_1executable__binary}{ar\+::core\+::executable\+\_\+binary}} $>$ \&binary)
+\begin{DoxyCompactList}\small\item\em Prepares the virtual console for starting. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classar_1_1core_1_1virtual__console_a8cd59003b78576ad2599c57cadef010b}\label{classar_1_1core_1_1virtual__console_a8cd59003b78576ad2599c57cadef010b}} 
+void {\bfseries create\+\_\+and\+\_\+run\+\_\+threads} ()
+\begin{DoxyCompactList}\small\item\em Create developer\textquotesingle{}s defined main, render and input threads and start them. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\T \mbox{\hyperlink{classar_1_1core_1_1virtual__console_a94ca942b89fbb24ebefe67ba7f02479a}{get\+\_\+symbol\+\_\+from\+\_\+library}} (const std\+::string \&symbol\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Fetches the requested symbol\textquotesingle{}s address by name and casts it to T. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classar_1_1core_1_1virtual__console_aaf30d68d38e3826842276877a839aeba}{quit\+\_\+and\+\_\+cleanup}} ()
+\begin{DoxyCompactList}\small\item\em Cleans up all the resources that were allocated by the virtual console. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classar_1_1core_1_1virtual__console_affec56df5b4a318ec23c72813f152ed4}{get\+\_\+path}} () const
+\begin{DoxyCompactList}\small\item\em Get the path from which the virtual console was created. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classar_1_1core_1_1virtual__console_a14c70d4c4fa8d9abbbc6b88948db1c50}{get\+\_\+name}} () const
+\begin{DoxyCompactList}\small\item\em Get the name of the virtual console as defined by the developer. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classar_1_1core_1_1virtual__console_a93c8ada30f651f93802924beb95cb383}{get\+\_\+system}} () const
+\begin{DoxyCompactList}\small\item\em Get the system of the virtual console as defined by the developer. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classar_1_1core_1_1virtual__console_a8d2ad1d0962e1eaba042e82a6222cc0c}{get\+\_\+author}} () const
+\begin{DoxyCompactList}\small\item\em Get the name/surname/both of the virtual console author as defined by the developer. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classar_1_1core_1_1virtual__console_ab2c4e806809214e49327180864adee46}{get\+\_\+rom\+\_\+extension}} () const
+\begin{DoxyCompactList}\small\item\em Get the game extensions of the virtual console as defined by the developer. \end{DoxyCompactList}\item 
+unsigned \mbox{\hyperlink{classar_1_1core_1_1virtual__console_a108481ff37b4d6359e9c14e9f935d9cd}{get\+\_\+default\+\_\+window\+\_\+width}} () const
+\begin{DoxyCompactList}\small\item\em Get the default window width as defined by the developer. \end{DoxyCompactList}\item 
+unsigned \mbox{\hyperlink{classar_1_1core_1_1virtual__console_afc121dae1ddc908f7fe353bbe16d1502}{get\+\_\+default\+\_\+window\+\_\+height}} () const
+\begin{DoxyCompactList}\small\item\em Get the default window height as defined by the developer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classar_1_1core_1_1virtual__console_aa0029bae7e1445be9114905c93fd41a6}\label{classar_1_1core_1_1virtual__console_aa0029bae7e1445be9114905c93fd41a6}} 
+std\+::string {\bfseries \+\_\+path}
+\begin{DoxyCompactList}\small\item\em Path from which the virtual console was loaded. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classar_1_1core_1_1virtual__console_a414a74cc755669c6c7c529ea333b1459}\label{classar_1_1core_1_1virtual__console_a414a74cc755669c6c7c529ea333b1459}} 
+\mbox{\hyperlink{classar_1_1core_1_1dynamic__library}{ar\+::core\+::dynamic\+\_\+library}} {\bfseries \+\_\+library}
+\begin{DoxyCompactList}\small\item\em The dynamic library loaded for this virtual console. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classar_1_1core_1_1virtual__console_a375559f7744c1055c69ff45d871eb4bd}\label{classar_1_1core_1_1virtual__console_a375559f7744c1055c69ff45d871eb4bd}} 
+std\+::string {\bfseries \+\_\+name}
+\begin{DoxyCompactList}\small\item\em Name of the virtual console (NOT the emulated system) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classar_1_1core_1_1virtual__console_a08ce2e43c321c703cc9d4cfe07f39763}\label{classar_1_1core_1_1virtual__console_a08ce2e43c321c703cc9d4cfe07f39763}} 
+std\+::string {\bfseries \+\_\+system}
+\begin{DoxyCompactList}\small\item\em Name of the emulated system, please see guide for standard names for common consoles. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classar_1_1core_1_1virtual__console_a18f6aec84513d2c85e0213e311642c9b}\label{classar_1_1core_1_1virtual__console_a18f6aec84513d2c85e0213e311642c9b}} 
+std\+::string {\bfseries \+\_\+author}
+\item 
+\mbox{\Hypertarget{classar_1_1core_1_1virtual__console_ae02159420e248bfe6dfe56fc3fc2cd6f}\label{classar_1_1core_1_1virtual__console_ae02159420e248bfe6dfe56fc3fc2cd6f}} 
+std\+::string {\bfseries \+\_\+rom\+\_\+extension}
+\begin{DoxyCompactList}\small\item\em File extension associated with this system for ex\+: \char`\"{}.\+gb\char`\"{} for Game\+Boy. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classar_1_1core_1_1virtual__console_a594c9674243c539785208519273ce67c}\label{classar_1_1core_1_1virtual__console_a594c9674243c539785208519273ce67c}} 
+double {\bfseries \+\_\+frame\+\_\+time}
+\begin{DoxyCompactList}\small\item\em Frame time for the virtual console, it is calculated using formula\+: 1000 / Frame Rate. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classar_1_1core_1_1virtual__console_a995e75245e35118092f0aba811054c66}\label{classar_1_1core_1_1virtual__console_a995e75245e35118092f0aba811054c66}} 
+unsigned {\bfseries \+\_\+default\+\_\+window\+\_\+width}
+\begin{DoxyCompactList}\small\item\em Default window width for this virtual console. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classar_1_1core_1_1virtual__console_ac1852e504531a605b2df9d5b0d8af259}\label{classar_1_1core_1_1virtual__console_ac1852e504531a605b2df9d5b0d8af259}} 
+unsigned {\bfseries \+\_\+default\+\_\+window\+\_\+height}
+\begin{DoxyCompactList}\small\item\em Default window height for this virtual console. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classar_1_1core_1_1virtual__console_a3446de0a4557e8f745940dddd4ccaa69}\label{classar_1_1core_1_1virtual__console_a3446de0a4557e8f745940dddd4ccaa69}} 
+std\+::optional$<$ std\+::reference\+\_\+wrapper$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classar_1_1core_1_1executable__binary}{ar\+::core\+::executable\+\_\+binary}} $>$ $>$ $>$ {\bfseries \+\_\+linked\+\_\+binary}
+\begin{DoxyCompactList}\small\item\em Binary linked to this virtual console, linked using \textquotesingle{}prepare\+\_\+for\+\_\+startup\textquotesingle{}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classar_1_1core_1_1virtual__console_ae8c981433ce2872197650ce2f9554079}\label{classar_1_1core_1_1virtual__console_ae8c981433ce2872197650ce2f9554079}} 
+std\+::function$<$ \mbox{\hyperlink{namespacear_1_1types_af22b095bd412dfdff3412bd0efe32912}{ar\+::types\+::err\+\_\+code}}()$>$ {\bfseries \+\_\+define\+\_\+fn}
+\begin{DoxyCompactList}\small\item\em This function gets called when virtual console is loaded (vc object created) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classar_1_1core_1_1virtual__console_a4ea35cd8fdf4b5857181336e0b476e03}\label{classar_1_1core_1_1virtual__console_a4ea35cd8fdf4b5857181336e0b476e03}} 
+std\+::function$<$ \mbox{\hyperlink{namespacear_1_1types_af22b095bd412dfdff3412bd0efe32912}{ar\+::types\+::err\+\_\+code}}()$>$ {\bfseries \+\_\+startup\+\_\+fn}
+\begin{DoxyCompactList}\small\item\em This function gets called on virtual console startup. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classar_1_1core_1_1virtual__console_ac93ec509059c58f2e4a2560647bf9a9e}\label{classar_1_1core_1_1virtual__console_ac93ec509059c58f2e4a2560647bf9a9e}} 
+std\+::function$<$ void()$>$ {\bfseries \+\_\+quit\+\_\+fn}
+\begin{DoxyCompactList}\small\item\em This function gets called when virtual console exits. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classar_1_1core_1_1virtual__console_a68a0f73eee345084e6bf5547ca464f49}\label{classar_1_1core_1_1virtual__console_a68a0f73eee345084e6bf5547ca464f49}} 
+std\+::atomic\+\_\+bool {\bfseries \+\_\+run\+\_\+threads} = false
+\begin{DoxyCompactList}\small\item\em Thread-\/safe boolean to check if threads should still be running. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classar_1_1core_1_1virtual__console_aa2e739fbb0c8c0d4748ff61f56cbc119}\label{classar_1_1core_1_1virtual__console_aa2e739fbb0c8c0d4748ff61f56cbc119}} 
+std\+::unique\+\_\+ptr$<$ std\+::thread $>$ {\bfseries \+\_\+main\+\_\+thread} = nullptr
+\begin{DoxyCompactList}\small\item\em Main thread object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classar_1_1core_1_1virtual__console_a2ed06c7ec9c96feff79578356a4393fe}\label{classar_1_1core_1_1virtual__console_a2ed06c7ec9c96feff79578356a4393fe}} 
+std\+::function$<$ void()$>$ {\bfseries \+\_\+main\+\_\+thread\+\_\+fn}
+\begin{DoxyCompactList}\small\item\em Function used to create \textquotesingle{}main\textquotesingle{} thread. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classar_1_1core_1_1virtual__console_a2dd2d99a408c2461c9cf153e9e6a67ee}\label{classar_1_1core_1_1virtual__console_a2dd2d99a408c2461c9cf153e9e6a67ee}} 
+std\+::unique\+\_\+ptr$<$ std\+::thread $>$ {\bfseries \+\_\+render\+\_\+thread} = nullptr
+\begin{DoxyCompactList}\small\item\em Render thread object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classar_1_1core_1_1virtual__console_a34f66b1aaee38146a0a4523ff8da218b}\label{classar_1_1core_1_1virtual__console_a34f66b1aaee38146a0a4523ff8da218b}} 
+std\+::function$<$ void()$>$ {\bfseries \+\_\+render\+\_\+thread\+\_\+fn}
+\begin{DoxyCompactList}\small\item\em Function used to create \textquotesingle{}render\textquotesingle{} thread. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classar_1_1core_1_1virtual__console_aced3d2dfc19329b4da2e7ce55a2eecdc}\label{classar_1_1core_1_1virtual__console_aced3d2dfc19329b4da2e7ce55a2eecdc}} 
+std\+::unique\+\_\+ptr$<$ std\+::thread $>$ {\bfseries \+\_\+input\+\_\+thread} = nullptr
+\begin{DoxyCompactList}\small\item\em Input thread object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classar_1_1core_1_1virtual__console_a0d226d12336bef43420e176355c50f5d}\label{classar_1_1core_1_1virtual__console_a0d226d12336bef43420e176355c50f5d}} 
+std\+::function$<$ void()$>$ {\bfseries \+\_\+input\+\_\+thread\+\_\+fn}
+\begin{DoxyCompactList}\small\item\em Function used to create \textquotesingle{}input\textquotesingle{} thread. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Each emulator is called a \textquotesingle{}virtual console\textquotesingle{} in this frontend, this class represents a single emulator. 
+
+It\textquotesingle{}s a \textquotesingle{}wrapper\textquotesingle{} class around raw dynamic library with extra functionality so that the emulator can actually work. \begin{DoxyWarning}{Warning}
+Meta\+: Each virtual console should be treated as a full standalone program in terms of security, it is possible for an attacker to run pretty much any code inside the virtual console so any virtual console should be audited by the user as any other program downloaded from the internet would. 
+\end{DoxyWarning}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classar_1_1core_1_1virtual__console_a15a0ae8588fa7979e573d77bc226b075}\label{classar_1_1core_1_1virtual__console_a15a0ae8588fa7979e573d77bc226b075}} 
+\index{ar::core::virtual\_console@{ar::core::virtual\_console}!virtual\_console@{virtual\_console}}
+\index{virtual\_console@{virtual\_console}!ar::core::virtual\_console@{ar::core::virtual\_console}}
+\doxysubsubsection{\texorpdfstring{virtual\_console()}{virtual\_console()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily ar\+::core\+::virtual\+\_\+console\+::virtual\+\_\+console (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Default constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & Path to the \textquotesingle{}.vc\textquotesingle{} file of a virtual console \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exceptions} & 
+\begin{DoxyItemize}
+\item \mbox{\hyperlink{classar_1_1error_1_1io__error}{ar\+::error\+::io\+\_\+error}}\+: Invalid .vc file path
+\item \mbox{\hyperlink{classar_1_1core_1_1virtual__console__error}{ar\+::core\+::virtual\+\_\+console\+\_\+error}}\+: Unable to create virtual console 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classar_1_1core_1_1virtual__console_a124af2d63b3d5a996f173cbfa87acaa5}\label{classar_1_1core_1_1virtual__console_a124af2d63b3d5a996f173cbfa87acaa5}} 
+\index{ar::core::virtual\_console@{ar::core::virtual\_console}!virtual\_console@{virtual\_console}}
+\index{virtual\_console@{virtual\_console}!ar::core::virtual\_console@{ar::core::virtual\_console}}
+\doxysubsubsection{\texorpdfstring{virtual\_console()}{virtual\_console()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily ar\+::core\+::virtual\+\_\+console\+::virtual\+\_\+console (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classar_1_1core_1_1virtual__console}{virtual\+\_\+console}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Move constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Source rvalue \\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{Warning}
+All threads are set to nullptr and atomic thread running bool is set to false 
+\end{DoxyWarning}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classar_1_1core_1_1virtual__console_a8d2ad1d0962e1eaba042e82a6222cc0c}\label{classar_1_1core_1_1virtual__console_a8d2ad1d0962e1eaba042e82a6222cc0c}} 
+\index{ar::core::virtual\_console@{ar::core::virtual\_console}!get\_author@{get\_author}}
+\index{get\_author@{get\_author}!ar::core::virtual\_console@{ar::core::virtual\_console}}
+\doxysubsubsection{\texorpdfstring{get\_author()}{get\_author()}}
+{\footnotesize\ttfamily std\+::string ar\+::core\+::virtual\+\_\+console\+::get\+\_\+author (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the name/surname/both of the virtual console author as defined by the developer. 
+
+\begin{DoxyReturn}{Returns}
+Author of the virtual console developer 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classar_1_1core_1_1virtual__console_afc121dae1ddc908f7fe353bbe16d1502}\label{classar_1_1core_1_1virtual__console_afc121dae1ddc908f7fe353bbe16d1502}} 
+\index{ar::core::virtual\_console@{ar::core::virtual\_console}!get\_default\_window\_height@{get\_default\_window\_height}}
+\index{get\_default\_window\_height@{get\_default\_window\_height}!ar::core::virtual\_console@{ar::core::virtual\_console}}
+\doxysubsubsection{\texorpdfstring{get\_default\_window\_height()}{get\_default\_window\_height()}}
+{\footnotesize\ttfamily unsigned ar\+::core\+::virtual\+\_\+console\+::get\+\_\+default\+\_\+window\+\_\+height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the default window height as defined by the developer. 
+
+\begin{DoxyReturn}{Returns}
+Window height recommended by the virtual console 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classar_1_1core_1_1virtual__console_a108481ff37b4d6359e9c14e9f935d9cd}\label{classar_1_1core_1_1virtual__console_a108481ff37b4d6359e9c14e9f935d9cd}} 
+\index{ar::core::virtual\_console@{ar::core::virtual\_console}!get\_default\_window\_width@{get\_default\_window\_width}}
+\index{get\_default\_window\_width@{get\_default\_window\_width}!ar::core::virtual\_console@{ar::core::virtual\_console}}
+\doxysubsubsection{\texorpdfstring{get\_default\_window\_width()}{get\_default\_window\_width()}}
+{\footnotesize\ttfamily unsigned ar\+::core\+::virtual\+\_\+console\+::get\+\_\+default\+\_\+window\+\_\+width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the default window width as defined by the developer. 
+
+\begin{DoxyReturn}{Returns}
+Window width recommended by the virtual console 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classar_1_1core_1_1virtual__console_a14c70d4c4fa8d9abbbc6b88948db1c50}\label{classar_1_1core_1_1virtual__console_a14c70d4c4fa8d9abbbc6b88948db1c50}} 
+\index{ar::core::virtual\_console@{ar::core::virtual\_console}!get\_name@{get\_name}}
+\index{get\_name@{get\_name}!ar::core::virtual\_console@{ar::core::virtual\_console}}
+\doxysubsubsection{\texorpdfstring{get\_name()}{get\_name()}}
+{\footnotesize\ttfamily std\+::string ar\+::core\+::virtual\+\_\+console\+::get\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the name of the virtual console as defined by the developer. 
+
+\begin{DoxyReturn}{Returns}
+Name of the virtual console 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classar_1_1core_1_1virtual__console_affec56df5b4a318ec23c72813f152ed4}\label{classar_1_1core_1_1virtual__console_affec56df5b4a318ec23c72813f152ed4}} 
+\index{ar::core::virtual\_console@{ar::core::virtual\_console}!get\_path@{get\_path}}
+\index{get\_path@{get\_path}!ar::core::virtual\_console@{ar::core::virtual\_console}}
+\doxysubsubsection{\texorpdfstring{get\_path()}{get\_path()}}
+{\footnotesize\ttfamily std\+::string ar\+::core\+::virtual\+\_\+console\+::get\+\_\+path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the path from which the virtual console was created. 
+
+\begin{DoxyReturn}{Returns}
+Path of the library file used to create virtual console 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classar_1_1core_1_1virtual__console_ab2c4e806809214e49327180864adee46}\label{classar_1_1core_1_1virtual__console_ab2c4e806809214e49327180864adee46}} 
+\index{ar::core::virtual\_console@{ar::core::virtual\_console}!get\_rom\_extension@{get\_rom\_extension}}
+\index{get\_rom\_extension@{get\_rom\_extension}!ar::core::virtual\_console@{ar::core::virtual\_console}}
+\doxysubsubsection{\texorpdfstring{get\_rom\_extension()}{get\_rom\_extension()}}
+{\footnotesize\ttfamily std\+::string ar\+::core\+::virtual\+\_\+console\+::get\+\_\+rom\+\_\+extension (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the game extensions of the virtual console as defined by the developer. 
+
+\begin{DoxyReturn}{Returns}
+Extensions of games that this virtual console support 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classar_1_1core_1_1virtual__console_a94ca942b89fbb24ebefe67ba7f02479a}\label{classar_1_1core_1_1virtual__console_a94ca942b89fbb24ebefe67ba7f02479a}} 
+\index{ar::core::virtual\_console@{ar::core::virtual\_console}!get\_symbol\_from\_library@{get\_symbol\_from\_library}}
+\index{get\_symbol\_from\_library@{get\_symbol\_from\_library}!ar::core::virtual\_console@{ar::core::virtual\_console}}
+\doxysubsubsection{\texorpdfstring{get\_symbol\_from\_library()}{get\_symbol\_from\_library()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T ar\+::core\+::virtual\+\_\+console\+::get\+\_\+symbol\+\_\+from\+\_\+library (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{symbol\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Fetches the requested symbol\textquotesingle{}s address by name and casts it to T. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exceptions} & 
+\begin{DoxyItemize}
+\item std\+::runtime\+\_\+error\+: When the library has not been loaded
+\item ar\+::core\+::os\+\_\+error\+: When the symbol was not found inside the library 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyExceptions}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Type that the result will be casted to. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of the symbol as defined in the library. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Symbol\textquotesingle{}s address casted to T 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classar_1_1core_1_1virtual__console_a93c8ada30f651f93802924beb95cb383}\label{classar_1_1core_1_1virtual__console_a93c8ada30f651f93802924beb95cb383}} 
+\index{ar::core::virtual\_console@{ar::core::virtual\_console}!get\_system@{get\_system}}
+\index{get\_system@{get\_system}!ar::core::virtual\_console@{ar::core::virtual\_console}}
+\doxysubsubsection{\texorpdfstring{get\_system()}{get\_system()}}
+{\footnotesize\ttfamily std\+::string ar\+::core\+::virtual\+\_\+console\+::get\+\_\+system (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the system of the virtual console as defined by the developer. 
+
+\begin{DoxyReturn}{Returns}
+Name system emulated by the virtual console 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classar_1_1core_1_1virtual__console_a0b1bff7493b23f70fe87a6253c614a65}\label{classar_1_1core_1_1virtual__console_a0b1bff7493b23f70fe87a6253c614a65}} 
+\index{ar::core::virtual\_console@{ar::core::virtual\_console}!prepare\_for\_startup@{prepare\_for\_startup}}
+\index{prepare\_for\_startup@{prepare\_for\_startup}!ar::core::virtual\_console@{ar::core::virtual\_console}}
+\doxysubsubsection{\texorpdfstring{prepare\_for\_startup()}{prepare\_for\_startup()}}
+{\footnotesize\ttfamily void ar\+::core\+::virtual\+\_\+console\+::prepare\+\_\+for\+\_\+startup (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classar_1_1core_1_1executable__binary}{ar\+::core\+::executable\+\_\+binary}} $>$ \&}]{binary }\end{DoxyParamCaption})}
+
+
+
+Prepares the virtual console for starting. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em binary} & Binary file with executable content to be linked\\
+\hline
+\end{DoxyParams}
+Runs \textquotesingle{}\+\_\+ar\+\_\+vc\+\_\+startup\textquotesingle{} function allocating virtual console and library resources \begin{DoxyWarning}{Warning}
+Binary file is stored as reference, ownership remains with main window class 
+
+If this function runs you must use \textquotesingle{}quit\+\_\+and\+\_\+cleanup\textquotesingle{} later otherwise memory leak can happen 
+\end{DoxyWarning}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exceptions} & 
+\begin{DoxyItemize}
+\item \mbox{\hyperlink{classar_1_1core_1_1virtual__console__error}{ar\+::core\+::virtual\+\_\+console\+\_\+error}}\+: \textquotesingle{}ar\+\_\+vc\+\_\+startup\textquotesingle{} returned non-\/zero error code 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classar_1_1core_1_1virtual__console_aaf30d68d38e3826842276877a839aeba}\label{classar_1_1core_1_1virtual__console_aaf30d68d38e3826842276877a839aeba}} 
+\index{ar::core::virtual\_console@{ar::core::virtual\_console}!quit\_and\_cleanup@{quit\_and\_cleanup}}
+\index{quit\_and\_cleanup@{quit\_and\_cleanup}!ar::core::virtual\_console@{ar::core::virtual\_console}}
+\doxysubsubsection{\texorpdfstring{quit\_and\_cleanup()}{quit\_and\_cleanup()}}
+{\footnotesize\ttfamily void ar\+::core\+::virtual\+\_\+console\+::quit\+\_\+and\+\_\+cleanup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Cleans up all the resources that were allocated by the virtual console. 
+
+This function should only get called when the virtual console closes after it was started, that\textquotesingle{}s why it\textquotesingle{}s a separate method and not a destructor as a destructor would run even if virtual console was not started yet. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/daniel/\+Developer/access-\/to-\/retro/access-\/to-\/retro/frontend/src/core/\mbox{\hyperlink{virtual-console_8hpp}{virtual-\/console.\+hpp}}\item 
+/\+Users/daniel/\+Developer/access-\/to-\/retro/access-\/to-\/retro/frontend/src/core/virtual-\/console.\+cpp\end{DoxyCompactItemize}

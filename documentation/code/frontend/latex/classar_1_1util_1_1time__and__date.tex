@@ -1,0 +1,192 @@
+\hypertarget{classar_1_1util_1_1time__and__date}{}\doxysection{ar\+::util\+::time\+\_\+and\+\_\+date Class Reference}
+\label{classar_1_1util_1_1time__and__date}\index{ar::util::time\_and\_date@{ar::util::time\_and\_date}}
+
+
+Represents both time and date, not to be confused with time duration.  
+
+
+
+
+{\ttfamily \#include $<$time.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classar_1_1util_1_1time__and__date_a30e78ddf127eb5331bf813e04b5df553}{time\+\_\+and\+\_\+date}} (unsigned year, unsigned month, unsigned day, unsigned hour, unsigned minute, unsigned second)
+\item 
+std\+::string \mbox{\hyperlink{classar_1_1util_1_1time__and__date_a4dfd919f58d4176fa1f6dce50176b201}{as\+\_\+string}} (const std\+::string \&format=\char`\"{}D/M/Y h\+:m\+:s\char`\"{}) const
+\begin{DoxyCompactList}\small\item\em Returns a string in provided format based on the values in the object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classar_1_1util_1_1time__and__date_aaa8308fed6d8fe91f2cf8b023652629c}\label{classar_1_1util_1_1time__and__date_aaa8308fed6d8fe91f2cf8b023652629c}} 
+unsigned {\bfseries get\+\_\+year} () const
+\item 
+\mbox{\Hypertarget{classar_1_1util_1_1time__and__date_a4c511f39363537b7911760bc95f60f82}\label{classar_1_1util_1_1time__and__date_a4c511f39363537b7911760bc95f60f82}} 
+unsigned {\bfseries get\+\_\+month} () const
+\item 
+\mbox{\Hypertarget{classar_1_1util_1_1time__and__date_a5608fa7b846142256f4de28d915bfb4c}\label{classar_1_1util_1_1time__and__date_a5608fa7b846142256f4de28d915bfb4c}} 
+unsigned {\bfseries get\+\_\+day} () const
+\item 
+\mbox{\Hypertarget{classar_1_1util_1_1time__and__date_ad80a2786e69723bcb25e17e13b1d4a2b}\label{classar_1_1util_1_1time__and__date_ad80a2786e69723bcb25e17e13b1d4a2b}} 
+unsigned {\bfseries get\+\_\+hour} () const
+\item 
+\mbox{\Hypertarget{classar_1_1util_1_1time__and__date_a0e0b2c65e67d22a90dc2499ab1d318a7}\label{classar_1_1util_1_1time__and__date_a0e0b2c65e67d22a90dc2499ab1d318a7}} 
+unsigned {\bfseries get\+\_\+minute} () const
+\item 
+\mbox{\Hypertarget{classar_1_1util_1_1time__and__date_a5ba0dd810a6115603824f80d1f867a7f}\label{classar_1_1util_1_1time__and__date_a5ba0dd810a6115603824f80d1f867a7f}} 
+unsigned {\bfseries get\+\_\+second} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classar_1_1util_1_1time__and__date}{time\+\_\+and\+\_\+date}} \mbox{\hyperlink{classar_1_1util_1_1time__and__date_a1f1ebb8f882f1f2cbd9c27aec269eaad}{from\+\_\+date}} (unsigned year, unsigned month, unsigned day)
+\begin{DoxyCompactList}\small\item\em Constructs time and date object based on values provided, rest is filled in with unix epoch values. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{classar_1_1util_1_1time__and__date}{time\+\_\+and\+\_\+date}} \mbox{\hyperlink{classar_1_1util_1_1time__and__date_a4f7817158f59fa2aabd5a966c435bf60}{from\+\_\+time}} (unsigned hour, unsigned minute, unsigned second)
+\begin{DoxyCompactList}\small\item\em Constructs time and date object based on values provided, rest is filled in with unix epoch values. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{classar_1_1util_1_1time__and__date}{time\+\_\+and\+\_\+date}} \mbox{\hyperlink{classar_1_1util_1_1time__and__date_a482baf535cf3b456ece51b1d659c6356}{now}} ()
+\begin{DoxyCompactList}\small\item\em Constructs time and date object based on current time and date. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classar_1_1util_1_1time__and__date_ab4fffbd09c797dea3330baef7d6a0518}\label{classar_1_1util_1_1time__and__date_ab4fffbd09c797dea3330baef7d6a0518}} 
+void {\bfseries normalise} ()
+\begin{DoxyCompactList}\small\item\em Normalises values. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classar_1_1util_1_1time__and__date_af89ed0537df8028e9584060953cfb9a3}\label{classar_1_1util_1_1time__and__date_af89ed0537df8028e9584060953cfb9a3}} 
+unsigned {\bfseries \+\_\+year}
+\item 
+\mbox{\Hypertarget{classar_1_1util_1_1time__and__date_af7d907212045f47a912d034c076b9284}\label{classar_1_1util_1_1time__and__date_af7d907212045f47a912d034c076b9284}} 
+unsigned {\bfseries \+\_\+month}
+\item 
+\mbox{\Hypertarget{classar_1_1util_1_1time__and__date_abc242ccb8b09b9ca4780d9d3a056cf03}\label{classar_1_1util_1_1time__and__date_abc242ccb8b09b9ca4780d9d3a056cf03}} 
+unsigned {\bfseries \+\_\+day}
+\item 
+\mbox{\Hypertarget{classar_1_1util_1_1time__and__date_a1b40abdb1e21218f46a3726b5fe83d41}\label{classar_1_1util_1_1time__and__date_a1b40abdb1e21218f46a3726b5fe83d41}} 
+unsigned {\bfseries \+\_\+hour}
+\item 
+\mbox{\Hypertarget{classar_1_1util_1_1time__and__date_a6c310bad42481779f848d279dcdf4465}\label{classar_1_1util_1_1time__and__date_a6c310bad42481779f848d279dcdf4465}} 
+unsigned {\bfseries \+\_\+minute}
+\item 
+\mbox{\Hypertarget{classar_1_1util_1_1time__and__date_a0424e05e4b6cc4f74501cf270cd1056d}\label{classar_1_1util_1_1time__and__date_a0424e05e4b6cc4f74501cf270cd1056d}} 
+unsigned {\bfseries \+\_\+second}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classar_1_1util_1_1time__and__date_ae06dbad5e39fdc851c8d9a17560622f3}\label{classar_1_1util_1_1time__and__date_ae06dbad5e39fdc851c8d9a17560622f3}} 
+static constexpr unsigned {\bfseries DEFAULT\+\_\+\+YEAR} = 1970
+\item 
+\mbox{\Hypertarget{classar_1_1util_1_1time__and__date_ad41cb6807fc55ae853157833d99e4924}\label{classar_1_1util_1_1time__and__date_ad41cb6807fc55ae853157833d99e4924}} 
+static constexpr unsigned {\bfseries DEFAULT\+\_\+\+MONTH} = 1
+\item 
+\mbox{\Hypertarget{classar_1_1util_1_1time__and__date_aa682e10c5871d5eb9f11f215c43d7ff1}\label{classar_1_1util_1_1time__and__date_aa682e10c5871d5eb9f11f215c43d7ff1}} 
+static constexpr unsigned {\bfseries DEFAULT\+\_\+\+DAY} = 1
+\item 
+\mbox{\Hypertarget{classar_1_1util_1_1time__and__date_acdb88fbd9103f0fe928888c6458f33f7}\label{classar_1_1util_1_1time__and__date_acdb88fbd9103f0fe928888c6458f33f7}} 
+static constexpr unsigned {\bfseries DEFAULT\+\_\+\+HOUR} = 0
+\item 
+\mbox{\Hypertarget{classar_1_1util_1_1time__and__date_ad5e5c2b6ba932a3455559b768176bd4b}\label{classar_1_1util_1_1time__and__date_ad5e5c2b6ba932a3455559b768176bd4b}} 
+static constexpr unsigned {\bfseries DEFAULT\+\_\+\+MINUTE} = 0
+\item 
+\mbox{\Hypertarget{classar_1_1util_1_1time__and__date_a3bc78f7cd4c96e64783b07a34bd12f20}\label{classar_1_1util_1_1time__and__date_a3bc78f7cd4c96e64783b07a34bd12f20}} 
+static constexpr unsigned {\bfseries DEFAULT\+\_\+\+SECOND} = 0
+\item 
+static constexpr std\+::array$<$ unsigned, 12 $>$ \mbox{\hyperlink{classar_1_1util_1_1time__and__date_a5c616efac7894cbcc715f7d62d46b643}{LAST\+\_\+\+DAY\+\_\+\+OF\+\_\+\+MONTH}}
+\begin{DoxyCompactList}\small\item\em Stores the number of days in given month (index) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents both time and date, not to be confused with time duration. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classar_1_1util_1_1time__and__date_a30e78ddf127eb5331bf813e04b5df553}\label{classar_1_1util_1_1time__and__date_a30e78ddf127eb5331bf813e04b5df553}} 
+\index{ar::util::time\_and\_date@{ar::util::time\_and\_date}!time\_and\_date@{time\_and\_date}}
+\index{time\_and\_date@{time\_and\_date}!ar::util::time\_and\_date@{ar::util::time\_and\_date}}
+\doxysubsubsection{\texorpdfstring{time\_and\_date()}{time\_and\_date()}}
+{\footnotesize\ttfamily ar\+::util\+::time\+\_\+and\+\_\+date\+::time\+\_\+and\+\_\+date (\begin{DoxyParamCaption}\item[{unsigned}]{year,  }\item[{unsigned}]{month,  }\item[{unsigned}]{day,  }\item[{unsigned}]{hour,  }\item[{unsigned}]{minute,  }\item[{unsigned}]{second }\end{DoxyParamCaption})}
+
+Values will be normalised, if the value is incorrect the default (from unix epoch) will be chosen 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classar_1_1util_1_1time__and__date_a4dfd919f58d4176fa1f6dce50176b201}\label{classar_1_1util_1_1time__and__date_a4dfd919f58d4176fa1f6dce50176b201}} 
+\index{ar::util::time\_and\_date@{ar::util::time\_and\_date}!as\_string@{as\_string}}
+\index{as\_string@{as\_string}!ar::util::time\_and\_date@{ar::util::time\_and\_date}}
+\doxysubsubsection{\texorpdfstring{as\_string()}{as\_string()}}
+{\footnotesize\ttfamily std\+::string ar\+::util\+::time\+\_\+and\+\_\+date\+::as\+\_\+string (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{format = {\ttfamily \char`\"{}D/M/Y~h\+:m\+:s\char`\"{}} }\end{DoxyParamCaption}) const}
+
+
+
+Returns a string in provided format based on the values in the object. 
+
+Format can only contain Y, M, D, h, m, s. Note the upper and lower case letters. 
+\begin{DoxyParams}{Parameters}
+{\em format} & Optional string in which the string is to be returned, for example\+: \char`\"{}\+Y-\/\+M-\/\+D h\+:m\+:s\char`\"{} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+String with time values filled in 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classar_1_1util_1_1time__and__date_a1f1ebb8f882f1f2cbd9c27aec269eaad}\label{classar_1_1util_1_1time__and__date_a1f1ebb8f882f1f2cbd9c27aec269eaad}} 
+\index{ar::util::time\_and\_date@{ar::util::time\_and\_date}!from\_date@{from\_date}}
+\index{from\_date@{from\_date}!ar::util::time\_and\_date@{ar::util::time\_and\_date}}
+\doxysubsubsection{\texorpdfstring{from\_date()}{from\_date()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classar_1_1util_1_1time__and__date}{ar\+::util\+::time\+\_\+and\+\_\+date}} ar\+::util\+::time\+\_\+and\+\_\+date\+::from\+\_\+date (\begin{DoxyParamCaption}\item[{unsigned}]{year,  }\item[{unsigned}]{month,  }\item[{unsigned}]{day }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Constructs time and date object based on values provided, rest is filled in with unix epoch values. 
+
+Values will be normalised, if the value is incorrect the default (from unix epoch) will be chosen \begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classar_1_1util_1_1time__and__date}{time\+\_\+and\+\_\+date}} object with normalised values 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classar_1_1util_1_1time__and__date_a4f7817158f59fa2aabd5a966c435bf60}\label{classar_1_1util_1_1time__and__date_a4f7817158f59fa2aabd5a966c435bf60}} 
+\index{ar::util::time\_and\_date@{ar::util::time\_and\_date}!from\_time@{from\_time}}
+\index{from\_time@{from\_time}!ar::util::time\_and\_date@{ar::util::time\_and\_date}}
+\doxysubsubsection{\texorpdfstring{from\_time()}{from\_time()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classar_1_1util_1_1time__and__date}{ar\+::util\+::time\+\_\+and\+\_\+date}} ar\+::util\+::time\+\_\+and\+\_\+date\+::from\+\_\+time (\begin{DoxyParamCaption}\item[{unsigned}]{hour,  }\item[{unsigned}]{minute,  }\item[{unsigned}]{second }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Constructs time and date object based on values provided, rest is filled in with unix epoch values. 
+
+Values will be normalised, if the value is incorrect the default (from unix epoch) will be chosen \begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classar_1_1util_1_1time__and__date}{time\+\_\+and\+\_\+date}} object with normalised values 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classar_1_1util_1_1time__and__date_a482baf535cf3b456ece51b1d659c6356}\label{classar_1_1util_1_1time__and__date_a482baf535cf3b456ece51b1d659c6356}} 
+\index{ar::util::time\_and\_date@{ar::util::time\_and\_date}!now@{now}}
+\index{now@{now}!ar::util::time\_and\_date@{ar::util::time\_and\_date}}
+\doxysubsubsection{\texorpdfstring{now()}{now()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classar_1_1util_1_1time__and__date}{ar\+::util\+::time\+\_\+and\+\_\+date}} ar\+::util\+::time\+\_\+and\+\_\+date\+::now (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Constructs time and date object based on current time and date. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classar_1_1util_1_1time__and__date}{time\+\_\+and\+\_\+date}} object with normalised values 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classar_1_1util_1_1time__and__date_a5c616efac7894cbcc715f7d62d46b643}\label{classar_1_1util_1_1time__and__date_a5c616efac7894cbcc715f7d62d46b643}} 
+\index{ar::util::time\_and\_date@{ar::util::time\_and\_date}!LAST\_DAY\_OF\_MONTH@{LAST\_DAY\_OF\_MONTH}}
+\index{LAST\_DAY\_OF\_MONTH@{LAST\_DAY\_OF\_MONTH}!ar::util::time\_and\_date@{ar::util::time\_and\_date}}
+\doxysubsubsection{\texorpdfstring{LAST\_DAY\_OF\_MONTH}{LAST\_DAY\_OF\_MONTH}}
+{\footnotesize\ttfamily constexpr std\+::array$<$unsigned, 12$>$ ar\+::util\+::time\+\_\+and\+\_\+date\+::\+LAST\+\_\+\+DAY\+\_\+\+OF\+\_\+\+MONTH\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}, {\ttfamily [private]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{\ 31,\ 28,\ 31,\ 30,\ 31,\ 30,\ 31,\ 31,\ 30,\ 31,\ 30,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 31\ \}}
+
+\end{DoxyCode}
+
+
+Stores the number of days in given month (index) 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/daniel/\+Developer/access-\/to-\/retro/access-\/to-\/retro/frontend/src/util/\mbox{\hyperlink{time_8hpp}{time.\+hpp}}\item 
+/\+Users/daniel/\+Developer/access-\/to-\/retro/access-\/to-\/retro/frontend/src/util/time.\+cpp\end{DoxyCompactItemize}

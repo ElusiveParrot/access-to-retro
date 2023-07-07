@@ -1,0 +1,219 @@
+\hypertarget{group__group__data}{}\doxysection{Data}
+\label{group__group__data}\index{Data@{Data}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structar__bit}{ar\+\_\+bit}}
+\begin{DoxyCompactList}\small\item\em Type representing a single bit. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef uint8\+\_\+t \mbox{\hyperlink{group__group__data_ga98a547dd832af88e55f5046e7bf2aa57}{ar\+\_\+byte}}
+\begin{DoxyCompactList}\small\item\em Type representing a single byte inside the memory. \end{DoxyCompactList}\item 
+typedef uint8\+\_\+t \mbox{\hyperlink{group__group__data_gab21b83d8b5627a31f0ce97b7c4582b5c}{ar\+\_\+sbyte}}
+\begin{DoxyCompactList}\small\item\em Type representing a single byte inside the memory. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__group__data_gadc181543960ce661bfd1dab31dcc1881}\label{group__group__data_gadc181543960ce661bfd1dab31dcc1881}} 
+typedef void $\ast$ {\bfseries ar\+\_\+generic\+\_\+memory\+\_\+ptr}
+\begin{DoxyCompactList}\small\item\em Type representing generic memory pointer. \end{DoxyCompactList}\item 
+typedef uintmax\+\_\+t \mbox{\hyperlink{group__group__data_ga7ab6719e5d65156b5672eb2de3f6cfad}{ar\+\_\+max\+\_\+int}}
+\begin{DoxyCompactList}\small\item\em Type representing widest possible integer for this platform. \end{DoxyCompactList}\item 
+typedef intmax\+\_\+t \mbox{\hyperlink{group__group__data_ga0b20a9fac92eb141cbd3835332191d33}{ar\+\_\+max\+\_\+sint}}
+\begin{DoxyCompactList}\small\item\em Type representing widest possible integer for this platform. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__group__data_gaa2a5774f881966db1ec06bf6bcefff8a}\label{group__group__data_gaa2a5774f881966db1ec06bf6bcefff8a}} 
+typedef struct \mbox{\hyperlink{structar__bit}{ar\+\_\+bit}} {\bfseries ar\+\_\+bit}
+\begin{DoxyCompactList}\small\item\em Typedef for \textquotesingle{}\mbox{\hyperlink{structar__bit}{ar\+\_\+bit}}\textquotesingle{} structure to \textquotesingle{}simulate\textquotesingle{} primitive type. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__group__data_ga02cbd533e2ad45810954d3578099c0ce}\label{group__group__data_ga02cbd533e2ad45810954d3578099c0ce}} 
+typedef uint8\+\_\+t {\bfseries ar\+\_\+bit\+\_\+index}
+\begin{DoxyCompactList}\small\item\em Type representing an index of a bit inside a number. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+AR\+\_\+\+API void \mbox{\hyperlink{group__group__data_gac8660764bc1ffabf946a65bd18c0cc5a}{ar\+\_\+set\+\_\+bit}} (\mbox{\hyperlink{group__group__data_ga7ab6719e5d65156b5672eb2de3f6cfad}{ar\+\_\+max\+\_\+int}} $\ast$data, \mbox{\hyperlink{group__group__data_ga02cbd533e2ad45810954d3578099c0ce}{ar\+\_\+bit\+\_\+index}} bit\+\_\+index)
+\begin{DoxyCompactList}\small\item\em Set specific bit inside the number by setting it to \textquotesingle{}1\textquotesingle{}. \end{DoxyCompactList}\item 
+AR\+\_\+\+API void \mbox{\hyperlink{group__group__data_gaa15743b1f3424f8a1773def0e94ed7e6}{ar\+\_\+set\+\_\+bit\+\_\+to}} (\mbox{\hyperlink{group__group__data_ga7ab6719e5d65156b5672eb2de3f6cfad}{ar\+\_\+max\+\_\+int}} $\ast$data, \mbox{\hyperlink{group__group__data_ga02cbd533e2ad45810954d3578099c0ce}{ar\+\_\+bit\+\_\+index}} bit\+\_\+index, \mbox{\hyperlink{structar__bit}{ar\+\_\+bit}} new\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Set specific bit inside the number to provided value. \end{DoxyCompactList}\item 
+AR\+\_\+\+API void \mbox{\hyperlink{group__group__data_gafb559abcf4d9f4927ad4154c7613390b}{ar\+\_\+clear\+\_\+bit}} (\mbox{\hyperlink{group__group__data_ga7ab6719e5d65156b5672eb2de3f6cfad}{ar\+\_\+max\+\_\+int}} $\ast$data, \mbox{\hyperlink{group__group__data_ga02cbd533e2ad45810954d3578099c0ce}{ar\+\_\+bit\+\_\+index}} bit\+\_\+index)
+\begin{DoxyCompactList}\small\item\em Clear specific bit inside the number by setting it to \textquotesingle{}0\textquotesingle{}. \end{DoxyCompactList}\item 
+AR\+\_\+\+API void \mbox{\hyperlink{group__group__data_gaad5cb69d923f81bd75ddc12bd7571c62}{ar\+\_\+toggle\+\_\+bit}} (\mbox{\hyperlink{group__group__data_ga7ab6719e5d65156b5672eb2de3f6cfad}{ar\+\_\+max\+\_\+int}} $\ast$data, \mbox{\hyperlink{group__group__data_ga02cbd533e2ad45810954d3578099c0ce}{ar\+\_\+bit\+\_\+index}} bit\+\_\+index)
+\begin{DoxyCompactList}\small\item\em Toggles a specific bit inside the number. \end{DoxyCompactList}\item 
+AR\+\_\+\+API bool \mbox{\hyperlink{group__group__data_gab038aa1926c64dcf4ccc8f7dfe1788b1}{ar\+\_\+is\+\_\+bit\+\_\+set}} (\mbox{\hyperlink{group__group__data_ga7ab6719e5d65156b5672eb2de3f6cfad}{ar\+\_\+max\+\_\+int}} data, \mbox{\hyperlink{group__group__data_ga02cbd533e2ad45810954d3578099c0ce}{ar\+\_\+bit\+\_\+index}} bit\+\_\+index)
+\begin{DoxyCompactList}\small\item\em Checks whether given bit inside the number is set (its value is \textquotesingle{}1\textquotesingle{}) \end{DoxyCompactList}\item 
+AR\+\_\+\+API \mbox{\hyperlink{group__group__data_ga7ab6719e5d65156b5672eb2de3f6cfad}{ar\+\_\+max\+\_\+int}} \mbox{\hyperlink{group__group__data_ga94b39b0a4c4e192550f43f06cdbb357e}{ar\+\_\+combine\+\_\+n\+\_\+bytes}} (const \mbox{\hyperlink{group__group__data_ga98a547dd832af88e55f5046e7bf2aa57}{ar\+\_\+byte}} $\ast$bytes, \mbox{\hyperlink{group__group__data_ga7ab6719e5d65156b5672eb2de3f6cfad}{ar\+\_\+max\+\_\+int}} byte\+\_\+count)
+\begin{DoxyCompactList}\small\item\em Combine n bytes into a single integer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Helper functions dealing with data 
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{group__group__data_ga98a547dd832af88e55f5046e7bf2aa57}\label{group__group__data_ga98a547dd832af88e55f5046e7bf2aa57}} 
+\index{Data@{Data}!ar\_byte@{ar\_byte}}
+\index{ar\_byte@{ar\_byte}!Data@{Data}}
+\doxysubsubsection{\texorpdfstring{ar\_byte}{ar\_byte}}
+{\footnotesize\ttfamily typedef uint8\+\_\+t \mbox{\hyperlink{group__group__data_ga98a547dd832af88e55f5046e7bf2aa57}{ar\+\_\+byte}}}
+
+
+
+Type representing a single byte inside the memory. 
+
+\begin{DoxyRemark}{Remarks}
+This type is unsigned, for signed byte see \textquotesingle{}ar\+\_\+sbyte\textquotesingle{} 
+\end{DoxyRemark}
+\mbox{\Hypertarget{group__group__data_ga7ab6719e5d65156b5672eb2de3f6cfad}\label{group__group__data_ga7ab6719e5d65156b5672eb2de3f6cfad}} 
+\index{Data@{Data}!ar\_max\_int@{ar\_max\_int}}
+\index{ar\_max\_int@{ar\_max\_int}!Data@{Data}}
+\doxysubsubsection{\texorpdfstring{ar\_max\_int}{ar\_max\_int}}
+{\footnotesize\ttfamily typedef uintmax\+\_\+t \mbox{\hyperlink{group__group__data_ga7ab6719e5d65156b5672eb2de3f6cfad}{ar\+\_\+max\+\_\+int}}}
+
+
+
+Type representing widest possible integer for this platform. 
+
+This is useful for functions that perform bitwise operations and allow integer of any size to be changed, this type helps with that as any integer type can be promoted to this one. \begin{DoxyRemark}{Remarks}
+This type is unsigned, for signed equivalent see \textquotesingle{}ar\+\_\+max\+\_\+sint\textquotesingle{} 
+\end{DoxyRemark}
+\mbox{\Hypertarget{group__group__data_ga0b20a9fac92eb141cbd3835332191d33}\label{group__group__data_ga0b20a9fac92eb141cbd3835332191d33}} 
+\index{Data@{Data}!ar\_max\_sint@{ar\_max\_sint}}
+\index{ar\_max\_sint@{ar\_max\_sint}!Data@{Data}}
+\doxysubsubsection{\texorpdfstring{ar\_max\_sint}{ar\_max\_sint}}
+{\footnotesize\ttfamily typedef intmax\+\_\+t \mbox{\hyperlink{group__group__data_ga0b20a9fac92eb141cbd3835332191d33}{ar\+\_\+max\+\_\+sint}}}
+
+
+
+Type representing widest possible integer for this platform. 
+
+This is useful for functions that perform bitwise operations and allow integer of any size to be changed, this type helps with that as any signed integer type can be promoted to this one. \begin{DoxyWarning}{Warning}
+\textquotesingle{}ar\+\_\+max\+\_\+int\textquotesingle{} is generally preferred and should always be used if promotion from integers larger than 32-\/bit is possible 
+\end{DoxyWarning}
+\begin{DoxyRemark}{Remarks}
+This type is signed, for unsigned equivalent see \textquotesingle{}ar\+\_\+max\+\_\+int\textquotesingle{} 
+\end{DoxyRemark}
+\mbox{\Hypertarget{group__group__data_gab21b83d8b5627a31f0ce97b7c4582b5c}\label{group__group__data_gab21b83d8b5627a31f0ce97b7c4582b5c}} 
+\index{Data@{Data}!ar\_sbyte@{ar\_sbyte}}
+\index{ar\_sbyte@{ar\_sbyte}!Data@{Data}}
+\doxysubsubsection{\texorpdfstring{ar\_sbyte}{ar\_sbyte}}
+{\footnotesize\ttfamily typedef uint8\+\_\+t \mbox{\hyperlink{group__group__data_gab21b83d8b5627a31f0ce97b7c4582b5c}{ar\+\_\+sbyte}}}
+
+
+
+Type representing a single byte inside the memory. 
+
+\begin{DoxyRemark}{Remarks}
+This type is signed, for unsigned byte see \textquotesingle{}ar\+\_\+sbyte\textquotesingle{} 
+\end{DoxyRemark}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group__group__data_gafb559abcf4d9f4927ad4154c7613390b}\label{group__group__data_gafb559abcf4d9f4927ad4154c7613390b}} 
+\index{Data@{Data}!ar\_clear\_bit@{ar\_clear\_bit}}
+\index{ar\_clear\_bit@{ar\_clear\_bit}!Data@{Data}}
+\doxysubsubsection{\texorpdfstring{ar\_clear\_bit()}{ar\_clear\_bit()}}
+{\footnotesize\ttfamily AR\+\_\+\+API void ar\+\_\+clear\+\_\+bit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__group__data_ga7ab6719e5d65156b5672eb2de3f6cfad}{ar\+\_\+max\+\_\+int}} $\ast$}]{data,  }\item[{\mbox{\hyperlink{group__group__data_ga02cbd533e2ad45810954d3578099c0ce}{ar\+\_\+bit\+\_\+index}}}]{bit\+\_\+index }\end{DoxyParamCaption})}
+
+
+
+Clear specific bit inside the number by setting it to \textquotesingle{}0\textquotesingle{}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Number in which the bit will be cleared \\
+\hline
+{\em bit\+\_\+index} & Index of the bit, 0 indexed \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__group__data_ga94b39b0a4c4e192550f43f06cdbb357e}\label{group__group__data_ga94b39b0a4c4e192550f43f06cdbb357e}} 
+\index{Data@{Data}!ar\_combine\_n\_bytes@{ar\_combine\_n\_bytes}}
+\index{ar\_combine\_n\_bytes@{ar\_combine\_n\_bytes}!Data@{Data}}
+\doxysubsubsection{\texorpdfstring{ar\_combine\_n\_bytes()}{ar\_combine\_n\_bytes()}}
+{\footnotesize\ttfamily AR\+\_\+\+API \mbox{\hyperlink{group__group__data_ga7ab6719e5d65156b5672eb2de3f6cfad}{ar\+\_\+max\+\_\+int}} ar\+\_\+combine\+\_\+n\+\_\+bytes (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{group__group__data_ga98a547dd832af88e55f5046e7bf2aa57}{ar\+\_\+byte}} $\ast$}]{bytes,  }\item[{\mbox{\hyperlink{group__group__data_ga7ab6719e5d65156b5672eb2de3f6cfad}{ar\+\_\+max\+\_\+int}}}]{byte\+\_\+count }\end{DoxyParamCaption})}
+
+
+
+Combine n bytes into a single integer. 
+
+\begin{DoxyRemark}{Remarks}
+Up to 8 bytes will be used, if more provided they will be ignored 
+\end{DoxyRemark}
+
+\begin{DoxyParams}{Parameters}
+{\em bytes} & Array of bytes that will be used \\
+\hline
+{\em byte\+\_\+count} & Number of bytes provided \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Constructed integer 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__group__data_gab038aa1926c64dcf4ccc8f7dfe1788b1}\label{group__group__data_gab038aa1926c64dcf4ccc8f7dfe1788b1}} 
+\index{Data@{Data}!ar\_is\_bit\_set@{ar\_is\_bit\_set}}
+\index{ar\_is\_bit\_set@{ar\_is\_bit\_set}!Data@{Data}}
+\doxysubsubsection{\texorpdfstring{ar\_is\_bit\_set()}{ar\_is\_bit\_set()}}
+{\footnotesize\ttfamily AR\+\_\+\+API bool ar\+\_\+is\+\_\+bit\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__group__data_ga7ab6719e5d65156b5672eb2de3f6cfad}{ar\+\_\+max\+\_\+int}}}]{data,  }\item[{\mbox{\hyperlink{group__group__data_ga02cbd533e2ad45810954d3578099c0ce}{ar\+\_\+bit\+\_\+index}}}]{bit\+\_\+index }\end{DoxyParamCaption})}
+
+
+
+Checks whether given bit inside the number is set (its value is \textquotesingle{}1\textquotesingle{}) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Number in which the bit will be checked \\
+\hline
+{\em bit\+\_\+index} & Index of the bit, 0 indexed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Whether the bit is set 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__group__data_gac8660764bc1ffabf946a65bd18c0cc5a}\label{group__group__data_gac8660764bc1ffabf946a65bd18c0cc5a}} 
+\index{Data@{Data}!ar\_set\_bit@{ar\_set\_bit}}
+\index{ar\_set\_bit@{ar\_set\_bit}!Data@{Data}}
+\doxysubsubsection{\texorpdfstring{ar\_set\_bit()}{ar\_set\_bit()}}
+{\footnotesize\ttfamily AR\+\_\+\+API void ar\+\_\+set\+\_\+bit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__group__data_ga7ab6719e5d65156b5672eb2de3f6cfad}{ar\+\_\+max\+\_\+int}} $\ast$}]{data,  }\item[{\mbox{\hyperlink{group__group__data_ga02cbd533e2ad45810954d3578099c0ce}{ar\+\_\+bit\+\_\+index}}}]{bit\+\_\+index }\end{DoxyParamCaption})}
+
+
+
+Set specific bit inside the number by setting it to \textquotesingle{}1\textquotesingle{}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Number in which the bit will be set \\
+\hline
+{\em bit\+\_\+index} & Index of the bit, 0 indexed \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__group__data_gaa15743b1f3424f8a1773def0e94ed7e6}\label{group__group__data_gaa15743b1f3424f8a1773def0e94ed7e6}} 
+\index{Data@{Data}!ar\_set\_bit\_to@{ar\_set\_bit\_to}}
+\index{ar\_set\_bit\_to@{ar\_set\_bit\_to}!Data@{Data}}
+\doxysubsubsection{\texorpdfstring{ar\_set\_bit\_to()}{ar\_set\_bit\_to()}}
+{\footnotesize\ttfamily AR\+\_\+\+API void ar\+\_\+set\+\_\+bit\+\_\+to (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__group__data_ga7ab6719e5d65156b5672eb2de3f6cfad}{ar\+\_\+max\+\_\+int}} $\ast$}]{data,  }\item[{\mbox{\hyperlink{group__group__data_ga02cbd533e2ad45810954d3578099c0ce}{ar\+\_\+bit\+\_\+index}}}]{bit\+\_\+index,  }\item[{\mbox{\hyperlink{structar__bit}{ar\+\_\+bit}}}]{new\+\_\+value }\end{DoxyParamCaption})}
+
+
+
+Set specific bit inside the number to provided value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Number in which the bit will be set \\
+\hline
+{\em bit\+\_\+index} & Index of the bit, 0 indexed \\
+\hline
+{\em new\+\_\+value} & Value to which the bit will be set \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__group__data_gaad5cb69d923f81bd75ddc12bd7571c62}\label{group__group__data_gaad5cb69d923f81bd75ddc12bd7571c62}} 
+\index{Data@{Data}!ar\_toggle\_bit@{ar\_toggle\_bit}}
+\index{ar\_toggle\_bit@{ar\_toggle\_bit}!Data@{Data}}
+\doxysubsubsection{\texorpdfstring{ar\_toggle\_bit()}{ar\_toggle\_bit()}}
+{\footnotesize\ttfamily AR\+\_\+\+API void ar\+\_\+toggle\+\_\+bit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__group__data_ga7ab6719e5d65156b5672eb2de3f6cfad}{ar\+\_\+max\+\_\+int}} $\ast$}]{data,  }\item[{\mbox{\hyperlink{group__group__data_ga02cbd533e2ad45810954d3578099c0ce}{ar\+\_\+bit\+\_\+index}}}]{bit\+\_\+index }\end{DoxyParamCaption})}
+
+
+
+Toggles a specific bit inside the number. 
+
+If bit is 0 then it will be set, if bit is 1 then it will be cleared 
+\begin{DoxyParams}{Parameters}
+{\em data} & Number in which the bit will change its value \\
+\hline
+{\em bit\+\_\+index} & Index of the bit, 0 indexed \\
+\hline
+\end{DoxyParams}

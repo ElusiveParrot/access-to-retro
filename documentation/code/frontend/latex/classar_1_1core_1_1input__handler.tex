@@ -1,0 +1,115 @@
+\hypertarget{classar_1_1core_1_1input__handler}{}\doxysection{ar\+::core\+::input\+\_\+handler Class Reference}
+\label{classar_1_1core_1_1input__handler}\index{ar::core::input\_handler@{ar::core::input\_handler}}
+
+
+Handles gamepad/keyboard inputs for the virtual console.  
+
+
+
+
+{\ttfamily \#include $<$input-\/handler.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classar_1_1core_1_1input__handler_a3bac14d6d9614f7ba26996fa0229faa5}{input\+\_\+handler}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classar_1_1core_1_1virtual__console}{core\+::virtual\+\_\+console}} $>$ \&\mbox{\hyperlink{classar_1_1core_1_1virtual__console}{virtual\+\_\+console}})
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classar_1_1core_1_1input__handler_ae5d14cd68f842619c4f83913e9161568}{key\+\_\+press}} (const std\+::string \&key)
+\begin{DoxyCompactList}\small\item\em Handles key press event. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classar_1_1core_1_1input__handler_a09a0d8ec516cf33f32b96a1b55685bae}{key\+\_\+release}} (const std\+::string \&key)
+\begin{DoxyCompactList}\small\item\em Handles key release event. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classar_1_1core_1_1input__handler_a6341faff99c74bfe03f17f3164e6e854}\label{classar_1_1core_1_1input__handler_a6341faff99c74bfe03f17f3164e6e854}} 
+void {\bfseries fill\+\_\+input\+\_\+translation\+\_\+map\+\_\+from\+\_\+settings} ()
+\begin{DoxyCompactList}\small\item\em Fill input translation map from settings. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classar_1_1core_1_1input__handler_a7ef92fcddc59299c03c2af3a369adbe9}\label{classar_1_1core_1_1input__handler_a7ef92fcddc59299c03c2af3a369adbe9}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classar_1_1util_1_1settings__manager}{ar\+::util\+::settings\+\_\+manager}} $>$ {\bfseries \+\_\+settings\+\_\+manager}
+\begin{DoxyCompactList}\small\item\em Global settings manager used to get user\textquotesingle{}s input settings. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classar_1_1core_1_1input__handler_ab6654d7b84a718f9118448dd54887d23}\label{classar_1_1core_1_1input__handler_ab6654d7b84a718f9118448dd54887d23}} 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classar_1_1core_1_1virtual__console}{ar\+::core\+::virtual\+\_\+console}} $>$ \& {\bfseries \+\_\+virtual\+\_\+console}
+\begin{DoxyCompactList}\small\item\em Virtual console that the inputs will be directed to. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classar_1_1core_1_1input__handler_a40e3f4b9276ff7e99841dc600c1cc3d4}\label{classar_1_1core_1_1input__handler_a40e3f4b9276ff7e99841dc600c1cc3d4}} 
+std\+::function$<$ void(ar\+\_\+unified\+\_\+controller\+\_\+key, ar\+\_\+unified\+\_\+controller\+\_\+key\+\_\+status)$>$ {\bfseries \+\_\+set\+\_\+key\+\_\+status\+\_\+fn}
+\begin{DoxyCompactList}\small\item\em Access to Retro library function to set key status, fetches from \textquotesingle{}\+\_\+virtual\+\_\+console\textquotesingle{} in constructor. \end{DoxyCompactList}\item 
+std\+::unordered\+\_\+map$<$ std\+::string, ar\+\_\+unified\+\_\+controller\+\_\+key $>$ \mbox{\hyperlink{classar_1_1core_1_1input__handler_aff1e018b4ad5fbf54c2e3d61d1f5f5bf}{\+\_\+input\+\_\+translation\+\_\+map}}
+\begin{DoxyCompactList}\small\item\em Map used for input translation Qt -\/\texorpdfstring{$>$}{>} Unified Controller. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Handles gamepad/keyboard inputs for the virtual console. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classar_1_1core_1_1input__handler_a3bac14d6d9614f7ba26996fa0229faa5}\label{classar_1_1core_1_1input__handler_a3bac14d6d9614f7ba26996fa0229faa5}} 
+\index{ar::core::input\_handler@{ar::core::input\_handler}!input\_handler@{input\_handler}}
+\index{input\_handler@{input\_handler}!ar::core::input\_handler@{ar::core::input\_handler}}
+\doxysubsubsection{\texorpdfstring{input\_handler()}{input\_handler()}}
+{\footnotesize\ttfamily ar\+::core\+::input\+\_\+handler\+::input\+\_\+handler (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classar_1_1core_1_1virtual__console}{core\+::virtual\+\_\+console}} $>$ \&}]{virtual\+\_\+console }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Default constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \mbox{\hyperlink{classar_1_1core_1_1virtual__console}{virtual\+\_\+console}}} & Virtual console that the inputs will be directed to \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classar_1_1core_1_1input__handler_ae5d14cd68f842619c4f83913e9161568}\label{classar_1_1core_1_1input__handler_ae5d14cd68f842619c4f83913e9161568}} 
+\index{ar::core::input\_handler@{ar::core::input\_handler}!key\_press@{key\_press}}
+\index{key\_press@{key\_press}!ar::core::input\_handler@{ar::core::input\_handler}}
+\doxysubsubsection{\texorpdfstring{key\_press()}{key\_press()}}
+{\footnotesize\ttfamily void ar\+::core\+::input\+\_\+handler\+::key\+\_\+press (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key }\end{DoxyParamCaption})}
+
+
+
+Handles key press event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & Pressed key name \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classar_1_1core_1_1input__handler_a09a0d8ec516cf33f32b96a1b55685bae}\label{classar_1_1core_1_1input__handler_a09a0d8ec516cf33f32b96a1b55685bae}} 
+\index{ar::core::input\_handler@{ar::core::input\_handler}!key\_release@{key\_release}}
+\index{key\_release@{key\_release}!ar::core::input\_handler@{ar::core::input\_handler}}
+\doxysubsubsection{\texorpdfstring{key\_release()}{key\_release()}}
+{\footnotesize\ttfamily void ar\+::core\+::input\+\_\+handler\+::key\+\_\+release (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key }\end{DoxyParamCaption})}
+
+
+
+Handles key release event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & Released key name \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classar_1_1core_1_1input__handler_aff1e018b4ad5fbf54c2e3d61d1f5f5bf}\label{classar_1_1core_1_1input__handler_aff1e018b4ad5fbf54c2e3d61d1f5f5bf}} 
+\index{ar::core::input\_handler@{ar::core::input\_handler}!\_input\_translation\_map@{\_input\_translation\_map}}
+\index{\_input\_translation\_map@{\_input\_translation\_map}!ar::core::input\_handler@{ar::core::input\_handler}}
+\doxysubsubsection{\texorpdfstring{\_input\_translation\_map}{\_input\_translation\_map}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::string, ar\+\_\+unified\+\_\+controller\+\_\+key$>$ ar\+::core\+::input\+\_\+handler\+::\+\_\+input\+\_\+translation\+\_\+map\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Map used for input translation Qt -\/\texorpdfstring{$>$}{>} Unified Controller. 
+
+Whenever a button is pressed it will be translated from its string value into the enum of unified controller\+:
+
+KEY\+\_\+\+NAME (is =) CURRENTLY\+\_\+\+PRESSED\+\_\+\+KEY MAP\mbox{[}KEY\+\_\+\+NAME\mbox{]} (gives -\/\texorpdfstring{$>$}{>}) CONTROLLER\+\_\+\+KEY CONTROLLER\+\_\+\+KEY (is) MARKED AS PRESSED 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/daniel/\+Developer/access-\/to-\/retro/access-\/to-\/retro/frontend/src/core/\mbox{\hyperlink{input-handler_8hpp}{input-\/handler.\+hpp}}\item 
+/\+Users/daniel/\+Developer/access-\/to-\/retro/access-\/to-\/retro/frontend/src/core/input-\/handler.\+cpp\end{DoxyCompactItemize}

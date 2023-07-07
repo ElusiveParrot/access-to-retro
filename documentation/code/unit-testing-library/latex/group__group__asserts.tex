@@ -1,0 +1,307 @@
+\hypertarget{group__group__asserts}{}\doxysection{Asserts}
+\label{group__group__asserts}\index{Asserts@{Asserts}}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group__group__asserts_gabe6cab7f0ad41c4f0845258f1f2f8a32}{ASSERT\+\_\+\+NULL}}(OBJ,  FAIL\+\_\+\+CODE)
+\begin{DoxyCompactList}\small\item\em Assert that object is NULL. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__group__asserts_gacf09f3b421777ab0e175eff855c35f60}{ASSERT\+\_\+\+NOT\+\_\+\+NULL}}(OBJ,  FAIL\+\_\+\+CODE)
+\begin{DoxyCompactList}\small\item\em Assert that object is NOT NULL. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__group__asserts_ga7e443adff0695908f4f0901fae74a581}{ASSERT\+\_\+\+EQ}}(OBJ1,  OBJ2,  FAIL\+\_\+\+CODE)
+\begin{DoxyCompactList}\small\item\em Assert that two objects are equal. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__group__asserts_ga86a59fdfa90c387eec1a6e4f9da0c300}{ASSERT\+\_\+\+TRUE}}(OBJ,  FAIL\+\_\+\+CODE)
+\begin{DoxyCompactList}\small\item\em Assert that value is true. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__group__asserts_ga5d93127e9ebecc9a46aba51684523307}{ASSERT\+\_\+\+FALSE}}(OBJ,  FAIL\+\_\+\+CODE)
+\begin{DoxyCompactList}\small\item\em Assert that value is false. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__group__asserts_ga4df833356fe2d2b055faf0591cd59d13}{ASSERT\+\_\+\+NEQ}}(OBJ1,  OBJ2,  FAIL\+\_\+\+CODE)
+\begin{DoxyCompactList}\small\item\em Assert that two objects are NOT equal. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__group__asserts_ga6bf85ec193d9376f5c44d7a85a60c931}{ASSERT\+\_\+\+STR\+\_\+\+EQ}}(STR1,  STR2,  FAIL\+\_\+\+CODE)
+\begin{DoxyCompactList}\small\item\em Assert that two strings are equal. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__group__asserts_gac84c020a6900609771536f5948384441}{ASSERT\+\_\+\+STR\+\_\+\+NEQ}}(OBJ1,  OBJ2,  FAIL\+\_\+\+CODE)
+\begin{DoxyCompactList}\small\item\em Assert that two strings are NOT equal. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__group__asserts_gacb911a95b9e014e2a690295ff530a298}{ASSERT\+\_\+\+TEST\+\_\+\+SUCCEEDS}}(TEST\+\_\+\+FN,  FAIL\+\_\+\+CODE)
+\begin{DoxyCompactList}\small\item\em Assert that other test did not fail. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__group__asserts_ga1e99bc6889a807c125424ecfc59324a1}{ASSERT\+\_\+\+TEST\+\_\+\+FAILS}}(TEST\+\_\+\+FN,  FAIL\+\_\+\+CODE)
+\begin{DoxyCompactList}\small\item\em Assert that other test did fail. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Contains asserting macros 
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group__group__asserts_ga7e443adff0695908f4f0901fae74a581}\label{group__group__asserts_ga7e443adff0695908f4f0901fae74a581}} 
+\index{Asserts@{Asserts}!ASSERT\_EQ@{ASSERT\_EQ}}
+\index{ASSERT\_EQ@{ASSERT\_EQ}!Asserts@{Asserts}}
+\doxysubsubsection{\texorpdfstring{ASSERT\_EQ}{ASSERT\_EQ}}
+{\footnotesize\ttfamily \#define ASSERT\+\_\+\+EQ(\begin{DoxyParamCaption}\item[{}]{OBJ1,  }\item[{}]{OBJ2,  }\item[{}]{FAIL\+\_\+\+CODE }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{if}\ (OBJ1\ !=\ OBJ2)\ \(\backslash\)}
+\DoxyCodeLine{\{\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ COMPLETE\_TEST(\mbox{\hyperlink{group__group__definitions_ga5dd66fe6bc5d9d8521929591f7d6290f}{ERROR}}(FAIL\_CODE));\ \(\backslash\)}
+\DoxyCodeLine{\}\ \(\backslash\)}
+
+\end{DoxyCode}
+
+
+Assert that two objects are equal. 
+
+\begin{DoxyRemark}{Remarks}
+Uses \textquotesingle{}==\textquotesingle{} for equality check 
+\end{DoxyRemark}
+
+\begin{DoxyParams}{Parameters}
+{\em OBJ1} & First value \\
+\hline
+{\em OBJ2} & Second value \\
+\hline
+{\em FAIL\+\_\+\+CODE} & Error code returned from the test on failure \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__group__asserts_ga5d93127e9ebecc9a46aba51684523307}\label{group__group__asserts_ga5d93127e9ebecc9a46aba51684523307}} 
+\index{Asserts@{Asserts}!ASSERT\_FALSE@{ASSERT\_FALSE}}
+\index{ASSERT\_FALSE@{ASSERT\_FALSE}!Asserts@{Asserts}}
+\doxysubsubsection{\texorpdfstring{ASSERT\_FALSE}{ASSERT\_FALSE}}
+{\footnotesize\ttfamily \#define ASSERT\+\_\+\+FALSE(\begin{DoxyParamCaption}\item[{}]{OBJ,  }\item[{}]{FAIL\+\_\+\+CODE }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{if}\ (OBJ)\ \(\backslash\)}
+\DoxyCodeLine{\{\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ COMPLETE\_TEST(\mbox{\hyperlink{group__group__definitions_ga5dd66fe6bc5d9d8521929591f7d6290f}{ERROR}}(FAIL\_CODE));\ \(\backslash\)}
+\DoxyCodeLine{\}\ \(\backslash\)}
+
+\end{DoxyCode}
+
+
+Assert that value is false. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em OBJ} & Value to check \\
+\hline
+{\em FAIL\+\_\+\+CODE} & Error code returned from the test on failure \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__group__asserts_ga4df833356fe2d2b055faf0591cd59d13}\label{group__group__asserts_ga4df833356fe2d2b055faf0591cd59d13}} 
+\index{Asserts@{Asserts}!ASSERT\_NEQ@{ASSERT\_NEQ}}
+\index{ASSERT\_NEQ@{ASSERT\_NEQ}!Asserts@{Asserts}}
+\doxysubsubsection{\texorpdfstring{ASSERT\_NEQ}{ASSERT\_NEQ}}
+{\footnotesize\ttfamily \#define ASSERT\+\_\+\+NEQ(\begin{DoxyParamCaption}\item[{}]{OBJ1,  }\item[{}]{OBJ2,  }\item[{}]{FAIL\+\_\+\+CODE }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{if}\ (OBJ1\ ==\ OBJ2)\ \(\backslash\)}
+\DoxyCodeLine{\{\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ COMPLETE\_TEST(\mbox{\hyperlink{group__group__definitions_ga5dd66fe6bc5d9d8521929591f7d6290f}{ERROR}}(FAIL\_CODE));\ \(\backslash\)}
+\DoxyCodeLine{\}\ \(\backslash\)}
+
+\end{DoxyCode}
+
+
+Assert that two objects are NOT equal. 
+
+\begin{DoxyRemark}{Remarks}
+Uses \textquotesingle{}!=\textquotesingle{} for not equality check 
+\end{DoxyRemark}
+
+\begin{DoxyParams}{Parameters}
+{\em OBJ1} & First value \\
+\hline
+{\em OBJ2} & Second value \\
+\hline
+{\em FAIL\+\_\+\+CODE} & Error code returned from the test on failure \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__group__asserts_gacf09f3b421777ab0e175eff855c35f60}\label{group__group__asserts_gacf09f3b421777ab0e175eff855c35f60}} 
+\index{Asserts@{Asserts}!ASSERT\_NOT\_NULL@{ASSERT\_NOT\_NULL}}
+\index{ASSERT\_NOT\_NULL@{ASSERT\_NOT\_NULL}!Asserts@{Asserts}}
+\doxysubsubsection{\texorpdfstring{ASSERT\_NOT\_NULL}{ASSERT\_NOT\_NULL}}
+{\footnotesize\ttfamily \#define ASSERT\+\_\+\+NOT\+\_\+\+NULL(\begin{DoxyParamCaption}\item[{}]{OBJ,  }\item[{}]{FAIL\+\_\+\+CODE }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{if}\ (OBJ\ ==\ NULL)\ \(\backslash\)}
+\DoxyCodeLine{\{\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ COMPLETE\_TEST(\mbox{\hyperlink{group__group__definitions_ga5dd66fe6bc5d9d8521929591f7d6290f}{ERROR}}(FAIL\_CODE));\ \(\backslash\)}
+\DoxyCodeLine{\}\ \(\backslash\)}
+
+\end{DoxyCode}
+
+
+Assert that object is NOT NULL. 
+
+\begin{DoxyRemark}{Remarks}
+Uses \textquotesingle{}!=\textquotesingle{} for not equality check 
+\end{DoxyRemark}
+
+\begin{DoxyParams}{Parameters}
+{\em OBJ} & Value to check \\
+\hline
+{\em FAIL\+\_\+\+CODE} & Error code returned from the test on failure \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__group__asserts_gabe6cab7f0ad41c4f0845258f1f2f8a32}\label{group__group__asserts_gabe6cab7f0ad41c4f0845258f1f2f8a32}} 
+\index{Asserts@{Asserts}!ASSERT\_NULL@{ASSERT\_NULL}}
+\index{ASSERT\_NULL@{ASSERT\_NULL}!Asserts@{Asserts}}
+\doxysubsubsection{\texorpdfstring{ASSERT\_NULL}{ASSERT\_NULL}}
+{\footnotesize\ttfamily \#define ASSERT\+\_\+\+NULL(\begin{DoxyParamCaption}\item[{}]{OBJ,  }\item[{}]{FAIL\+\_\+\+CODE }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{if}\ (OBJ\ !=\ NULL)\ \(\backslash\)}
+\DoxyCodeLine{\{\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ COMPLETE\_TEST(\mbox{\hyperlink{group__group__definitions_ga5dd66fe6bc5d9d8521929591f7d6290f}{ERROR}}(FAIL\_CODE));\ \(\backslash\)}
+\DoxyCodeLine{\}\ \(\backslash\)}
+
+\end{DoxyCode}
+
+
+Assert that object is NULL. 
+
+\begin{DoxyRemark}{Remarks}
+Uses \textquotesingle{}==\textquotesingle{} for equality check 
+\end{DoxyRemark}
+
+\begin{DoxyParams}{Parameters}
+{\em OBJ} & Value to check \\
+\hline
+{\em FAIL\+\_\+\+CODE} & Error code returned from the test on failure \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__group__asserts_ga6bf85ec193d9376f5c44d7a85a60c931}\label{group__group__asserts_ga6bf85ec193d9376f5c44d7a85a60c931}} 
+\index{Asserts@{Asserts}!ASSERT\_STR\_EQ@{ASSERT\_STR\_EQ}}
+\index{ASSERT\_STR\_EQ@{ASSERT\_STR\_EQ}!Asserts@{Asserts}}
+\doxysubsubsection{\texorpdfstring{ASSERT\_STR\_EQ}{ASSERT\_STR\_EQ}}
+{\footnotesize\ttfamily \#define ASSERT\+\_\+\+STR\+\_\+\+EQ(\begin{DoxyParamCaption}\item[{}]{STR1,  }\item[{}]{STR2,  }\item[{}]{FAIL\+\_\+\+CODE }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{if}\ (strcmp(STR1,\ STR2)\ !=\ 0)\ \(\backslash\)}
+\DoxyCodeLine{\{\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ COMPLETE\_TEST(\mbox{\hyperlink{group__group__definitions_ga5dd66fe6bc5d9d8521929591f7d6290f}{ERROR}}(FAIL\_CODE));\ \(\backslash\)}
+\DoxyCodeLine{\}\ \(\backslash\)}
+
+\end{DoxyCode}
+
+
+Assert that two strings are equal. 
+
+\begin{DoxyRemark}{Remarks}
+Uses \textquotesingle{}strcmp\textquotesingle{} for equality check 
+\end{DoxyRemark}
+
+\begin{DoxyParams}{Parameters}
+{\em STR1} & First string \\
+\hline
+{\em STR2} & Second string \\
+\hline
+{\em FAIL\+\_\+\+CODE} & Error code returned from the test on failure \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__group__asserts_gac84c020a6900609771536f5948384441}\label{group__group__asserts_gac84c020a6900609771536f5948384441}} 
+\index{Asserts@{Asserts}!ASSERT\_STR\_NEQ@{ASSERT\_STR\_NEQ}}
+\index{ASSERT\_STR\_NEQ@{ASSERT\_STR\_NEQ}!Asserts@{Asserts}}
+\doxysubsubsection{\texorpdfstring{ASSERT\_STR\_NEQ}{ASSERT\_STR\_NEQ}}
+{\footnotesize\ttfamily \#define ASSERT\+\_\+\+STR\+\_\+\+NEQ(\begin{DoxyParamCaption}\item[{}]{OBJ1,  }\item[{}]{OBJ2,  }\item[{}]{FAIL\+\_\+\+CODE }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{if}\ (strcmp(STR1,\ STR2)\ ==\ 0)\ \(\backslash\)}
+\DoxyCodeLine{\{\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ COMPLETE\_TEST(\mbox{\hyperlink{group__group__definitions_ga5dd66fe6bc5d9d8521929591f7d6290f}{ERROR}}(FAIL\_CODE));\ \(\backslash\)}
+\DoxyCodeLine{\}\ \(\backslash\)}
+
+\end{DoxyCode}
+
+
+Assert that two strings are NOT equal. 
+
+\begin{DoxyRemark}{Remarks}
+Uses \textquotesingle{}strcmp\textquotesingle{} for not equality check 
+\end{DoxyRemark}
+
+\begin{DoxyParams}{Parameters}
+{\em OBJ1} & First string \\
+\hline
+{\em OBJ2} & Second string \\
+\hline
+{\em FAIL\+\_\+\+CODE} & Error code returned from the test on failure \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__group__asserts_ga1e99bc6889a807c125424ecfc59324a1}\label{group__group__asserts_ga1e99bc6889a807c125424ecfc59324a1}} 
+\index{Asserts@{Asserts}!ASSERT\_TEST\_FAILS@{ASSERT\_TEST\_FAILS}}
+\index{ASSERT\_TEST\_FAILS@{ASSERT\_TEST\_FAILS}!Asserts@{Asserts}}
+\doxysubsubsection{\texorpdfstring{ASSERT\_TEST\_FAILS}{ASSERT\_TEST\_FAILS}}
+{\footnotesize\ttfamily \#define ASSERT\+\_\+\+TEST\+\_\+\+FAILS(\begin{DoxyParamCaption}\item[{}]{TEST\+\_\+\+FN,  }\item[{}]{FAIL\+\_\+\+CODE }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{if}\ (TEST\_FN()\ ==\ 0)\(\backslash\)}
+\DoxyCodeLine{\{\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ COMPLETE\_TEST(\mbox{\hyperlink{group__group__definitions_ga5dd66fe6bc5d9d8521929591f7d6290f}{ERROR}}(FAIL\_CODE));\ \(\backslash\)}
+\DoxyCodeLine{\}\ \(\backslash\)}
+
+\end{DoxyCode}
+
+
+Assert that other test did fail. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em TEST\+\_\+\+FN} & Function name of the other test \\
+\hline
+{\em FAIL\+\_\+\+CODE} & Error code returned from the test on failure \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__group__asserts_gacb911a95b9e014e2a690295ff530a298}\label{group__group__asserts_gacb911a95b9e014e2a690295ff530a298}} 
+\index{Asserts@{Asserts}!ASSERT\_TEST\_SUCCEEDS@{ASSERT\_TEST\_SUCCEEDS}}
+\index{ASSERT\_TEST\_SUCCEEDS@{ASSERT\_TEST\_SUCCEEDS}!Asserts@{Asserts}}
+\doxysubsubsection{\texorpdfstring{ASSERT\_TEST\_SUCCEEDS}{ASSERT\_TEST\_SUCCEEDS}}
+{\footnotesize\ttfamily \#define ASSERT\+\_\+\+TEST\+\_\+\+SUCCEEDS(\begin{DoxyParamCaption}\item[{}]{TEST\+\_\+\+FN,  }\item[{}]{FAIL\+\_\+\+CODE }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{if}\ (TEST\_FN()\ !=\ 0)\(\backslash\)}
+\DoxyCodeLine{\{\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ COMPLETE\_TEST(\mbox{\hyperlink{group__group__definitions_ga5dd66fe6bc5d9d8521929591f7d6290f}{ERROR}}(FAIL\_CODE));\ \(\backslash\)}
+\DoxyCodeLine{\}\ \(\backslash\)}
+
+\end{DoxyCode}
+
+
+Assert that other test did not fail. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em TEST\+\_\+\+FN} & Function name of the other test \\
+\hline
+{\em FAIL\+\_\+\+CODE} & Error code returned from the test on failure \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__group__asserts_ga86a59fdfa90c387eec1a6e4f9da0c300}\label{group__group__asserts_ga86a59fdfa90c387eec1a6e4f9da0c300}} 
+\index{Asserts@{Asserts}!ASSERT\_TRUE@{ASSERT\_TRUE}}
+\index{ASSERT\_TRUE@{ASSERT\_TRUE}!Asserts@{Asserts}}
+\doxysubsubsection{\texorpdfstring{ASSERT\_TRUE}{ASSERT\_TRUE}}
+{\footnotesize\ttfamily \#define ASSERT\+\_\+\+TRUE(\begin{DoxyParamCaption}\item[{}]{OBJ,  }\item[{}]{FAIL\+\_\+\+CODE }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{if}\ (!OBJ)\ \(\backslash\)}
+\DoxyCodeLine{\{\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ COMPLETE\_TEST(\mbox{\hyperlink{group__group__definitions_ga5dd66fe6bc5d9d8521929591f7d6290f}{ERROR}}(FAIL\_CODE));\ \(\backslash\)}
+\DoxyCodeLine{\}\ \(\backslash\)}
+
+\end{DoxyCode}
+
+
+Assert that value is true. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em OBJ} & Value to check \\
+\hline
+{\em FAIL\+\_\+\+CODE} & Error code returned from the test on failure \\
+\hline
+\end{DoxyParams}
